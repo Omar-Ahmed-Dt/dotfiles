@@ -1,6 +1,4 @@
-# it's up to you 😇 
-
-## Dotfiles 
+# Dotfiles 
 
 > Operating System 
 * Linux, ArcoD 
