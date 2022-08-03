@@ -132,7 +132,7 @@ for_window [class="^.*"] border pixel 1
 gaps inner 12
 gaps outer 0
 smart_gaps on
-#smart_borders on
+smart_borders on
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 bar {
     height 25
@@ -141,7 +141,8 @@ bar {
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks 
     colors {
-        background #040000
+        #background #040000
+        background #282a33
         statusline #eeeeee
         separator  #eaf08d
         focused_workspace     #83a598 #458588 #ebdbb2
