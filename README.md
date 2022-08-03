@@ -1,53 +1,76 @@
 # Dotfiles 
 
-* Operating System 
-> Linux, ArcoD 
-* Service Manager 
-> systemd
-* Window Manager 
-> i3 
-* Status Bar 
-> i3blocks 
-* Terminal 
-> kitty
-* Editor 
-> nvim & vscodium
-* Shell 
-> fish 
-* Launcher 
-> dmenu [Gitlap for dmenu..](https://gitlab.com/dwt1/dmenu-distrotube)
-* Terminal File Manager 
-> nnn  
-* Gui File Manager 
-> pcmanfm
-* Music Player 
-> mpd & ncmpcpp
-* Video Player 
-> mpv 
-* Photo Viewer 
-> sxiv
-* Screen Recorder 
-> simplescreenrecorder 
-* pdf Viewer 
-> zathura
-* Resource Monitor
-> htop
-* Key Binding 
-> sxhkd 
-* Browser 
-> brave && firefox
-* Search Engine 
-> startpage 
-* Firewall 
-> guwf 
-* Office 
-> libreoffice-still
-* Mail Client 
-> mailspring
-* Virtual Machine 
-> vbox
-* Virtual OS 
-> ubuntu, artix, artix lxde, void, arcoD xfce, artix xfce, archcrift
+> #### Operating System 
+> > * Linux, ArcoD 
+
+> #### Service Manager 
+> > * systemd
+
+> #### Window Manager 
+> > * i3  
+
+> #### Status Bar 
+>  > * i3blocks 
+
+> #### Terminal 
+>  > * kitty
+
+> #### Editor 
+>  > * nvim & vscodium
+
+> #### Shell 
+>  > * fish 
+
+> #### Launcher 
+>  > * dmenu [Gitlap for dmenu..](https://gitlab.com/dwt1/dmenu-distrotube)
+
+> #### Terminal File Manager 
+>  > * nnn  
+
+> #### Gui File Manager 
+>  > * pcmanfm
+
+> #### Music Player 
+>  > * mpd & ncmpcpp
+
+> #### Video Player 
+>  > * mpv 
+
+> #### Photo Viewer 
+>  > * sxiv
+
+> #### Screen Recorder 
+>  > * simplescreenrecorder 
+
+> #### pdf Viewer 
+>  > * zathura
+
+> #### Resource Monitor
+> > * htop
+
+> #### Key Binding 
+> > * sxhkd 
+
+> #### Browser 
+> > * brave && firefox
+
+> #### Search Engine 
+> > * startpage 
+
+> #### Firewall 
+> > * guwf 
+
+> #### Office 
+> > * libreoffice-still
+
+> #### Mail Client 
+> > * mailspring
+
+> #### Virtual Machine 
+> > * vbox
+
+> #### Virtual OS 
+> > * ubuntu, artix, artix lxde, void, arcoD xfce, artix xfce, archcrift
 
 
 | Utility  | Packages            |
