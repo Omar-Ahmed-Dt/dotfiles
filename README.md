@@ -95,3 +95,4 @@
 | Mail | thunderbird mailspring | 
 | Meetings | zoom droidcam |
 | Password Manager | keepassxc | 
+| Blue Light Filter | blugon | 
