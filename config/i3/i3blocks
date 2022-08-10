@@ -18,11 +18,11 @@ markup=pango
 command=xkb-switch | xargs echo  
 interval=once
 signal=15
+border_top=1
 label=<span color="#ff79c6">  </span>
 border=#ff79c6
-border_top=1
 border_right=0
-border_bottom=0
+border_bottom=1
 border_left=0
 
 #[lang.sh]
@@ -38,7 +38,7 @@ interval=3600
 border=#bd93f9
 border_top=1
 border_right=0
-border_bottom=0
+border_bottom=1
 border_left=0
 
 #################
@@ -50,7 +50,7 @@ label=<span color="#ff79c6"> </span>
 border=#ff79c6
 border_top=1
 border_right=0
-border_bottom=0
+border_bottom=1
 border_left=0
 
 #[pacman.sh]
@@ -64,7 +64,7 @@ interval=60
 border=#bd93f9
 border_top=1
 border_right=0
-border_bottom=0
+border_bottom=1
 border_left=0
 
 #############
@@ -73,7 +73,7 @@ interval=2
 border=#ff79c6
 border_top=1
 border_right=0
-border_bottom=0
+border_bottom=1
 border_left=0
 
 #############
@@ -83,7 +83,7 @@ color=#bd93f9
 border=#bd93f9
 border_top=1
 border_right=0
-border_bottom=0
+border_bottom=1
 border_left=0
 
 #[battery.sh]
@@ -98,7 +98,7 @@ label=<span color="#ff79c6"><b>CPU: </b></span>
 border=#ff79c6
 border_top=1
 border_right=0
-border_bottom=0
+border_bottom=1
 border_left=0
 
 #[cpu.sh]
@@ -116,7 +116,7 @@ label=<span color="#bd93f9"> </span>
 border=#bd93f9
 border_top=1
 border_right=0
-border_bottom=0
+border_bottom=1
 border_left=0
 
 #[i3-memory.sh]
@@ -131,7 +131,7 @@ label=<span color="#ff79c6"></span>
 border=#ff79c6
 border_top=1
 border_right=0
-border_bottom=0
+border_bottom=1
 border_left=0
 
 #[backlight.sh]
@@ -146,7 +146,7 @@ signal=10
 border=#bd93f9
 border_top=1
 border_right=0
-border_bottom=0
+border_bottom=1
 border_left=0
 
 #[volbar2.sh]
@@ -165,7 +165,7 @@ label=<span color="#ff79c6"> </span>
 border=#ff79c6
 border_top=1
 border_right=0
-border_bottom=0
+border_bottom=1
 border_left=0
 
 [clock]
@@ -175,7 +175,7 @@ interval=30
 border=#bd93f9
 border_top=1
 border_right=0
-border_bottom=0
+border_bottom=1
 border_left=0
 
 #[clock.sh]
