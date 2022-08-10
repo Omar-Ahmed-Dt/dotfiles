@@ -158,6 +158,7 @@ super + c
 #date 
 super + t 
     kdialog --calendar date
+		#gsimplecal
 
 #hub 
 super + shift + o 
