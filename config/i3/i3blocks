@@ -2,7 +2,7 @@ command=/home/omar/scripts/$BLOCK_NAME
 
 #################
 align=center
-separator=false
+separator=true
 #color=#f8f8f2
 color=#ebdbb2
 separator_block_width=18
@@ -157,22 +157,24 @@ border_left=0
 ##############
 
 ##############
-[date]
-interval=30
-command=LC_ALL="zh_CN.UTF-8" date '+%Y 年 %B %d 日 %A。' | awk '{ printf "%s<span color=\"#ff79c6\">%s%s</span>%s<span color=\"#ff79c6\">%s %s</span>\n", $1, $2, $3, $4, $5, $6 }'
-interval=60
-label=<span color="#ff79c6"> </span>
-border=#ff79c6
-border_top=1
-border_right=0
-border_bottom=1
-border_left=0
+#[date]
+#interval=30
+#command=LC_ALL="zh_CN.UTF-8" date '+%Y 年 %B %d 日 %A。' | awk '{ printf "%s<span color=\"#ff79c6\">%s%s</span>%s<span color=\"#ff79c6\">%s %s</span>\n", $1, $2, $3, $4, $5, $6 }'; [[ -z "${BLOCK_BUTTON}" ]] || gsimplecal &
+#interval=60
+#label=<span color="#ff79c6"> </span>
+#border=#ff79c6
+#border_top=1
+#border_right=0
+#border_bottom=1
+#border_left=0
 
 [clock]
-command=date '+%I : %M %p' | awk '{ printf "%s<span color=\"#bd93f9\">%s</span>%s<span color=\"#bd93f9\"> %s</span>\n", $1, $2, $3, $4 }'
+#command=date '+%I : %M %p' | awk '{ printf "%s<span color=\"#bd93f9\">%s</span>%s<span color=\"#bd93f9\"> %s</span>\n", $1, $2, $3, $4 }'
+command=date '+%I : %M %p' | awk '{ printf "%s<span color=\"#ff79c6\">%s</span>%s<span color=\"#ff79c6\"> %s</span>\n", $1, $2, $3, $4 }'; [[ -z "${BLOCK_BUTTON}" ]] || kdialog --calendar date 
 #command=date '+%I:%M %p'
 interval=30
-border=#bd93f9
+#border=#bd93f9
+border=#ff79c6
 border_top=1
 border_right=0
 border_bottom=1

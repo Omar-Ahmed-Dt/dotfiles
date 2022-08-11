@@ -71,6 +71,8 @@ bindsym $mod+Ctrl+l resize grow width 1 px or 1 ppt
 font pango:Noto Mono Regular 10
 exec_always --no-startup-id autotiling
 for_window [class="Vivaldi-stable"] focus
+
+# auto start
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id blueberry-tray
 exec --no-startup-id nm-applet
@@ -84,8 +86,8 @@ exec --no-startup-id clipmenud
 exec --no-startup-id xhost + 
 exec --no-startup-id xfce4-power-manager &
 exec --no-startup-id blugon
-
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
+
 for_window [class="Arcolinux-welcome-app.py"] floating enable
 for_window [class="Arcolinux-calamares-tool.py"] floating enable
 for_window [class="Bleachbit"] floating disable
@@ -138,9 +140,9 @@ exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 bar {
     height 25
     workspace_buttons yes
-    font pango:Noto Sans 15
+    font pango:Noto Sans bold 15
     position top
-    status_command i3blocks -c ~/.config/i3/i3blocks 
+    status_command i3blocks -c ~/.config/i3/i3blocks
     colors {
         #background #040000
         background #282a33
