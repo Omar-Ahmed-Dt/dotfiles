@@ -16,7 +16,7 @@ set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 #set -x MANPAGER '/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
 ### "nvim" as manpager
-#set -x MANPAGER "nvim -c 'set ft=man' -"
+set -x MANPAGER "nvim -c 'set ft=man' -"
 
 ### SET EITHER DEFAULT EMACS MODE OR VI MODE ###
 function fish_user_key_bindings
@@ -325,7 +325,7 @@ alias ram='ps axh -o cmd:15,%mem --sort=-%mem | head | string trim'
 alias cpu='ps axh -o cmd:15,%cpu --sort=-%cpu | head'
 alias bup='sh /home/omar/scripts/gitupload.sh'
 alias y='ytfzf -ml'
-alias yy='ytfzf -t'
+#alias yy='ytfzf -t'
 #alias df='df -h'
 alias df='duf'
 alias printer='system-config-printer'
