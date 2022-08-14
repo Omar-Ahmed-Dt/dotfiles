@@ -12,4 +12,4 @@ cp ~/.config/mpd/mpd.conf ~/Documents/GitHub/dotfiles/config/mpd
 #cp ~/.config/mpDris2/mpDris2.conf ~/Documents/GitHub/dotfiles/config/mpDris2
 cp -r ~/.config/nnn/plugins ~/Documents/GitHub/dotfiles/config/nnn
 cp -r ~/.config/kitty/kitty.conf ~/Documents/GitHub/dotfiles/config/kitty
-
+cp -r ~/.zshrc ~/Documents/GitHub/dotfiles/zshrc

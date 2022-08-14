@@ -34,7 +34,7 @@ do
   "w") 
       xwallpaper --stretch "$file" &&
       cp "$file" ~/.cache/styli.sh/wallpaper.jpg 
-      notify-send "$file has been set as your wallpaper." && exit 0
+      notify-send -i ~/logo/wall.jpg "$file has been set as your wallpaper." && exit 0
     ;;
   "g")
      pacman -Qq "gimp" >/dev/null 2>&1 && gimp "$file" ||
