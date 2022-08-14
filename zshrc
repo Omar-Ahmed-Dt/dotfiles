@@ -1,6 +1,6 @@
 ###
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 #installation via script from github
@@ -13,8 +13,8 @@ export ZSH=/usr/share/oh-my-zsh/
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # if you installed the package oh-my-zsh-powerline-theme-git then you type here "powerline" as zsh theme
-#ZSH_THEME="simonoff"
-ZSH_THEME="miloshadzic"
+export TERM="xterm-256color"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -561,7 +561,6 @@ alias gd="cd ~/Documents/GitHub/dotfiles"
 alias sv="~/scripts/dmenu_service.sh"
 alias hub="cd /home/omar/github/dmscripts/scripts/ && ./dm-hub"
 alias pmsi="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro doas pacman -S"
-alias pmsii="yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk "{print \$2}")' | xargs -ro  yay -S"
 alias pmsr="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
 alias sf="fzf --preview='head -$LINES {}'| xargs -r -I % $EDITOR %"
 alias v="nvim $argv"
@@ -596,3 +595,8 @@ function sc() {
 function se() { 
     du -a ~/scripts/ | awk '{print $2}' | fzf --preview='head -$LINES {}' | xargs -r sh
 }
+
+function pmsii(){
+  yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk "{print \$2}")' | xargs -ro  yay -S
+}
+

@@ -82,7 +82,7 @@
 | Scripts | dm-scripts [Gitlap for dmscripts..](https://gitlab.com/dwt1/dmscripts)|
 | Multimedia | pulseaudio pulsemixer mpv mpv-mpris mpd mpDris2 mpc moc ncmpcpp youtube-dl yt-dlp ffmpeg simplescreenrecorder | 
 | File Manager | nnn dolphin pcmanfm | 
-| Terminal and some tools | alacritty fish kitty exa fzf cmatrix xdotool xclip maim |
+| Terminal and some tools | alacritty fish zsh kitty exa fzf cmatrix xdotool xclip maim |
 | Diagnostic | htop bashtop bpytop nvtop | 
 | Nvidia | nvidia nvidia-lts optimus-manager | 
 | Browsers | brave-bin firefox google-chrome chromium qutebrowser librewolf | 
