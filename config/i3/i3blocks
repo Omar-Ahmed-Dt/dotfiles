@@ -19,8 +19,8 @@ command=xkb-switch | xargs echo
 interval=once
 signal=15
 border_top=1
-label=<span color="#ff79c6">  </span>
-border=#ff79c6
+label=<span color="#bd93f9">  </span>
+border=#bd93f9
 border_right=0
 border_bottom=1
 border_left=0
@@ -35,7 +35,7 @@ border_left=0
 
 [weather.sh]
 interval=3600
-border=#bd93f9
+border=#ff79c6
 border_top=1
 border_right=0
 border_bottom=1
@@ -45,9 +45,8 @@ border_left=0
 [arch_update]
 command=checkupdates | wc -l
 interval=once
-#label=<span color="#1793d1"> </span>
-label=<span color="#ff79c6"> </span>
-border=#ff79c6
+label=<span color="#bd93f9"> </span>
+border=#bd93f9
 border_top=1
 border_right=0
 border_bottom=1
@@ -61,7 +60,7 @@ border_left=0
 
 [uptime.sh]
 interval=60
-border=#bd93f9
+border=#ff79c6
 border_top=1
 border_right=0
 border_bottom=1
@@ -70,7 +69,7 @@ border_left=0
 #############
 [nettraf.sh]
 interval=2
-border=#ff79c6
+border=#bd93f9
 border_top=1
 border_right=0
 border_bottom=1
@@ -79,8 +78,8 @@ border_left=0
 #############
 [battery.sh]
 interval=2
-color=#bd93f9
-border=#bd93f9
+color=#ff79c6
+border=#ff79c6
 border_top=1
 border_right=0
 border_bottom=1
@@ -90,6 +89,15 @@ border_left=0
 #interval=2
 #color=#98c379
 ##############
+[gpuload.sh]
+interval=2 
+label=<span color="#bd93f9"><b>GPU: </b></span>
+border=#bd93f9
+border_top=1
+border_right=0
+border_bottom=1
+border_left=0
+
 [cpu.sh]
 #command=sar -u 1 1 | awk 'FNR == 5 { printf "%04.1f<span color=\"#ff79c6\">%</span>", (100 - $8) } ' && sensors | awk '{ if ($1 == "CPU" && $2 == "Temperature:") { gsub(/[+°C]/, "") ; printf " %i<span color=\"#ff5555\">°C</span>\n", $3 } }'
 interval=2 
