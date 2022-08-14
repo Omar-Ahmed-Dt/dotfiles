@@ -13,3 +13,4 @@ cp ~/.config/mpd/mpd.conf ~/Documents/GitHub/dotfiles/config/mpd
 cp -r ~/.config/nnn/plugins ~/Documents/GitHub/dotfiles/config/nnn
 cp -r ~/.config/kitty/kitty.conf ~/Documents/GitHub/dotfiles/config/kitty
 cp -r ~/.zshrc ~/Documents/GitHub/dotfiles/zshrc
+cp -r ~/.Xresources ~/Documents/GitHub/dotfiles/Xresources

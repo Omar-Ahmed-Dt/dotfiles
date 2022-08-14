@@ -379,6 +379,7 @@ alias gsh="~/scripts/gsh.sh"
 #alias bm="~/github/bashmount/bashmount"
 alias theme="~/scripts/kitty_theme.sh"
 alias f="doas find / -iname"
+alias uprsc="xrdb -load ~/.Xresources"
 # Function for fish 
 
 function sv 
