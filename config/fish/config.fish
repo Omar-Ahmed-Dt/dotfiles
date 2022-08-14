@@ -380,6 +380,7 @@ alias gsh="~/scripts/gsh.sh"
 alias theme="~/scripts/kitty_theme.sh"
 alias f="doas find / -iname"
 alias uprsc="xrdb -load ~/.Xresources"
+alias gpu="sudo nvim /etc/optimus-manager/optimus-manager.conf"
 # Function for fish 
 
 function sv 
