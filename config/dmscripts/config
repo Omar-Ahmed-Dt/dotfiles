@@ -119,7 +119,7 @@ confedit_list[xmonad]="$HOME/.xmonad/xmonad.hs"
 confedit_list[xmobar]="$HOME/.xmobarrc"
 #confedit_list[xinitrc]="$HOME/.xinitrc"
 #confedit_list[xresources]="$HOME/.Xresources"
-#confedit_list[zsh]="$HOME/.zshrc"
+confedit_list[zsh]="$HOME/.zshrc"
 
 # dm-reddit config
 declare -a reddit_list=(
