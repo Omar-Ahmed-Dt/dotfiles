@@ -381,6 +381,7 @@ alias theme="~/scripts/kitty_theme.sh"
 alias f="doas find / -iname"
 alias uprsc="xrdb -load ~/.Xresources"
 alias gpu="sudo nvim /etc/optimus-manager/optimus-manager.conf"
+alias smi="nvidia-smi"
 # Function for fish 
 
 function sv 
