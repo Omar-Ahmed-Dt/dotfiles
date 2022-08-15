@@ -52,7 +52,7 @@
 > > * sxhkd 
 
 > #### Browser 
-> > * brave && firefox
+> > * firefox 
 
 > #### Search Engine 
 > > * startpage 
