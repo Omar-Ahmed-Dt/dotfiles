@@ -176,9 +176,18 @@ border_left=0
 #border_bottom=1
 #border_left=0
 
+[clock.sh]
+interval=30
+#border=#bd93f9
+border=#ff79c6
+border_top=1
+border_right=0
+border_bottom=1
+border_left=0
+
 [clock]
 #command=date '+%I : %M %p' | awk '{ printf "%s<span color=\"#bd93f9\">%s</span>%s<span color=\"#bd93f9\"> %s</span>\n", $1, $2, $3, $4 }'
-command=date '+%I : %M %p' | awk '{ printf "%s<span color=\"#ff79c6\">%s</span>%s<span color=\"#ff79c6\"> %s</span>\n", $1, $2, $3, $4 }'; [[ -z "${BLOCK_BUTTON}" ]] || kdialog --calendar date 
+command=date '+%I : %M %p' | awk '{ printf "%s<span color=\"#ff79c6\">%s</span>%s<span color=\"#ff79c6\"> %s</span>\n", $1, $2, $3, $4 }'; [[ -z "${BLOCK_BUTTON}" ]] || kdialog --calendar date  
 #command=date '+%I:%M %p'
 interval=30
 #border=#bd93f9
