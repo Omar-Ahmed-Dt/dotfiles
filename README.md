@@ -40,7 +40,7 @@
 >  > * sxiv
 
 > #### Screen Recorder 
->  > * simplescreenrecorder 
+>  > * obs && simplescreenrecorder 
 
 > #### pdf Viewer 
 >  > * zathura
@@ -80,7 +80,7 @@
 | Display |  xorg-server xorg-xrandr lightdm lightdm-gtk-greeter xorg-xrdb |
 | Editor and IDE | nvim [Github for nvim..](https://github.com/AstroNvim/AstroNvim), vscodium| 
 | Scripts | dm-scripts [Gitlap for dmscripts..](https://gitlab.com/dwt1/dmscripts)|
-| Multimedia | pulseaudio pulsemixer mpv mpv-mpris mpd mpDris2 mpc moc ncmpcpp youtube-dl yt-dlp ffmpeg simplescreenrecorder | 
+| Multimedia | pulseaudio pulsemixer mpv mpv-mpris mpd mpDris2 mpc moc ncmpcpp youtube-dl yt-dlp ffmpeg simplescreenrecorder obs | 
 | File Manager | nnn dolphin pcmanfm | 
 | Terminal and some tools | alacritty fish zsh kitty exa fzf cmatrix xdotool xclip maim |
 | Diagnostic | htop bashtop bpytop nvtop | 
