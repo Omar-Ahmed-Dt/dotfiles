@@ -154,10 +154,9 @@ super + v
 #find cursor 
 super + c 
     xfce4-find-cursor
-
-##date 
-#super + t 
-#    kdialog --calendar date
+#date 
+super + t 
+    kdialog --calendar date
 #		#gsimplecal
 
 #hub 
