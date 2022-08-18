@@ -382,6 +382,7 @@ alias f="doas find / -iname"
 alias uprsc="xrdb -load ~/.Xresources"
 alias gpu="sudo nvim /etc/optimus-manager/optimus-manager.conf"
 alias smi="nvidia-smi"
+alias rmft="rm ~/.config/fish/functions/fish_prompt.fish"
 # Function for fish 
 
 function sv 
