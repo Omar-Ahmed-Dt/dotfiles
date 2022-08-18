@@ -14,7 +14,7 @@ export ZSH=/usr/share/oh-my-zsh/
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # if you installed the package oh-my-zsh-powerline-theme-git then you type here "powerline" as zsh theme
 export TERM="xterm-256color"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="archcraft-dwm"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -77,7 +77,9 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git copypath)
+
+DISABLE_FZF_KEY_BINDINGS="false"
 
 if [ -f $ZSH/oh-my-zsh.sh ]; then
   source $ZSH/oh-my-zsh.sh
@@ -88,7 +90,7 @@ fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -472,6 +474,12 @@ ex ()
 #### My configuration ########
 ##############################
 ##############################
+
+# plugins
+#export FZF_BASE=/usr/share/oh-my-zsh/plugins/fzf/fzf.plugin.zsh
+#source /usr/share/oh-my-zsh/plugins/fzf/fzf.plugin.zsh
+
+
 
 #vim with zsh 
 bindkey -v 
