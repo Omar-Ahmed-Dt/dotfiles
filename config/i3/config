@@ -81,7 +81,8 @@ exec --no-startup-id volumeicon
 exec --no-startup-id feh --bg-fill /home/omar/.cache/styli.sh/wallpaper.jpg & 
 exec_always --no-startup-id sxhkd 
 exec --no-startup-id mpd
-exec --no-startup-id mpDris2
+exec --no-startup-id mpd-mpris & 
+#exec --no-startup-id mpDris2
 exec --no-startup-id clipmenud
 exec --no-startup-id xhost + 
 exec --no-startup-id xfce4-power-manager &
@@ -145,7 +146,7 @@ bar {
     status_command i3blocks -c ~/.config/i3/i3blocks
     colors {
         #background #040000
-        background #282a33
+        background #282a33 
         statusline #eeeeee
         separator  #eaf08d
         focused_workspace     #83a598 #458588 #ebdbb2
@@ -155,9 +156,10 @@ bar {
       }
     }
     # class                 border  backgr. text    indicator
-    client.focused          #353439 #b0c4be #e5e5e5 #b0c4be
+    client.focused          #353439 #b0c4be #e5e5e5 #98c379
     client.unfocused        #222222 #222222 #aaaaaa #222222
     client.focused_inactive #222222 #222222 #a9a9a9 #222222
     client.placeholder      #222222 #222222 #aaaaaa #222222
     client.urgent           #d42121 #d42121 #f7f7f7 #d42121
     client.background       #242424
+

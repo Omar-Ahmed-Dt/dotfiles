@@ -243,7 +243,9 @@ ctrl + Left : resize left
 .IP \[bu] 
 ctrl + Right : resize Right
 .IP \[bu] 
-**'** + 0 : go to last file or line edited  
+**'** + 0 : go to last file edited   
+.IP \[bu] 
+**'** + . : go to last change 
 .IP \[bu] 
 space + w : save 
 .IP \[bu] 
@@ -254,4 +256,3 @@ space + o : open explorer files and move from vim page to explorer files
 space + e : close explorer files 
 .IP \[bu] 
 space + d : Dashboard 
-

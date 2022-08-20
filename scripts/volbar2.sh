@@ -37,6 +37,7 @@ elif [ "$num" == "100" ]; then
 string="██████████"
 fi
  
+
 dot="${num: -1}"
  
 if [ "$dot" == "5" ]; then
