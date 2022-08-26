@@ -15,7 +15,7 @@ text/html=firefox.desktop
 audio/mpeg=mpv.desktop;
 application/json=nvim.desktop;
 inode/directory=pcmanfm.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-H0FHE1.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-CIISR1.desktop
 application/x-shellscript=nvim.desktop;
 text/plain=nvim.desktop;
 x-scheme-handler/chrome=firefox.desktop
@@ -29,3 +29,6 @@ x-scheme-handler/mailto=Mailspring.desktop
 message/rfc822=userapp-Thunderbird-QG2BN1.desktop
 x-scheme-handler/mid=userapp-Thunderbird-QG2BN1.desktop
 x-scheme-handler/mailspring=Mailspring.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-Telegram Desktop-CIISR1.desktop;
