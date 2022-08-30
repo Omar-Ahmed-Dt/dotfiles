@@ -1,3 +1,6 @@
+#ipute from keybord 
+#run : xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+
 # Reload sxhkd 
 shift + Escape
 	pkill -USR1 -x sxhkd
@@ -30,9 +33,9 @@ XF86AudioLowerVolume
 XF86AudioMute
 	amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
 
-#mic toggle 
-XF86AudioMicMute
-    pactl set-source-mute @DEFAULT_SOURCE@ toggle && pkill -RTMIN+17 i3blocks
+##mic toggle 
+#XF86AudioMicMute
+#    pactl set-source-mute @DEFAULT_SOURCE@ toggle && pkill -RTMIN+17 i3blocks
 
 ##mic up 
 #ctrl + m
@@ -42,11 +45,11 @@ XF86AudioMicMute
 #    amixer set Capture 5%- && pkill -RTMIN+17 i3blocks
 
 #light up 
-XF86MonBrightnessUp
-	light -A 5 && pkill -RTMIN+20 i3blocks
+#XF86MonBrightnessUp
+#	light -A 5 && pkill -RTMIN+20 i3blocks
 
 #light up 
-XF86Calculator
+XF86Search
 	light -A 5 && pkill -RTMIN+20 i3blocks
 
 #light down 
