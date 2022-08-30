@@ -552,7 +552,8 @@ alias nn='nnn -Rx'
 alias n='nnn -Rx'
 alias nt='nnn -RxT t'
 alias sn='sudo -E nnn -RH'
-export NNN_PLUG='F:fixname;i:imgview;f:fzcd;t:mp3conv;e:suedit;v:preview-tui;x:!doas chmod +x $nnn;s:!bash -i*;o:fzopen;k:kdeconnect;u:upload;p:rsynccp' #to play this plug press ; then choose option 
+#export NNN_PLUG='F:fixname;i:imgview;f:fzcd;t:mp3conv;e:suedit;v:preview-tui;x:!doas chmod +x $nnn;s:!bash -i*;o:fzopen;k:kdeconnect;u:upload;p:rsynccp' #to play this plug press ; then choose option 
+export NNN_PLUG='F:fixname;i:imgview;f:fzcd;t:mp3conv;v:preview-tui;s:!bash -i*;o:fzopen;p:rsynccp;m:mtpmount' #to play this plug press ; then choose option 
 export NNN_BMS="m:/media/;g:$HOME/Documents/GitHub/dotfiles;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" #to play this plug press b then choose option 
 #xdg-open is the default opener for nnn 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
