@@ -20,8 +20,9 @@ command=xkb-switch | xargs echo
 interval=once
 signal=15
 border_top=1
-label=<span color="#bd93f9">  </span>
-border=#bd93f9
+label=<span color="#e5b566">  </span>
+#border=#bd93f9
+border=#e5b566
 border_right=0
 border_bottom=1
 border_left=0
@@ -61,7 +62,8 @@ border_left=0
 
 [uptime.sh]
 interval=60
-border=#ff79c6
+#border=#ff79c6
+border=#6c99ba
 border_top=1
 border_right=0
 border_bottom=1
@@ -70,7 +72,8 @@ border_left=0
 #############
 [nettraf.sh]
 interval=2
-border=#bd93f9
+#border=#bd93f9
+border=#e5b566
 border_top=1
 border_right=0
 border_bottom=1
@@ -102,9 +105,9 @@ border_left=0
 [cpu.sh]
 #command=sar -u 1 1 | awk 'FNR == 5 { printf "%04.1f<span color=\"#ff79c6\">%</span>", (100 - $8) } ' && sensors | awk '{ if ($1 == "CPU" && $2 == "Temperature:") { gsub(/[+°C]/, "") ; printf " %i<span color=\"#ff5555\">°C</span>\n", $3 } }'
 interval=2 
-label=<span color="#ff79c6"><b>CPU: </b></span>
+label=<span color="#6c99ba"><b>CPU: </b></span>
 #label=<span color="#ff5555"><b> </b></span>
-border=#ff79c6
+border=#6c99ba
 border_top=1
 border_right=0
 border_bottom=1
@@ -121,8 +124,8 @@ border_left=0
 ##############
 [i3-memory.sh]
 interval=1 
-label=<span color="#bd93f9"> </span>
-border=#bd93f9
+label=<span color="#e5b566"> </span>
+border=#e5b566
 border_top=1
 border_right=0
 border_bottom=1
@@ -179,9 +182,10 @@ border_left=0
 
 [clock.sh]
 interval=30
-#border=#bd93f9
-label=<span color="#ff79c6"> </span>
-border=#ff79c6
+#label=<span color="#ff79c6"> </span>
+label=<span color="#6c99ba"> </span>
+#border=#ff79c6
+border=#6c99ba
 border_top=1
 border_right=0
 border_bottom=1
@@ -190,11 +194,12 @@ border_left=0
 [clock]
 #command=date '+%I : %M %p' | awk '{ printf "%s<span color=\"#bd93f9\">%s</span>%s<span color=\"#bd93f9\"> %s</span>\n", $1, $2, $3, $4 }'
 #command=date '+%I : %M %p' | awk '{ printf "%s<span color=\"#ff79c6\">%s</span>%s<span color=\"#ff79c6\"> %s</span>\n", $1, $2, $3, $4 }'; [[ -z "${BLOCK_BUTTON}" ]] || kdialog --calendar date  
-command=date '+%I : %M %p' | awk '{ printf "%s<span color=\"#ff79c6\">%s</span>%s<span color=\"#ff79c6\"> %s</span>\n", $1, $2, $3, $4 }' 
+#command=date '+%I : %M %p' | awk '{ printf "%s<span color=\"#ff79c6\">%s</span>%s<span color=\"#ff79c6\"> %s</span>\n", $1, $2, $3, $4 }' 
+command=date '+%I : %M %p' | awk '{ printf "%s<span color=\"#e5b566\">%s</span>%s<span color=\"#e5b566\"> %s</span>\n", $1, $2, $3, $4 }' 
 #command=date '+%I:%M %p'
 interval=30
-#border=#bd93f9
-border=#ff79c6
+#border=#ff79c6
+border=#e5b566
 border_top=1
 border_right=0
 border_bottom=1

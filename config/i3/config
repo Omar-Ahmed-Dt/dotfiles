@@ -88,6 +88,7 @@ exec --no-startup-id xhost +
 exec --no-startup-id xfce4-power-manager &
 exec --no-startup-id blugon
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
+#exec --no-startup-id conky -c $HOME/.xmonad/scripts/system-overview &
 
 
 for_window [class="Arcolinux-welcome-app.py"] floating enable

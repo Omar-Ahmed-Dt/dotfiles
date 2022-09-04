@@ -197,3 +197,4 @@ ctrl + Pause
 # Pause button
 Pause
 	playerctl play-pause
+
