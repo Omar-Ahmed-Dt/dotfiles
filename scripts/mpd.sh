@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 filter() { mpc | sed "/^volume:/d;s/\\&/&amp;/g;s/\\[paused\\].*/⏸/g;/\\[playing\\].*/d;/^ERROR/Q" | paste -sd ' ' -;}
 
@@ -17,3 +17,18 @@ case $BLOCK_BUTTON in
 	6) mpc status | filter ; "$TERMINAL" -e "$EDITOR" "$0" ;;
 	*) mpc status | filter ;;
 esac
+
+
+#while true; do
+#  if ! mpc idle > /dev/null; then
+#    sleep 120
+#  fi
+#  if mpc status | grep playing > /dev/null; then
+#    echo "$(mpc current)"
+#  else
+#    echo
+#  fi
+#done
+
+
+

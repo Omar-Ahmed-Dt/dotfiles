@@ -246,6 +246,7 @@ alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
+alias prop="xprop"
 
 # bare git repo alias for dotfiles
 #alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
@@ -384,6 +385,7 @@ alias gpu="sudo nvim /etc/optimus-manager/optimus-manager.conf"
 alias smi="nvidia-smi"
 alias rmft="rm ~/.config/fish/functions/fish_prompt.fish"
 alias ct="kitty +kitten themes"
+alias journ="journalctl -f"
 
 # Function for fish 
 

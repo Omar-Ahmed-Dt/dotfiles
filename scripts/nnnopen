@@ -16,7 +16,7 @@ if [[ "${1#*.}" = "m3u" ]];then
 
 # image/*
 elif [[ "${mime%/*}" = "image" ]];then
-	sxiv -a "$1"
+	sxiv -ab "$1"
 # video/*
 elif [[ "${mime%/*}" = "video" || "${mime%/*}" = "audio" ]];then
 	mpv --player-operation-mode=pseudo-gui "$1"
@@ -49,5 +49,7 @@ elif [[ "$mime" = "text/x-perl" ]];then
 elif [[ "$mime" = "application/json" ]];then
 	kitty -e nvim "$1"
 elif [[ "$mime" = "text/troff" ]];then
+	kitty -e nvim "$1"
+elif [[ "$mime" = "application/x-setupscript" ]];then
 	kitty -e nvim "$1"
 fi
