@@ -96,4 +96,4 @@
 | Meetings | zoom droidcam |
 | Password Manager | keepassxc | 
 | Blue Light Filter | blugon | 
-| Note | notejot | 
+| Note | joplin | 
