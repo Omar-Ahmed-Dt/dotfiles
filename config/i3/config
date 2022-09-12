@@ -137,6 +137,7 @@ for_window [class="Gnome-terminal"] focus
 for_window [class="Termite"] focus
 for_window [class="Terminator"] focus
 for_window [class="Urxvt"] focus
+for_window [class="io.github.lainsce.Notejot"] floating enable
 new_window normal
 new_float normal
 popup_during_fullscreen smart

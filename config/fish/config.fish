@@ -386,6 +386,7 @@ alias smi="nvidia-smi"
 alias rmft="rm ~/.config/fish/functions/fish_prompt.fish"
 alias ct="kitty +kitten themes"
 alias journ="journalctl -f"
+alias note="io.github.lainsce.Notejot"
 
 # Function for fish 
 
