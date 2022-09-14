@@ -29,6 +29,7 @@ x-scheme-handler/mailto=Mailspring.desktop
 message/rfc822=userapp-Thunderbird-QG2BN1.desktop
 x-scheme-handler/mid=userapp-Thunderbird-QG2BN1.desktop
 x-scheme-handler/mailspring=Mailspring.desktop
+x-scheme-handler/msteams=teams.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Telegram Desktop-CIISR1.desktop;

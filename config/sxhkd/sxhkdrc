@@ -166,10 +166,6 @@ super + t
 super + shift + o 
 	~/scripts/hub.sh
 
-#song
-super + n 
-    ~/scripts/noti
-
 #ncmpcpp
 super + shift + n 
      kitty -e ncmpcpp && ~/github/mpdq/mpdq & 
@@ -197,4 +193,9 @@ ctrl + Pause
 # Pause button
 Pause
 	playerctl play-pause
-
+# joplin 
+super + n
+	joplin-desktop 
+#teams 
+super + shift + t 
+	teams 

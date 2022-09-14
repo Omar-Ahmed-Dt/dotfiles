@@ -92,7 +92,7 @@
 | General Tools | sxhkd dmenu rofi sxiv clipmenu trash-cli kdialog xorg-xprop | 
 | Laptop Battery Life | tlp tlp-rdw auto-cpufreq slimbookbattery | 
 | Office | libreoffice | 
-| Mail | thunderbird mailspring | 
+| Mail | thunderbird mailspring evolution | 
 | Meetings | zoom droidcam |
 | Password Manager | keepassxc | 
 | Blue Light Filter | blugon | 
