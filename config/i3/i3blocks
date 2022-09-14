@@ -90,7 +90,7 @@ border_right=0
 border_bottom=1
 border_left=0
 
-[i3-memory.sh]
+[ram.sh]
 interval=2 
 label=<span color="#e5b566"> </span>
 border=#e5b566
