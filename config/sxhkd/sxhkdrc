@@ -180,7 +180,7 @@ super + shift + v
 
 # mailspring  
 super + shift + m
-    mailspring
+    thunderbird
 
 #mount 
 super + Insert

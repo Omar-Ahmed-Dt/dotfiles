@@ -90,6 +90,7 @@ exec --no-startup-id blugon
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 #exec --no-startup-id conky -c $HOME/.xmonad/scripts/system-overview &
 #exec_always --no-startup-id dunst
+#exec --no-startup-id dunst
 #exec_always --no-startup-id dbus-launch
 #exec_always --no-startup-id xhost +SI:localuser:omar
 #exec_always --no-startup-id xhost +SI:localuser:root
@@ -147,6 +148,7 @@ gaps outer 0
 smart_gaps on
 smart_borders on
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
+#exec_always --no-startup-id ~/.config/polybar/launch.sh &
 bar {
     height 25
     workspace_buttons yes
