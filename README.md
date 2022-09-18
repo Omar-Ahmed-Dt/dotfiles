@@ -64,7 +64,7 @@
 > > * libreoffice-still
 
 > #### Mail Client 
-> > * mailspring
+> > * thunderbird
 
 > #### Virtual Machine 
 > > * vbox
