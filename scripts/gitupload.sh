@@ -1,6 +1,6 @@
 #!/bin/bash 
 cd ~/.config/
-cp -r alacritty fish neofetch ranger sxhkd zathura htop mpv paru starship.toml vlc dmscripts i3 pcmanfm yay sxiv mimeapps.list /home/omar/Documents/GitHub/dotfiles/config
+cp -r alacritty fish neofetch ranger sxhkd zathura htop mpv paru starship.toml vlc dmscripts i3 pcmanfm yay sxiv mimeapps.list dunst /home/omar/Documents/GitHub/dotfiles/config
 cd /home/omar/Documents/GitHub/dotfiles/config/dmscripts
 rm dmnote
 cp -r /home/omar/scripts/ /home/omar/Documents/GitHub/dotfiles/
