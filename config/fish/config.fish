@@ -8,7 +8,7 @@ set TERMINAL "kitty"                         # Sets the terminal type
 set EDITOR "nvim"
 set VISUAL "nvim"
 #export EDITOR=/usr/bin/nvim
-set DISPLAY ":0.0"
+#set DISPLAY ":0.0"
 
 ### "bat" as manpager
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
