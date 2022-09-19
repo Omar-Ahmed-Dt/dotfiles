@@ -23,15 +23,18 @@ super + shift + x
 
 #Vol up 
 XF86AudioRaiseVolume
-	amixer -q set Master 5%+ && pkill -RTMIN+10 i3blocks 
+	amixer -q set Master 5%+ && polybar-msg hook volbar 1 
+	#amixer -q set Master 5%+ && pkill -RTMIN+10 i3blocks 
 
 #Vol down 
 XF86AudioLowerVolume
-	amixer -q set Master 5%- && pkill -RTMIN+10 i3blocks
+	amixer -q set Master 5%- && polybar-msg hook volbar 1 
+	#amixer -q set Master 5%- && pkill -RTMIN+10 i3blocks
 
 #vol toggle 
 XF86AudioMute
-	amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
+	amixer -q set Master toggle && polybar-msg hook volbar 1
+	#amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
 
 ##mic toggle 
 #XF86AudioMicMute
@@ -50,15 +53,18 @@ XF86AudioMute
 
 #light up 
 XF86Search
-	light -A 5 && pkill -RTMIN+20 i3blocks
+	light -A 5 && polybar-msg hook backlight 1  
+	#light -A 5 && pkill -RTMIN+20 i3blocks
 
 #light down 
-XF86MonBrightnessDown
-	light -U 5 && pkill -RTMIN+20 i3blocks
+#XF86MonBrightnessDown
+#	light -U 5 && polybar-msg hook backlight 1  
+#	#light -U 5 && pkill -RTMIN+20 i3blocks
 
 #light down 
 XF86Explorer
-	light -U 5 && pkill -RTMIN+20 i3blocks
+	light -U 5 && polybar-msg hook backlight 1  
+	#light -U 5 && pkill -RTMIN+20 i3blocks
 
 #dmenu 
 super + shift + d 
