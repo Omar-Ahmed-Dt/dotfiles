@@ -35,13 +35,14 @@
     icon_position = left
     min_icon_size = 0
     max_icon_size = 32
-    icon_path = /usr/share/icons/Papirus/32x32
+    #icon_path = /usr/share/icons/Papirus/32x32
+    icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/:/usr/share/icons/Adwaita/16x16/legacy/
     sticky_history = yes
     history_length = 20
     always_run_script = true
     title = Dunst
     class = Dunst
-    ignore_dbusclose = false
+    ignore_dbusclose = false 
     force_xwayland = false
     force_xinerama = false
     mouse_left_click = do_action, close_current
