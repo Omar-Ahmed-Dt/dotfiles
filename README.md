@@ -7,10 +7,10 @@
 > > * systemd
 
 > #### Window Manager 
-> > * i3  
+> > * xmonad  
 
 > #### Status Bar 
->  > * i3blocks 
+>  > * polybar 
 
 > #### Terminal 
 >  > * kitty
