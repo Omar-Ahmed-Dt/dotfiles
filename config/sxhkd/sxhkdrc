@@ -23,18 +23,18 @@ super + shift + x
 
 #Vol up 
 XF86AudioRaiseVolume
-	amixer -q set Master 5%+ && polybar-msg hook volbar 1 
-	#amixer -q set Master 5%+ && pkill -RTMIN+10 i3blocks 
+	amixer -q set Master 5%+ && pkill -RTMIN+10 i3blocks 
+	#amixer -q set Master 5%+ && polybar-msg hook volbar 1 
 
 #Vol down 
 XF86AudioLowerVolume
-	amixer -q set Master 5%- && polybar-msg hook volbar 1 
-	#amixer -q set Master 5%- && pkill -RTMIN+10 i3blocks
+	amixer -q set Master 5%- && pkill -RTMIN+10 i3blocks
+	#amixer -q set Master 5%- && polybar-msg hook volbar 1 
 
 #vol toggle 
 XF86AudioMute
-	amixer -q set Master toggle && polybar-msg hook volbar 1
-	#amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
+	amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
+	#amixer -q set Master toggle && polybar-msg hook volbar 1
 
 ##mic toggle 
 #XF86AudioMicMute
@@ -48,23 +48,23 @@ XF86AudioMute
 #    amixer set Capture 5%- && pkill -RTMIN+17 i3blocks
 
 #light up 
-#XF86MonBrightnessUp
-#	light -A 5 && pkill -RTMIN+20 i3blocks
+XF86MonBrightnessUp
+		light -A 5 && pkill -RTMIN+20 i3blocks
 
 #light up 
 XF86Search
-	light -A 5 && polybar-msg hook backlight 1  
-	#light -A 5 && pkill -RTMIN+20 i3blocks
+		light -A 5 && pkill -RTMIN+20 i3blocks
+	#light -A 5 && polybar-msg hook backlight 1  
 
 #light down 
-#XF86MonBrightnessDown
-#	light -U 5 && polybar-msg hook backlight 1  
-#	#light -U 5 && pkill -RTMIN+20 i3blocks
+XF86MonBrightnessDown
+		light -U 5 && pkill -RTMIN+20 i3blocks
+	#light -U 5 && polybar-msg hook backlight 1  
 
 #light down 
 XF86Explorer
-	light -U 5 && polybar-msg hook backlight 1  
-	#light -U 5 && pkill -RTMIN+20 i3blocks
+		light -U 5 && pkill -RTMIN+20 i3blocks
+	#light -U 5 && polybar-msg hook backlight 1  
 
 #dmenu 
 super + shift + d 
@@ -72,11 +72,11 @@ super + shift + d
 
 #lang 
 shift + Alt_L
-	(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && polybar-msg hook keyboard 1
-	#(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
+	(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
+	#(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && polybar-msg hook keyboard 1
 shift + Alt_R
-	(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && polybar-msg hook keyboard 1
-	#(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
+	(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
+	#(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && polybar-msg hook keyboard 1
 
 #power 
 super + Escape 
