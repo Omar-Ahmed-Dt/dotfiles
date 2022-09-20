@@ -1,4 +1,4 @@
 #!/bin/bash 
-echo 🐧 $(checkupdates | wc -l) pk 
+echo  $(checkupdates | wc -l) pks 
 
 

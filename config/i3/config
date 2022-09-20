@@ -81,20 +81,11 @@ exec --no-startup-id volumeicon
 exec --no-startup-id feh --bg-fill /home/omar/.cache/styli.sh/wallpaper.jpg & 
 exec_always --no-startup-id sxhkd 
 exec --no-startup-id mpd
-#exec --no-startup-id mpd-mpris & 
-#exec --no-startup-id mpDris2
 exec --no-startup-id clipmenud
-#exec --no-startup-id xhost + 
 exec --no-startup-id xfce4-power-manager &
 exec --no-startup-id blugon
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
-#exec --no-startup-id conky -c $HOME/.xmonad/scripts/system-overview &
-#exec_always --no-startup-id dunst
 exec --no-startup-id dunst
-#exec_always --no-startup-id dbus-launch
-#exec_always --no-startup-id xhost +SI:localuser:omar
-#exec_always --no-startup-id xhost +SI:localuser:root
-#exec_always --no-startup-id xhost +local:
 exec_always --no-startup-id xhost +local:root 
 
 
