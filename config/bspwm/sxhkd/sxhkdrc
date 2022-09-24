@@ -1,0 +1,415 @@
+#################################################################
+# KEYBOARD BINDINGS FOR ANY TWM
+#################################################################
+
+# Reload sxhkd 
+shift + Escape
+	pkill -USR1 -x sxhkd
+
+#################################################################
+# SUPER + KEYS
+#################################################################
+
+#Toggle fullscreen of window
+super + f
+	bspc node --state \~fullscreen
+
+# Toggle pseudo tiling of window
+super + p
+	bspc node --state \~pseudo_tiled
+
+#################################################################
+# SUPER KEYS
+#################################################################
+
+#Focus selected desktop
+super + Tab
+	bspc desktop -f '^{1-9,10}'
+
+# Increase/decrease window gap on focused desktop
+super + bracket{left,right}
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
+
+# set the window state
+super + space
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# Move focus to other monitor
+super + BackSpace
+		bspc monitor -f next
+
+#################################################################
+# SUPER + ALT KEYS
+#################################################################
+
+# Move floating window
+super + alt + {_,shift + }{Left,Down,Up,Right}
+	~/.config/bspwm/scripts/move-window {_,edge-}{west,south,north,east}
+
+#################################################################
+# SUPER + CONTROL KEYS
+#################################################################
+
+# Cancel preselection
+
+	bspc node --presel-dir cancel
+
+#################################################################
+# SUPER + SHIFT KEYS
+#################################################################
+
+
+#Reload bspwm
+super + shift + r
+	~/.config/bspwm/bspwmrc
+# pkill bspwm 
+super + shift + q 
+	pkill bspwm
+#kill
+super + shift + c 
+	bspc node -c
+
+#Logout
+#super + shift + x
+#	bspc quit
+
+# Focus/swap windows by direction
+super + {_,shift + }{h,j,k,l}
+	bspc node --{focus,swap} {west,south,north,east}
+
+## Flip layout vertically/horizontally
+#super + {_,shift + }a
+#	bspc node @/ --flip {vertical,horizontal}
+
+## Move focused window to other monitor
+#super + shift + Left
+#	bspc node -m next --follow
+#
+## Move focused window to other monitor
+#super + shift + Right
+#		bspc node -m next --follow
+#
+## Move focused window to other monitor
+#super + shift + Up
+#	bspc node -m next --follow
+#
+## Move focused window to other monitor
+#super + shift + Down
+#		bspc node -m next --follow
+
+#################################################################
+# SUPER + CONTROL KEYS
+#################################################################
+
+## Focus/swap windows by direction
+#super + ctrl + {Left,Down,Up,Right}
+#	bspc node --{focus} {west,south,north,east}
+
+# Contract tiled space
+super + ctrl + {h,j,k,l}
+	bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
+
+# Focus parent/brother/first/second for preselection
+super + ctrl + {e,r,t,y}
+	bspc node --focus @{parent,brother,first,second}
+
+# Preselect the splitting area for next window on leaf/parent
+super + ctrl + {u,i,o,p}
+	bspc node --presel-dir \~{west,south,north,east}
+
+# Define splitting ratio for next window on leaf/parent
+super + ctrl + {_,shift +}{1-9}
+	bspc node {_,@/} --presel-ratio 0.{1-9}
+
+
+#################################################################
+# ALT KEYS
+#################################################################
+
+##Focus selected desktop
+#alt + Tab
+#	bspc desktop -f '^{1-9,10}'
+#
+#	#Focus selected desktop
+#alt + shift + Tab
+#	bspc desktop -f '^{1-9,10}'
+
+#Rotate desktop
+alt + space
+	bspc node @/ --rotate {90,-90}
+
+#################################################################
+# ALT + SHIFT KEYS
+#################################################################
+
+## Expand tiled space
+#alt + super + {h,j,k,l}
+#	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
+
+#################################################################
+# CTRL + ALT KEYS
+#################################################################
+
+# Focus next/previous window
+super + h
+	bspc node --focus west
+
+# Focus next/previous window
+super + l
+	bspc node --focus east
+
+# Focus Up window
+super + k
+	bspc node --focus north
+
+# Focus Down window
+super + j
+	bspc node --focus south
+
+#################################################################
+#################################################################
+##################   AZERTY/QWERTY/ ... KEYBOARD#################
+#################################################################
+#################################################################
+
+#Switch here between qwerty and azerty or make new one
+#Focus selected desktop FOR QWERTY KEYBOARDS
+super + {1-9,0}
+	bspc desktop -f '^{1-9,10}'
+
+#Focus selected desktop	FOR BELIGIAN AZERTY KEYBOARDS
+#super + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
+#    bspc desktop -f '^{1-9,10}'
+
+#Focus selected desktop	FOR FRNECH AZERTY KEYBOARDS
+#super + {ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla,agrave}
+#    bspc desktop -f '^{1-9,10}'
+
+#################################################################
+
+#Switch here between qwerty and azerty or make new one
+#Move window to selected desktop FOR QWERTY KEYBOARDS
+super + shift + {1-9,0}
+    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
+
+#Move window to selected desktop FOR AZERTY KEYBOARDS
+#super + shift + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
+#    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
+
+#################################################################
+
+
+## super & mouse scroll
+
+# Focused desktop window gap
+super + button{4,5}
+  bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 2 ))
+
+
+##################################################################
+
+# Terminal 
+super + Return 
+	kitty
+
+#########################
+#        POLYBAR        #
+#########################
+
+#Hide polybar
+super + b
+    polybar-msg cmd toggle
+
+#browser 
+super + shift + b 
+	~/scripts/browser.sh
+
+#file manger gui 
+super + shift + Return
+	pcmanfm /home/omar
+
+#xkill 
+super + shift + x 
+	xkill
+
+#Vol up 
+XF86AudioRaiseVolume
+	amixer set Master 5%+ && polybar-msg hook volbar 1 
+
+#Vol down 
+XF86AudioLowerVolume
+	amixer set Master 5%- && polybar-msg hook volbar 1 
+
+#vol toggle 
+XF86AudioMute
+	amixer set Master toggle && polybar-msg hook volbar 1
+
+##mic toggle 
+#XF86AudioMicMute
+#    pactl set-source-mute @DEFAULT_SOURCE@ toggle && pkill -RTMIN+17 i3blocks
+
+##mic up 
+#ctrl + m
+#    amixer set Capture 5%+ && pkill -RTMIN+17 i3blocks
+##mic down 
+#ctrl + n
+#    amixer set Capture 5%- && pkill -RTMIN+17 i3blocks
+
+#light up 
+XF86MonBrightnessUp
+	light -A 5 && polybar-msg hook backlight 1  
+
+#light up 
+XF86Search
+	light -A 5 && polybar-msg hook backlight 1  
+
+#light down 
+XF86MonBrightnessDown
+	light -U 5 && polybar-msg hook backlight 1  
+
+#light down 
+XF86Explorer
+	light -U 5 && polybar-msg hook backlight 1  
+
+#dmenu 
+super + shift + d 
+	dmenu_run  
+
+#lang 
+shift + Alt_L
+	(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && polybar-msg hook keyboard 1
+shift + Alt_R
+	(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && polybar-msg hook keyboard 1
+
+#power 
+super + Escape 
+	/home/omar/scripts/power.sh
+
+##wallpaper 
+#super + shift + i 
+#	/home/omar/github/styli.sh/styli.sh && notify-send "Changing wallpaper is done." && exit 0 
+#
+##move wall 
+#super + i 
+#    ~/scripts/wall.sh
+
+#play pause 
+XF86AudioPlay
+	playerctl play-pause
+
+#play next 
+XF86AudioNext
+	playerctl next
+
+#play pre
+XF86AudioPrev 
+	 playerctl previous
+
+#play stop 
+XF86AudioStop 
+	playerctl stop
+
+#mpd previous
+ctrl + XF86AudioPrev 
+    mpc prev 
+
+#mpd next
+ctrl + XF86AudioNext 
+    mpc next
+
+#mpd stop
+ctrl + XF86AudioPlay
+    mpc toggle 
+
+#clipboard 
+super + d 
+	clipmenu  
+
+#htop 
+super + shift + h 
+  /home/omar/scripts/resources.sh
+
+#screeen record 
+super + Print
+	simplescreenrecorder
+
+#mpv youtube 
+super + p 
+ mpv $(xclip -o)
+
+#mp3-youtube-dl 
+super + shift + y
+    /home/omar/scripts/ytdmenu.sh
+
+#screenshot 
+Print
+    /home/omar/scripts/screendmenu.sh
+
+#kill process 
+super + shift + k 
+    /home/omar/github/dmscripts/scripts/dm-kill
+
+##websearch 
+#super + w
+#    /home/omar/github/dmscripts/scripts/dm-websearch
+
+#github disktop
+super + shift + g 
+    github-desktop
+
+#emoji 
+super + o 
+    bemoji
+
+#kill mpv 
+super + v 
+    pkill mpv 
+
+#find cursor 
+super + c 
+    xfce4-find-cursor
+#date 
+super + t 
+    kdialog --calendar date
+#		#gsimplecal
+
+#hub 
+super + shift + o 
+	~/scripts/hub.sh
+
+#ncmpcpp
+super + shift + n 
+     kitty -e ncmpcpp && ~/github/mpdq/mpdq & 
+
+#nnn file manger 
+shift + Return
+    ~/scripts/nnn.sh
+
+#creat vim file 
+super + shift + v 
+    kitty -e nvim
+
+# mailspring  
+super + shift + m
+    thunderbird
+
+#mount 
+super + Insert
+	~/scripts/mount_umount.sh
+
+# Pause button 
+ctrl + Pause
+    mpc toggle 
+
+# Pause button
+Pause
+	playerctl play-pause
+# joplin 
+super + n
+	joplin-desktop 
+#teams 
+super + shift + t 
+	teams 
+#polybar 
+super + e 
+	polybar-msg action "#volbar.hook.0"
