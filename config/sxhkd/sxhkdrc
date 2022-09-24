@@ -207,3 +207,6 @@ super + n
 #teams 
 super + shift + t 
 	teams 
+# mpc stop 
+ctrl + BackSpace 
+	mpc stop 
