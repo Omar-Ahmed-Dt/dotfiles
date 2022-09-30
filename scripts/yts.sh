@@ -15,5 +15,5 @@ if [["$choice" == "exit"]];then
     exit
 else
     link=$(printf '%s\n' "${choice}" | awk '{print $NF}' )
-    kitty -e mpv --no-video "$link"
+    kitty -e mpv --no-video "$link" &
 fi

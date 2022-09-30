@@ -86,7 +86,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id blueberry-tray
 exec --no-startup-id nm-applet
 exec_always --no-startup-id numlockx on
-exec --no-startup-id volumeicon
+#exec --no-startup-id volumeicon
 exec --no-startup-id feh --bg-fill /home/omar/.cache/styli.sh/wallpaper.jpg & 
 exec_always --no-startup-id sxhkd 
 exec --no-startup-id mpd
@@ -157,8 +157,8 @@ bar {
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks
     colors {
-        #background #040000
-        background #282a33 
+        background #040000
+        #background #282a33 
         statusline #eeeeee
         separator  #eaf08d
         focused_workspace     #83a598 #458588 #ebdbb2

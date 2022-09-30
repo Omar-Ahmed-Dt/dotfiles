@@ -43,7 +43,7 @@ border_bottom=1
 border_left=0
 
 [pacman.sh]
-interval=once
+interval=3600
 #label=<span color="#bd93f9"> </span>
 label=<span color="#bd93f9"> </span>
 border=#bd93f9
