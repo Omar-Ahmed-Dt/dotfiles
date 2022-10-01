@@ -210,3 +210,7 @@ super + shift + t
 # mpc stop 
 ctrl + BackSpace 
 	mpc stop 
+# record 
+super + shift + u 
+	~/scripts/recordscreen.sh && ~/scripts/recordpid.sh && pkill -RTMIN+5 i3blocks || pkill -9 ffmpeg && pkill -RTMIN+5 i3blocks
+
