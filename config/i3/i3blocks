@@ -6,6 +6,19 @@ color=#ebdbb2
 separator_block_width=18
 markup=pango
 
+[recordpid.sh]
+align=center
+border_top=1
+border=#ff79c6
+color=#f8f8f2
+border_right=0
+border_bottom=1
+border_left=0
+interval=once
+signal=5
+#label=<span > 🎥 </span>
+label=<span color="#ff79c6">  </span>
+
 [currently_playing]
 command=~/scripts/currently_playing
 interval=persist
