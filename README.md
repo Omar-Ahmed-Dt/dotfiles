@@ -97,3 +97,38 @@
 | Password Manager | keepassxc | 
 | Blue Light Filter | blugon | 
 | Note | joplin | 
+
+| Open | Keybindings  |
+| -----     | --------------- |
+| Reload sxhkd | shift + Escape | 
+| terminal | super + Return | 
+| browser  | super + shift + b |
+| nvim | super + shift + v |
+| pcmanfm | super + shift + Return | 
+| xkill | super + shift + x | 
+| dmenu | super + shift + d | 
+| power | super + Escape | 
+| clipboard | super  + d | 
+| resources | super + shift + h | 
+| screen record | super + print | 
+| youtube in mpv | super + p | 
+| youtube-dl download | super + shift + y | 
+| screendmenu | Print | 
+| kill process | super + shift + k | 
+| github disktop | super + shift + g | 
+| emoji | super + o | 
+| kill mpv | super + v | 
+| find cursor | super + c | 
+| date | super  + t | 
+| hub | super + shift + o | 
+| ncmpcpp | super + shift + n | 
+| nnn | shift + Return | 
+| mailspring | super + shift + m | 
+| mount | super + Insert | 
+| joplin | super + n | 
+| teams | super + shift + t | 
+| record screen | super + shift + u | 
+| virtual machine | super + shift + a | 
+| stylish | super + shift + w | 
+
+
