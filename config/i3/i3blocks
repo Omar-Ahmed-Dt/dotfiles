@@ -12,7 +12,7 @@ border_top=1
 border=#ff79c6
 color=#f8f8f2
 border_right=0
-border_bottom=1
+border_bottom=0
 border_left=0
 interval=once
 signal=5
@@ -29,7 +29,7 @@ border=#7e8d50
 #color=#7e8d50
 color=#f8f8f2
 border_right=0
-border_bottom=1
+border_bottom=0
 border_left=0
 
 [lang]
@@ -42,7 +42,7 @@ border=#e5b566
 #color=#e5b566
 color=#f8f8f2
 border_right=0
-border_bottom=1
+border_bottom=0
 border_left=0
 
 [weather.sh]
@@ -52,7 +52,7 @@ border=#ff79c6
 color=#f8f8f2
 border_top=1
 border_right=0
-border_bottom=1
+border_bottom=0
 border_left=0
 
 [pacman.sh]
@@ -64,7 +64,7 @@ border=#bd93f9
 color=#f8f8f2
 border_top=1
 border_right=0
-border_bottom=1
+border_bottom=0
 border_left=0
 
 [uptime.sh]
@@ -76,7 +76,7 @@ border=#6c99ba
 color=#f8f8f2
 border_top=1
 border_right=0
-border_bottom=1
+border_bottom=0
 border_left=0
 
 [nettraf.sh]
@@ -87,7 +87,7 @@ border=#e5b566
 color=#f8f8f2
 border_top=1
 border_right=0
-border_bottom=1
+border_bottom=0
 border_left=0
 
 [battery.sh]
@@ -98,7 +98,7 @@ color=#f8f8f2
 border=#ff79c6
 border_top=1
 border_right=0
-border_bottom=1
+border_bottom=0
 border_left=0
 
 #[gpuload.sh]
@@ -107,7 +107,7 @@ border_left=0
 #border=#bd93f9
 #border_top=1
 #border_right=0
-#border_bottom=1
+#border_bottom=0
 #border_left=0
 
 [cpu.sh]
@@ -118,7 +118,7 @@ border=#6c99ba
 color=#f8f8f2
 border_top=1
 border_right=0
-border_bottom=1
+border_bottom=0
 border_left=0
 
 [ram.sh]
@@ -129,7 +129,7 @@ border=#e5b566
 color=#f8f8f2
 border_top=1
 border_right=0
-border_bottom=1
+border_bottom=0
 border_left=0
 
 [backlight.sh]
@@ -141,7 +141,7 @@ border=#ff79c6
 color=#f8f8f2
 border_top=1
 border_right=0
-border_bottom=1
+border_bottom=0
 border_left=0
 
 [volbar2.sh]
@@ -152,7 +152,7 @@ border=#bd93f9
 color=#f8f8f2
 border_top=1
 border_right=0
-border_bottom=1
+border_bottom=0
 border_left=0
 
 [clock.sh]
@@ -163,7 +163,7 @@ border=#6c99ba
 color=#f8f8f2
 border_top=1
 border_right=0
-border_bottom=1
+border_bottom=0
 border_left=0
 
 [clock]
@@ -176,6 +176,15 @@ border=#e5b566
 label=<span > 🕓 </span>
 border_top=1
 border_right=0
-border_bottom=1
+border_bottom=0
 border_left=0
 
+[Hidden]
+command=xdotool key "super+b"
+full_text= H : 
+color=#d4bfff
+border=#d4bfff
+border_top=1
+border_right=0
+border_bottom=0
+border_left=0
