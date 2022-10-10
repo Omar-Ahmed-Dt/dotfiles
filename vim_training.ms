@@ -256,3 +256,5 @@ space + o : open explorer files and move from vim page to explorer files
 space + e : close explorer files 
 .IP \[bu] 
 space + d : Dashboard 
+.IP \[bu] 
+space + / : Comment Line  

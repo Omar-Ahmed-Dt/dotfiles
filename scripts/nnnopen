@@ -52,4 +52,6 @@ elif [[ "$mime" = "text/troff" ]];then
 	kitty -e nvim "$1"
 elif [[ "$mime" = "application/x-setupscript" ]];then
 	kitty -e nvim "$1"
+elif [[ "$mime" = "text/x-script.python" ]];then
+	kitty -e nvim "$1"
 fi
