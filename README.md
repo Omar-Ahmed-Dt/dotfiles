@@ -98,7 +98,7 @@
 | Blue Light Filter | blugon | 
 | Note | joplin | 
 
-| Open | Keybindings  |
+| Event  | Keybinding |
 | -----     | --------------- |
 | Reload sxhkd | shift + Escape | 
 | terminal | super + Return | 
