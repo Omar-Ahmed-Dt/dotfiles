@@ -96,6 +96,8 @@ exec --no-startup-id blugon
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 exec --no-startup-id dunst
 exec_always --no-startup-id xhost +local:root 
+exec_always --no-startup-id setxkbmap -option caps:escape  
+
 
 
 # Floating 
