@@ -14,3 +14,4 @@ cp -r ~/.config/nnn/plugins ~/Documents/GitHub/dotfiles/config/nnn
 cp -r ~/.config/kitty/kitty.conf ~/Documents/GitHub/dotfiles/config/kitty
 cp -r ~/.zshrc ~/Documents/GitHub/dotfiles/zshrc
 cp -r ~/.Xresources ~/Documents/GitHub/dotfiles/Xresources
+cp  ~/vim_training/vim_training.ms ~/Documents/GitHub/dotfiles/vim_training.ms

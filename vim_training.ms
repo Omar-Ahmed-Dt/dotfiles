@@ -258,3 +258,12 @@ space + e : close explorer files
 space + d : Dashboard 
 .IP \[bu] 
 space + / : Comment Line  
+.IP \[bu] 
+>b : Move tab to right 
+.IP \[bu] 
+<b : Move tab to left 
+.IP \[bu] 
+space + T : Close spacific tab
+.IP \[bu] 
+space  + c : Close current tab
+
