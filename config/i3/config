@@ -88,6 +88,7 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id numlockx on
 #exec --no-startup-id volumeicon
 exec --no-startup-id feh --bg-fill /home/omar/.cache/styli.sh/wallpaper.jpg & 
+#exec --no-startup-id feh --bg-fill --randomize https://unsplash.it/1920/1080?random
 exec_always --no-startup-id sxhkd 
 exec --no-startup-id mpd
 exec --no-startup-id clipmenud
@@ -96,7 +97,7 @@ exec --no-startup-id blugon
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 exec --no-startup-id dunst
 exec_always --no-startup-id xhost +local:root 
-exec_always --no-startup-id setxkbmap -option caps:escape  
+exec --no-startup-id setxkbmap -option caps:escape  
 
 
 
@@ -108,7 +109,7 @@ for_window [class="Blueberry.py"] floating enable
 for_window [class="Brasero"] floating disable
 for_window [class="Galculator"] floating enable
 for_window [class="mpv"] floating enable
-for_window [class="Pavucontrol"] floating enable
+#for_window [class="Pavucontrol"] floating enable
 for_window [class="Gnome-disks"] floating disable
 for_window [class="^Gnome-font-viewer$"] floating enable
 for_window [class="^Gpick$"] floating enable

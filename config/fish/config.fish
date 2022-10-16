@@ -249,6 +249,7 @@ alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 alias prop="xprop"
 
+
 # bare git repo alias for dotfiles
 #alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 
@@ -391,6 +392,11 @@ alias note="io.github.lainsce.Notejot"
 
 # Function for fish 
 
+function j 
+  cd $(autojump $argv)  
+end 
+
+
 function sv 
     ~/scripts/dmenu_service.sh
 end 
@@ -444,6 +450,45 @@ end
 # function vim
 #   nvim $argv
 #end
+
+#alias vssh="vagrant ssh"
+#alias vup="vagrangt up"
+#alias vha="vagrangt halt"
+#alias vsu="vagrangt suspend"
+#alias vr="vagrant reload"
+#alias vre="vagrangt resume"
+
+function vup 
+ vagrant up $argv
+end 
+
+function vst 
+ vagrant status $argv 
+end 
+
+function vsta
+ vagrant status 
+end 
+
+function vssh
+  vagrant ssh $argv
+end 
+
+function vha
+  vagrant halt $argv
+end 
+
+function vsu
+  vagrant suspend $argv
+end 
+
+function vr
+  vagrant reload $argv
+end 
+
+function vre
+  vagrant resume $argv
+end 
 
 ####################################
 ####################################
