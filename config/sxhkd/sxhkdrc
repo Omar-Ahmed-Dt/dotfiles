@@ -219,3 +219,6 @@ super + shift + a
 # stylish
 super + shift + w 
 	~/scripts/styli.sh
+# music script 
+super + shift + p 
+  ~/github/dmscripts/scripts/dm-music

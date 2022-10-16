@@ -146,7 +146,7 @@ URxvt.keysym.Control-Shift-V: perl:clipboard:paste
 ! ------------------------------------------------------------------------------
 
 xterm*faceName: Monospace
-xterm*faceSize: 11
+xterm*faceSize: 14
 xterm*loginShell: true
 xterm*vt100*geometry: 100x30
 xterm*saveLines: 50000
