@@ -99,8 +99,6 @@ exec --no-startup-id dunst
 exec_always --no-startup-id xhost +local:root 
 exec --no-startup-id setxkbmap -option caps:escape  
 
-
-
 # Floating 
 for_window [class="Arcolinux-welcome-app.py"] floating enable
 for_window [class="Arcolinux-calamares-tool.py"] floating enable
