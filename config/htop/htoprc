@@ -22,5 +22,5 @@ color_scheme=0
 delay=15
 left_meters=LeftCPUs RightCPUs 
 left_meter_modes=1 1  
-right_meters=Memory Swap NetworkIO Battery
-right_meter_modes=1 1 2 2 
+right_meters=Memory Swap NetworkIO Battery Uptime 
+right_meter_modes=1 1 2 2 2 
