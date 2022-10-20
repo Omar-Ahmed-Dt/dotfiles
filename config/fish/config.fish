@@ -389,6 +389,10 @@ alias rmft="rm ~/.config/fish/functions/fish_prompt.fish"
 alias ct="kitty +kitten themes"
 alias journ="journalctl -f"
 alias note="io.github.lainsce.Notejot"
+alias rm="rm -i"
+alias vt="vagrant"
+alias V="sudoedit"
+alias rf='source ~/.config/fish/config.fish'
 
 # Function for fish 
 
@@ -458,37 +462,37 @@ end
 #alias vr="vagrant reload"
 #alias vre="vagrangt resume"
 
-function vup 
- vagrant up $argv
-end 
-
-function vst 
- vagrant status $argv 
-end 
-
-function vsta
- vagrant status 
-end 
-
-function vssh
-  vagrant ssh $argv
-end 
-
-function vha
-  vagrant halt $argv
-end 
-
-function vsu
-  vagrant suspend $argv
-end 
-
-function vr
-  vagrant reload $argv
-end 
-
-function vre
-  vagrant resume $argv
-end 
+# function vup 
+#  vagrant up $argv
+# end 
+#
+# function vst 
+#  vagrant status $argv 
+# end 
+#
+# function vsta
+#  vagrant status 
+# end 
+#
+# function vssh
+#   vagrant ssh $argv
+# end 
+#
+# function vha
+#   vagrant halt $argv
+# end 
+#
+# function vsu
+#   vagrant suspend $argv
+# end 
+#
+# function vr
+#   vagrant reload $argv
+# end 
+#
+# function vre
+#   vagrant resume $argv
+# end 
 
 ####################################
 ####################################

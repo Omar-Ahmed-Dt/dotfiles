@@ -124,7 +124,8 @@ super + d
 
 #htop 
 super + shift + h 
-  /home/omar/scripts/resources.sh
+  kitty -e htop 
+  #/home/omar/scripts/resources.sh
 
 #screeen record 
 super + Print
