@@ -343,7 +343,7 @@ alias tr='trash-restore'
 #alias rm='trash-put'
 alias td='cd ~/.local/share/Trash/files'
 alias te='trash-empty'
-alias rk='pulseaudio -k; pulseaudio --start'
+# alias rk='pulseaudio -k; pulseaudio --start'
 alias pulse='doas nvim /etc/pulse/default.pa'
 alias gs='cd ~/scripts'
 alias pr='proxychains'
@@ -393,8 +393,14 @@ alias rm="rm -i"
 alias vt="vagrant"
 alias V="sudoedit"
 alias rf='source ~/.config/fish/config.fish'
+alias rkeys="~/scripts/keys.sh"
 
 # Function for fish 
+
+function keys
+  xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+end 
+
 
 function j 
   cd $(autojump $argv)  
