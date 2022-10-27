@@ -6,6 +6,9 @@
 > #### Service Manager 
 > > * systemd
 
+> #### Desktop Display Manager 
+> > * sddm
+
 > #### Window Manager 
 > > * i3  
 
@@ -77,7 +80,7 @@
 | -----     | --------------- |
 | Permissions  | doas |
 | Aur Helper  | paru yay git |
-| Display |  xorg-server xorg-xrandr lightdm lightdm-gtk-greeter xorg-xrdb |
+| Display |  xorg-server xorg-xrandr lightdm lightdm-gtk-greeter xorg-xrdb sddm |
 | Editor and IDE | nvim [Github for nvim..](https://github.com/AstroNvim/AstroNvim), vscodium| 
 | Scripts | dm-scripts [Gitlap for dmscripts..](https://gitlab.com/dwt1/dmscripts)|
 | Multimedia | pulseaudio pulsemixer mpv mpv-mpris mpd mpDris2 mpc moc ncmpcpp youtube-dl yt-dlp ffmpeg simplescreenrecorder obs | 
