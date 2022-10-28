@@ -607,4 +607,3 @@ function se() {
 function pmsii(){
   yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk "{print \$2}")' | xargs -ro  yay -S
 }
-
