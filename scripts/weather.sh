@@ -1,6 +1,6 @@
 #!/bin/sh
 
-key="8cc75d17134e5ae1a723b5a39e7b6850" # api key is free of charge for personal usage
+key="0eea53b5f49182d78eb7acacd66fe81e" # api key is free of charge for personal usage
 cityid="347497" #city id can be found at https://openweathermap.org in the url bar
 lang="us"
 unit="metric" # use Celsius or Fahrenheit
