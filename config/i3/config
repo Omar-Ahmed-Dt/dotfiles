@@ -1,5 +1,8 @@
 # My configuration file 
 
+# current displays
+exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
+
 # Set
 set $mod Mod4
 set $up k
@@ -47,6 +50,13 @@ bindsym $mod+shift+q exec --no-startup-id i3exit logout
 bindsym $mod+a focus parent
 bindsym $mod+z focus child
 bindsym $mod+b bar mode toggle
+
+# Indicator 
+# split in horizontal orientation
+bindsym $mod+i split h
+
+# split in vertical orientation
+bindsym $mod+u split v
 
 # Floating and Fullscreen
 floating_modifier $mod
@@ -99,6 +109,8 @@ exec --no-startup-id dunst
 exec_always --no-startup-id xhost +local:root 
 #exec --no-startup-id setxkbmap -option caps:escape  
 exec --no-startup-id $HOME/scripts/keys.sh
+# exec --no-startup-id alsactl --file ~/.config/asound.state store
+
 
 # Floating 
 for_window [class="Arcolinux-welcome-app.py"] floating enable
@@ -159,8 +171,9 @@ bar {
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks
     colors {
-        #background #040000
+        # background #040000
         background #282a33 
+        # background #282c34
         #background #35455c
         statusline #eeeeee
         separator  #eaf08d
@@ -171,7 +184,9 @@ bar {
       }
     }
     # class                 border  backgr. text    indicator
-    client.focused          #353439 #b0c4be #e5e5e5 #98c379
+    #client.focused          #353439 #b0c4be #e5e5e5 #98c379
+    #client.focused          #353439 #b0c4be #e5e5e5 #e8331c
+    client.focused          #353439 #b0c4be #e5e5e5 #51afef
     client.unfocused        #222222 #222222 #aaaaaa #222222
     client.focused_inactive #222222 #222222 #a9a9a9 #222222
     client.placeholder      #222222 #222222 #aaaaaa #222222

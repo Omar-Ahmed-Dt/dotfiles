@@ -1,1 +1,1 @@
-/home/omar/.local/share/omf/themes/edan/fish_prompt.fish
+/home/omar/.local/share/omf/themes/sashimi/fish_prompt.fish

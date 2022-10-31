@@ -1,4 +1,3 @@
-.\" groff -ms vim_training.ms -T pdf > vim_training.pdf 
 .nr PS 14z  \" document font size
 .TL 
 Vim commands

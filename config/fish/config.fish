@@ -279,7 +279,7 @@ alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-(date +%Y.%m.%d-%H.%M.%S)'
 
 #my config 
 #alias v='doas nvim'
-alias h='cd ~'
+# alias h='cd ~'
 alias p='cd ..'
 alias C='doas chmod 777'
 alias c='doas chmod 744'
@@ -331,6 +331,8 @@ alias y='ytfzf -ml'
 #alias yy='ytfzf -t'
 #alias df='df -h'
 alias df='duf'
+alias dfdr='dust'
+alias dfd='dust -r'
 alias printer='system-config-printer'
 alias printerinstall='hp-setup -u'
 alias epdf='okular'
@@ -355,7 +357,7 @@ alias power='tlpui'
 #alias m='cmatrix'
 alias m='unimatrix -n -s 96 -l o'
 alias gx='cd /usr/share/xsessions'
-alias color='rgb-tui'
+#alias color='rgb-tui'
 alias ns='nvidia-smi'
 alias ft='xdg-mime query filetype'
 alias fd='xdg-mime query default'
@@ -364,17 +366,25 @@ alias search='find / -iname'
 #alias size='du -sh'
 alias rip='~/scripts/rip.sh' #to get public ip 
 alias ip='ip --color a' #to get private ip 
-alias ll='exa --group-directories-first  --icons -lh'
-alias la='exa --group-directories-first  --icons -lah'
-alias l='exa --group-directories-first  --icons'
-alias ls='exa --group-directories-first  --icons'
+#alias ll='exa --group-directories-first  --icons -lh'
+#alias la='exa --group-directories-first  --icons -lah'
+#alias l='exa --group-directories-first  --icons'
+#alias ls='exa --group-directories-first  --icons'
+alias ll='lsd -lh'
+alias la="lsd -lah"
+alias l="lsd"
+alias ls="lsd"
+alias llp="lsd -lh --permission octal"
+alias lls="lsd -lhS"
+alias llt="lsd -lht"
+alias llS="lsd -l --total-size 2> /dev/null"
 #alias hub='/home/omar/github/dmscripts/scripts/dm-hub'
 alias calc='gnome-calculator'
 alias smus='mpd && ncmpcpp'
 alias mus='ncmpcpp'
 alias emus='pkill mpd'
 alias rd='zaread'
-alias size='gdu'
+alias size='du -sh'
 alias gm='cd /media'
 alias yts='~/scripts/yts.sh'
 alias vs='vscodium'
@@ -394,17 +404,30 @@ alias vt="vagrant"
 alias V="sudoedit"
 alias rf='source ~/.config/fish/config.fish'
 alias rkeys="~/scripts/keys.sh"
+alias rmpm="sudo rm /var/lib/pacman/db.lck"
+alias cd="z"
+# alias cat="bat"
+# alias nto="nnn -p - | xargs"
 
 # Function for fish 
+
+function nls
+  ls -l $(nnn -p -)
+end 
+
+function nto 
+  nnn -p - | xargs $argv 2> /dev/null
+end
+  
 
 function keys
   xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 end 
 
 
-function j 
-  cd $(autojump $argv)  
-end 
+# function j 
+#   cd $(autojump $argv)  
+# end 
 
 
 function sv 
@@ -607,10 +630,10 @@ function __fzf_cd -d "Change directory"
 end
 
 #my config for nnn file manger alias nnn='nnn -eRx'
-alias nn='nnn -Rx'
-alias n='nnn -Rx'
-alias nt='nnn -RxT t'
-alias sn='sudo -E nnn -RH'
+alias nn='nnn -Rxl 5'
+alias n='nnn -Rxl 5'
+# alias nt='nnn -RxTt'
+# alias sn='sudo -E nnn -RH'
 #export NNN_PLUG='F:fixname;i:imgview;f:fzcd;t:mp3conv;e:suedit;v:preview-tui;x:!doas chmod +x $nnn;s:!bash -i*;o:fzopen;k:kdeconnect;u:upload;p:rsynccp' #to play this plug press ; then choose option 
 export NNN_PLUG='F:fixname;i:imgview;f:fzcd;t:mp3conv;v:preview-tui;s:!bash -i*;o:fzopen;p:rsynccp;m:mtpmount' #to play this plug press ; then choose option 
 export NNN_BMS="m:/media/;g:$HOME/Documents/GitHub/dotfiles;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" #to play this plug press b then choose option 
@@ -620,9 +643,8 @@ export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
 export NNN_COLORS='1267'
 #BLK="c1" CHR="e2" DIR="95" EXE="68" REG="E6" HARDLINK="60" SYMLINK="33" MISSING="f7" ORPHAN="c6" FIFO="d6" SOCK="ab" OTHER="c4"
-export NNN_FCOLORS='c1e29568E66033f7c6d6abc4'
+export NNN_FCOLORS='c1e20368E66033f7c6d6abc4'
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_TRASH=1 #to use trash (needs trash-cli) instead of delete. the trash's directory : /home/omar/.local/share/Trash/files
 export NNN_ARCHIVE="\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)"
 export NNN_RCLONE='rclone mount --read-only --no-checksum'
-
