@@ -223,6 +223,8 @@ super + shift + w
 # music script 
 super + shift + p 
   ~/github/dmscripts/scripts/dm-music
+
 # clip output 
-Control_L + Arabic_ra
-  xclip -o 
+# Control_L + Arabic_ra
+#   xclip -o 
+

@@ -408,6 +408,7 @@ alias rmpm="sudo rm /var/lib/pacman/db.lck"
 alias cd="z"
 # alias cat="bat"
 # alias nto="nnn -p - | xargs"
+alias ssh="kitty +kitten ssh"
 
 # Function for fish 
 
