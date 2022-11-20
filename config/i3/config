@@ -114,6 +114,7 @@ exec --no-startup-id $HOME/scripts/keys.sh
 
 # Floating 
 for_window [class="Arcolinux-welcome-app.py"] floating enable
+for_window [class="CoreImage"] floating enable
 for_window [class="Arcolinux-calamares-tool.py"] floating enable
 for_window [class="Bleachbit"] floating disable
 for_window [class="Blueberry.py"] floating enable
