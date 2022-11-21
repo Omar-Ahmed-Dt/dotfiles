@@ -344,6 +344,3 @@ export NNN_TRASH=1 #to use trash (needs trash-cli) instead of delete. the trash'
 export NNN_ARCHIVE="\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)"
 
 Exec=bash -lc "nnn %f"
-
-
-
