@@ -38,12 +38,10 @@ command=xkb-switch | xargs echo
 interval=once
 signal=15
 border_top=1
-label=<span color="#6c99ba">  </span>
-color=#6c99ba
-border=#6c99ba
+label=<span color="#e5b566">  </span>
+border=#e5b566
 #color=#e5b566
-#color=#e5b566
-#color=#f8f8f2
+color=#f8f8f2
 border_right=0
 border_bottom=0
 border_left=0
@@ -52,9 +50,8 @@ border_left=0
 interval=3600
 #border=#ff79c6
 border=#e5b566
-color=#e5b566
 #color=#ff79c6
-#color=#f8f8f2
+color=#f8f8f2
 border_top=1
 border_right=0
 border_bottom=0
@@ -66,9 +63,8 @@ interval=3600
 label=<span color="#ff79c6"> </span>
 #border=#bd93f9
 border=#ff79c6
-color=#ff79c6
 #color=#bd93f9
-#color=#f8f8f2
+color=#f8f8f2
 border_top=1
 border_right=0
 border_bottom=0
@@ -80,9 +76,8 @@ interval=60
 label=<span color="#bd93f9"><b>  </b></span>
 #border=#6c99ba
 border=#bd93f9
-color=#bd93f9
 #color=#6c99ba
-#color=#f8f8f2
+color=#f8f8f2
 border_top=1
 border_right=0
 border_bottom=0
@@ -93,9 +88,8 @@ interval=2
 label=<span color="#6c99ba"><b>   </b></span>
 #border=#e5b566
 border=#6c99ba
-color=#6c99ba
 #color=#e5b566
-#color=#f8f8f2
+color=#f8f8f2
 border_top=1
 border_right=0
 border_bottom=0
@@ -105,10 +99,9 @@ border_left=0
 interval=2
 label=<span color="#e5b566">B: </span>
 #color=#ff79c6
-#color=#f8f8f2
+color=#f8f8f2
 #border=#ff79c6
 border=#e5b566
-color=#e5b566
 border_top=1
 border_right=0
 border_bottom=0
@@ -123,13 +116,24 @@ border_left=0
 #border_bottom=0
 #border_left=0
 
+#[cpu.sh]
+#interval=2
+#label=<span color="#6c99ba"><b>CPU: </b></span>
+#border=#6c99ba
+##color=#6c99ba
+#color=#f8f8f2
+#border_top=1
+#border_right=0
+#border_bottom=0
+#border_left=0
+
 [cpu_usage2]
 command=/home/omar/github/i3blocks-contrib/cpu_usage/cpu_usage
 label=<span color="#ff79c6">CPU: </span>
 interval=2
 #border=#6c99ba
 border=#ff79c6
-COLOR_NORMAL=#ff79c6
+COLOR_NORMAL=#f8f8f2
 border_top=1
 border_right=0
 border_bottom=0
@@ -141,8 +145,7 @@ command=~/github/i3blocks-contrib/temperature/temperature
 label=<span color="#6c99ba">+ </span>
 interval=5
 border=#6c99ba
-color=#6c99ba
-#color=#f8f8f2
+color=#f8f8f2
 border_top=1
 border_right=0
 border_bottom=0
@@ -152,9 +155,8 @@ border_left=0
 interval=2 
 label=<span color="#e5b566"> </span>
 border=#e5b566
-color=#e5b566
 #color=#e5b566
-#color=#f8f8f2
+color=#f8f8f2
 border_top=1
 border_right=0
 border_bottom=0
@@ -165,8 +167,8 @@ interval=once
 signal=20
 label=<span color="#ff79c6"></span>
 border=#ff79c6
-color=#ff79c6
-#color=#f8f8f2
+#color=#ff79c6
+color=#f8f8f2
 border_top=1
 border_right=0
 border_bottom=0
@@ -176,8 +178,8 @@ border_left=0
 interval=once
 signal=10
 border=#bd93f9
-color=#bd93f9
-#color=#f8f8f2
+#color=#bd93f9
+color=#f8f8f2
 border_top=1
 border_right=0
 border_bottom=0
@@ -187,18 +189,17 @@ border_left=0
 interval=30
 label=<span color="#6c99ba"> </span>
 border=#6c99ba
-color=#6c99ba
+#color=#6c99ba
+color=#f8f8f2
 border_top=1
 border_right=0
 border_bottom=0
 border_left=0
 
 [clock]
-#command=date '+%I : %M %p' | awk '{ printf "%s<span color=\"#e5b566\">%s</span>%s<span color=\"#e5b566\"> %s</span>\n", $1, $2, $3, $4 }' 
-command=date '+%I : %M %p'
+command=date '+%I : %M %p' | awk '{ printf "%s<span color=\"#e5b566\">%s</span>%s<span color=\"#e5b566\"> %s</span>\n", $1, $2, $3, $4 }' 
 interval=30
-#color=#f8f8f2
-color=#e5b566
+color=#f8f8f2
 border=#e5b566
 label=<span > 🕓 </span>
 border_top=1
