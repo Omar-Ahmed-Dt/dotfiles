@@ -31,5 +31,5 @@ tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
 #printf " %3sB   %3sB\\n" $(numfmt --to=iec $rx) $(numfmt --to=iec $tx)
 
 #printf "  %3sB  %3sB\\n" $(numfmt --to=iec $rx) $(numfmt --to=iec $tx)
-printf "  %3sB  | %3sB\\n" $(numfmt --to=iec $rx) $(numfmt --to=iec $tx)
+printf "  %3sB - %3sB\\n" $(numfmt --to=iec $rx) $(numfmt --to=iec $tx)
 #printf "⤵️ %3sB  ⤴️ %3sB\\n" $(numfmt --to=iec $rx) $(numfmt --to=iec $tx)

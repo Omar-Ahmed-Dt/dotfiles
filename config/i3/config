@@ -114,6 +114,7 @@ exec --no-startup-id $HOME/scripts/keys.sh
 
 # Floating 
 for_window [class="Arcolinux-welcome-app.py"] floating enable
+for_window [class="yad"] floating enable
 for_window [class="CoreImage"] floating enable
 for_window [class="Arcolinux-calamares-tool.py"] floating enable
 for_window [class="Bleachbit"] floating disable
@@ -159,7 +160,7 @@ new_window normal
 new_float normal
 popup_during_fullscreen smart
 for_window [class="^.*"] border pixel 1
-gaps inner 12
+gaps inner 8
 gaps outer 0
 smart_gaps on
 smart_borders on
@@ -172,10 +173,7 @@ bar {
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks
     colors {
-        # background #040000
         background #282a33 
-        # background #282c34
-        #background #35455c
         statusline #eeeeee
         separator  #eaf08d
         focused_workspace     #83a598 #458588 #ebdbb2
@@ -185,8 +183,6 @@ bar {
       }
     }
     # class                 border  backgr. text    indicator
-    #client.focused          #353439 #b0c4be #e5e5e5 #98c379
-    #client.focused          #353439 #b0c4be #e5e5e5 #e8331c
     client.focused          #353439 #b0c4be #e5e5e5 #51afef
     client.unfocused        #222222 #222222 #aaaaaa #222222
     client.focused_inactive #222222 #222222 #a9a9a9 #222222
