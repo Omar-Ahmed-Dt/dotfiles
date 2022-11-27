@@ -23,17 +23,25 @@ super + shift + x
 
 #Vol up 
 XF86AudioRaiseVolume
-	amixer -q set Master 5%+ && pkill -RTMIN+10 i3blocks 
+	pamixer -i 5 && pkill -RTMIN+10 i3blocks 
+	#wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && pkill -RTMIN+10 i3blocks
+	#pamixer -i 5 && pkill -RTMIN+10 i3blocks 
+	#pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -RTMIN+10 i3blocks 
+	#amixer -q set Master 5%+ && pkill -RTMIN+10 i3blocks 
 	#amixer -q set Master 5%+ && polybar-msg hook volbar 1 
 
 #Vol down 
 XF86AudioLowerVolume
-	amixer -q set Master 5%- && pkill -RTMIN+10 i3blocks
+	pamixer -d 5 && pkill -RTMIN+10 i3blocks 
+	#wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && pkill -RTMIN+10 i3blocks
+	#pactl set-sink-volume @DEFAULT_SINK@ -5% && pkill -RTMIN+10 i3blocks 
+	#amixer -q set Master 5%- && pkill -RTMIN+10 i3blocks
 	#amixer -q set Master 5%- && polybar-msg hook volbar 1 
 
 #vol toggle 
 XF86AudioMute
 	amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
+	#wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && pkill -RTMIN+10 i3blocks
 	#amixer -q set Master toggle && polybar-msg hook volbar 1
 
 ##mic toggle 

@@ -172,7 +172,19 @@ border_right=0
 border_bottom=0
 border_left=0
 
-[volbar2.sh]
+#[volbar2.sh]
+#interval=once
+#signal=10
+#border=#bd93f9
+#color=#bd93f9
+##color=#f8f8f2
+#border_top=1
+#border_right=0
+#border_bottom=0
+#border_left=0
+
+[volbar]
+command= wpctl get-volume @DEFAULT_AUDIO_SINK@
 interval=once
 signal=10
 border=#bd93f9
