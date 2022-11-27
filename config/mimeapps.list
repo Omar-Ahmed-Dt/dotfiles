@@ -37,3 +37,4 @@ x-scheme-handler/tg=userapp-Telegram Desktop-CIISR1.desktop;
 x-scheme-handler/mailto=userapp-Evolution-HDSJS1.desktop;
 image/jpeg=org.cubocore.CoreImage.desktop;
 text/markdown=org.pwmt.zathura-pdf-mupdf.desktop;
+application/epub+zip=firefox.desktop;org.pwmt.zathura-pdf-mupdf.desktop;okularApplication_epub.desktop;
