@@ -1,15 +1,15 @@
-#ipute from keyboard 
+#iput from keyboard 
 #run : xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 
-# Reload sxhkd 
+#Reload sxhkd 
 shift + Escape
 	pkill -USR1 -x sxhkd
 
-#terminal 
+#Terminal 
 super + Return
     kitty 
 
-#browser 
+#Browser 
 super + shift + b 
 	~/scripts/browser.sh
 
@@ -30,6 +30,10 @@ XF86AudioRaiseVolume
 	#amixer -q set Master 5%+ && pkill -RTMIN+10 i3blocks 
 	#amixer -q set Master 5%+ && polybar-msg hook volbar 1 
 
+#Vol up
+super + equal
+	pamixer -i 5 && pkill -RTMIN+10 i3blocks 
+
 #Vol down 
 XF86AudioLowerVolume
 	pamixer -d 5 && pkill -RTMIN+10 i3blocks 
@@ -37,12 +41,21 @@ XF86AudioLowerVolume
 	#pactl set-sink-volume @DEFAULT_SINK@ -5% && pkill -RTMIN+10 i3blocks 
 	#amixer -q set Master 5%- && pkill -RTMIN+10 i3blocks
 	#amixer -q set Master 5%- && polybar-msg hook volbar 1 
+	
+
+#Vol down
+super + minus
+	pamixer -d 5 && pkill -RTMIN+10 i3blocks 
 
 #vol toggle 
 XF86AudioMute
 	amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
 	#wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && pkill -RTMIN+10 i3blocks
 	#amixer -q set Master toggle && polybar-msg hook volbar 1
+
+#vol toggle 
+super + BackSpace
+	amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
 
 ##mic toggle 
 #XF86AudioMicMute
