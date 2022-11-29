@@ -436,7 +436,7 @@ function sv
 end 
 
 function gd 
-  cd ~/Documents/GitHub/dotfiles/
+  cd ~/Documents/GitHub/
 end 
 
 function hub 

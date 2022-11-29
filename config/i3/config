@@ -172,6 +172,7 @@ bar {
     font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 12
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks
+
     colors {
         background #282a33 
         statusline #eeeeee
@@ -183,7 +184,7 @@ bar {
       }
     }
     # class                 border  backgr. text    indicator
-    client.focused          #353439 #b0c4be #e5e5e5 #51afef
+    client.focused          #353439 #fcce7b #e5e5e5 #c678dd
     client.unfocused        #222222 #222222 #aaaaaa #222222
     client.focused_inactive #222222 #222222 #a9a9a9 #222222
     client.placeholder      #222222 #222222 #aaaaaa #222222
