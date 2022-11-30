@@ -83,8 +83,7 @@ border_right=0
 border_bottom=0
 border_left=0
 
-[cpu_usage2]
-command=/home/omar/github/i3blocks-contrib/cpu_usage/cpu_usage
+[cpu_usage]
 #label= CPU: 
 label=   
 interval=2
@@ -95,8 +94,7 @@ border_right=0
 border_bottom=0
 border_left=0
 
-[temp.sh]
-command=~/github/i3blocks-contrib/temperature/temperature
+[temperature]
 label= + 
 interval=5
 border=#6c99ba
@@ -124,10 +122,19 @@ border_right=0
 border_bottom=0
 border_left=0
 
-[vol.sh]
+#[vol.sh]
+#interval=once 
+#signal=10
+#border=#bd93f9
+#border_top=1
+#border_right=0
+#border_bottom=0
+#border_left=0
+
+[volume-pipewire]
+border=#bd93f9
 interval=once
 signal=10
-border=#bd93f9
 border_top=1
 border_right=0
 border_bottom=0
