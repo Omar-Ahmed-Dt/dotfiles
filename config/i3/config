@@ -110,6 +110,9 @@ exec_always --no-startup-id xhost +local:root
 #exec --no-startup-id setxkbmap -option caps:escape  
 exec --no-startup-id $HOME/scripts/keys.sh
 # exec --no-startup-id alsactl --file ~/.config/asound.state store
+# exec --no-startup-id /usr/bin/pipewire & 
+# exec --no-startup-id /usr/bin/pipewire-pulse & 
+
 
 
 # Floating 
