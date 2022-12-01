@@ -17,7 +17,7 @@
 >> * i3blocks 
 
 ### Screen Locker
->> * bslock
+>> * bslock [Github for bslock..](https://github.com/phenax/bslock)
 
 #### Terminal 
 >> * kitty
