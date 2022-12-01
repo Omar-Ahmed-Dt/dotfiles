@@ -154,7 +154,7 @@ super + Print
 
 #mpv youtube 
 super + p 
- mpv $(xclip -o)
+  ~/scripts/mpvload
 
 #mp3-youtube-dl 
 super + shift + y

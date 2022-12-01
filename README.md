@@ -1,79 +1,83 @@
 # Dotfiles  
+---
 
-> #### Operating System 
-> > * Linux, ArcoD 
+#### Operating System 
+>> * Linux, ArcoD 
 
-> #### Service Manager 
-> > * systemd
+#### Service Manager 
+>>  * systemd
 
-> #### Desktop Display Manager 
-> > * sddm
+#### Desktop Display Manager 
+>>  * sddm
 
-> #### Window Manager 
-> > * i3  
+#### Window Manager 
+>> * i3  
 
-> #### Status Bar 
->  > * i3blocks 
+#### Status Bar 
+>> * i3blocks 
 
-> #### Terminal 
->  > * kitty
+### Screen Locker
+>> * bslock
 
-> #### Editor 
->  > * nvim & vscodium
+#### Terminal 
+>> * kitty
 
-> #### Shell 
->  > * fish 
+#### Editor 
+>> * nvim & vscodium
 
-> #### Launcher 
->  > * dmenu [Gitlap for dmenu..](https://gitlab.com/dwt1/dmenu-distrotube)
+#### Shell 
+>> * fish 
 
-> #### Terminal File Manager 
->  > * nnn  
+#### Launcher 
+>> * dmenu [Gitlap for dmenu..](https://gitlab.com/dwt1/dmenu-distrotube)
 
-> #### Gui File Manager 
->  > * pcmanfm
+#### Terminal File Manager 
+>> * nnn  
 
-> #### Music Player 
->  > * mpd & ncmpcpp
+#### Gui File Manager 
+>> * pcmanfm
 
-> #### Video Player 
->  > * mpv 
+#### Music Player 
+>> * mpd & ncmpcpp
 
-> #### Photo Viewer 
->  > * sxiv
+#### Video Player 
+>> * mpv 
 
-> #### Screen Recorder 
->  > * obs && simplescreenrecorder 
+#### Photo Viewer 
+>> * sxiv
 
-> #### pdf Viewer 
->  > * zathura
+#### Screen Recorder 
+>> * obs && simplescreenrecorder 
 
-> #### Resource Monitor
-> > * htop
+#### pdf Viewer 
+>> * zathura
 
-> #### Key Binding 
-> > * sxhkd 
+#### Resource Monitor
+>> * htop
 
-> #### Browser 
-> > * firefox 
+#### Key Binding 
+>> * sxhkd 
 
-> #### Search Engine 
-> > * startpage 
+#### Browser 
+>> * firefox 
 
-> #### Firewall 
-> > * guwf 
+#### Search Engine 
+>> * startpage 
 
-> #### Office 
-> > * libreoffice-still
+#### Firewall 
+>> * guwf 
 
-> #### Mail Client 
-> > * thunderbird
+#### Office 
+>> * libreoffice-still
 
-> #### Virtual Machine 
-> > * vbox
+#### Mail Client 
+>> * thunderbird
 
-> #### Virtual OS 
-> > * ubuntu, artix, artix lxde, void, arcoD xfce, artix xfce, archcrift
+#### Virtual Machine 
+>> * vbox
+
+#### Virtual OS 
+>> * ubuntu, artix, artix lxde, void, arcoD xfce, artix xfce, archcrift
 
 
 | Utility  | Packages            |
