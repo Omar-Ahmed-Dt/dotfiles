@@ -87,7 +87,7 @@ bindsym $mod+Ctrl+l resize grow width 1 px or 1 ppt
 
 for_window [urgent=latest] focus
 default_orientation horizontal
-font pango:Noto Mono Regular 10
+#font pango:Noto Mono Regular 9
 exec_always --no-startup-id autotiling
 for_window [class="Vivaldi-stable"] focus
 
@@ -172,7 +172,7 @@ bar {
     height 25
     workspace_buttons yes
     #font pango:Noto Sans 13
-    font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 12
+    font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 12 
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks
 

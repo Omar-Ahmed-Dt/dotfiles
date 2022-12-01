@@ -140,20 +140,28 @@ border_right=0
 border_bottom=0
 border_left=0
 
-[clock.sh]
-interval=30
-label=   
-border=#6c99ba
-border_top=1
-border_right=0
-border_bottom=0
-border_left=0
+#[clock.sh]
+#interval=30
+#label=   
+#border=#6c99ba
+#border_top=1
+#border_right=0
+#border_bottom=0
+#border_left=0
 
-[clock]
-command=date '+%I : %M %p'
+#[clock]
+#command=date '+%I : %M %p'
+#interval=30
+#border=#e5b566
+#label=<span > 🕓 </span>
+#border_top=1
+#border_right=0
+#border_bottom=0
+#border_left=0
+
+[clock3.sh]
 interval=30
 border=#e5b566
-label=<span > 🕓 </span>
 border_top=1
 border_right=0
 border_bottom=0
