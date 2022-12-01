@@ -1,3 +1,8 @@
+/* bslock config file */
+/* sudo make clean install */
+/* Dependencies : xorg-fonts-misc */
+/* https://github.com/phenax/bslock */
+
 /* user and group to drop privileges to */
 static const char *user = "nobody";
 static const char *group = "nobody";
