@@ -85,6 +85,9 @@ bindsym $mod+Ctrl+k resize grow height 1 px or 1 ppt
 bindsym $mod+Ctrl+j resize shrink height 1 px or 1 ppt
 bindsym $mod+Ctrl+l resize grow width 1 px or 1 ppt
 
+# Jump to urgent window 
+bindsym $mod+x [urgent=latest] focus
+
 for_window [urgent=latest] focus
 default_orientation horizontal
 #font pango:Noto Mono Regular 9
