@@ -105,6 +105,8 @@
 | Blue Light Filter | blugon | 
 | Note | joplin | 
 
+---
+
 | Event  | Keybinding |
 | -----     | --------------- |
 | Reload sxhkd | shift + Escape | 
@@ -137,5 +139,3 @@
 | record screen | super + shift + u | 
 | virtual machine | super + shift + a | 
 | stylish | super + shift + w | 
-
-
