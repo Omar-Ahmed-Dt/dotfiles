@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-notify-send -t 3000 "Playing Video" "$(xclip -o)";
 # mpv --ytdl-format=22 "$(xclip -o)"
-mpv --ytdl-format=bestvideo+bestaudio full_screen=no "$(xclip -o)"
+notify-send -t 2000 "Playing Video" "$(xclip -o)";
+mpv --ytdl-format=bestvideo+bestaudio full_screen=no "$(xclip -o)" || notify-send -t 2000 -i ~/logo/error3.jpg "Failed to Load !" 

@@ -122,7 +122,7 @@ border_right=0
 border_bottom=0
 border_left=0
 
-#[vol.sh]
+#[volbar2.sh]
 #interval=once 
 #signal=10
 #border=#bd93f9

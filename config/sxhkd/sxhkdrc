@@ -30,10 +30,6 @@ XF86AudioRaiseVolume
 	#amixer -q set Master 5%+ && pkill -RTMIN+10 i3blocks 
 	#amixer -q set Master 5%+ && polybar-msg hook volbar 1 
 
-#Vol up
-super + equal
-	pamixer -i 5 && pkill -RTMIN+10 i3blocks 
-
 #Vol down 
 XF86AudioLowerVolume
 	pamixer -d 5 && pkill -RTMIN+10 i3blocks 
@@ -41,21 +37,12 @@ XF86AudioLowerVolume
 	#pactl set-sink-volume @DEFAULT_SINK@ -5% && pkill -RTMIN+10 i3blocks 
 	#amixer -q set Master 5%- && pkill -RTMIN+10 i3blocks
 	#amixer -q set Master 5%- && polybar-msg hook volbar 1 
-	
-
-#Vol down
-super + minus
-	pamixer -d 5 && pkill -RTMIN+10 i3blocks 
 
 #vol toggle 
 XF86AudioMute
 	amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
 	#wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && pkill -RTMIN+10 i3blocks
 	#amixer -q set Master toggle && polybar-msg hook volbar 1
-
-#vol toggle 
-super + BackSpace
-	amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
 
 ##mic toggle 
 #XF86AudioMicMute
@@ -153,7 +140,7 @@ super + Print
 	simplescreenrecorder
 
 #mpv youtube 
-super + p 
+super + shift + p 
   ~/scripts/mpvload
 
 #mp3-youtube-dl 
@@ -162,6 +149,10 @@ super + shift + y
 
 #screenshot 
 Print
+    /home/omar/scripts/screendmenu.sh
+
+#screenshot 
+super + shift + s 
     /home/omar/scripts/screendmenu.sh
 
 #kill process 
@@ -204,9 +195,13 @@ super + shift + n
 shift + Return
     ~/scripts/nnn.sh
 
-#creat vim file 
+#open nvim file 
 super + shift + v 
-    kitty -e nvim
+    kitty -e lvim
+
+#open lvim file 
+# super + shift + i 
+#     kitty -e lvim
 
 # mailspring  
 super + shift + m
@@ -238,11 +233,11 @@ super + shift + u
 # virtual machine 
 super + shift + a
  		virtualbox 
-# stylish
-super + w 
-	~/scripts/styli.sh
+# # stylish
+# super + w 
+# 	~/scripts/styli.sh
 # music script 
-super + shift + p 
+super + p 
   ~/github/dmscripts/scripts/dm-music
 
 # clip output 

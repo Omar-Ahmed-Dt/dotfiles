@@ -23,7 +23,7 @@
 >> * kitty
 
 #### Editor 
->> * nvim & vscodium
+>> * nvim >> lvim & vscodium
 
 #### Shell 
 >> * fish 
@@ -85,7 +85,7 @@
 | Permissions  | doas |
 | Aur Helper  | paru yay git |
 | Display |  xorg-server xorg-xrandr lightdm lightdm-gtk-greeter xorg-xrdb sddm |
-| Editor and IDE | nvim [Github for nvim..](https://github.com/AstroNvim/AstroNvim), vscodium| 
+| Editor and IDE | nvim [Github for nvim..](https://github.com/AstroNvim/AstroNvim), vscodium , lvim [Link to lvim](https://www.lunarvim.org/)| 
 | Scripts | dm-scripts [Gitlap for dmscripts..](https://gitlab.com/dwt1/dmscripts)|
 | Multimedia | pulseaudio pulsemixer mpv mpv-mpris mpd mpDris2 mpc moc ncmpcpp youtube-dl yt-dlp ffmpeg simplescreenrecorder obs | 
 | File Manager | nnn dolphin pcmanfm | 
@@ -112,7 +112,7 @@
 | Reload sxhkd | shift + Escape | 
 | terminal | super + Return | 
 | browser  | super + shift + b |
-| nvim | super + shift + v |
+| lvim | super + shift + v |
 | pcmanfm | super + shift + Return | 
 | xkill | super + shift + x | 
 | dmenu | super + shift + d | 

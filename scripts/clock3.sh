@@ -32,4 +32,4 @@ esac
 #	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 #esac
 
-echo " $(date '+%a %d %b %Y') $icon $(date '+%R %p')"
+echo " $(date '+%a %d %b %Y') $icon $(date '+%I : %M %p')"

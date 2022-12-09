@@ -40,18 +40,22 @@ elif [[ "$mime" = "text/html" ]];then
 	firefox "$1"
 # plain txt
 elif [[ "$mime" = "text/plain" ]];then
-	kitty -e nvim "$1"
+	kitty -e lvim "$1"
 # shellscript 
 elif [[ "$mime" = "text/x-shellscript" ]];then
-	kitty -e nvim "$1"
+	kitty -e lvim "$1"
 elif [[ "$mime" = "text/x-perl" ]];then
-	kitty -e nvim "$1"
+	kitty -e lvim "$1"
 elif [[ "$mime" = "application/json" ]];then
-	kitty -e nvim "$1"
+	kitty -e lvim "$1"
 elif [[ "$mime" = "text/troff" ]];then
-	kitty -e nvim "$1"
+	kitty -e lvim "$1"
 elif [[ "$mime" = "application/x-setupscript" ]];then
-	kitty -e nvim "$1"
+	kitty -e lvim "$1"
+elif [[ "$mime" = "text/x-c++" ]];then
+	kitty -e lvim "$1"
 elif [[ "$mime" = "text/x-script.python" ]];then
-	kitty -e nvim "$1"
+	kitty -e lvim "$1"
+elif [[ "$mime" = "text/csv" ]];then
+	kitty -e lvim "$1"
 fi

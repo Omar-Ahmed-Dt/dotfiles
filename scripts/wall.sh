@@ -5,4 +5,3 @@ case $OPT in
 	images ) cp ~/.images/wallpaper_2560x1440.jpeg ~/wall/wall_$(date +'%Y%m%d-%H%M%S').jpeg ;;	
 	*) ;;
 esac
-
