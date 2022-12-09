@@ -16,4 +16,4 @@ cp -r ~/.zshrc ~/Documents/GitHub/dotfiles/zshrc
 cp -r ~/.Xresources ~/Documents/GitHub/dotfiles/Xresources
 cp  ~/vim_training/vim_training.ms ~/Documents/GitHub/dotfiles/vim_training.ms
 cp  ~/.config/lvim/config.lua  ~/Documents/GitHub/dotfiles/config/lvim
-
+cp -r ~/.config/lvim/ftplugin/  ~/Documents/GitHub/dotfiles/config/lvim/
