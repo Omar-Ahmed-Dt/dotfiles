@@ -260,44 +260,24 @@ lvim.plugins = {
 --
 -- My plugins : 
 --
--- Run Python File  
+-- For Python File 
 -- 
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = { "*.py" },
-  command = "nnoremap <C-p> :w <bar> !python3 %<CR>",
+  command = "source ~/.config/lvim/ftplugin/py.lua",
 })
 --
-vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { "*.py" },
-  command = "nnoremap <C-i> :w <bar>terminal python3 %<CR>",
-})
-
-vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { "*.py" },
-  command = "nnoremap <C-;> :w <bar> TermExec cmd='python3 %'<CR>",
-})
 --
 -- Run sh File  
---
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = { "*.sh" },
-  command = "nnoremap <C-p> :w <bar> !./%<CR>",
+  command = "source ~/.config/lvim/ftplugin/sh.lua",
 })
 --
-vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { "*.sh" },
-  command = "nnoremap <C-i> :w <bar>terminal ./%<CR>",
-})
---
-vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { "*.sh" },
-  command = "nnoremap <C-;> :w <bar> TermExec cmd='./%'<CR>",
-})
-
 -- Run markdown File  
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = { "*.md" },
-  command = "nnoremap <C-p> :w <bar> MarkdownPreview<CR>",
+  command = "source ~/.config/lvim/ftplugin/md.lua",
 })
 --
 -- samples 
