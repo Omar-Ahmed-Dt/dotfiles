@@ -5,9 +5,9 @@ set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 ### EXPORT ###
 set fish_greeting                                 # Supresses fish's intro message
 set TERMINAL "kitty"                         # Sets the terminal type
-set EDITOR "nvim"
-set VISUAL "nvim"
-#export EDITOR=/usr/bin/nvim
+set EDITOR "lvim"
+set VISUAL "lvim"
+#export EDITOR=/usr/bin/lvim
 #set DISPLAY ":0.0"
 
 ### "bat" as manpager
@@ -16,8 +16,8 @@ set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 ### "vim" as manpager
 #set -x MANPAGER '/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
-### "nvim" as manpager
-#set -x MANPAGER "nvim -c 'set ft=man' -"
+### "lvim" as manpager
+#set -x MANPAGER "lvim -c 'set ft=man' -"
 
 ### SET EITHER DEFAULT EMACS MODE OR VI MODE ###
 function fish_user_key_bindings
@@ -278,7 +278,7 @@ alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-(date +%Y.%m.%d-%H.%M.%S)'
 
 
 #my config 
-#alias v='doas nvim'
+#alias v='doas lvim'
 # alias h='cd ~'
 alias p='cd ..'
 alias C='doas chmod 777'
@@ -314,7 +314,7 @@ alias blk='lsblk'
 #alias ll='ls -la'
 #alias l='ls'
 #alias l.="ls -A | egrep '^\.'"
-#alias vim='doas nvim'
+#alias vim='doas lvim'
 #alias pmug='git pull'
 #alias ex='extract'
 #alias sp='sh /home/omar/scripts/fzf-ueberzogen.sh'
@@ -338,7 +338,7 @@ alias printerinstall='hp-setup -u'
 alias epdf='okular'
 alias topdf='sh ~/scripts/topdf.sh'
 alias lf='lfrun'
-#alias vim='nvim'
+#alias vim='lvim'
 alias gn='cd ~/.config/nnn'
 alias tl='trash-list' 
 alias tr='trash-restore'
@@ -346,7 +346,7 @@ alias tr='trash-restore'
 alias td='cd ~/.local/share/Trash/files'
 alias te='trash-empty'
 # alias rk='pulseaudio -k; pulseaudio --start'
-alias pulse='doas nvim /etc/pulse/default.pa'
+# alias pulse='doas lvim /etc/pulse/default.pa'
 alias gs='cd ~/scripts'
 alias pr='proxychains'
 alias pf='proxychains firefox'
@@ -393,7 +393,7 @@ alias gsh="~/scripts/gsh.sh"
 alias theme="~/scripts/kitty_theme.sh"
 alias f="doas find / -iname"
 alias uprsc="xrdb -load ~/.Xresources"
-alias gpu="sudo nvim /etc/optimus-manager/optimus-manager.conf"
+alias gpu="sudo lvim /etc/optimus-manager/optimus-manager.conf"
 alias smi="nvidia-smi"
 alias rmft="rm ~/.config/fish/functions/fish_prompt.fish"
 alias ct="kitty +kitten themes"
@@ -467,22 +467,26 @@ end
 function sf 
     fzf --preview='head -$LINES {}'| xargs -r -I % $EDITOR % 
 end 
-#alias to nvim 
+alias to lvim 
 function v
-    nvim $argv
+    lvim $argv
 end
 
-function vim
-    doas nvim $argv
+function V
+    doas lvim $argv
 end
 
-function via 
-  ~/scripts/via.sh 
+function vi 
+    vim $argv 
 end 
 
-# nvim 
+# function via 
+#   ~/scripts/via.sh 
+# end 
+
+# lvim 
 # function vim
-#   nvim $argv
+#   lvim $argv
 #end
 
 #alias vssh="vagrant ssh"

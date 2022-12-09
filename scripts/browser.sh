@@ -1,5 +1,4 @@
 #!/bin/bash
-
 declare options=("Firefox
 Brave
 Chromium

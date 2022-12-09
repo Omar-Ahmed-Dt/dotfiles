@@ -1,5 +1,4 @@
-#!/usr/bin/env sh
-
+#!/bin/bash
 #date '+%Y %b %d (%a) %I:%M%p'
 #date '+%d-%m-%y (%a) %I:%M%p'
 #date '+%a %d-%m'

@@ -15,7 +15,7 @@ text/html=firefox.desktop
 audio/mpeg=mpv.desktop;
 application/json=nvim.desktop;
 inode/directory=pcmanfm.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-CIISR1.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-HPBJW1.desktop
 application/x-shellscript=nvim.desktop;
 text/plain=nvim.desktop;
 x-scheme-handler/chrome=firefox.desktop
@@ -33,7 +33,7 @@ x-scheme-handler/msteams=teams.desktop
 text/x-c++=nvim.desktop
 
 [Added Associations]
-x-scheme-handler/tg=userapp-Telegram Desktop-CIISR1.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-CIISR1.desktop;userapp-Telegram Desktop-HPBJW1.desktop;
 x-scheme-handler/mailto=userapp-Evolution-HDSJS1.desktop;
 image/jpeg=org.cubocore.CoreImage.desktop;
 text/markdown=org.pwmt.zathura-pdf-mupdf.desktop;

@@ -17,7 +17,6 @@ get_load()
   cpu_now=($(head -n1 /proc/stat))
   cpu_sum="${cpu_now[@]:1}"
   cpu_sum=$((${cpu_sum// /+}))
-
   cpu_delta=$((cpu_sum - cpu_last_sum))
   cpu_idle=$((cpu_now[4]- cpu_last[4]))
   cpu_used=$((cpu_delta - cpu_idle))

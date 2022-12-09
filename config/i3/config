@@ -99,7 +99,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id blueberry-tray
 exec --no-startup-id nm-applet
 exec_always --no-startup-id numlockx on
-#exec --no-startup-id volumeicon
+# exec --no-startup-id volumeicon
 exec --no-startup-id feh --bg-fill /home/omar/.cache/styli.sh/wallpaper.jpg & 
 #exec --no-startup-id feh --bg-fill --randomize https://unsplash.it/1920/1080?random
 exec_always --no-startup-id sxhkd 
