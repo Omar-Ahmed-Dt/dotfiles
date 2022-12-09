@@ -122,8 +122,8 @@ export HISTCONTROL=ignoreboth:erasedups
 
 # Make nano the default editor
 
-export EDITOR='nvim'
-export VISUAL='nvim'
+export EDITOR='lvim'
+export VISUAL='lvim'
 
 #PS1='[\u@\h \W]\$ '
 
@@ -533,7 +533,7 @@ alias tr='trash-restore'
 alias td='cd ~/.local/share/Trash/files'
 alias te='trash-empty'
 alias rk='pulseaudio -k; pulseaudio --start'
-alias pulse='doas nvim /etc/pulse/default.pa'
+alias pulse='doas lvim /etc/pulse/default.pa'
 alias gs='cd ~/scripts'
 alias pr='proxychains'
 alias pf='proxychains firefox'
@@ -571,8 +571,8 @@ alias hub="cd /home/omar/github/dmscripts/scripts/ && ./dm-hub"
 alias pmsi="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro doas pacman -S"
 alias pmsr="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
 alias sf="fzf --preview='head -$LINES {}'| xargs -r -I % $EDITOR %"
-alias v="nvim $argv"
-alias vim="doas nvim $argv"
+alias v="lvim $argv"
+alias vim="doas lvim $argv"
 alias via="~/scripts/via.sh"
 
 # nnn file manager 

@@ -15,8 +15,8 @@ DMBROWSER="brave"
 
 DMTERM="kitty -e"
 
-#DMEDITOR="nvim"
-DMEDITOR="nvim"
+#DMEDITOR="lvim"
+DMEDITOR="lvim"
 
 # TODO: Rename this variable to something more traditional
 logout_locker='slock'
