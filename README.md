@@ -88,7 +88,7 @@
 | Editor and IDE | nvim [Github for nvim..](https://github.com/AstroNvim/AstroNvim), vscodium , lvim [Link to lvim](https://www.lunarvim.org/)| 
 | Scripts | dm-scripts [Gitlap for dmscripts..](https://gitlab.com/dwt1/dmscripts)|
 | Multimedia | pulseaudio pulsemixer mpv mpv-mpris mpd mpDris2 mpc moc ncmpcpp youtube-dl yt-dlp ffmpeg simplescreenrecorder obs | 
-| File Manager | nnn dolphin pcmanfm | 
+| File Manager | nnn pcmanfm | 
 | Terminal and some tools | alacritty fish zsh kitty exa fzf cmatrix xdotool xclip maim |
 | Diagnostic | htop bashtop bpytop nvtop | 
 | Nvidia | nvidia nvidia-lts optimus-manager | 
@@ -109,7 +109,7 @@
 
 | Event  | Keybinding |
 | -----     | --------------- |
-| Reload sxhkd | shift + Escape | 
+| Reload sxhkd | shift + Escape |
 | terminal | super + Return | 
 | browser  | super + shift + b |
 | lvim | super + shift + v |
