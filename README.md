@@ -78,7 +78,7 @@
 
 #### Virtual OS 
 >> * ubuntu, artix, artix lxde, void, arcoD xfce, artix xfce, archcrift
-
+---
 
 | Utility  | Packages            |
 | -----     | --------------- |
