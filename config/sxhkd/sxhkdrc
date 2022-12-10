@@ -1,4 +1,4 @@
-#iput from keyboard 
+iput from keyboard 
 #run : xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 
 #Reload sxhkd 
@@ -80,11 +80,12 @@ super + shift + d
 
 #lang 
 shift + Alt_L
-	(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
-	#(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && polybar-msg hook keyboard 1
+	setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
+# 	#(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && polybar-msg hook keyboard 1
+#
 shift + Alt_R
-	(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
-	#(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && polybar-msg hook keyboard 1
+	setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
+# 	#(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && polybar-msg hook keyboard 1
 
 #power 
 super + Escape 
