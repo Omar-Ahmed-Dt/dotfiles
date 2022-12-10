@@ -89,6 +89,7 @@ confedit_list[polybar_xmonad]="$HOME/.config/polybar_xmonad/config"
 confedit_list[polybar_bspwm]="$HOME/.config/polybar_bspwm/config"
 confedit_list[bspwm]="$HOME/.config/bspwm/bspwmrc"
 confedit_list[sxhkd_bspwm]="$HOME/.config/bspwm/sxhkd/sxhkdrc"
+confedit_list[lvim]="$HOME/.config/lvim/config.lua"
 
 # dm-reddit config
 declare -a reddit_list=(

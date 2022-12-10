@@ -20,7 +20,6 @@ lvim.transparent_window = true
 
 -- config
 -- vim.opt.titlestring = "%<%F%=%l/%L - nvim" -- what the title of the window will be set to
--- vim.opt.titlestring = "%:p" -- what the title of the window will be set to
 vim.opt.backspace = vim.opt.backspace + { "nostop" } -- Don't stop backspace at insert
 vim.opt.clipboard = "unnamedplus" -- Connection to the system clipboard
 vim.opt.cmdheight = 0 -- hide command line unless needed
@@ -57,6 +56,7 @@ vim.opt.undofile = true -- Enable persistent undo
 vim.opt.updatetime = 300 -- Length of time to wait before triggering the plugin
 vim.opt.wrap = false -- Disable wrapping of lines longer than the width of window
 vim.opt.writebackup = false -- Disable making a backup before overwriting a file
+vim.g.acd = true
 
 
 -- to disable icons and use a minimalist setup, uncomment the following
