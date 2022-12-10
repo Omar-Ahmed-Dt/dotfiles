@@ -243,4 +243,5 @@ super + p
 # clip output 
 # Control_L + Arabic_ra
 #   xclip -o 
-
+super + shift + w 
+    whatsdesk
