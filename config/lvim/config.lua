@@ -248,7 +248,29 @@ lvim.plugins = {
       end,
 },
 
+{
+  "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup({ "css", "scss", "html", "javascript" }, {
+          RGB = true, -- #RGB hex codes
+          RRGGBB = true, -- #RRGGBB hex codes
+          RRGGBBAA = true, -- #RRGGBBAA hex codes
+          rgb_fn = true, -- CSS rgb() and rgba() functions
+          hsl_fn = true, -- CSS hsl() and hsla() functions
+          css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+          css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+          })
+  end,
+},
+
+
 }
+
+-- Run ColorizerToggle for hexa
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = { "*" },
+  command = "ColorizerToggle",
+})
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
@@ -279,8 +301,15 @@ vim.api.nvim_create_autocmd("BufEnter", {
   pattern = { "*.md" },
   command = "source ~/.config/lvim/ftplugin/md.lua",
 })
+
+-- Run groff to generate pdf file 
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = { "*.ms" },
+  command = "source ~/.config/lvim/ftplugin/ms.lua",
+})
 --
 -- samples 
 -- autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 -- autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 -- autocmd filetype py nnoremap <C-p> :w <bar> !python3 %<CR>
+--

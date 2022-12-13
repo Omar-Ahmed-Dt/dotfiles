@@ -33,16 +33,11 @@ XF86AudioRaiseVolume
 #Vol down 
 XF86AudioLowerVolume
 	pamixer -d 5 && pkill -RTMIN+10 i3blocks 
-	#wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && pkill -RTMIN+10 i3blocks
-	#pactl set-sink-volume @DEFAULT_SINK@ -5% && pkill -RTMIN+10 i3blocks 
-	#amixer -q set Master 5%- && pkill -RTMIN+10 i3blocks
-	#amixer -q set Master 5%- && polybar-msg hook volbar 1 
 
 #vol toggle 
 XF86AudioMute
 	amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
 	#wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && pkill -RTMIN+10 i3blocks
-	#amixer -q set Master toggle && polybar-msg hook volbar 1
 
 ##mic toggle 
 #XF86AudioMicMute
@@ -81,23 +76,13 @@ super + shift + d
 #lang 
 shift + Alt_L
 	setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
-# 	#(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && polybar-msg hook keyboard 1
-#
+
 shift + Alt_R
 	setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
-# 	#(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap ar || setxkbmap us && polybar-msg hook keyboard 1
 
 #power 
 super + Escape 
 	/home/omar/scripts/power.sh
-
-##wallpaper 
-#super + shift + i 
-#	/home/omar/github/styli.sh/styli.sh && notify-send "Changing wallpaper is done." && exit 0 
-#
-##move wall 
-#super + i 
-#    ~/scripts/wall.sh
 
 #play pause 
 XF86AudioPlay
@@ -160,10 +145,6 @@ super + shift + s
 super + shift + k 
     /home/omar/github/dmscripts/scripts/dm-kill
 
-##websearch 
-#super + w
-#    /home/omar/github/dmscripts/scripts/dm-websearch
-
 #github disktop
 super + shift + g 
     github-desktop
@@ -200,10 +181,6 @@ shift + Return
 super + shift + v 
     kitty -e lvim
 
-#open lvim file 
-# super + shift + i 
-#     kitty -e lvim
-
 # mailspring  
 super + shift + m
     thunderbird
@@ -219,30 +196,31 @@ ctrl + Pause
 # Pause button
 Pause
 	playerctl play-pause
+
 # joplin 
 super + n
 	joplin-desktop 
+
 #teams 
 super + shift + t 
 	teams 
+
 # mpc stop 
 ctrl + BackSpace 
 	mpc stop 
+
 # record 
 super + shift + u 
 	~/scripts/recordscreen.sh && ~/scripts/recordpid.sh && pkill -RTMIN+5 i3blocks || pkill -9 ffmpeg && pkill -RTMIN+5 i3blocks
+
 # virtual machine 
 super + shift + a
  		virtualbox 
-# # stylish
-# super + w 
-# 	~/scripts/styli.sh
+
 # music script 
 super + p 
   ~/github/dmscripts/scripts/dm-music
 
-# clip output 
-# Control_L + Arabic_ra
 #   xclip -o 
 super + shift + w 
     whatsdesk
