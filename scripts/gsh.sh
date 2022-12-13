@@ -5,7 +5,7 @@
 script_path="$HOME"
 
 # the editor of your choice
-script_editor="nvim"
+script_editor="lvim"
 
 # check for argument (script name)
 

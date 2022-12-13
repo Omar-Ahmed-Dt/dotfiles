@@ -409,6 +409,7 @@ alias cd="z"
 # alias cat="bat"
 # alias nto="nnn -p - | xargs"
 alias ssh="kitty +kitten ssh"
+alias opdf="~/scripts/ozathura.sh"
 
 # Function for fish 
 

@@ -1,11 +1,11 @@
 .nr PS 14z  \" document font size
 .TL 
-Vim commands
+Lvim commands
 .AU 
 .AI 
 .IP
 .B1
-.BI "First day" \"bold font 
+.\" .BI "First day" \"bold font 
 .B2
 
 .IP \[bu] 2  
@@ -85,7 +85,7 @@ u : undo
 .AI 
 .IP
 .B1
-.BI "Second day"
+.\" .BI "Second day"
 .B2
 
 .IP \[bu]
@@ -101,7 +101,7 @@ q then char (char is name of macro : qd ) ------- q (to end macro)
 .AI 
 .IP
 .B1
-.BI "Third day"
+.\" .BI "Third day"
 .B2
 
 .IP \[bu] 
@@ -267,3 +267,29 @@ space + T : Close spacific tab
 .IP \[bu] 
 space  + c : Close current tab
 
+.sp 2 \"space between line 
+.AI 
+.IP
+.B1
+.\" .BI "Second day"
+.B2
+
+.IP \[bu] 
+ctrl + \\ : Open terminal 
+.IP \[bu] 
+alt + {1,2,3} : Open terminal
+.IP \[bu] 
+move from window to terminal : ctrl + w then ctrl + w 
+.IP \[bu] 
+move from window to terminal : ctrl + w then w  
+.IP \[bu] 
+move from terminal to window : ctrl + l then ctrl + w then ctrl + w 
+.IP \[bu] 
+move from terminal to window : ctrl + l then ctrl + w  then w 
+
+.sp 2 \"space between line 
+.AI 
+.IP
+.B1
+.\" .BI "Second day"
+.B2
