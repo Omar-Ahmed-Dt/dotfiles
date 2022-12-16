@@ -16,8 +16,8 @@ border_right=0
 border_bottom=0
 border_left=0
 interval=once
-signal=5
-label=   
+signal=9
+# label=   
 
 [currently_playing]
 command=~/scripts/currently_playing
@@ -131,6 +131,16 @@ border_left=0
 #border_right=0
 #border_bottom=0
 #border_left=0
+
+[micro.sh]
+# label=<span color="#6c99ba"> Mic </span>
+border=#6c99ba
+interval=once
+signal=17
+border_top=1
+border_right=0
+border_bottom=0
+border_left=0
 
 [volume-pipewire]
 border=#bd93f9

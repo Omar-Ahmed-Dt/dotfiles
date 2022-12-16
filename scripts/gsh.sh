@@ -1,8 +1,8 @@
 #!/bin/bash
-
-# where to save (or look for) the script
-#script_path="$HOME/.local/bin"
-script_path="$HOME"
+#
+# generate bash script in $pwd
+path=$(pwd)
+script_path="$path"
 
 # the editor of your choice
 script_editor="lvim"
@@ -19,7 +19,8 @@ fi
 # if script doesn't exist, create it
 
 if [[ ! -f $script_file ]]; then
-    echo '#!/usr/bin/env bash' > $script_file
+    # echo '#!/usr/bin/env bash' > $script_file
+    echo '#!/bin/bash' > $script_file
     chmod +744 $script_file
 fi
 

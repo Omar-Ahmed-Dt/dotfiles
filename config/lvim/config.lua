@@ -54,8 +54,16 @@ vim.opt.termguicolors = true -- Enable 24-bit RGB color in the TUI
 vim.opt.timeoutlen = 300 -- Length of time to wait for a mapped sequence
 vim.opt.undofile = true -- Enable persistent undo
 vim.opt.updatetime = 300 -- Length of time to wait before triggering the plugin
-vim.opt.wrap = false -- Disable wrapping of lines longer than the width of window
+vim.opt.wrap = true -- Disable wrapping of lines longer than the width of window
 vim.opt.writebackup = false -- Disable making a backup before overwriting a file
+vim.opt.foldmethod = "manual" -- folding set to "expr" for treesitter based folding
+vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
+vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
+
+-- colorcolumn
+vim.api.nvim_set_option_value("colorcolumn", "90", {})
+
+-- global
 vim.go.acd = true -- open terminal in the same path 
 
 
@@ -104,10 +112,6 @@ lvim.keys.normal_mode["<leader>C"] = ":BufferLinePickClose<CR>"
 --   -- d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnostics" },
 --   -- q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
 --   -- l = { "<cmd>Trouble loclist<cr>", "LocationList" },
---   p = { "<cmd>!python3 %<cr>", "Run Python File " },
---   P = { "<cmd>terminal python3 %<cr>", "Run Python File in Terminal " },
---   S = { "<cmd>terminal ./%<cr>", "Run Shell File in Terminal " },
---   s = { "<cmd>!./%<cr>", "Run Shell File " },
 -- }
 
 -- Change theme settings
