@@ -123,7 +123,8 @@ super + shift + h
 
 #screeen record 
 super + Print
-	simplescreenrecorder
+    ~/scripts/select_dmenurecording.sh
+	# simplescreenrecorder
 
 #mpv youtube 
 super + shift + p 
@@ -210,8 +211,8 @@ ctrl + BackSpace
 	mpc stop 
 
 # record 
-super + shift + u 
-	~/scripts/recordscreen.sh && ~/scripts/recordpid.sh && pkill -RTMIN+5 i3blocks || pkill -9 ffmpeg && pkill -RTMIN+5 i3blocks
+# super + shift + u 
+# 	~/scripts/recordscreen.sh && ~/scripts/recordpid.sh && pkill -RTMIN+5 i3blocks || pkill -9 ffmpeg && pkill -RTMIN+5 i3blocks
 
 # virtual machine 
 super + shift + a
@@ -224,3 +225,7 @@ super + p
 #   xclip -o 
 super + shift + w 
     whatsdesk
+# cmatrix
+# super + m 
+#     kitty -e cmatrix
+

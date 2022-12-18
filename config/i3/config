@@ -3,8 +3,12 @@
 # current displays
 exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
 
-# Set
+# Set 
+
+# Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
+set $mod1 Mod1
+
 set $up k
 set $down j
 set $left h
@@ -43,7 +47,7 @@ bindsym $mod+Shift+8 move container to workspace $WS8
 bindsym $mod+Shift+9 move container to workspace $WS9
 
 # Keybinding 
-# bindsym $mod+r reload
+bindsym $mod+r reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+c kill
 bindsym $mod+shift+q exec --no-startup-id i3exit logout
@@ -91,7 +95,7 @@ bindsym $mod+Ctrl+k move up
 bindsym $mod+w layout tabbed
 # bindsym $mod+e layout toggle split
 
-bindsym $mod+r mode "resize"
+bindsym $mod+s mode "resize"
 mode "resize" {
         # Originally set to jkl;.
         # These bindings trigger as soon as you enter the resize mode
@@ -115,11 +119,16 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-#navigate workspaces next / previous
-bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace prev
+# navigate workspaces next / previous
+bindsym $mod1+Tab workspace next
+bindsym Ctrl+Tab workspace prev
 
+# move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
 
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+Shift+equal scratchpad show
 
 #############################
 # Jump to urgent window 
@@ -211,8 +220,7 @@ exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 bar {
     height 25
     workspace_buttons yes
-    #font pango:Noto Sans 13
-    font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 11.5
+    font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 11
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks
 
@@ -233,14 +241,4 @@ bar {
     client.placeholder      #222222 #222222 #aaaaaa #222222
     client.urgent           #d42121 #d42121 #f7f7f7 #d42121
     client.background       #242424
-
-
-# class                   border  backgr. text    indic.   child_border
-  # client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  # client.focused_inactive #2F3D44 #2F3D44 #AD69AF #454948
-  # client.unfocused        #2F3D44 #2F3D44 #AD69AF #454948
-  # client.urgent           #CB4B16 #FDF6E3 #AD69AF #268BD2
-  # client.placeholder      #000000 #0c0c0c #ffffff #000000 
-
-  # client.background       #2B2C2B
 

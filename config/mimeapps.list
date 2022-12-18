@@ -13,11 +13,11 @@ video/mp4=mpv.desktop;
 video/x-matroska=mpv.desktop;
 text/html=firefox.desktop
 audio/mpeg=mpv.desktop;
-application/json=nvim.desktop;
+application/json=lvim.desktop;
 inode/directory=pcmanfm.desktop
 x-scheme-handler/tg=userapp-Telegram Desktop-HPBJW1.desktop
-application/x-shellscript=nvim.desktop;
-text/plain=nvim.desktop;
+application/x-shellscript=lvim.desktop;
+text/plain=lvim.desktop;
 x-scheme-handler/chrome=firefox.desktop
 application/x-extension-htm=firefox.desktop
 application/x-extension-html=firefox.desktop
@@ -30,7 +30,7 @@ message/rfc822=userapp-Thunderbird-QG2BN1.desktop
 x-scheme-handler/mid=userapp-Thunderbird-QG2BN1.desktop
 x-scheme-handler/mailspring=Mailspring.desktop
 x-scheme-handler/msteams=teams.desktop
-text/x-c++=nvim.desktop
+text/x-c++=lvim.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Telegram Desktop-CIISR1.desktop;userapp-Telegram Desktop-HPBJW1.desktop;
