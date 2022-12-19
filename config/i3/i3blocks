@@ -7,16 +7,24 @@ color=#f8f8f2
 separator_block_width=18
 markup=pango
 
+# color 
+#c=#ff665c
+#c=#c57bdb
+#c=#7bc275
+#c=#51afef
+
+
 #
 [recordpid.sh]
 align=center
 border_top=1
 border=#ff79c6
 border_right=0
-border_bottom=0
 border_left=0
 interval=once
 signal=9
+border_bottom=0
+
 # label=   
 #
 
@@ -25,29 +33,32 @@ command=~/scripts/currently_playing
 interval=persist
 align=center
 border_top=1
-border=#7e8d50
+border=#ff665c
 border_right=0
-border_bottom=0
 border_left=0
+border_bottom=0
+
 
 [lang]
 command=xkb-switch | xargs echo  
 interval=once
 signal=15
 border_top=1
-label=<span color="#6c99ba">  </span>
-border=#6c99ba
+label=<span color="#51afef">  </span>
+border=#51afef
 border_right=0
-border_bottom=0
 border_left=0
+border_bottom=0
+
 
 [weather.sh]
 interval=3600
 border=#e5b566
 border_top=1
 border_right=0
-border_bottom=0
 border_left=0
+border_bottom=0
+
 
 [pacman.sh]
 interval=3600
@@ -55,26 +66,29 @@ label=<span color="#ff79c6"> </span>
 border=#ff79c6
 border_top=1
 border_right=0
-border_bottom=0
 border_left=0
+border_bottom=0
+
 
 [uptime.sh]
 interval=60
-label=<span color="#bd93f9"><b>  </b></span>
-border=#bd93f9
+label=<span color="#7bc275"><b>  </b></span>
+border=#7bc275
 border_top=1
 border_right=0
-border_bottom=0
 border_left=0
+border_bottom=0
+
 
 [nettraf.sh]
 interval=2
-label=<span color="#6c99ba">  </span>
-border=#6c99ba
+label=<span color="#bd93f9">  </span>
+border=#bd93f9
 border_top=1
 border_right=0
-border_bottom=0
 border_left=0
+border_bottom=0
+
 
 [battery.sh]
 interval=2
@@ -82,28 +96,31 @@ label=<span color="#e5b566">B: </span>
 border=#e5b566
 border_top=1
 border_right=0
-border_bottom=0
 border_left=0
+border_bottom=0
+
 
 [cpu_usage]
 #label= CPU: 
-label=<span color="#ff79c6">  </span> 
+label=<span color="#ff665c">  </span> 
 interval=2
-border=#ff79c6
+border=#ff665c
 COLOR_NORMAL=#ebdbb2
 border_top=1
 border_right=0
-border_bottom=0
 border_left=0
+border_bottom=0
+
 
 [temperature]
-label=<span color="#6c99ba">+ </span>
+label=<span color="#51afef">+ </span>
 interval=5
-border=#6c99ba
+border=#51afef
 border_top=1
 border_right=0
-border_bottom=0
 border_left=0
+border_bottom=0
+
 
 [ram.sh]
 interval=2 
@@ -111,8 +128,9 @@ label=<span color="#e5b566"> </span>
 border=#e5b566
 border_top=1
 border_right=0
-border_bottom=0
 border_left=0
+border_bottom=0
+
 
 [backlight.sh]
 interval=once
@@ -121,8 +139,9 @@ label=<span color="#ff79c6"></span>
 border=#ff79c6
 border_top=1
 border_right=0
-border_bottom=0
 border_left=0
+border_bottom=0
+
 
 #[volbar2.sh]
 #interval=once 
@@ -130,18 +149,18 @@ border_left=0
 #border=#bd93f9
 #border_top=1
 #border_right=0
-#border_bottom=0
+##border_bottom=1
 #border_left=0
 
 [micro.sh]
-# label=<span color="#6c99ba"> Mic </span>
-border=#6c99ba
+border=#7bc275
 interval=once
 signal=17
 border_top=1
 border_right=0
-border_bottom=0
 border_left=0
+border_bottom=0
+
 
 [volume-pipewire]
 border=#bd93f9
@@ -149,8 +168,9 @@ interval=once
 signal=10
 border_top=1
 border_right=0
-border_bottom=0
 border_left=0
+border_bottom=0
+
 
 [clock3.sh]
 interval=30
@@ -158,8 +178,9 @@ border=#e5b566
 label=<span color="#e5b566"> </span>
 border_top=1
 border_right=0
-border_bottom=0
+border_top=1
 border_left=0
+border_bottom=0
 
 [Hidden]
 command=xdotool key "super+b"
@@ -167,5 +188,5 @@ full_text= H : 
 border=#d4bfff
 border_top=1
 border_right=0
-border_bottom=0
 border_left=0
+border_bottom=0
