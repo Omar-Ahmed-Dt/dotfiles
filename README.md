@@ -1,83 +1,87 @@
 # Dotfiles  
 ---
+![img](https://www.padok.fr/hubfs/Images/Blog/dotfiles_git.webp)
+These are my dotfiles. The documentation for them is in progress, I'm trying to do better. Also, my window manager dots change all the time. I do upload everything here,so you should be able to view previous commits to get to the rice you want.
+
+---
 
 #### Operating System 
->> * Linux, ArcoD 
+ * Linux, ArcoD 
 
 #### Service Manager 
->>  * systemd
+  * systemd
 
 #### Desktop Display Manager 
->>  * sddm
+  * sddm
 
 #### Window Manager 
->> * i3  
+ * i3  
 
 #### Status Bar 
->> * i3blocks 
+ * i3blocks 
 
 ### Screen Locker
->> * i3lock 
+ * i3lock 
 
 #### Terminal 
->> * kitty
+ * kitty
 
 #### Editor 
->> * nvim >> lvim & vscodium
+ * nvim >> lvim & vscodium
 
 #### Shell 
->> * fish 
+ * fish 
 
 #### Launcher 
->> * dmenu [Gitlap for dmenu..](https://gitlab.com/dwt1/dmenu-distrotube)
+ * dmenu [Gitlap for dmenu..](https://gitlab.com/dwt1/dmenu-distrotube)
 
 #### Terminal File Manager 
->> * nnn  
+ * nnn  
 
 #### Gui File Manager 
->> * pcmanfm
+ * pcmanfm
 
 #### Music Player 
->> * mpd & ncmpcpp
+ * mpd & ncmpcpp
 
 #### Video Player 
->> * mpv 
+ * mpv 
 
 #### Photo Viewer 
->> * sxiv
+ * sxiv
 
 #### Screen Recorder 
->> * obs && simplescreenrecorder 
+ * obs && simplescreenrecorder 
 
 #### pdf Viewer 
->> * zathura
+ * zathura
 
 #### Resource Monitor
->> * htop
+ * htop
 
 #### Key Binding 
->> * sxhkd 
+ * sxhkd 
 
 #### Browser 
->> * firefox 
+ * firefox 
 
 #### Search Engine 
->> * startpage 
+ * startpage 
 
 #### Firewall 
->> * guwf 
+ * guwf 
 
 #### Office 
->> * libreoffice-still
+ * libreoffice-still
 
 #### Mail Client 
->> * thunderbird
+ * thunderbird
 
 #### Virtual Machine 
->> * vbox
+ * vbox
 
 #### Virtual OS 
->> * ubuntu, artix, artix lxde, void, arcoD xfce, artix xfce, archcrift
+ * ubuntu, artix, artix lxde, void, arcoD xfce, artix xfce, archcrift
 ---
 
 | Utility  | Packages            |
