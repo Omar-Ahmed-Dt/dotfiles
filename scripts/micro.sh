@@ -15,8 +15,16 @@ statusLine=$(amixer get Capture | tail -n 1)
 status=$(echo "${statusLine}" | grep -wo "on")
 volume=$(echo "${statusLine}" | awk -F ' ' '{print $5}' | tr -d '[]%')
 
+# if [[ "${status}" == "on" ]]; then
+#   echo " ${volume}%"
+# else
+#   echo " off"
+# fi
+
 if [[ "${status}" == "on" ]]; then
-  echo " ${volume}%"
+  bin_color="#7bc275"
+  echo "<span color='${bin_color}'>  </span>"${volume} %
 else
-  echo " off"
+  bin_color="#7bc275"
+  echo "<span color='${bin_color}'>  </span>"${volume} [" OFF "]
 fi

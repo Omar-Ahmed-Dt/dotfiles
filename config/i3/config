@@ -4,6 +4,7 @@
 exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
 
 # Set 
+set $term kitty
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
@@ -131,6 +132,18 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+Shift+equal scratchpad show
 
 #############################
+
+#scratchpad
+
+# ncmpcpp
+for_window [instance="mus"] floating enable 
+for_window [instance="mus"] resize set 1000 900
+for_window [instance="mus"] move scratchpad
+for_window [instance="mus"] border pixel 7
+exec --no-startup-id $term --name mus -e ncmpcpp
+bindsym $mod+Shift+n [instance="mus"] scratchpad show; [instance="mus"] move position center
+
+#############################
 # Jump to urgent window 
 bindsym $mod+x [urgent=latest] focus
 
@@ -161,8 +174,6 @@ exec --no-startup-id $HOME/scripts/keys.sh
 # exec --no-startup-id alsactl --file ~/.config/asound.state store
 # exec --no-startup-id /usr/bin/pipewire & 
 # exec --no-startup-id /usr/bin/pipewire-pulse & 
-
-
 
 # Floating 
 for_window [class="Arcolinux-welcome-app.py"] floating enable

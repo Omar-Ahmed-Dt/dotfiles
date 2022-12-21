@@ -267,7 +267,6 @@ lvim.plugins = {
   end,
 },
 
-
 }
 
 -- Run ColorizerToggle for hexa

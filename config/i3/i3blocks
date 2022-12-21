@@ -2,8 +2,8 @@ command=/home/omar/scripts/$BLOCK_NAME
 
 align=center
 separator=true
-#color=#ebdbb2
-color=#f8f8f2
+color=#ebdbb2
+# color=#f8f8f2
 separator_block_width=18
 markup=pango
 
@@ -13,8 +13,6 @@ markup=pango
 #c=#7bc275
 #c=#51afef
 
-
-#
 [recordpid.sh]
 align=center
 border_top=1
@@ -24,9 +22,6 @@ border_left=0
 interval=once
 signal=9
 border_bottom=0
-
-# label=   
-#
 
 [currently_playing]
 command=~/scripts/currently_playing
@@ -39,7 +34,7 @@ border_left=0
 border_bottom=0
 
 
-[lang]
+[lang.sh]
 command=xkb-switch | xargs echo  
 interval=once
 signal=15
@@ -63,6 +58,7 @@ border_bottom=0
 [pacman.sh]
 interval=3600
 label=<span color="#ff79c6"> </span>
+#label=<span color="#ff79c6">🐳 </span>
 border=#ff79c6
 border_top=1
 border_right=0
