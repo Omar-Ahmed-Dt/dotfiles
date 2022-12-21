@@ -411,6 +411,7 @@ alias cd="z"
 # alias nto="nnn -p - | xargs"
 alias ssh="kitty +kitten ssh"
 alias opdf="~/scripts/ozathura.sh"
+alias rmark="glow"
 
 # Function for fish 
 

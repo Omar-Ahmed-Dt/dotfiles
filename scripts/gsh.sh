@@ -19,8 +19,8 @@ fi
 # if script doesn't exist, create it
 
 if [[ ! -f $script_file ]]; then
-    # echo '#!/usr/bin/env bash' > $script_file
-    echo '#!/bin/bash' > $script_file
+    echo '#!/usr/bin/env bash' > $script_file
+    # echo '#!/bin/bash' > $script_file
     chmod +744 $script_file
 fi
 

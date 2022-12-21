@@ -24,6 +24,7 @@ super + shift + x
 #Vol up 
 XF86AudioRaiseVolume
 	pamixer -i 5 && pkill -RTMIN+10 i3blocks 
+	# amixer -D pulse sset Master 5%+ > /dev/null && pkill -RTMIN+10 i3blocks
 	#wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && pkill -RTMIN+10 i3blocks
 	#pamixer -i 5 && pkill -RTMIN+10 i3blocks 
 	#pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -RTMIN+10 i3blocks 
@@ -33,10 +34,12 @@ XF86AudioRaiseVolume
 #Vol down 
 XF86AudioLowerVolume
 	pamixer -d 5 && pkill -RTMIN+10 i3blocks 
+	# amixer -D pulse sset Master 5%- > /dev/null && pkill -RTMIN+10 i3blocks
 
 #vol toggle 
 XF86AudioMute
 	amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
+	# amixer -D pulse set Master 1+ toggle > /dev/null && pkill -RTMIN+10 i3blocks
 	#wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && pkill -RTMIN+10 i3blocks
 
 ##mic toggle 
@@ -171,8 +174,9 @@ super + shift + o
 	~/scripts/hub.sh
 
 #ncmpcpp
-super + shift + n 
-     kitty -e ncmpcpp && ~/github/mpdq/mpdq & 
+# super + shift + n 
+#      kitty -e ncmpcpp
+#      kitty -e ncmpcpp && ~/github/mpdq/mpdq & 
 
 #nnn file manger 
 shift + Return
@@ -225,7 +229,4 @@ super + p
 #   xclip -o 
 super + shift + w 
     whatsdesk
-# cmatrix
-# super + m 
-#     kitty -e cmatrix
 
