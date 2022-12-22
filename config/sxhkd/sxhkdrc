@@ -167,16 +167,11 @@ super + c
 #date 
 super + t 
     kdialog --calendar date
-#		#gsimplecal
 
 #hub 
 super + shift + o 
 	~/scripts/hub.sh
 
-#ncmpcpp
-# super + shift + n 
-#      kitty -e ncmpcpp
-#      kitty -e ncmpcpp && ~/github/mpdq/mpdq & 
 
 #nnn file manger 
 shift + Return
@@ -206,17 +201,9 @@ Pause
 super + n
 	joplin-desktop 
 
-#teams 
-super + shift + t 
-	teams 
-
 # mpc stop 
 ctrl + BackSpace 
 	mpc stop 
-
-# record 
-# super + shift + u 
-# 	~/scripts/recordscreen.sh && ~/scripts/recordpid.sh && pkill -RTMIN+5 i3blocks || pkill -9 ffmpeg && pkill -RTMIN+5 i3blocks
 
 # virtual machine 
 super + shift + a

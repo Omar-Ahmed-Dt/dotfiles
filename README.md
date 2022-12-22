@@ -109,6 +109,7 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
 | Password Manager | keepassxc | 
 | Blue Light Filter | blugon | 
 | Note | joplin | 
+| Calendar | khal | 
 
 ---
 
@@ -133,14 +134,13 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
 | emoji | super + o | 
 | kill mpv | super + v | 
 | find cursor | super + c | 
-| date | super  + t | 
+| khal | super  + t | 
 | hub | super + shift + o | 
 | ncmpcpp | super + shift + n | 
 | nnn | shift + Return | 
 | mailspring | super + shift + m | 
 | mount | super + Insert | 
 | joplin | super + n | 
-| teams | super + shift + t | 
 | record screen | super + shift + u | 
 | virtual machine | super + shift + a | 
 | stylish | super + shift + w | 

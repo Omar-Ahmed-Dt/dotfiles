@@ -18,3 +18,4 @@ cp  ~/vim_training/vim_training.ms ~/Documents/GitHub/dotfiles/vim_training.ms
 cp  ~/.config/lvim/config.lua  ~/Documents/GitHub/dotfiles/config/lvim
 cp -r ~/.config/lvim/ftplugin/  ~/Documents/GitHub/dotfiles/config/lvim/
 cp ~/.cache/styli.sh/wallpaper.jpg ~/Documents/GitHub/dotfiles/workflow/
+cp ~/.config/khal/config ~/Documents/GitHub/dotfiles/config/khal/
