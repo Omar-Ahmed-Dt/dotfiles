@@ -143,6 +143,15 @@ for_window [instance="mus"] border pixel 7
 exec --no-startup-id $term --name mus -e ncmpcpp
 bindsym $mod+Shift+n [instance="mus"] scratchpad show; [instance="mus"] move position center
 
+# cal
+for_window [instance="cal"] floating enable 
+for_window [instance="cal"] resize set 1000 900
+for_window [instance="cal"] move scratchpad
+for_window [instance="cal"] border pixel 7
+exec --no-startup-id $term --name cal -e khal  --color interactive
+bindsym $mod+t [instance="cal"] scratchpad show; [instance="cal"] move position center
+
+
 #############################
 # Jump to urgent window 
 bindsym $mod+x [urgent=latest] focus
