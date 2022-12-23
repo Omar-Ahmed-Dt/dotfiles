@@ -193,6 +193,9 @@ super + Insert
 ctrl + Pause
     mpc toggle 
 
+ctrl + p
+    mpc toggle 
+
 # Pause button
 Pause
 	playerctl play-pause
@@ -216,4 +219,3 @@ super + p
 #   xclip -o 
 super + shift + w 
     whatsdesk
-

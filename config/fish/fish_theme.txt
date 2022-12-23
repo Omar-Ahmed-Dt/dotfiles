@@ -1,0 +1,11 @@
+# forcing remove 
+ln -s ~/.local/share/omf/themes/pie/fish_prompt.fish fish_prompt.fish
+or 
+rm ~/.config/fish/functions/fish_prompt.fish
+
+omf install theme_name
+omf theme >> themes avail 
+
+omf theme idan 
+omf theme harleen 
+omf theme sashimi
