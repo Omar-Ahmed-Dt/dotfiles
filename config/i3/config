@@ -139,18 +139,22 @@ bindsym $mod+Shift+equal scratchpad show
 for_window [instance="mus"] floating enable 
 for_window [instance="mus"] resize set 1000 900
 for_window [instance="mus"] move scratchpad
-for_window [instance="mus"] border pixel 7
 exec --no-startup-id $term --name mus -e ncmpcpp
 bindsym $mod+Shift+n [instance="mus"] scratchpad show; [instance="mus"] move position center
 
 # cal
-for_window [instance="cal"] floating enable 
-for_window [instance="cal"] resize set 1000 900
-for_window [instance="cal"] move scratchpad
-for_window [instance="cal"] border pixel 7
-exec --no-startup-id $term --name cal -e khal  --color interactive
-bindsym $mod+t [instance="cal"] scratchpad show; [instance="cal"] move position center
+for_window [instance="date"] floating enable 
+for_window [instance="date"] resize set 1000 900
+for_window [instance="date"] move scratchpad
+exec --no-startup-id $term --name date -e khal --color interactive
+bindsym $mod+shift+t [instance="date"] scratchpad show; [instance="date"] move position center
 
+# calc
+for_window [instance="calc"] floating enable 
+for_window [instance="calc"] resize set 900 900
+for_window [instance="calc"] move scratchpad
+exec --no-startup-id $term --name calc -e kalker 
+bindsym $mod+t [instance="calc"] scratchpad show; [instance="calc"] move position center
 
 #############################
 # Jump to urgent window 
@@ -158,7 +162,6 @@ bindsym $mod+x [urgent=latest] focus
 
 for_window [urgent=latest] focus
 default_orientation horizontal
-#font pango:Noto Mono Regular 9
 exec_always --no-startup-id autotiling
 for_window [class="Vivaldi-stable"] focus
 
@@ -169,7 +172,6 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id numlockx on
 # exec --no-startup-id volumeicon
 exec --no-startup-id feh --bg-fill /home/omar/.cache/styli.sh/wallpaper.jpg & 
-#exec --no-startup-id feh --bg-fill --randomize https://unsplash.it/1920/1080?random
 exec_always --no-startup-id sxhkd 
 exec --no-startup-id mpd
 exec --no-startup-id clipmenud
@@ -178,11 +180,7 @@ exec --no-startup-id blugon
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 exec --no-startup-id dunst
 exec_always --no-startup-id xhost +local:root 
-#exec --no-startup-id setxkbmap -option caps:escape  
 exec --no-startup-id $HOME/scripts/keys.sh
-# exec --no-startup-id alsactl --file ~/.config/asound.state store
-# exec --no-startup-id /usr/bin/pipewire & 
-# exec --no-startup-id /usr/bin/pipewire-pulse & 
 
 # Floating 
 for_window [class="Arcolinux-welcome-app.py"] floating enable
