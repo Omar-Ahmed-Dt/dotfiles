@@ -1,3 +1,5 @@
+# #######
+
 # input from keyboard 
 #run : xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 
@@ -193,7 +195,8 @@ super + Insert
 ctrl + Pause
     mpc toggle 
 
-ctrl + p
+# Pause button 
+ctrl + space
     mpc toggle 
 
 # Pause button
