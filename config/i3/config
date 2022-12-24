@@ -151,7 +151,7 @@ bindsym $mod+shift+t [instance="date"] scratchpad show; [instance="date"] move p
 
 # calc
 for_window [instance="calc"] floating enable 
-for_window [instance="calc"] resize set 900 900
+for_window [instance="calc"] resize set 900 325
 for_window [instance="calc"] move scratchpad
 exec --no-startup-id $term --name calc -e kalker 
 bindsym $mod+t [instance="calc"] scratchpad show; [instance="calc"] move position center
