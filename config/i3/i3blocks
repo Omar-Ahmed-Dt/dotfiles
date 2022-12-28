@@ -178,11 +178,11 @@ border_top=1
 border_left=0
 border_bottom=0
 
-[Hidden]
-command=xdotool key "super+b"
-full_text= H : 
-border=#d4bfff
-border_top=1
-border_right=0
-border_left=0
-border_bottom=0
+#[Hidden]
+#command=xdotool key "super+b"
+#full_text= H : 
+#border=#d4bfff
+#border_top=1
+#border_right=0
+#border_left=0
+#border_bottom=0

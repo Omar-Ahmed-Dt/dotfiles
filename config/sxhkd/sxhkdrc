@@ -54,6 +54,9 @@ super + equal
 #mic down 
 super + minus
    amixer set Capture 5%- && pkill -RTMIN+17 i3blocks
+# mic mute
+super + BackSpace 
+      amixer -q sset Capture toggle && pkill -RTMIN+17 i3blocks
 
 #light up 
 XF86MonBrightnessUp
@@ -118,12 +121,12 @@ ctrl + XF86AudioPlay
     mpc toggle 
 
 #clipboard 
-super + d 
+super + v 
 	clipmenu  
 
 #htop 
-super + shift + h 
-  kitty -e htop 
+# super + shift + h 
+#   kitty -e htop 
   #/home/omar/scripts/resources.sh
 
 #screeen record 
@@ -160,7 +163,7 @@ super + o
     bemoji
 
 #kill mpv 
-super + v 
+super + d 
     pkill mpv 
 
 #find cursor 
