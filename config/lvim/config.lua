@@ -61,7 +61,7 @@ vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying me
 vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
 
 -- colorcolumn
-vim.api.nvim_set_option_value("colorcolumn", "90", {})
+vim.api.nvim_set_option_value("colorcolumn", "80", {})
 
 -- global
 vim.go.acd = true -- open terminal in the same path 
