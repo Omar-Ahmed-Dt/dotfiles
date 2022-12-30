@@ -110,6 +110,7 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
 | Blue Light Filter | blugon | 
 | Note | joplin | 
 | Calendar | khal | 
+| Whatsapp Client  | whatsdesk whatsapp-nativefier | 
 
 ---
 
@@ -143,4 +144,9 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
 | joplin | super + n | 
 | record screen | super + shift + u | 
 | virtual machine | super + shift + a | 
-| stylish | super + shift + w | 
+| whatsdesk | super + shift + w | 
+| logout | super + Delete | 
+| calendar | super + shift + t | 
+| calculator | super + c | 
+| pavucontrol | super + Backslash | 
+| keepassxc | super + q | 

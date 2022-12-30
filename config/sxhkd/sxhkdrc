@@ -11,9 +11,14 @@ shift + Escape
 super + Return
     kitty 
 
-#Browser 
+# run script via dmenu 
+super + shift + f
+    ~/scripts/run_dmenu.sh
+	# ~/scripts/browser.sh
+
+# browser
 super + shift + b 
-	~/scripts/browser.sh
+    ~/scripts/browser.sh
 
 #file manger gui 
 super + shift + Return
@@ -167,11 +172,12 @@ super + d
     pkill mpv 
 
 #find cursor 
-super + c 
-    xfce4-find-cursor
+# super + c 
+#     xfce4-find-cursor
+
 #date 
-super + t 
-    kdialog --calendar date
+# super + t 
+#     kdialog --calendar date
 
 #hub 
 super + shift + o 
@@ -222,6 +228,11 @@ super + shift + a
 super + p 
   ~/github/dmscripts/scripts/dm-music
 
-#   xclip -o 
+# whatsapp 
 super + shift + w 
-    whatsdesk
+     whatsdesk
+    # whatsapp-nativefier
+
+# logout 
+super + Delete 
+	pkill i3
