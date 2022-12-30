@@ -138,6 +138,8 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
 | khal | super  + t | 
 | hub | super + shift + o | 
 | ncmpcpp | super + shift + n | 
+| mpc pause | ctrl + space  |
+| mpc stop | ctrl + Backspace |
 | nnn | shift + Return | 
 | mailspring | super + shift + m | 
 | mount | super + Insert | 
@@ -149,6 +151,9 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
 | calendar | super + shift + t | 
 | calculator | super + c | 
 | pavucontrol | super + Backslash | 
+| mic down | super + minus | 
+| mic up | super + equal | 
+| mic mute | super + Backspace | 
 | keepassxc | super + q | 
 | scripts via dmenu | super + shift + f | 
 | clipmenu | super + v | 
