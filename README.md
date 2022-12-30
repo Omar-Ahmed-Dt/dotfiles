@@ -133,7 +133,7 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
 | kill process | super + shift + k | 
 | github disktop | super + shift + g | 
 | emoji | super + o | 
-| kill mpv | super + v | 
+| kill mpv | super + d | 
 | find cursor | super + c | 
 | khal | super  + t | 
 | hub | super + shift + o | 
@@ -150,3 +150,5 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
 | calculator | super + c | 
 | pavucontrol | super + Backslash | 
 | keepassxc | super + q | 
+| scripts via dmenu | super + shift + f | 
+| clipmenu | super + v | 
