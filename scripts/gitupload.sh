@@ -12,6 +12,8 @@ cp ~/.config/mpd/mpd.conf ~/Documents/GitHub/dotfiles/config/mpd
 #cp ~/.config/mpDris2/mpDris2.conf ~/Documents/GitHub/dotfiles/config/mpDris2
 cp -r ~/.config/nnn/plugins ~/Documents/GitHub/dotfiles/config/nnn
 cp -r ~/.config/kitty/kitty.conf ~/Documents/GitHub/dotfiles/config/kitty
+cp -r ~/.config/kitty/kitty2.conf ~/Documents/GitHub/dotfiles/config/kitty
+cp -r ~/.config/kitty/theme.conf ~/Documents/GitHub/dotfiles/config/kitty
 cp -r ~/.zshrc ~/Documents/GitHub/dotfiles/zshrc
 cp -r ~/.Xresources ~/Documents/GitHub/dotfiles/Xresources
 cp  ~/vim_training/vim_training.ms ~/Documents/GitHub/dotfiles/vim_training.ms

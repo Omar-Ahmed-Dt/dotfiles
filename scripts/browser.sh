@@ -1,8 +1,8 @@
 #!/bin/bash
 declare options=("Firefox
 Brave
-Chromium
-Google-chrome")
+Chromium"
+)
 
 choice=$(echo -e "${options[@]}" | dmenu -i -l 20 -g 2 -X 0 -Y 0 -W 680 -p 'launch browser: ' )
 
@@ -18,9 +18,6 @@ case "$choice" in
     ;;
     Chromium)
         choice="chromium"
-    ;;
-    Google-chrome)
-        choice="google-chrome-stable"
     ;;
 esac
 "$choice"
