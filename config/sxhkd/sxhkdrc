@@ -84,7 +84,8 @@ XF86Explorer
 
 #dmenu 
 super + shift + d 
-	dmenu_run  
+    ~/scripts/lan_dmenu.sh && dmenu_run
+	# dmenu_run  
 
 #lang 
 shift + Alt_L
@@ -127,7 +128,9 @@ ctrl + XF86AudioPlay
 
 #clipboard 
 super + v 
-	clipmenu  
+
+    ~/scripts/lan_dmenu.sh && clipmenu
+	# clipmenu  
 
 #htop 
 # super + shift + h 
@@ -164,8 +167,8 @@ super + shift + g
     github-desktop
 
 #emoji 
-super + o 
-   ~/github/dmscripts/scripts/dm-note 
+# super + o 
+# ~/scripts/lan_dmenu.sh && ~/github/dmscripts/scripts/dm-note 
 #     bemoji
 
 #kill mpv 
@@ -240,4 +243,4 @@ super + Delete
 
 # emoji 
 super + period
-    bemoji -f ~/scripts/emoji
+    ~/scripts/lan_dmenu.sh && bemoji -f ~/scripts/emoji
