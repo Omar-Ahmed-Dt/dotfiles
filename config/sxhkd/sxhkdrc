@@ -165,7 +165,8 @@ super + shift + g
 
 #emoji 
 super + o 
-    bemoji
+   ~/github/dmscripts/scripts/dm-note 
+#     bemoji
 
 #kill mpv 
 super + d 
@@ -236,3 +237,7 @@ super + shift + w
 # logout 
 super + Delete 
 	pkill i3
+
+# emoji 
+super + period
+    bemoji -f ~/scripts/emoji

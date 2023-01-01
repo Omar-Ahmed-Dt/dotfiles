@@ -1,5 +1,5 @@
 #!/bin/sh
-
+TERMINAL=kitty
 service=$(systemctl list-unit-files --all --type=service --no-legend \
     | awk '{print $0}' \
     | dmenu -i -l 10 -p "Systemd Service: ")
