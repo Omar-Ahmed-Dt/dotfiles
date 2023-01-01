@@ -178,11 +178,11 @@ exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name pass -e keepass
 bindsym $mod+q [instance="pass"] scratchpad show; [instance="pass"] move position center
 
 # term
-# for_window [instance="term"] floating enable 
-# for_window [instance="term"] resize set 1500 1000
-# for_window [instance="term"] move scratchpad
-# exec --no-startup-id $term --name term  
-# bindsym $mod+t [instance="term"] scratchpad show; [instance="term"] move position center
+for_window [instance="term"] floating enable 
+for_window [instance="term"] resize set 1500 1000
+for_window [instance="term"] move scratchpad
+exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name term  
+bindsym $mod+t [instance="term"] scratchpad show; [instance="term"] move position center
 
 #############################
 # Jump to urgent window 
