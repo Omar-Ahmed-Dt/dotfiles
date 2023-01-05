@@ -1,3 +1,5 @@
 #!/bin/bash 
-echo  $(checkupdates-aur | wc -l) pks 
-# echo $(checkupdates-with-aur | wc -l) pks 
+pacman=$(echo  $(checkupdates-aur | wc -l) pks )
+# aur_=echo  $(checkupdates-with-aur | wc -l) pks 
+
+echo $pacman

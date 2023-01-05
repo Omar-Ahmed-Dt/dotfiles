@@ -1,5 +1,4 @@
 #!/bin/sh
-#my config 
 while read file
 do
         case "$1" in
