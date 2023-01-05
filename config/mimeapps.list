@@ -14,7 +14,7 @@ video/x-matroska=mpv.desktop;
 text/html=firefox.desktop
 audio/mpeg=mpv.desktop;
 application/json=lvim.desktop;
-inode/directory=pcmanfm.desktop
+inode/directory=nemo.desktop
 x-scheme-handler/tg=userapp-Telegram Desktop-HPBJW1.desktop
 application/x-shellscript=lvim.desktop;
 text/plain=lvim.desktop;
@@ -31,6 +31,7 @@ x-scheme-handler/mid=userapp-Thunderbird-QG2BN1.desktop
 x-scheme-handler/mailspring=Mailspring.desktop
 x-scheme-handler/msteams=teams.desktop
 text/x-c++=lvim.desktop
+application/x-gnome-saved-search=nemo.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Telegram Desktop-CIISR1.desktop;userapp-Telegram Desktop-HPBJW1.desktop;

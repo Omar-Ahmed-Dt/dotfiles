@@ -14,7 +14,6 @@ super + Return
 # run script via dmenu 
 super + shift + f
     ~/scripts/run_dmenu.sh
-	# ~/scripts/browser.sh
 
 # browser
 super + shift + b 
@@ -22,7 +21,8 @@ super + shift + b
 
 #file manger gui 
 super + shift + Return
-	pcmanfm /home/omar
+    nemo ~/
+	# pcmanfm /home/omar
 
 #xkill 
 super + shift + x 
@@ -70,22 +70,18 @@ XF86MonBrightnessUp
 #light up 
 XF86Search
 		light -A 5 && pkill -RTMIN+20 i3blocks
-	#light -A 5 && polybar-msg hook backlight 1  
 
 #light down 
 XF86MonBrightnessDown
 		light -U 5 && pkill -RTMIN+20 i3blocks
-	#light -U 5 && polybar-msg hook backlight 1  
 
 #light down 
 XF86Explorer
 		light -U 5 && pkill -RTMIN+20 i3blocks
-	#light -U 5 && polybar-msg hook backlight 1  
 
 #dmenu 
 super + shift + d 
     ~/scripts/lan_dmenu.sh && dmenu_run
-	# dmenu_run  
 
 #lang 
 shift + Alt_L
@@ -132,11 +128,6 @@ super + v
     ~/scripts/lan_dmenu.sh && clipmenu
 	# clipmenu  
 
-#htop 
-# super + shift + h 
-#   kitty -e htop 
-  #/home/omar/scripts/resources.sh
-
 #screeen record 
 super + Print
     ~/scripts/select_dmenurecording.sh
@@ -166,22 +157,9 @@ super + shift + k
 super + shift + g 
     github-desktop
 
-#emoji 
-# super + o 
-# ~/scripts/lan_dmenu.sh && ~/github/dmscripts/scripts/dm-note 
-#     bemoji
-
 #kill mpv 
 super + d 
     pkill mpv 
-
-#find cursor 
-# super + c 
-#     xfce4-find-cursor
-
-#date 
-# super + t 
-#     kdialog --calendar date
 
 #hub 
 super + shift + o 
@@ -235,7 +213,6 @@ super + p
 # whatsapp 
 super + shift + w 
      whatsdesk
-    # whatsapp-nativefier
 
 # logout 
 super + Delete 
@@ -244,3 +221,4 @@ super + Delete
 # emoji 
 super + period
     ~/scripts/lan_dmenu.sh && bemoji -f ~/scripts/emoji
+

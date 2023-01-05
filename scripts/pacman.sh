@@ -1,8 +1,3 @@
 #!/bin/bash 
-pacman=$(checkupdates | wc -l)
-#aur=$(yay -Qum | wc -l)
-echo  $(checkupdates | wc -l) pks 
-
-#echo $(($pacman+$aur)) pks 
-
-
+echo  $(checkupdates-aur | wc -l) pks 
+# echo $(checkupdates-with-aur | wc -l) pks 
