@@ -1,11 +1,9 @@
 #!/bin/bash
+#
 # Default acpi script that takes an entry for all actions
-
 ### Path : /etc/acpi/handler.sh
-
-export DISPLAY=:0.0
-export $(dbus-launch)
-
+#
+#
 case "$1" in
     button/power)
         case "$2" in
@@ -20,10 +18,12 @@ case "$1" in
     jack/headphone)
 	    case "$3" in
 			    plug) 
-                    pkill -RTMIN+10 i3blocks && sudo -u omar DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus dunstify "Headphone is Plugged" -t 1500 -i /home/omar/logo/headphone.png -r 9523 ;;
+			        # To send desktop notification from a background script running as root (replace X_user and X_userid with the user and userid running X respectively): 
+			        # sudo -u X_user DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/X_userid/bus notify-send 'Hello world!' 'This is an example notification.'
+			        #
+                    pkill -RTMIN+10 i3blocks && sudo -u omar DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus dunstify "Headphone is Plugged" -t 1500 -i /home/omar/logo/headphone2.jpg -r 9523 && pkill -RTMIN+10 i3blocks ;;
 			    unplug)
-                    pkill -RTMIN+10 i3blocks && sudo -u omar DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus dunstify "Headphone is Unplugged" -t 1500 -i /home/omar/logo/headphone.png -r 9523 ;;
-                    #pkill -RTMIN+10 i3blocks && notify-send "Headphone is Unplugged" -r 1000 -i /home/omar/logo/headphone.png ;;
+                    pkill -RTMIN+10 i3blocks && sudo -u omar DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus dunstify "Headphone is Unplugged" -t 1500 -i /home/omar/logo/headphone2.jpg -r 9523 && pkill -RTMIN+10 i3blocks ;;
 			    *) 
 			        ;;
   		esac 
