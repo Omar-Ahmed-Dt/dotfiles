@@ -140,7 +140,7 @@
 | mpc pause | ctrl + space  |
 | mpc stop | ctrl + Backspace |
 | nnn | shift + Return | 
-| mailspring | super + shift + m | 
+| thunderbird | super + shift + m | 
 | mount | super + Insert | 
 | joplin | super + n | 
 | record screen | super + shift + u | 
