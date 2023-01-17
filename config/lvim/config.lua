@@ -11,7 +11,6 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
-
 -- colorscheme
 -- lvim.colorscheme = "habamax"
 -- lvim.colorscheme = "onedarker"
@@ -64,7 +63,7 @@ vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying me
 vim.api.nvim_set_option_value("colorcolumn", "80", {})
 
 -- global
-vim.go.acd = true -- open terminal in the same path 
+vim.go.acd = true -- open terminal in the same path
 
 
 -- to disable icons and use a minimalist setup, uncomment the following
@@ -98,11 +97,11 @@ lvim.keys.normal_mode["<leader>C"] = ":BufferLinePickClose<CR>"
 --     ["<C-p>"] = actions.cycle_history_prev,
 --   },
 --   -- for normal mode
-    --
-  -- n = {
-    -- ["<C-j>"] = actions.move_selection_next,
-    -- ["<C-k>"] = actions.move_selection_previous,
-  -- },
+--
+-- n = {
+-- ["<C-j>"] = actions.move_selection_next,
+-- ["<C-k>"] = actions.move_selection_previous,
+-- },
 -- }
 
 -- lvim.builtin.which_key.mappings["."] = {
@@ -140,18 +139,18 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
-  "bash",
-  "c",
-  "javascript",
-  "json",
-  "lua",
-  "python",
-  "typescript",
-  "tsx",
-  "css",
-  "rust",
-  "java",
-  "yaml",
+    "bash",
+    "c",
+    "javascript",
+    "json",
+    "lua",
+    "python",
+    "typescript",
+    "tsx",
+    "css",
+    "rust",
+    "java",
+    "yaml",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -243,36 +242,36 @@ lvim.builtin.treesitter.highlight.enable = true
 lvim.plugins = {
 
     -- For markdown-preview
-{
-      "iamcco/markdown-preview.nvim",
-      run = "cd app && npm install",
-      ft = "markdown",
-      config = function()
-      vim.g.mkdp_auto_start = 1
-      end,
-},
+    {
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        ft = "markdown",
+        config = function()
+            vim.g.mkdp_auto_start = 1
+        end,
+    },
 
-{
-  "norcalli/nvim-colorizer.lua",
-    config = function()
-      require("colorizer").setup({ "css", "scss", "html", "javascript" }, {
-          RGB = true, -- #RGB hex codes
-          RRGGBB = true, -- #RRGGBB hex codes
-          RRGGBBAA = true, -- #RRGGBBAA hex codes
-          rgb_fn = true, -- CSS rgb() and rgba() functions
-          hsl_fn = true, -- CSS hsl() and hsla() functions
-          css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-          css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-          })
-  end,
-},
+    {
+        "norcalli/nvim-colorizer.lua",
+        config = function()
+            require("colorizer").setup({ "css", "scss", "html", "javascript" }, {
+                RGB = true, -- #RGB hex codes
+                RRGGBB = true, -- #RRGGBB hex codes
+                RRGGBBAA = true, -- #RRGGBBAA hex codes
+                rgb_fn = true, -- CSS rgb() and rgba() functions
+                hsl_fn = true, -- CSS hsl() and hsla() functions
+                css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+                css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+            })
+        end,
+    },
 
 }
 
 -- Run ColorizerToggle for hexa
 vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { "*" },
-  command = "ColorizerToggle",
+    pattern = { "*" },
+    command = "ColorizerToggle",
 })
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
@@ -283,35 +282,35 @@ vim.api.nvim_create_autocmd("BufEnter", {
 -- })
 --
 --
--- My plugins : 
+-- My plugins :
 --
--- For Python File 
--- 
+-- For Python File
+--
 vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { "*.py" },
-  command = "source ~/.config/lvim/ftplugin/py.lua",
+    pattern = { "*.py" },
+    command = "source ~/.config/lvim/ftplugin/py.lua",
 })
 --
 --
--- Run sh File  
+-- Run sh File
 vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { "*.sh" },
-  command = "source ~/.config/lvim/ftplugin/sh.lua",
+    pattern = { "*.sh" },
+    command = "source ~/.config/lvim/ftplugin/sh.lua",
 })
 --
--- Run markdown File  
+-- Run markdown File
 vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { "*.md" },
-  command = "source ~/.config/lvim/ftplugin/md.lua",
+    pattern = { "*.md" },
+    command = "source ~/.config/lvim/ftplugin/md.lua",
 })
 
--- Run groff to generate pdf file 
+-- Run groff to generate pdf file
 vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { "*.ms" },
-  command = "source ~/.config/lvim/ftplugin/ms.lua",
+    pattern = { "*.ms" },
+    command = "source ~/.config/lvim/ftplugin/ms.lua",
 })
 --
--- samples 
+-- samples
 -- autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 -- autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 -- autocmd filetype py nnoremap <C-p> :w <bar> !python3 %<CR>
