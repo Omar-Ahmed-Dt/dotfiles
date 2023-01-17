@@ -7,7 +7,7 @@ x-scheme-handler/unknown=firefox.desktop
 application/pdf=org.pwmt.zathura.desktop
 image/png=sxiv.desktop
 image/gif=mpv.desktop
-image/jpeg=org.cubocore.CoreImage.desktop
+image/jpeg=org.gnome.eog.desktop
 image/jpg=sxiv.desktop
 video/mp4=mpv.desktop;
 video/x-matroska=mpv.desktop;
@@ -32,10 +32,12 @@ x-scheme-handler/mailspring=Mailspring.desktop
 x-scheme-handler/msteams=teams.desktop
 text/x-c++=lvim.desktop
 application/x-gnome-saved-search=nemo.desktop
+image/webp=org.gnome.eog.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Telegram Desktop-CIISR1.desktop;userapp-Telegram Desktop-HPBJW1.desktop;
 x-scheme-handler/mailto=userapp-Evolution-HDSJS1.desktop;
-image/jpeg=org.cubocore.CoreImage.desktop;
+image/jpeg=org.cubocore.CoreImage.desktop;org.gnome.eog.desktop;
 text/markdown=org.pwmt.zathura-pdf-mupdf.desktop;
 application/epub+zip=firefox.desktop;org.pwmt.zathura-pdf-mupdf.desktop;okularApplication_epub.desktop;
+image/webp=org.gnome.eog.desktop;

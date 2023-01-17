@@ -71,7 +71,7 @@ XF86MonBrightnessUp
 XF86Search
 		light -A 5 && pkill -RTMIN+20 i3blocks
 
-#light down 
+#LIGHT DOWN 
 XF86MonBrightnessDown
 		light -U 5 && pkill -RTMIN+20 i3blocks
 
@@ -86,9 +86,10 @@ super + shift + d
 #lang 
 shift + Alt_L
 	setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
-
+    # setxkbmap -query | grep -q 'ar' && setxkbmap us || setxkbmap ar,us
 shift + Alt_R
 	setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
+    # setxkbmap -query | grep -q 'ar' && setxkbmap us || setxkbmap ar,us
 
 #power 
 super + Escape 

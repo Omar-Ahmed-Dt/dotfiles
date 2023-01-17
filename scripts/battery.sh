@@ -18,6 +18,9 @@ get_battery()
 {
 	# The vast majority of people only use one battery.
 
+    remain=$(acpi | awk -F , '{print $3}' | awk -F: '{print $1":"$2}')
+    
+
 	if [ -d /sys/class/power_supply/BAT0 ]; then
 		capacity=$(cat /sys/class/power_supply/BAT0/capacity)
 		charging=$(cat /sys/class/power_supply/BAT0/status)
@@ -37,8 +40,8 @@ get_battery()
 			BAT_ICON=$BATTERY_2_ICON
 		fi
 	fi
-	echo "$ICON$BAT_ICON  $capacity%"
+	echo "$ICON$BAT_ICON  $capacity% $remain"
 }
 
-get_battery
-dmen
+get_battery 
+# dmen
