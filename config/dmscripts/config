@@ -52,7 +52,7 @@ esac
 bookman_show_source=1
 
 # dm-sounds
-#sounds_dir="${HOME}/.config/dmscripts/dmsounds"
+# sounds_dir="${HOME}/.config/dmscripts/dmsounds"
 
 # dm-setbg
 #setbg_dir="${HOME}/Pictures/Wallpapers"
