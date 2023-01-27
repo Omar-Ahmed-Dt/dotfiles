@@ -19,6 +19,7 @@ alsa-utils
 alsi
 android-file-transfer
 android-tools
+apg
 appstream
 arandr
 arc-darkest-theme-git
@@ -30,7 +31,6 @@ archiso
 archlinux-keyring
 archlinux-login-backgrounds-git
 archlinux-logout-git
-archlinux-logout-themes-git
 archlinux-tweak-tool-git
 arcolinux-alacritty-git
 arcolinux-arc-kde
@@ -128,12 +128,14 @@ bigbashview
 biglinux-noise-reduction-pipewire
 bind
 binutils
+birdtray
 bison
 blueberry
 bluez
 bluez-libs
 bluez-utils
 blugon
+bmon
 boost-libs
 bottom
 brasero
@@ -143,15 +145,20 @@ broadcom-wl-dkms
 btop
 btrfs-progs
 bumblebee
+byobu
 capitaine-cursors
 cargo-c
 catfish
 catppuccin-cursors-git
+ccze
 cheese
 chromium
-clipmenu
+clipmenu-rofi
+clipnotify-git
 clonezilla
+clubhouse-desktop-bin
 conky-lua-archers
+containerd
 cronie
 cryptsetup
 cuda
@@ -171,6 +178,8 @@ dmenu
 dmidecode
 dmraid
 dnsmasq
+docker
+docker-compose
 dosfstools
 downgrade
 dracula-cursors-git
@@ -336,6 +345,7 @@ hardinfo-gtk3
 hddtemp
 hdparm
 hitori
+hollywood
 hplip
 htop-vim
 hunspell
@@ -352,12 +362,14 @@ i3status
 iagno
 imagemagick
 imagewriter
+imv
 inkscape
 intltool
 inxi
 irssi
 iw
 jfsutils
+jp2a
 jq
 jsoncpp
 kalker
@@ -428,6 +440,7 @@ mlocate
 mobile-broadband-provider-info
 modemmanager
 moka-icon-theme-git
+moreutils
 mousetweaks
 mpc
 mpd
@@ -441,6 +454,7 @@ nbd
 ncmpcpp
 ndisc6
 nemo
+neo-matrix
 neofetch
 neovim
 nerd-fonts-source-code-pro
@@ -540,9 +554,12 @@ pv
 python-pyparted
 python-pywal
 qbittorrent
+qjackctl
 qogir-gtk-theme-git
 qogir-icon-theme
 qogir-kde-theme-git
+qpwgraph
+qsynth
 qt5ct
 quadrapassel
 rate-mirrors-bin
@@ -598,6 +615,7 @@ slock
 smartmontools
 sof-firmware
 sparklines-git
+speedometer
 speedtest-cli-git
 squashfs-tools
 starship
@@ -615,6 +633,7 @@ sxhkd
 sxiv
 syslinux
 sysprof
+sysstat
 system-config-printer
 system76-power
 tali
@@ -637,6 +656,7 @@ tmux
 totem
 tpm2-tss
 tracker3-miners
+trash-cli
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-caladea
@@ -672,11 +692,13 @@ ttf-roboto
 ttf-roboto-mono
 ttf-ubuntu-font-family
 tumbler
+udevil
 udftools
 udiskie
 udisks2
 ufw
 unace
+unimatrix-git
 unrar
 unzip
 upd72020x-fw
@@ -787,6 +809,7 @@ xkb-switch-git
 xkblayout-state-git
 xkeyboard-config
 xl2tpd
+xmind
 xorg-bdftopcf
 xorg-iceauth
 xorg-mkfontscale
@@ -824,6 +847,7 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xournalpp
 xwallpaper
 yad
 yarn
@@ -831,6 +855,7 @@ yay-bin
 yelp
 yt-dlp
 zafiro-icon-theme
+zaread-git
 zathura
 zathura-pdf-mupdf
 zenity
