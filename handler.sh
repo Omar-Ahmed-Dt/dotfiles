@@ -1,9 +1,5 @@
 #!/bin/bash
 #
-# Default acpi script that takes an entry for all actions
-### Path : /etc/acpi/handler.sh
-#
-#
 case "$1" in
     button/power)
         case "$2" in
@@ -75,7 +71,7 @@ case "$1" in
     button/lid)
         case "$3" in
             close)
-                logger 'LID closed'
+                sudo -u omar DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus /home/omar/scripts/lock.sh && systemctl suspend
                 ;;
             open)
                 logger 'LID opened'

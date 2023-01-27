@@ -4,7 +4,7 @@ align=center
 separator=true
 color=#ebdbb2
 #color=#f8f8f2
-separator_block_width=18
+separator_block_width=15
 markup=pango
 
 [recordpid.sh]
@@ -27,7 +27,6 @@ border_right=0
 border_left=0
 border_bottom=0
 
-
 [lang.sh]
 command=xkb-switch | xargs echo | awk -F '(' '{print $1}'
 interval=once
@@ -39,7 +38,6 @@ border_right=0
 border_left=0
 border_bottom=0
 
-
 [weather.sh]
 interval=3600
 border=#e5b566
@@ -47,7 +45,6 @@ border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-
 
 [pacman.sh]
 interval=3600
@@ -59,7 +56,6 @@ border_right=0
 border_left=0
 border_bottom=0
 
-
 [uptime.sh]
 interval=60
 label=<span color="#7bc275"><b>  </b></span>
@@ -68,7 +64,6 @@ border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-
 
 [nettraf.sh]
 interval=2
@@ -79,16 +74,14 @@ border_right=0
 border_left=0
 border_bottom=0
 
-
 [battery.sh]
-interval=60
+interval=2
 label=<span color="#e5b566">B: </span>
 border=#e5b566
 border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-
 
 [cpu_usage]
 #label= CPU: 
@@ -101,7 +94,6 @@ border_right=0
 border_left=0
 border_bottom=0
 
-
 [temperature]
 label=<span color="#51afef">+ </span>
 interval=5
@@ -111,27 +103,24 @@ border_right=0
 border_left=0
 border_bottom=0
 
-
 [ram.sh]
 interval=2 
-label=<span color="#e5b566"> </span>
+label=<span color="#e5b566">  </span>
 border=#e5b566
 border_top=1
 border_right=0
 border_left=0
 border_bottom=0
 
-
 [backlight.sh]
 interval=once
 signal=20
-label=<span color="#ff79c6"></span>
+label=<span color="#ff79c6"> </span>
 border=#ff79c6
 border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-
 
 #[volbar2.sh]
 #interval=once 
@@ -151,7 +140,6 @@ border_right=0
 border_left=0
 border_bottom=0
 
-
 [volume-pipewire]
 border=#bd93f9
 interval=once
@@ -160,7 +148,6 @@ border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-
 
 [clock3.sh]
 interval=30
@@ -180,3 +167,4 @@ border_bottom=0
 #border_right=0
 #border_left=0
 #border_bottom=0
+

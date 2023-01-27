@@ -144,7 +144,8 @@ bindsym $mod+Shift+n [instance="mus"] scratchpad show; [instance="mus"] move pos
 
 # cal
 for_window [instance="date"] floating enable 
-for_window [instance="date"] resize set 1000 900
+# for_window [instance="date"] resize set 1000 900
+for_window [instance="date"] resize set 733 500
 for_window [instance="date"] move scratchpad
 exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name date -e khal --color interactive
 bindsym $mod+shift+t [instance="date"] scratchpad show; [instance="date"] move position center
@@ -177,6 +178,13 @@ for_window [instance="pass"] move scratchpad
 exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name pass -e keepassxc 
 bindsym $mod+q [instance="pass"] scratchpad show; [instance="pass"] move position center
 
+# mail
+# for_window [instance="mail"] floating enable 
+# for_window [instance="mail"] resize set 1500 1000
+# for_window [instance="mail"] move scratchpad
+# exec --no-startup-id $term --name mail -e thunderbird 
+# bindsym $mod+shift+m [instance="mail"] scratchpad show; [instance="mail"] move position center
+
 #############################
 # Jump to urgent window 
 bindsym $mod+x [urgent=latest] focus
@@ -201,10 +209,12 @@ exec --no-startup-id blugon
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 exec --no-startup-id dunst
 exec_always --no-startup-id xhost +local:root 
-exec --no-startup-id $HOME/scripts/keys.sh
+exec --no-startup-id $HOME/scripts/keys.sh 
 
 # Floating 
 for_window [class="Arcolinux-welcome-app.py"] floating enable
+for_window [class="thunderbird"] floating enable
+# for_window [class="eog"] floating enable
 for_window [class="yad"] floating enable
 for_window [class="CoreImage"] floating enable
 for_window [class="Arcolinux-calamares-tool.py"] floating enable
@@ -257,6 +267,8 @@ smart_gaps on
 smart_borders on
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 bar {
+    # separator_symbol "::"
+    separator_symbol "•"
     height 25
     workspace_buttons yes
     font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 10.5

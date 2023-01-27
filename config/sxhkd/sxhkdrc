@@ -12,8 +12,8 @@ super + Return
     kitty 
 
 # run script via dmenu 
-super + shift + f
-    ~/scripts/run_dmenu.sh
+# super + shift + f
+#     ~/scripts/run_dmenu.sh
 
 # browser
 super + shift + b 
@@ -49,6 +49,18 @@ XF86AudioMute
 	# amixer -D pulse set Master 1+ toggle > /dev/null && pkill -RTMIN+10 i3blocks
 	#wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && pkill -RTMIN+10 i3blocks
 
+# vol up
+F2
+	pamixer -d 5 && pkill -RTMIN+10 i3blocks 
+
+# vol down
+F3
+	pamixer -i 5 && pkill -RTMIN+10 i3blocks 
+
+#vol toggle 
+F1
+	amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
+
 ##mic toggle 
 XF86AudioMicMute
    pactl set-source-mute @DEFAULT_SOURCE@ toggle && pkill -RTMIN+17 i3blocks
@@ -67,16 +79,16 @@ super + BackSpace
 XF86MonBrightnessUp
 		light -A 5 && pkill -RTMIN+20 i3blocks
 
-#light up 
-XF86Search
-		light -A 5 && pkill -RTMIN+20 i3blocks
-
 #LIGHT DOWN 
 XF86MonBrightnessDown
 		light -U 5 && pkill -RTMIN+20 i3blocks
 
+#light up 
+F12
+		light -A 5 && pkill -RTMIN+20 i3blocks
+
 #light down 
-XF86Explorer
+F11
 		light -U 5 && pkill -RTMIN+20 i3blocks
 
 #dmenu 
@@ -86,9 +98,14 @@ super + shift + d
 #lang 
 shift + Alt_L
 	setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
+    # {setxkbmap us, setxkbmap ar} && pkill -RTMIN+15 i3blocks
+	# setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
+	# setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
     # setxkbmap -query | grep -q 'ar' && setxkbmap us || setxkbmap ar,us
 shift + Alt_R
 	setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
+#     {setxkbmap us, setxkbmap ar} && pkill -RTMIN+15 i3blocks
+	# setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
     # setxkbmap -query | grep -q 'ar' && setxkbmap us || setxkbmap ar,us
 
 #power 
@@ -222,4 +239,10 @@ super + Delete
 # emoji 
 super + period
     ~/scripts/lan_dmenu.sh && bemoji -f ~/scripts/emoji
+# lock 
+F9
+    ~/scripts/lock.sh
+# rkeys
+F10
+    $HOME/scripts/keys.sh
 

@@ -1,7 +1,4 @@
-#!/bin/bash 
-# pacman=$(echo  $(checkupdates-aur | wc -l) pks )
-# aur_=echo  $(checkupdates-with-aur | wc -l) pks 
- 
-num=$(pacman -Qu | wc -l)
+#!/bin/bash
 
-echo $num
+pkg_=$(checkupdates | wc -l)
+echo "$pkg_ pkgs"
