@@ -57,7 +57,7 @@
  * zathura
 
 #### Resource Monitor
- * htop
+ * htop && gotop
 
 #### Key Binding 
  * sxhkd 
