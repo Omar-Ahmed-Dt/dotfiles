@@ -33,6 +33,7 @@ x-scheme-handler/msteams=teams.desktop
 text/x-c++=lvim.desktop
 application/x-gnome-saved-search=nemo.desktop
 image/webp=org.gnome.eog.desktop
+text/x-python=userapp-kitty-54GMZ1.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Telegram Desktop-CIISR1.desktop;userapp-Telegram Desktop-HPBJW1.desktop;
@@ -41,3 +42,4 @@ image/jpeg=org.cubocore.CoreImage.desktop;org.gnome.eog.desktop;
 text/markdown=org.pwmt.zathura-pdf-mupdf.desktop;
 application/epub+zip=firefox.desktop;org.pwmt.zathura-pdf-mupdf.desktop;okularApplication_epub.desktop;
 image/webp=org.gnome.eog.desktop;
+text/x-python=userapp-kitty-54GMZ1.desktop;

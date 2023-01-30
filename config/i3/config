@@ -122,7 +122,7 @@ mode "resize" {
 
 # navigate workspaces next / previous
 bindsym $mod1+Tab workspace next
-bindsym Ctrl+Tab workspace prev
+bindsym $mod+Tab workspace prev
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -161,7 +161,8 @@ bindsym $mod+c [instance="calc"] scratchpad show; [instance="calc"] move positio
 for_window [instance="monitor"] floating enable 
 for_window [instance="monitor"] resize set 1500 1000
 for_window [instance="monitor"] move scratchpad
-exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name monitor -e htop 
+# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name monitor -e htop 
+exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name monitor -e gotop 
 bindsym $mod+shift+h [instance="monitor"] scratchpad show; [instance="monitor"] move position center
 
 # Pavucontrol
