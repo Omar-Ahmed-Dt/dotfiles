@@ -344,6 +344,7 @@ hardcode-fixer-git
 hardinfo-gtk3
 hddtemp
 hdparm
+helvum
 hitori
 hollywood
 hplip
@@ -515,6 +516,7 @@ pace
 packer
 pacman
 pamixer
+pantheon-geoclue2-agent
 paper-icon-theme
 papirus-folders-git
 papirus-folders-gui-bin
@@ -563,6 +565,9 @@ qsynth
 qt5ct
 quadrapassel
 rate-mirrors-bin
+redshift-git
+redshift-gtk-git
+redshift-qt
 refind
 reflector
 reiserfsprogs
