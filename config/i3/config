@@ -206,7 +206,9 @@ exec_always --no-startup-id sxhkd
 exec --no-startup-id mpd
 exec --no-startup-id clipmenud
 exec --no-startup-id xfce4-power-manager &
-exec --no-startup-id blugon
+# exec --no-startup-id blugon
+exec --no-startup-id redshift -P -O 3250 &
+# exec --no-startup-id redshift 
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 exec --no-startup-id dunst
 exec_always --no-startup-id xhost +local:root 
@@ -214,7 +216,7 @@ exec --no-startup-id $HOME/scripts/keys.sh
 
 # Floating 
 for_window [class="Arcolinux-welcome-app.py"] floating enable
-for_window [class="thunderbird"] floating enable
+# for_window [class="thunderbird"] floating enable resize set 1673 1033
 # for_window [class="eog"] floating enable
 for_window [class="yad"] floating enable
 for_window [class="CoreImage"] floating enable
