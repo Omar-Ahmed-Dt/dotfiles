@@ -190,6 +190,7 @@ duf-bin
 dunst
 dust
 e2fsprogs
+easyeffects
 edid-decode-git
 edk2-shell
 edu-candy-beauty-tela-git
@@ -229,6 +230,8 @@ fluent-gtk-theme
 fluent-icon-theme-git
 fluent-kde-theme-git
 font-manager
+fonts-droid-fallback
+fonts-noto-hinted
 four-in-a-row
 freetype2
 fsarchiver
@@ -377,6 +380,7 @@ kalker
 keepassxc
 khal
 kitty
+koreader-bin
 kripton-theme-git
 kvantum
 kvantum-theme-materia
@@ -470,6 +474,7 @@ nilfs-utils
 nitrogen
 nnn-nerd
 noise-suppression-for-voice
+noisetorch
 nomacs
 nordzy-icon-theme-git
 notification-daemon
