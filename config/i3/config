@@ -213,6 +213,8 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 exec --no-startup-id dunst
 exec_always --no-startup-id xhost +local:root 
 exec --no-startup-id $HOME/scripts/keys.sh 
+exec --no-startup-id easyeffects --gapplication-service
+
 
 # Floating 
 for_window [class="Arcolinux-welcome-app.py"] floating enable
