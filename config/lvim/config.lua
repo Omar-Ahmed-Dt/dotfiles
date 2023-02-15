@@ -77,9 +77,11 @@ vim.opt.writebackup = false -- Disable making a backup before overwriting a file
 vim.opt.foldmethod = "manual" -- folding set to "expr" for treesitter based folding
 vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
 vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
+vim.opt.breakindent = true
+vim.opt.textwidth = 150
 
 -- colorcolumn
-vim.api.nvim_set_option_value("colorcolumn", "80", {})
+vim.api.nvim_set_option_value("colorcolumn", "150", {})
 
 -- global
 vim.go.acd = true -- open terminal in the same path

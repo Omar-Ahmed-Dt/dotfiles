@@ -179,6 +179,13 @@ for_window [instance="pass"] move scratchpad
 exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name pass -e keepassxc 
 bindsym $mod+q [instance="pass"] scratchpad show; [instance="pass"] move position center
 
+# caprine
+# for_window [instance="ms"] floating enable 
+# for_window [instance="ms"] resize set 1500 1000
+# for_window [instance="ms"] move scratchpad
+# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name ms -e caprine 
+# bindsym $mod+m [instance="ms"] scratchpad show; [instance="ms"] move position center
+
 # mail
 # for_window [instance="mail"] floating enable 
 # for_window [instance="mail"] resize set 1500 1000
