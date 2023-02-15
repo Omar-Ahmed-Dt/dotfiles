@@ -22,3 +22,6 @@ cp  ~/.config/lvim/config.lua  ~/Documents/GitHub/dotfiles/config/lvim
 cp -r ~/.config/lvim/ftplugin/  ~/Documents/GitHub/dotfiles/config/lvim/
 cp ~/.cache/styli.sh/wallpaper.jpg ~/Documents/GitHub/dotfiles/workflow/
 cp ~/.config/khal/config ~/Documents/GitHub/dotfiles/config/khal/
+cp /usr/local/searxng-docker/searxng-docker.service ~/Documents/GitHub/dotfiles/searxng/
+cp /usr/local/searxng-docker/docker-compose.yaml ~/Documents/GitHub/dotfiles/searxng/
+

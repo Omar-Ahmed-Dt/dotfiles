@@ -147,6 +147,7 @@ btrfs-progs
 bumblebee
 byobu
 capitaine-cursors
+caprine
 cargo-c
 catfish
 catppuccin-cursors-git
@@ -177,7 +178,6 @@ discord
 dmenu
 dmidecode
 dmraid
-dnsmasq
 docker
 docker-compose
 dosfstools
@@ -305,6 +305,7 @@ gnome-user-share
 gnome-video-effects
 gnome-weather
 gnu-netcat
+go-to-meeting-desktop
 google-chrome
 gpart
 gparted
@@ -368,8 +369,10 @@ imagemagick
 imagewriter
 imv
 inkscape
+instaloader
 intltool
 inxi
+iperf
 irssi
 iw
 jfsutils
@@ -403,6 +406,7 @@ libtool
 libusb-compat
 light
 lightsoff
+lighttpd
 linux
 linux-atm
 linux-firmware
@@ -470,6 +474,7 @@ networkmanager-openvpn
 networkmanager-pptp
 networkmanager-vpnc
 nfs-utils
+nginx-mainline
 nilfs-utils
 nitrogen
 nnn-nerd
@@ -536,6 +541,10 @@ pavucontrol
 pcmanfm
 pcsclite
 peek
+php-cgi
+php-fpm
+php-sqlite
+pi-hole-server
 picom
 piper
 pipewire-alsa
@@ -665,6 +674,7 @@ tlp
 tmux
 totem
 tpm2-tss
+trace-cmd
 tracker3-miners
 trash-cli
 ttf-anonymous-pro
@@ -748,6 +758,7 @@ wpa_supplicant
 wttr
 wvdial
 xapp
+xcape
 xclip
 xcursor-arch-cursor-complete
 xcursor-comix
