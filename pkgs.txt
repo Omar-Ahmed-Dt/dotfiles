@@ -147,7 +147,6 @@ btrfs-progs
 bumblebee
 byobu
 capitaine-cursors
-caprine
 cargo-c
 catfish
 catppuccin-cursors-git
