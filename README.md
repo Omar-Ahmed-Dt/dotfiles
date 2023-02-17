@@ -27,7 +27,7 @@
  * kitty
 
 #### Editor 
- * nvim >> lvim & vscodium
+ *  lvim & vscodium (ssh machine)
 
 #### Shell 
  * fish 
@@ -66,7 +66,10 @@
  * firefox 
 
 #### Search Engine 
- * startpage 
+ * searXNG 
+
+#### Color Temperature
+ * redshift
 
 #### Firewall 
  * guwf 
@@ -81,7 +84,7 @@
  * vbox
 
 #### Virtual OS 
- * ubuntu, artix, artix lxde, void, arcoD xfce, artix xfce, archcrift
+ * ubuntu
 ---
 
 | Utility  | Packages            |
@@ -91,10 +94,10 @@
 | Display |  xorg-server xorg-xrandr lightdm lightdm-gtk-greeter xorg-xrdb sddm |
 | Editor and IDE | [nvim](https://github.com/AstroNvim/AstroNvim), vscodium , [lvim](https://www.lunarvim.org/)| 
 | Scripts | [dm-scripts](https://gitlab.com/dwt1/dmscripts)|
-| Multimedia | pulseaudio pulsemixer mpv mpv-mpris mpd mpDris2 mpc moc ncmpcpp youtube-dl yt-dlp ffmpeg simplescreenrecorder obs | 
-| File Manager | nnn pcmanfm | 
+| Multimedia | pipewire [install pipewire](https://github.com/Omar-Ahmed-Dt/dotfiles/blob/main/scripts/pipewire_install.sh) pulseaudio pulsemixer mpv mpv-mpris mpd mpDris2 mpc moc ncmpcpp youtube-dl yt-dlp ffmpeg simplescreenrecorder obs | 
+| File Manager | nnn nemo | 
 | Terminal and some tools | alacritty fish zsh kitty exa fzf cmatrix xdotool xclip maim |
-| Diagnostic | htop bashtop bpytop nvtop | 
+| Diagnostic | htop gotop bashtop bpytop nvtop | 
 | Nvidia | nvidia nvidia-lts optimus-manager | 
 | Browsers | brave-bin firefox google-chrome chromium qutebrowser librewolf | 
 | pdf tools | zathura okular zathura-pdf-mupdf xournal | 
@@ -106,7 +109,7 @@
 | Mail | thunderbird mailspring evolution | 
 | Meetings | zoom droidcam |
 | Password Manager | keepassxc | 
-| Blue Light Filter | blugon | 
+| Blue Light Filter | redshift | 
 | Note | joplin | 
 | Calendar | khal | 
 | Whatsapp Client  | whatsdesk whatsapp-nativefier | 
@@ -119,22 +122,22 @@
 | terminal | super + Return | 
 | browser  | super + shift + b |
 | lvim | super + shift + v |
-| pcmanfm | super + shift + Return | 
+| nemo | super + shift + Return | 
 | xkill | super + shift + x | 
 | dmenu | super + shift + d | 
 | power | super + Escape | 
-| clipboard | super  + d | 
+| clipboard | super  + v | 
 | resources | super + shift + h | 
-| screen record | super + print | 
-| youtube in mpv | super + p | 
+| screenshot | print |  
+| youtube in mpv | super + shift + p | 
 | youtube-dl download | super + shift + y | 
 | screendmenu | Print | 
 | kill process | super + shift + k | 
 | github disktop | super + shift + g | 
-| emoji | super + o | 
+| emoji | super + . | 
 | kill mpv | super + d | 
-| find cursor | super + c | 
-| khal | super  + t | 
+| kalker | super + c | 
+| khal | super + shift + t | 
 | hub | super + shift + o | 
 | ncmpcpp | super + shift + n | 
 | mpc pause | ctrl + space  |
@@ -143,12 +146,10 @@
 | thunderbird | super + shift + m | 
 | mount | super + Insert | 
 | joplin | super + n | 
-| record screen | super + shift + u | 
+| record screen | super + print | 
 | virtual machine | super + shift + a | 
 | whatsdesk | super + shift + w | 
 | logout | super + Delete | 
-| calendar | super + shift + t | 
-| calculator | super + c | 
 | pavucontrol | super + Backslash | 
 | mic down | super + minus | 
 | mic up | super + equal | 
