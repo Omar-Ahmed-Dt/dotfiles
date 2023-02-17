@@ -1,6 +1,5 @@
-#  Dotfiles [![My Skills](https://skills.thijs.gg/icons?i=linux,bash,vim,github,&theme=dark)](https://skills.thijs.gg)
-
- 🛠 These are my dotfiles. The documentation for them is in progress, I'm trying to do better. Also, my window manager dots change all the time. I do upload everything here,so you should be able to view previous commits to get to the rice you want.
+# 🛠 Dotfiles 🛠
+These are my dotfiles. The documentation for them is in progress, I'm trying to do better. Also, my window manager dots change all the time. I do upload everything here,so you should be able to view previous commits to get to the rice you want.
 
 ![img](https://www.padok.fr/hubfs/Images/Blog/dotfiles_git.webp)
 ---
