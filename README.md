@@ -38,7 +38,7 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
  * nnn  
 
 #### Gui File Manager 
- * pcmanfm
+ * nemo
 
 #### Music Player 
  * mpd & ncmpcpp
@@ -50,13 +50,13 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
  * sxiv
 
 #### Screen Recorder 
- * obs && simplescreenrecorder 
+ * ffmpeg 
 
 #### pdf Viewer 
  * zathura
 
 #### Resource Monitor
- * htop && gotop
+ * gotop
 
 #### Key Binding 
  * sxhkd 
