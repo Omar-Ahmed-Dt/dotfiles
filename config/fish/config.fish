@@ -328,7 +328,7 @@ alias cdi='cd ~/.config/i3'
 alias ram='ps axh -o cmd:15,%mem --sort=-%mem | head | string trim'
 alias cpu='ps axh -o cmd:15,%cpu --sort=-%cpu | head'
 alias bup='sh /home/omar/scripts/gitupload.sh'
-alias y='ytfzf -ml'
+# alias y='ytfzf -ml'
 #alias yy='ytfzf -t'
 #alias df='df -h'
 alias df='duf'
@@ -388,7 +388,7 @@ alias emus='pkill mpd'
 alias rd='zaread'
 alias size='du -sh'
 alias gm='cd /media'
-alias yts='~/scripts/yts.sh'
+# alias yts='~/scripts/yts.sh'
 alias vs='vscodium'
 alias gsh="~/scripts/gsh.sh"
 #alias bm="~/github/bashmount/bashmount"
@@ -412,7 +412,8 @@ alias cd="z"
 # alias nto="nnn -p - | xargs"
 alias ssh="kitty +kitten ssh"
 alias opdf="~/scripts/ozathura.sh"
-alias rmark="glow"
+alias ompv="~/scripts/ompv.sh"
+alias cat="lolcat"
 
 # Function for fish 
 
