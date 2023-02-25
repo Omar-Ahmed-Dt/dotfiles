@@ -19,6 +19,7 @@ alsa-utils
 alsi
 android-file-transfer
 android-tools
+anydesk-bin
 apg
 appstream
 arandr
@@ -452,6 +453,10 @@ moreutils
 mousetweaks
 mpc
 mpd
+mpv-mpris
+mpv-thumbnail-script
+mpv-url
+mpv-webm-git
 mtools
 mtpfs
 mugshot
@@ -543,7 +548,6 @@ peek
 php-cgi
 php-fpm
 php-sqlite
-pi-hole-server
 picom
 piper
 pipewire-alsa
@@ -759,6 +763,7 @@ wvdial
 xapp
 xcape
 xclip
+xcolor
 xcursor-arch-cursor-complete
 xcursor-comix
 xcursor-flatbed
@@ -874,6 +879,7 @@ yarn
 yay-bin
 yelp
 yt-dlp
+ytfzf
 zafiro-icon-theme
 zaread-git
 zathura

@@ -10,6 +10,7 @@
 
 -- colorscheme
 lvim.colorscheme = "habamax"
+-- lvim.colorscheme = "tokyonight"
 --
 -- transparent_window
 lvim.transparent_window = true

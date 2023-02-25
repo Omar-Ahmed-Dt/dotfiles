@@ -222,7 +222,6 @@ exec_always --no-startup-id xhost +local:root
 exec --no-startup-id $HOME/scripts/keys.sh 
 exec --no-startup-id easyeffects --gapplication-service
 
-
 # Floating 
 for_window [class="Arcolinux-welcome-app.py"] floating enable
 # for_window [class="thunderbird"] floating enable resize set 1673 1033
@@ -289,6 +288,7 @@ bar {
 
     colors {
         background #282a33 
+        # background #050100 
         statusline #eeeeee
         separator  #eaf08d
         focused_workspace     #83a598 #458588 #ebdbb2
