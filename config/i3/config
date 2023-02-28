@@ -274,7 +274,7 @@ popup_during_fullscreen smart
 for_window [class="^.*"] border pixel 1
 gaps inner 7
 gaps outer 0
-smart_gaps on
+# smart_gaps on
 smart_borders on
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 bar {
@@ -287,7 +287,8 @@ bar {
     status_command i3blocks -c ~/.config/i3/i3blocks
 
     colors {
-        background #282a33 
+        background #23273a 
+        #background #282a33 
         # background #050100 
         statusline #eeeeee
         separator  #eaf08d

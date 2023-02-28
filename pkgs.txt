@@ -49,6 +49,7 @@ arcolinux-grub-theme-vimix-git
 arcolinux-gtk3-sardi-arc-git
 arcolinux-guake-autostart-git
 arcolinux-hblock-git
+arcolinux-herbstluftwm-git
 arcolinux-i3wm-git
 arcolinux-keyring
 arcolinux-kvantum-git
@@ -349,6 +350,7 @@ hardinfo-gtk3
 hddtemp
 hdparm
 helvum
+herbstluftwm
 hitori
 hollywood
 hplip
@@ -423,7 +425,7 @@ lshw
 lsscsi
 luna-icon-theme-git
 lvm2
-lxappearance-gtk3
+lxappearance
 m4
 maim
 make
@@ -564,6 +566,7 @@ polkit-gnome
 polybar
 poppler-glib
 poppler-qt5
+power-profiles-daemon
 powerpill
 ppp
 pptpclient
@@ -673,7 +676,6 @@ thunar-media-tags-plugin
 thunar-volman
 thunderbird
 time
-tlp
 tmux
 totem
 tpm2-tss
@@ -873,6 +875,7 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 xournalpp
+xtitle-git
 xwallpaper
 yad
 yarn
