@@ -75,7 +75,7 @@ border_left=0
 border_bottom=0
 
 [battery.sh]
-interval=2
+interval=10
 label=<span color="#e5b566">B: </span>
 border=#e5b566
 border_top=1
@@ -86,7 +86,7 @@ border_bottom=0
 [cpu_usage]
 #label= CPU: 
 label=<span color="#ff665c">  </span> 
-interval=2
+interval=5
 border=#ff665c
 COLOR_NORMAL=#ebdbb2
 border_top=1
@@ -96,7 +96,7 @@ border_bottom=0
 
 [temperature]
 label=<span color="#51afef">+ </span>
-interval=5
+interval=10
 border=#51afef
 border_top=1
 border_right=0
@@ -104,7 +104,7 @@ border_left=0
 border_bottom=0
 
 [ram.sh]
-interval=2 
+interval=5 
 label=<span color="#e5b566">  </span>
 border=#e5b566
 border_top=1

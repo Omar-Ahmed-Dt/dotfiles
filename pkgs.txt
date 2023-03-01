@@ -391,6 +391,7 @@ kvantum
 kvantum-theme-materia
 la-capitaine-icon-theme-git
 laptop-detect
+laptop-mode-tools
 layan-cursor-theme-git
 layan-gtk-theme-git
 layan-kde-git

@@ -9,8 +9,17 @@
 -- vim.opt.relativenumber = true
 
 -- colorscheme
-lvim.colorscheme = "habamax"
+--
+-- lvim.colorscheme = "darkplus"
+lvim.colorscheme = "gruvbox"
+-- lvim.colorscheme = "onedarker"
+--lvim.colorscheme = "system76"
+--lvim.colorscheme = "habamax"
 -- lvim.colorscheme = "tokyonight"
+--
+-- reload
+-- reload "usr.plugins"
+-- reload "usr.colorizer.lua"
 --
 -- transparent_window
 lvim.transparent_window = true
@@ -30,15 +39,6 @@ lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
--- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
--- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
-
--- -- Use which-key to add extra bindings with the leader-key prefix
--- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
--- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
-
--- config
--- vim.opt.titlestring = "%<%F%=%l/%L - nvim" -- what the title of the window will be set to
 vim.opt.backspace = vim.opt.backspace + { "nostop" } -- Don't stop backspace at insert
 vim.opt.clipboard = "unnamedplus" -- Connection to the system clipboard
 vim.opt.cmdheight = 0 -- hide command line unless needed
@@ -80,9 +80,11 @@ vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying me
 vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
 vim.opt.breakindent = true
 vim.opt.textwidth = 150
+vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
+vim.opt.hlsearch = true
 
 -- colorcolumn
-vim.api.nvim_set_option_value("colorcolumn", "150", {})
+vim.api.nvim_set_option_value("colorcolumn", "100", {})
 
 -- global
 vim.go.acd = true -- open terminal in the same path
@@ -139,6 +141,14 @@ lvim.builtin.terminal.active = true
 
 lvim.plugins = {
 
+    { "lunarvim/colorschemes" },
+    { "folke/tokyonight.nvim" },
+    { "lunarvim/darkplus.nvim" },
+    { "ellisonleao/gruvbox.nvim" },
+    { "lunarvim/github.nvim" },
+
+
+
     {
         "norcalli/nvim-colorizer.lua",
         config = function()
@@ -168,17 +178,7 @@ lvim.plugins = {
             vim.g.mkdp_auto_start = 1
         end,
     },
-    --
-    -- You must install glow globally
-    -- https://github.com/charmbracelet/glow
-    -- yay -S glow
-    -- {
-    --     "npxbr/glow.nvim",
-    --     ft = { "markdown" }
-    --     -- run = "yay -S glow"
-    -- },
 
-    -- smooth scrolling
     {
         "karb94/neoscroll.nvim",
         event = "WinScrolled",
@@ -245,73 +245,3 @@ vim.api.nvim_create_autocmd("BufEnter", {
     pattern = { "*.ms" },
     command = "source ~/.config/lvim/ftplugin/ms.lua",
 })
---
--- samples
--- autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
--- autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
--- autocmd filetype py nnoremap <C-p> :w <bar> !python3 %<CR>
---
--- lvim.builtin.treesitter.ignore_install = { "haskell" }
-
--- -- generic LSP settings <https://www.lunarvim.org/docs/languages#lsp-support>
-
--- --- disable automatic installation of servers
--- lvim.lsp.installer.setup.automatic_installation = false
-
--- ---configure a server manually. IMPORTANT: Requires `:LvimCacheReset` to take effect
--- ---see the full default list `:lua =lvim.lsp.automatic_configuration.skipped_servers`
--- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
--- local opts = {} -- check the lspconfig documentation for a list of all possible options
--- require("lvim.lsp.manager").setup("pyright", opts)
-
--- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. IMPORTANT: Requires `:LvimCacheReset` to take effect
--- ---`:LvimInfo` lists which server(s) are skipped for the current filetype
--- lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
---   return server ~= "emmet_ls"
--- end, lvim.lsp.automatic_configuration.skipped_servers)
-
--- -- you can set a custom on_attach function that will be used for all the language servers
--- -- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
--- lvim.lsp.on_attach_callback = function(client, bufnr)
---   local function buf_set_option(...)
---     vim.api.nvim_buf_set_option(bufnr, ...)
---   end
---   --Enable completion triggered by <c-x><c-o>
---   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
--- end
-
--- -- linters and formatters <https://www.lunarvim.org/docs/languages#lintingformatting>
--- local formatters = require "lvim.lsp.null-ls.formatters"
--- formatters.setup {
---   { command = "stylua" },
---   {
---     command = "prettier",
---     extra_args = { "--print-width", "100" },
---     filetypes = { "typescript", "typescriptreact" },
---   },
--- }
--- local linters = require "lvim.lsp.null-ls.linters"
--- linters.setup {
---   { command = "flake8", filetypes = { "python" } },
---   {
---     command = "shellcheck",
---     args = { "--severity", "warning" },
---   },
--- }
-
--- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
--- lvim.plugins = {
---     {
---       "folke/trouble.nvim",
---       cmd = "TroubleToggle",
---     },
--- }
-
--- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = "zsh",
---   callback = function()
---     -- let treesitter use bash highlight for zsh files as well
---     require("nvim-treesitter.highlight").attach(0, "bash")
---   end,
--- })
