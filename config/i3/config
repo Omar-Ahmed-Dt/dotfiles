@@ -161,8 +161,8 @@ bindsym $mod+c [instance="calc"] scratchpad show; [instance="calc"] move positio
 for_window [instance="monitor"] floating enable 
 for_window [instance="monitor"] resize set 1500 1000
 for_window [instance="monitor"] move scratchpad
-# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name monitor -e htop 
-exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name monitor -e gotop 
+exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name monitor -e htop 
+# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name monitor -e gotop 
 bindsym $mod+shift+h [instance="monitor"] scratchpad show; [instance="monitor"] move position center
 
 # Pavucontrol
@@ -282,7 +282,8 @@ bar {
     separator_symbol "•"
     height 25
     workspace_buttons yes
-    font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 10.5
+    font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont Bold 10
+    # font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 10.5
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks
 

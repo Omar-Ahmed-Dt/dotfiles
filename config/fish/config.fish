@@ -13,12 +13,6 @@ set VISUAL "lvim"
 ### "bat" as manpager
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
-### "vim" as manpager
-#set -x MANPAGER '/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
-
-### "lvim" as manpager
-#set -x MANPAGER "lvim -c 'set ft=man' -"
-
 ### SET EITHER DEFAULT EMACS MODE OR VI MODE ###
 function fish_user_key_bindings
   # fish_default_key_bindings
@@ -268,30 +262,16 @@ alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.confi
 # Backup contents of /etc/dtos to a backup folder in $HOME.
 alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-(date +%Y.%m.%d-%H.%M.%S)'
 
-### RANDOM COLOR SCRIPT ###
-# Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
-# Or install it from the Arch User Repository: shell-color-scripts
-#colorscript random
-
-### SETTING THE STARSHIP PROMPT ###
-#starship init fish | source
-
-
 #my config 
-#alias v='doas lvim'
-# alias h='cd ~'
 alias p='cd ..'
 alias C='doas chmod 777'
 alias c='doas chmod 744'
 alias do='doas'
-#/opt/shell-color-scripts/colorscripts/colorscript.sh -r 
 /home/omar/github/shell-color-scripts/colorscript.sh -r 
-#eval "$(starship init bash)"
 alias pmi='doas pacman -S'
 alias pmu='doas pacman -Syyu'
 alias pmuu='paru -Syu'
 alias pmr='doas pacman -Rs'
-#alias pmR='doas pacman -Rns' #to remove config file for program 
 alias pmR='doas pacman -Rd --nodeps' #remove pkg without dependencies
 alias pmii='paru -S'
 alias pmq='pacman -Qq'
@@ -300,27 +280,13 @@ alias pmc='doas pacman -Sc' #clean the cache after upgrade my system
 alias pmg='pamac-manager'
 alias pmf="pacman -Qqo"
 alias bs='browser-sync start --server --files "*.js, *.html, *.css"'
-
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 alias e='exit'
 alias tomp3='sh ~/scripts/tomp3.sh'
 alias install='makepkg -si'
 alias md='mkdir'
-# alias config='/home/omar/github/dmscripts/scripts/dm-confedit'
 alias config='/home/omar/scripts/configs.sh'
 alias blk='lsblk'
-#list
-#alias ls='ls --color=auto'
-#alias la='ls -a'
-#alias ll='ls -la'
-#alias l='ls'
-#alias l.="ls -A | egrep '^\.'"
-#alias vim='doas lvim'
-#alias pmug='git pull'
-#alias ex='extract'
-#alias sp='sh /home/omar/scripts/fzf-ueberzogen.sh'
-#alias H='history | fzf | xclip -selection clipboard'
-#alias img='sxiv * &'
 alias img='~/scripts/sxivall1.sh'
 alias imgall='~/scripts/sxivall2.sh'
 alias gc='cd ~/.config'
@@ -328,9 +294,6 @@ alias cdi='cd ~/.config/i3'
 alias ram='ps axh -o cmd:15,%mem --sort=-%mem | head | string trim'
 alias cpu='ps axh -o cmd:15,%cpu --sort=-%cpu | head'
 alias bup='sh /home/omar/scripts/gitupload.sh'
-# alias y='ytfzf -ml'
-#alias yy='ytfzf -t'
-#alias df='df -h'
 alias df='duf'
 alias dfdr='dust'
 alias dfd='dust -r'
@@ -339,39 +302,23 @@ alias printerinstall='hp-setup -u'
 alias epdf='okular'
 alias topdf='sh ~/scripts/topdf.sh'
 alias lf='lfrun'
-#alias vim='lvim'
 alias gn='cd ~/.config/nnn'
 alias tl='trash-list' 
 alias tr='trash-restore'
-#alias rm='trash-put'
 alias td='cd ~/.local/share/Trash/files'
 alias te='trash-empty'
-# alias rk='pulseaudio -k; pulseaudio --start'
-# alias pulse='doas lvim /etc/pulse/default.pa'
 alias gs='cd ~/scripts'
 alias pr='proxychains'
 alias pf='proxychains firefox'
 alias toand='sh ~/scripts/android.sh'
 alias N='prime-run'
-alias power='tlpui'
-#alias cam='droidcam-cli -v adb 4747'
-#alias m='cmatrix'
-# alias m='unimatrix -n -s 96 -l o'
 alias m='~/scripts/matrix.sh'
 alias gx='cd /usr/share/xsessions'
-#alias color='rgb-tui'
-# alias ns='nvidia-smi'
 alias ft='xdg-mime query filetype'
 alias fd='xdg-mime query default'
 alias search='find / -iname'
-#alias search='locate -i'
-#alias size='du -sh'
 alias rip='~/scripts/rip.sh' #to get public ip 
 alias ip='ip --color a' #to get private ip 
-#alias ll='exa --group-directories-first  --icons -lh'
-#alias la='exa --group-directories-first  --icons -lah'
-#alias l='exa --group-directories-first  --icons'
-#alias ls='exa --group-directories-first  --icons'
 alias ll='lsd -lh'
 alias la="lsd -lah"
 alias l="lsd"
@@ -380,7 +327,6 @@ alias llp="lsd -lh --permission octal"
 alias lls="lsd -lhS"
 alias llt="lsd -lht"
 alias llS="lsd -l --total-size 2> /dev/null"
-#alias hub='/home/omar/github/dmscripts/scripts/dm-hub'
 alias calc='gnome-calculator'
 alias smus='mpd && ncmpcpp'
 alias mus='ncmpcpp'
@@ -388,10 +334,8 @@ alias emus='pkill mpd'
 alias rd='zaread'
 alias size='du -sh'
 alias gm='cd /media'
-# alias yts='~/scripts/yts.sh'
-alias vs='vscodium'
+alias code='vscodium'
 alias gsh="~/scripts/gsh.sh"
-#alias bm="~/github/bashmount/bashmount"
 alias theme="~/scripts/kitty_theme.sh"
 alias f="doas find / -iname"
 alias uprsc="xrdb -load ~/.Xresources"
@@ -408,8 +352,6 @@ alias rf='source ~/.config/fish/config.fish'
 alias rkeys="~/scripts/keys.sh"
 alias rmpm="sudo rm /var/lib/pacman/db.lck"
 alias cd="z"
-# alias cat="bat"
-# alias nto="nnn -p - | xargs"
 alias ssh="kitty +kitten ssh"
 alias opdf="~/scripts/ozathura.sh"
 alias ompv="~/scripts/ompv.sh"
@@ -429,12 +371,6 @@ end
 function keys
   xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 end 
-
-
-# function j 
-#   cd $(autojump $argv)  
-# end 
-
 
 function sv 
     ~/scripts/dmenu_service.sh
@@ -484,54 +420,6 @@ end
 function vi 
     vim $argv 
 end 
-
-# function via 
-#   ~/scripts/via.sh 
-# end 
-
-# lvim 
-# function vim
-#   lvim $argv
-#end
-
-#alias vssh="vagrant ssh"
-#alias vup="vagrangt up"
-#alias vha="vagrangt halt"
-#alias vsu="vagrangt suspend"
-#alias vr="vagrant reload"
-#alias vre="vagrangt resume"
-
-# function vup 
-#  vagrant up $argv
-# end 
-#
-# function vst 
-#  vagrant status $argv 
-# end 
-#
-# function vsta
-#  vagrant status 
-# end 
-#
-# function vssh
-#   vagrant ssh $argv
-# end 
-#
-# function vha
-#   vagrant halt $argv
-# end 
-#
-# function vsu
-#   vagrant suspend $argv
-# end 
-#
-# function vr
-#   vagrant reload $argv
-# end 
-#
-# function vre
-#   vagrant resume $argv
-# end 
 
 ####################################
 ####################################
@@ -642,17 +530,11 @@ end
 #my config for nnn file manger alias nnn='nnn -eRx'
 alias nn='nnn -Rxl 5'
 alias n='nnn -Rxl 5'
-# alias nt='nnn -RxTt'
-# alias sn='sudo -E nnn -RH'
-#export NNN_PLUG='F:fixname;i:imgview;f:fzcd;t:mp3conv;e:suedit;v:preview-tui;x:!doas chmod +x $nnn;s:!bash -i*;o:fzopen;k:kdeconnect;u:upload;p:rsynccp' #to play this plug press ; then choose option 
 export NNN_PLUG='F:fixname;i:imgview;f:fzcd;t:mp3conv;v:preview-tui;s:!bash -i*;o:fzopen;p:rsynccp;m:mtpmount' #to play this plug press ; then choose option 
 export NNN_BMS="m:/media/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" #to play this plug press b then choose option 
-#xdg-open is the default opener for nnn 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
-#export NNN_OPENER=nuke 
 export NNN_TMPFILE='/tmp/.lastd'
 export NNN_COLORS='1267'
-#BLK="c1" CHR="e2" DIR="95" EXE="68" REG="E6" HARDLINK="60" SYMLINK="33" MISSING="f7" ORPHAN="c6" FIFO="d6" SOCK="ab" OTHER="c4"
 export NNN_FCOLORS='c1e29568E66033f7c6d6abc4'
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_TRASH=1 #to use trash (needs trash-cli) instead of delete. the trash's directory : /home/omar/.local/share/Trash/files
