@@ -18,8 +18,7 @@ lvim.colorscheme = "gruvbox"
 -- lvim.colorscheme = "tokyonight"
 --
 -- reload
--- reload "usr.plugins"
--- reload "usr.colorizer.lua"
+reload "usr.colorizer.lua"
 --
 -- transparent_window
 lvim.transparent_window = true
