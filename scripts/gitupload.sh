@@ -1,4 +1,5 @@
 #!/bin/bash 
+#
 pacman -Qeq > ~/Documents/GitHub/dotfiles/pkgs.txt
 cd ~/.config/
 cp -r alacritty fish neofetch ranger sxhkd zathura htop mpv paru starship.toml vlc dmscripts i3 pcmanfm yay sxiv mimeapps.list dunst polybar_bspwm bspwm /home/omar/Documents/GitHub/dotfiles/config
@@ -18,10 +19,8 @@ cp -r ~/.config/kitty/theme.conf ~/Documents/GitHub/dotfiles/config/kitty
 cp -r ~/.zshrc ~/Documents/GitHub/dotfiles/zshrc
 cp -r ~/.Xresources ~/Documents/GitHub/dotfiles/Xresources
 cp  ~/vim_training/vim_training.ms ~/Documents/GitHub/dotfiles/vim_training.ms
-cp  ~/.config/lvim/config.lua  ~/Documents/GitHub/dotfiles/config/lvim
-cp -r ~/.config/lvim/ftplugin/  ~/Documents/GitHub/dotfiles/config/lvim/
 cp ~/.cache/styli.sh/wallpaper.jpg ~/Documents/GitHub/dotfiles/workflow/
 cp ~/.config/khal/config ~/Documents/GitHub/dotfiles/config/khal/
 cp /usr/local/searxng-docker/searxng-docker.service ~/Documents/GitHub/dotfiles/searxng/
 cp /usr/local/searxng-docker/docker-compose.yaml ~/Documents/GitHub/dotfiles/searxng/
-
+cp -r ~/.config/lvim/* ~/Documents/GitHub/dotfiles/config/lvim/
