@@ -155,11 +155,11 @@ super + shift + y
 
 #screenshot 
 Print
-    /home/omar/scripts/screendmenu.sh
+    /home/omar/scripts/flameshot.sh
 
 #screenshot 
 super + shift + s 
-    /home/omar/scripts/screendmenu.sh
+    /home/omar/scripts/flameshot.sh
 
 #kill process 
 super + shift + k 
