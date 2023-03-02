@@ -224,6 +224,7 @@ fish
 fish-fzf
 fisher
 five-or-more
+flameshot
 flat-remix-git
 flex
 florence
