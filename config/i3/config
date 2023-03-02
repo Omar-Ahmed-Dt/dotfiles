@@ -288,8 +288,8 @@ bar {
     status_command i3blocks -c ~/.config/i3/i3blocks
 
     colors {
-        background #23273a 
-        #background #282a33 
+        # background #23273a 
+        background #282828
         # background #050100 
         statusline #eeeeee
         separator  #eaf08d

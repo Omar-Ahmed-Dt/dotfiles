@@ -95,7 +95,7 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
 | Scripts | [dm-scripts](https://gitlab.com/dwt1/dmscripts)|
 | Multimedia | pipewire [install pipewire](https://github.com/Omar-Ahmed-Dt/dotfiles/blob/main/scripts/pipewire_install.sh) pulseaudio pulsemixer mpv mpv-mpris mpd mpDris2 mpc moc ncmpcpp youtube-dl yt-dlp ffmpeg simplescreenrecorder obs | 
 | File Manager | nnn nemo | 
-| Terminal and some tools | alacritty fish zsh kitty exa fzf cmatrix xdotool xclip maim |
+| Terminal and some tools | alacritty fish zsh kitty exa fzf cmatrix xdotool xclip maim flameshot |
 | Diagnostic | htop gotop bashtop bpytop nvtop | 
 | Nvidia | nvidia nvidia-lts optimus-manager | 
 | Browsers | brave-bin firefox google-chrome chromium qutebrowser librewolf | 

@@ -145,8 +145,7 @@ lvim.plugins = {
     { "lunarvim/darkplus.nvim" },
     { "ellisonleao/gruvbox.nvim" },
     { "lunarvim/github.nvim" },
-
-
+    { "Mofiqul/dracula.nvim" },
 
     {
         "norcalli/nvim-colorizer.lua",
