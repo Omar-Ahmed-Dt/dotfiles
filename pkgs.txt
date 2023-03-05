@@ -392,7 +392,6 @@ kvantum
 kvantum-theme-materia
 la-capitaine-icon-theme-git
 laptop-detect
-laptop-mode-tools
 layan-cursor-theme-git
 layan-gtk-theme-git
 layan-kde-git
@@ -568,7 +567,6 @@ polkit-gnome
 polybar
 poppler-glib
 poppler-qt5
-power-profiles-daemon
 powerpill
 ppp
 pptpclient
@@ -638,6 +636,7 @@ sed
 sg3_utils
 simple-scan
 simplescreenrecorder
+slimbookbattery
 slock
 smartmontools
 sof-firmware
@@ -678,6 +677,9 @@ thunar-media-tags-plugin
 thunar-volman
 thunderbird
 time
+tlp
+tlp-rdw
+tlpui
 tmux
 totem
 tpm2-tss

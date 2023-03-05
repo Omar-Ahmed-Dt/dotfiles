@@ -49,7 +49,6 @@ border_bottom=0
 [pacman.sh]
 interval=3600
 label=<span color="#ff79c6"> </span>
-#label=<span color="#ff79c6">🐳 </span>
 border=#ff79c6
 border_top=1
 border_right=0
@@ -66,7 +65,7 @@ border_left=0
 border_bottom=0
 
 [nettraf.sh]
-interval=2
+interval=5
 label=<span color="#bd93f9">  </span>
 border=#bd93f9
 border_top=1
@@ -75,7 +74,7 @@ border_left=0
 border_bottom=0
 
 [battery.sh]
-interval=10
+interval=20
 label=<span color="#e5b566">B: </span>
 border=#e5b566
 border_top=1
@@ -122,15 +121,6 @@ border_right=0
 border_left=0
 border_bottom=0
 
-#[volbar2.sh]
-#interval=once 
-#signal=10
-#border=#bd93f9
-#border_top=1
-#border_right=0
-##border_bottom=1
-#border_left=0
-
 [micro.sh]
 border=#7bc275
 interval=once
@@ -158,13 +148,4 @@ border_right=0
 border_top=1
 border_left=0
 border_bottom=0
-
-#[Hidden]
-#command=xdotool key "super+b"
-#full_text= H : 
-#border=#d4bfff
-#border_top=1
-#border_right=0
-#border_left=0
-#border_bottom=0
 
