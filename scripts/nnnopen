@@ -8,7 +8,7 @@ mime=$(file -b --mime-type "$1")
 echo $mime
 # m3u files report as text/plain for some reason
 if [[ "${1#*.}" = "m3u" ]];then
-	mpv --player-operation-mode=pseudo-gui "$1"
+	swallow mpv --player-operation-mode=pseudo-gui "$1"
 
 # text/*
 #elif [[ "${mime%/*}" = "text" ]];then
@@ -19,7 +19,7 @@ elif [[ "${mime%/*}" = "image" ]];then
 	sxiv -ab "$1"
 # video/*
 elif [[ "${mime%/*}" = "video" || "${mime%/*}" = "audio" ]];then
-	mpv --player-operation-mode=pseudo-gui "$1"
+	swallow mpv --player-operation-mode=pseudo-gui "$1"
 # ebooks 
 elif [[ "$mime" = "application/epub+zip" ]];then
 	zathura "$1"
@@ -57,5 +57,9 @@ elif [[ "$mime" = "text/x-c++" ]];then
 elif [[ "$mime" = "text/x-script.python" ]];then
 	kitty -e lvim "$1"
 elif [[ "$mime" = "text/csv" ]];then
+	kitty -e lvim "$1"
+elif [[ "$mime" = "text/x-java" ]];then
+	kitty -e lvim "$1"
+elif [[ "$mime" = "text/xml" ]];then
 	kitty -e lvim "$1"
 fi
