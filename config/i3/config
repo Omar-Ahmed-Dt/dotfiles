@@ -2,19 +2,18 @@
 
 # current displays
 exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
-
 # Set 
 set $term kitty
-
+set $EDITOR lvim
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 set $mod1 Mod1
-
+# 
 set $up k
 set $down j
 set $left h
 set $right l
-
+#
 set $WS1   1: 
 set $WS2   2: 
 set $WS3   3: 
@@ -24,7 +23,6 @@ set $WS6   6: 
 set $WS7   7: 
 set $WS8   8: 
 set $WS9   9: 
-
 # Switch to workspace
 bindsym $mod+1 workspace $WS1
 bindsym $mod+2 workspace $WS2
@@ -35,7 +33,6 @@ bindsym $mod+6 workspace $WS6
 bindsym $mod+7 workspace $WS7
 bindsym $mod+8 workspace $WS8
 bindsym $mod+9 workspace $WS9
-
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $WS1
 bindsym $mod+Shift+2 move container to workspace $WS2
@@ -46,8 +43,10 @@ bindsym $mod+Shift+6 move container to workspace $WS6
 bindsym $mod+Shift+7 move container to workspace $WS7
 bindsym $mod+Shift+8 move container to workspace $WS8
 bindsym $mod+Shift+9 move container to workspace $WS9
-
 # Keybinding 
+exec --no-startup-id "setxkbmap -model pc104 -layout us,ar -option grp:alt_shift_toggle"
+bindsym Shift+alt pkill -RTMIN+15 i3blocks
+
 # bindsym $mod+r reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+c kill
@@ -55,19 +54,15 @@ bindsym $mod+Shift+c kill
 bindsym $mod+a focus parent
 bindsym $mod+z focus child
 bindsym $mod+b bar mode toggle
-
 # Indicator 
 # split in horizontal orientation
 bindsym $mod+i split h
-
 # split in vertical orientation
 bindsym $mod+u split v
-
 # Floating and Fullscreen
 floating_modifier $mod
 bindsym $mod+space floating toggle
 bindsym $mod+f fullscreen toggle
-
 # Focus
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
@@ -77,71 +72,52 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
 # Moving 
 bindsym $mod+Ctrl+h move left
 bindsym $mod+Ctrl+l move right
 bindsym $mod+Ctrl+j move down
 bindsym $mod+Ctrl+k move up
-
 # Resize 
 # bindsym $mod+Ctrl+h resize shrink width 1 px or 1 ppt
 # bindsym $mod+Ctrl+k resize grow height 1 px or 1 ppt
 # bindsym $mod+Ctrl+j resize shrink height 1 px or 1 ppt
 # bindsym $mod+Ctrl+l resize grow width 1 px or 1 ppt
-
 # dt config 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 # bindsym $mod+e layout toggle split
-
 bindsym $mod+s mode "resize"
 mode "resize" {
-        # Originally set to jkl;.
-        # These bindings trigger as soon as you enter the resize mode
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym h resize shrink width 4 px or 4 ppt
         bindsym k resize grow height 4 px or 4 ppt
         bindsym j resize shrink height 4 px or 4 ppt
         bindsym l resize grow width 4 px or 4 ppt
-
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 4 px or 4 ppt
         bindsym Down resize grow height 4 px or 4 ppt
         bindsym Up resize shrink height 4 px or 4 ppt
         bindsym Right resize grow width 4 px or 4 ppt
-
         # exit resize mode: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
 # navigate workspaces next / previous
 bindsym $mod1+Tab workspace next
 bindsym $mod+Tab workspace prev
-
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
-
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+Shift+equal scratchpad show
-
 #############################
-
 #scratchpad
-
 # ncmpcpp
 for_window [instance="mus"] floating enable 
 for_window [instance="mus"] resize set 1000 900
 for_window [instance="mus"] move scratchpad
 exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name mus -e ncmpcpp
 bindsym $mod+Shift+n [instance="mus"] scratchpad show; [instance="mus"] move position center
-
 # cal
 for_window [instance="date"] floating enable 
 # for_window [instance="date"] resize set 1000 900
@@ -149,14 +125,12 @@ for_window [instance="date"] resize set 733 500
 for_window [instance="date"] move scratchpad
 exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name date -e khal --color interactive
 bindsym $mod+shift+t [instance="date"] scratchpad show; [instance="date"] move position center
-
 # calc
 for_window [instance="calc"] floating enable 
 for_window [instance="calc"] resize set 900 325
 for_window [instance="calc"] move scratchpad
 exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name calc -e kalker 
 bindsym $mod+c [instance="calc"] scratchpad show; [instance="calc"] move position center
-
 # htop
 for_window [instance="monitor"] floating enable 
 for_window [instance="monitor"] resize set 1500 1000
@@ -164,44 +138,25 @@ for_window [instance="monitor"] move scratchpad
 exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name monitor -e htop 
 # exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name monitor -e gotop 
 bindsym $mod+shift+h [instance="monitor"] scratchpad show; [instance="monitor"] move position center
-
 # Pavucontrol
 for_window [instance="pavu"] floating enable 
 for_window [instance="pavu"] resize set 900 900
 for_window [instance="pavu"] move scratchpad
 exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name pavu -e pavucontrol 
 bindsym $mod+backslash [instance="pavu"] scratchpad show; [instance="pavu"] move position center
-
 # keepassxc
 for_window [instance="pass"] floating enable 
 for_window [instance="pass"] resize set 1500 1000
 for_window [instance="pass"] move scratchpad
 exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name pass -e keepassxc 
 bindsym $mod+q [instance="pass"] scratchpad show; [instance="pass"] move position center
-
-# caprine
-# for_window [instance="ms"] floating enable 
-# for_window [instance="ms"] resize set 1500 1000
-# for_window [instance="ms"] move scratchpad
-# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name ms -e caprine 
-# bindsym $mod+m [instance="ms"] scratchpad show; [instance="ms"] move position center
-
-# mail
-# for_window [instance="mail"] floating enable 
-# for_window [instance="mail"] resize set 1500 1000
-# for_window [instance="mail"] move scratchpad
-# exec --no-startup-id $term --name mail -e thunderbird 
-# bindsym $mod+shift+m [instance="mail"] scratchpad show; [instance="mail"] move position center
-
 #############################
 # Jump to urgent window 
 bindsym $mod+x [urgent=latest] focus
-
 for_window [urgent=latest] focus
 default_orientation horizontal
 exec_always --no-startup-id autotiling
 for_window [class="Vivaldi-stable"] focus
-
 # auto start
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id blueberry-tray
@@ -224,7 +179,6 @@ exec --no-startup-id easyeffects --gapplication-service
 exec --no-startup-id flameshot
 exec --no-startup-id xfce4-clipman
 # exec --no-startup-id slimbookbattery --minimize
-
 # Floating 
 for_window [class="Arcolinux-welcome-app.py"] floating enable
 # for_window [class="thunderbird"] floating enable resize set 1673 1033
@@ -290,14 +244,9 @@ bar {
     # font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 10.5
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks
-
     colors {
-        background #0f0f0f
-        # background #23273a 
-        #background #282828
-        # background #050100 
+        background #282828
         statusline #eeeeee
-        #separator  #c678dd
         separator #a6cc70
         focused_workspace     #83a598 #458588 #ebdbb2
         active_workspace      #a9a9a9 #5f676a #eeeeee
@@ -312,4 +261,3 @@ bar {
     client.placeholder      #222222 #222222 #aaaaaa #222222
     client.urgent           #d42121 #d42121 #f7f7f7 #d42121
     client.background       #242424
-
