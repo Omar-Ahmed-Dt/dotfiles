@@ -97,7 +97,7 @@ super + shift + d
 
 #lang 
 shift + Alt_L
-	setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
+    setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
 
 shift + Alt_R
 	setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks

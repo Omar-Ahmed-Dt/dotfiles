@@ -405,6 +405,7 @@ libmtp
 libopenraw
 libpwquality
 libreoffice-still
+librewolf-bin
 libtool
 libusb-compat
 light
