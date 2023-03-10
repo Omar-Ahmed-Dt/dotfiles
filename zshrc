@@ -7,6 +7,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export ZSH="/home/$USER/.oh-my-zsh"
 #installation via paru -S oh-my-zsh-git
 export ZSH=/usr/share/oh-my-zsh/
+source /usr/share/oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -15,8 +16,12 @@ export ZSH=/usr/share/oh-my-zsh/
 # if you installed the package oh-my-zsh-powerline-theme-git then you type here "powerline" as zsh theme
 # ZSH_THEME="random"
 # ZSH_THEME="af-magic"
-ZSH_THEME="nicoulaj"
-
+# ZSH_THEME="nicoulaj"
+# ZSH_THEME="gallifrey"
+# ZSH_THEME="kennethreitz"
+# ZSH_THEME="lukerandall"
+# ZSH_THEME="miloshadzic"
+ZSH_THEME="sorin"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -79,7 +84,30 @@ ZSH_THEME="nicoulaj"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git fzf)
+
+# fzf
+DISABLE_FZF_AUTO_COMPLETION="false"
+# Set whether to disable key bindings (CTRL-T, CTRL-R, ALT-C): 
+DISABLE_FZF_KEY_BINDINGS="false"
+
+# Preview file content using bat (https://github.com/sharkdp/bat)
+export FZF_CTRL_T_OPTS="
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+
+# CTRL-/ to toggle small preview window to see the full command
+# CTRL-Y to copy the command into clipboard using pbcopy
+# export FZF_CTRL_R_OPTS="
+#   --preview 'echo {}' --preview-window up:3:hidden:wrap
+#   --bind 'ctrl-/:toggle-preview'
+#   --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+#   --color header:italic
+#   --header 'Press CTRL-Y to copy command into clipboard'"
+
+
+# Print tree structure in the preview window
+export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 
 if [ -f $ZSH/oh-my-zsh.sh ]; then
   source $ZSH/oh-my-zsh.sh
@@ -238,7 +266,7 @@ alias cd="z"
 alias opdf="~/scripts/ozathura.sh"
 alias ompv="~/scripts/ompv.sh"
 alias cat="lolcat"
-alias gd="  cd ~/Documents/GitHub/"
+alias gd="cd ~/Documents/GitHub/"
 alias sv="~/scripts/dmenu_service.sh"
 alias V="doas lvim $argv"
 alias v="lvim $argv"
@@ -283,7 +311,8 @@ se(){
 
 }
 sf(){
-    fzf --preview='head -$LINES {}'| xargs -r -I % $EDITOR % 
+    fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %
+    # fzf --preview='head -$LINES {}'| xargs -r -I % $EDITOR % 
 }
 
 

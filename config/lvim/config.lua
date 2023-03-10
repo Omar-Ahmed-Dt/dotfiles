@@ -147,7 +147,6 @@ lvim.plugins = {
     { "lunarvim/github.nvim" },
     { "Mofiqul/dracula.nvim" },
 
-
     {
         "norcalli/nvim-colorizer.lua",
         config = function()
