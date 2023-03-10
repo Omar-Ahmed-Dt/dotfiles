@@ -2,7 +2,7 @@
 #
 DMEDITOR="lvim"
 
-actions=(configs bash fish i3 i3_blocks mpv_input mpv_config kitty sxhkd sxiv zathura ncmpcpp ncmpcpp_bindings mimeapps lvim)
+actions=(configs bash fish i3 i3_blocks mpv_input mpv_config kitty sxhkd sxiv zathura ncmpcpp ncmpcpp_bindings mimeapps lvim zsh)
 
 selected=$(printf '%s\n' "${actions[@]}" | dmenu -i -l 20 -p "Edit Configs: ")
 
@@ -22,5 +22,6 @@ case "$selected" in
     ncmpcpp_bindings)  $DMEDITOR $HOME/.config/.config/ncmpcpp/ncmpcpp_bindings ;;
     mimeapps)          $DMEDITOR $HOME/.config/mimeapps.list ;;
     lvim)              $DMEDITOR $HOME/.config/lvim/config.lua ;;
-esac
+    zsh)               $DMEDITOR $HOME/.zshrc;;
+esac 
 

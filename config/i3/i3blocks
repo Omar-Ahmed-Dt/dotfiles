@@ -74,7 +74,7 @@ border_left=0
 border_bottom=0
 
 [battery.sh]
-interval=20
+interval=10
 label=<span color="#e5b566">B: </span>
 border=#e5b566
 border_top=1
