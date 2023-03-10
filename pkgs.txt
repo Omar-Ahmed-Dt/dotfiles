@@ -546,6 +546,7 @@ partimage
 paru-bin
 patch
 pavucontrol
+pbgopy
 pcmanfm
 pcsclite
 peek
@@ -898,4 +899,5 @@ zoom
 zoxide
 zsh
 zsh-completions
+zsh-fzf-plugin-git
 zsh-syntax-highlighting
