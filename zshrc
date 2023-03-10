@@ -7,13 +7,15 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export ZSH="/home/$USER/.oh-my-zsh"
 #installation via paru -S oh-my-zsh-git
 export ZSH=/usr/share/oh-my-zsh/
-source /usr/share/oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# if you installed the package oh-my-zsh-powerline-theme-git then you type here "powerline" as zsh theme
+#Plugins
+# fzf-tab
+source /usr/share/oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
+# zsh-autosuggestions
+source /usr/share/oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
+
+# Theme 
 # ZSH_THEME="random"
 # ZSH_THEME="af-magic"
 # ZSH_THEME="nicoulaj"
@@ -114,6 +116,7 @@ if [ -f $ZSH/oh-my-zsh.sh ]; then
 fi
 
 ###
+# vim mode 
 bindkey -v 
 eval "$(zoxide init zsh)"
 # random color
@@ -135,13 +138,13 @@ eval "$(zoxide init zsh)"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-autoload -Uz compinit
-compinit
-zstyle ':completion:*' menu select
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
+# autoload -Uz compinit
+# compinit
+# zstyle ':completion:*' menu select
 
 ####   ARCOLINUX SETTINGS   ####
-export PAGER='most'
+# export PAGER='most'
 
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -161,7 +164,7 @@ export HISTCONTROL=ignoreboth:erasedups
 export EDITOR='lvim'
 export VISUAL='lvim'
 export TERMINAL='kitty'
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 ## 
 
