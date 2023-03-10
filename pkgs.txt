@@ -739,6 +739,7 @@ urxvt-resize-font-git
 usb_modeswitch
 usbmuxd
 usbutils
+vagrant
 variety
 ventoy-bin
 vim
