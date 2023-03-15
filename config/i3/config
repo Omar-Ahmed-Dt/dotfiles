@@ -110,6 +110,13 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+Shift+equal scratchpad show
+# kitti3 
+exec_always --no-startup-id kitti3 -p CT -s 0.8 0.4 -n n1
+bindsym $mod+n nop n1
+#
+exec_always --no-startup-id kitti3 -p CB -s 0.8 0.4 -n n2
+bindsym $mod+m nop n2
+
 #############################
 #scratchpad
 # ncmpcpp
@@ -152,11 +159,11 @@ exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name pass -e keepass
 bindsym $mod+q [instance="pass"] scratchpad show; [instance="pass"] move position center
 #############################
 # Jump to urgent window 
-bindsym $mod+x [urgent=latest] focus
-for_window [urgent=latest] focus
+# bindsym $mod+x [urgent=latest] focus
+# for_window [urgent=latest] focus
 default_orientation horizontal
 exec_always --no-startup-id autotiling
-for_window [class="Vivaldi-stable"] focus
+# for_window [class="Vivaldi-stable"] focus
 # auto start
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id blueberry-tray

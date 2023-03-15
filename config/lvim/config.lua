@@ -146,7 +146,21 @@ lvim.plugins = {
     { "ellisonleao/gruvbox.nvim" },
     { "lunarvim/github.nvim" },
     { "Mofiqul/dracula.nvim" },
-
+    -- { "junegunn/fzf.vim" },
+    -- { "ibhagwan/fzf-lua" },
+    --
+    --
+    -- ranger file manager
+    -- {
+    --     "kevinhwang91/rnvimr",
+    --     cmd = "RnvimrToggle",
+    --     config = function()
+    --         vim.g.rnvimr_draw_border = 1
+    --         vim.g.rnvimr_pick_enable = 1
+    --         vim.g.rnvimr_bw_enable = 1
+    --     end,
+    -- },
+    ----
     {
         "norcalli/nvim-colorizer.lua",
         config = function()

@@ -19,7 +19,7 @@ case "$selected" in
     sxiv)              $DMEDITOR $HOME/.config/sxiv/exec/key-handler ;;
     zathura)           $DMEDITOR $HOME/.config/zathura/zathurarc ;;
     ncmpcpp)           $DMEDITOR $HOME/.config/ncmpcpp/config ;;
-    ncmpcpp_bindings)  $DMEDITOR $HOME/.config/.config/ncmpcpp/ncmpcpp_bindings ;;
+    ncmpcpp_bindings)  $DMEDITOR $HOME/.config/ncmpcpp/bindings ;;
     mimeapps)          $DMEDITOR $HOME/.config/mimeapps.list ;;
     lvim)              $DMEDITOR $HOME/.config/lvim/config.lua ;;
     zsh)               $DMEDITOR $HOME/.zshrc;;
