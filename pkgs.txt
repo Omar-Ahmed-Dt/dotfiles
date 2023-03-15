@@ -385,6 +385,7 @@ jsoncpp
 kalker
 keepassxc
 khal
+kitti3
 kitty
 koreader-bin
 kripton-theme-git
@@ -544,6 +545,7 @@ partclone
 parted
 partimage
 paru-bin
+passhole
 patch
 pavucontrol
 pbgopy
@@ -567,6 +569,7 @@ polari
 polkit
 polkit-gnome
 polybar
+ponysay
 poppler-glib
 poppler-qt5
 powerpill
@@ -575,6 +578,11 @@ pptpclient
 pragha
 pulseaudio-equalizer-ladspa
 pv
+python-colorama
+python-pykeepass
+python-pykeepass_cache-git
+python-pynput
+python-pyotp
 python-pyparted
 python-pywal
 qbittorrent

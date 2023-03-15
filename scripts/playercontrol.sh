@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 #This is like a structure within an array
 
 #create the array of media players found

@@ -17,6 +17,7 @@ cp -r ~/.config/kitty/kitty.conf ~/Documents/GitHub/dotfiles/config/kitty
 cp -r ~/.config/kitty/kitty2.conf ~/Documents/GitHub/dotfiles/config/kitty
 cp -r ~/.config/kitty/theme.conf ~/Documents/GitHub/dotfiles/config/kitty
 cp -r ~/.zshrc ~/Documents/GitHub/dotfiles/zshrc
+cp -r ~/.zshenv ~/Documents/GitHub/dotfiles/zshenv
 cp -r ~/.Xresources ~/Documents/GitHub/dotfiles/Xresources
 cp  ~/vim_training/vim_training.ms ~/Documents/GitHub/dotfiles/vim_training.ms
 cp ~/.cache/styli.sh/wallpaper.jpg ~/Documents/GitHub/dotfiles/workflow/

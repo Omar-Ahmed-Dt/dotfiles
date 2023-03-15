@@ -15,6 +15,7 @@ source /usr/share/oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
 source /usr/share/oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
 
+#
 # Theme 
 # ZSH_THEME="random"
 # ZSH_THEME="af-magic"
@@ -24,62 +25,6 @@ source /usr/share/oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestio
 # ZSH_THEME="lukerandall"
 # ZSH_THEME="miloshadzic"
 ZSH_THEME="sorin"
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# ZSH_THEME_RANDOM_IGNORED=(pygmalion tjkirch_mod)
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -107,7 +52,6 @@ export FZF_CTRL_T_OPTS="
 #   --color header:italic
 #   --header 'Press CTRL-Y to copy command into clipboard'"
 
-
 # Print tree structure in the preview window
 export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 
@@ -118,30 +62,18 @@ fi
 ###
 # vim mode 
 bindkey -v 
+# zoxide
 eval "$(zoxide init zsh)"
-# random color
-/home/omar/github/shell-color-scripts/colorscript.sh -r 
+# Random Color
+# /home/omar/github/shell-color-scripts/colorscript.sh -r 
+# echo $(date "+%a %d.%m.%Y %H:%M %p") | ponysay
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='lvim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
-# autoload -Uz compinit
-# compinit
-# zstyle ':completion:*' menu select
+export LANG=en_US.UTF-8
 
 ####   ARCOLINUX SETTINGS   ####
 # export PAGER='most'
@@ -198,7 +130,6 @@ alias pmc='doas pacman -Sc' #clean the cache after upgrade my system
 alias pmg='pamac-manager'
 alias pmf="pacman -Qqo"
 alias bs='browser-sync start --server --files "*.js, *.html, *.css"'
-# export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 alias e='exit'
 alias tomp3='sh ~/scripts/tomp3.sh'
 alias install='makepkg -si'
@@ -273,7 +204,13 @@ alias gd="cd ~/Documents/GitHub/"
 alias sv="~/scripts/dmenu_service.sh"
 alias V="doas lvim $argv"
 alias v="lvim $argv"
-alias rz="omz reload"
+alias rzsh="omz reload"
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
+alias prop="xprop"
+alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
+
 
 # alias funcitons 
 nls() {
@@ -305,35 +242,28 @@ pmsr(){
     ~/scripts/pms.sh remove | xargs -ro sudo pacman -Rns
 }
 
-sc(){
-    du -a ~/scripts/ | awk '{print $2}' | fzf --preview='head -$LINES {}'| xargs -r $EDITOR
-}
+# sc(){
+#     cd ~/scripts
+#     du -a ~/scripts/ | awk '{print $2}' | fzf --preview='head -$LINES {}'| xargs -r $EDITOR
+#     cd - 
+# }
 
 se(){
-    du -a ~/scripts/ | awk '{print $2}' | fzf --preview='head -$LINES {}' | xargs -r sh
+    cd ~/scripts
+    fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r sh 
+    cd -
 
 }
-sf(){
+sc(){
+    cd ~/scripts
     fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %
-    # fzf --preview='head -$LINES {}'| xargs -r -I % $EDITOR % 
+    cd -
 }
-
 
 #create a file called .zshrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
 
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
 
-#my config for nnn file manger alias nnn='nnn -eRx'
-alias nn='nnn -Rxl 5'
-alias n='nnn -Rxl 5'
-export NNN_PLUG='F:fixname;i:imgview;f:fzcd;t:mp3conv;v:preview-tui;s:!bash -i*;o:fzopen;p:rsynccp;m:mtpmount' #to play this plug press ; then choose option 
-export NNN_BMS="m:/media/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" #to play this plug press b then choose option 
-export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
-export NNN_TMPFILE='/tmp/.lastd'
-export NNN_COLORS='1267'
-export NNN_FCOLORS='c1e29568E66033f7c6d6abc4'
-export NNN_FIFO=/tmp/nnn.fifo
-export NNN_TRASH=1 #to use trash (needs trash-cli) instead of delete. the trash's directory : /home/omar/.local/share/Trash/files
-export NNN_ARCHIVE="\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)"
-export NNN_RCLONE='rclone mount --read-only --no-checksum'
+# nnn configurations : 
+# ~/.zshenv

@@ -31,23 +31,14 @@ super + shift + x
 #Vol up 
 XF86AudioRaiseVolume
 	pamixer -i 5 && pkill -RTMIN+10 i3blocks 
-	# amixer -D pulse sset Master 5%+ > /dev/null && pkill -RTMIN+10 i3blocks
-	#wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && pkill -RTMIN+10 i3blocks
-	#pamixer -i 5 && pkill -RTMIN+10 i3blocks 
-	#pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -RTMIN+10 i3blocks 
-	#amixer -q set Master 5%+ && pkill -RTMIN+10 i3blocks 
-	#amixer -q set Master 5%+ && polybar-msg hook volbar 1 
 
 #Vol down 
 XF86AudioLowerVolume
 	pamixer -d 5 && pkill -RTMIN+10 i3blocks 
-	# amixer -D pulse sset Master 5%- > /dev/null && pkill -RTMIN+10 i3blocks
 
 #vol toggle 
 XF86AudioMute
 	amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
-	# amixer -D pulse set Master 1+ toggle > /dev/null && pkill -RTMIN+10 i3blocks
-	#wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && pkill -RTMIN+10 i3blocks
 
 # vol up
 F2
@@ -61,16 +52,18 @@ F3
 F1
 	amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
 
-##mic toggle 
+#mic toggle 
 XF86AudioMicMute
    pactl set-source-mute @DEFAULT_SOURCE@ toggle && pkill -RTMIN+17 i3blocks
 
 #mic up 
 super + equal
    amixer set Capture 5%+ && pkill -RTMIN+17 i3blocks
+
 #mic down 
 super + minus
    amixer set Capture 5%- && pkill -RTMIN+17 i3blocks
+
 # mic mute
 super + BackSpace 
       amixer -q sset Capture toggle && pkill -RTMIN+17 i3blocks
@@ -142,8 +135,8 @@ super + v
 
 #screeen record 
 super + Print
-    ~/scripts/select_dmenurecording.sh
-	# simplescreenrecorder
+	simplescreenrecorder
+#     ~/scripts/select_dmenurecording.sh
 
 #mpv youtube 
 super + shift + p 
@@ -182,11 +175,11 @@ super + shift + o
 shift + Return
     ~/scripts/nnn.sh
 
-#open nvim file 
+#open vim
 super + shift + v 
     kitty -e lvim
 
-# mailspring  
+# mail  
 super + shift + m
     thunderbird
 
@@ -207,8 +200,8 @@ Pause
 	playerctl play-pause
 
 # joplin 
-super + n
-	joplin-desktop 
+# super + n
+# 	joplin-desktop 
 
 # mpc stop 
 ctrl + BackSpace 
@@ -239,3 +232,6 @@ F9
 # rkeys
 F10
     $HOME/scripts/keys.sh
+# keepass
+# super + t 
+#     ph type --tabbed --prog dmenu
