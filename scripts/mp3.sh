@@ -1,5 +1,6 @@
 #!/bin/bash
-neofetch 
+echo $(date "+%a %d.%m.%Y %H:%M %p") | ponysay
+# neofetch 
 cd ~/youtube-dl 
 echo "---------------------------------------------"
 echo "✘ ❯❯ $(pwd)"

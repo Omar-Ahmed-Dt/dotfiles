@@ -197,7 +197,6 @@ edk2-shell
 edu-candy-beauty-tela-git
 efibootmgr
 endeavour
-envycontrol
 eog
 epiphany
 espeak-ng
