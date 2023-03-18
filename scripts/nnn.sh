@@ -1,2 +1,2 @@
 #!/usr/bin/zsh
-kitty -e nnn 
+kitty -e nnn -Rxl 5

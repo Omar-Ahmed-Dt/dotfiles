@@ -53,7 +53,7 @@ bindsym $mod+Shift+c kill
 # bindsym $mod+shift+q exec --no-startup-id i3exit logout
 bindsym $mod+a focus parent
 bindsym $mod+z focus child
-bindsym $mod+b bar mode toggle
+# bindsym $mod+b bar mode toggle
 # Indicator 
 # split in horizontal orientation
 bindsym $mod+i split h
@@ -77,6 +77,7 @@ bindsym $mod+Ctrl+h move left
 bindsym $mod+Ctrl+l move right
 bindsym $mod+Ctrl+j move down
 bindsym $mod+Ctrl+k move up
+
 # Resize 
 # bindsym $mod+Ctrl+h resize shrink width 1 px or 1 ppt
 # bindsym $mod+Ctrl+k resize grow height 1 px or 1 ppt
@@ -111,11 +112,11 @@ bindsym $mod+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+Shift+equal scratchpad show
 # kitti3 
-exec_always --no-startup-id kitti3 -p CT -s 0.8 0.4 -n n1
+exec_always --no-startup-id kitti3 -p CT -s 0.8 0.7 -n n1
 bindsym $mod+n nop n1
 #
-exec_always --no-startup-id kitti3 -p CB -s 0.8 0.4 -n n2
-bindsym $mod+m nop n2
+# exec_always --no-startup-id kitti3 -p CB -s 0.8 0.7 -n n2
+# bindsym $mod+m nop n2
 
 #############################
 #scratchpad
@@ -163,6 +164,8 @@ bindsym $mod+q [instance="pass"] scratchpad show; [instance="pass"] move positio
 # for_window [urgent=latest] focus
 default_orientation horizontal
 exec_always --no-startup-id autotiling
+
+
 # for_window [class="Vivaldi-stable"] focus
 # auto start
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &

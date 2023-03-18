@@ -9,13 +9,16 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=/usr/share/oh-my-zsh/
 
 #Plugins
+plugins_path="/usr/share/oh-my-zsh/custom/plugins"
 # fzf-tab
-source /usr/share/oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
+source $plugins_path/fzf-tab/fzf-tab.plugin.zsh
 # zsh-autosuggestions
-source /usr/share/oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source $plugins_path/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
+# vim mode 
+set -o vi
+# source $plugins_path/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-#
 # Theme 
 # ZSH_THEME="random"
 # ZSH_THEME="af-magic"
@@ -31,6 +34,7 @@ ZSH_THEME="sorin"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# plugins=(git fzf vi-mode)
 plugins=(git fzf)
 
 # fzf
@@ -39,18 +43,14 @@ DISABLE_FZF_AUTO_COMPLETION="false"
 DISABLE_FZF_KEY_BINDINGS="false"
 
 # Preview file content using bat (https://github.com/sharkdp/bat)
-export FZF_CTRL_T_OPTS="
-  --preview 'bat -n --color=always {}'
-  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+# export FZF_CTRL_T_OPTS="
+#   --preview 'bat -n --color=always {}'
+#   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
 # CTRL-/ to toggle small preview window to see the full command
 # CTRL-Y to copy the command into clipboard using pbcopy
-# export FZF_CTRL_R_OPTS="
-#   --preview 'echo {}' --preview-window up:3:hidden:wrap
-#   --bind 'ctrl-/:toggle-preview'
-#   --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
-#   --color header:italic
-#   --header 'Press CTRL-Y to copy command into clipboard'"
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:3:hidden:wrap"
 
 # Print tree structure in the preview window
 export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
@@ -61,7 +61,8 @@ fi
 
 ###
 # vim mode 
-bindkey -v 
+# bindkey -v 
+#
 # zoxide
 eval "$(zoxide init zsh)"
 # Random Color
@@ -76,6 +77,19 @@ eval "$(zoxide init zsh)"
 export LANG=en_US.UTF-8
 
 ####   ARCOLINUX SETTINGS   ####
+# Colored man pages
+function man() {
+	env \
+		LESS_TERMCAP_md=$(tput bold; tput setaf 4) \
+		LESS_TERMCAP_me=$(tput sgr0) \
+		LESS_TERMCAP_mb=$(tput blink) \
+		LESS_TERMCAP_us=$(tput setaf 2) \
+		LESS_TERMCAP_ue=$(tput sgr0) \
+		LESS_TERMCAP_so=$(tput smso) \
+		LESS_TERMCAP_se=$(tput rmso) \
+		PAGER="${commands[less]:-$PAGER}" \
+		man "$@"
+}
 # export PAGER='most'
 
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
@@ -96,11 +110,7 @@ export HISTCONTROL=ignoreboth:erasedups
 export EDITOR='lvim'
 export VISUAL='lvim'
 export TERMINAL='kitty'
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
 ## 
-
-#PS1='[\u@\h \W]\$ '
 
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
@@ -124,7 +134,8 @@ alias pmuu='paru -Syu'
 alias pmr='doas pacman -Rs'
 alias pmR='doas pacman -Rd --nodeps' #remove pkg without dependencies
 alias pmii='paru -S'
-alias pmq='pacman -Qq'
+alias pmq='pacman -Q'
+alias pmqd='pacman -Qqs'
 alias pmn='pacman -Q | wc -l'
 alias pmc='doas pacman -Sc' #clean the cache after upgrade my system 
 alias pmg='pamac-manager'
@@ -150,7 +161,6 @@ alias printer='system-config-printer'
 alias printerinstall='hp-setup -u'
 alias epdf='okular'
 alias topdf='sh ~/scripts/topdf.sh'
-alias lf='lfrun'
 alias gn='cd ~/.config/nnn'
 alias tl='trash-list' 
 alias tr='trash-restore'
@@ -204,13 +214,13 @@ alias gd="cd ~/Documents/GitHub/"
 alias sv="~/scripts/dmenu_service.sh"
 alias V="doas lvim $argv"
 alias v="lvim $argv"
-alias rzsh="omz reload"
+# alias rzsh="omz reload"
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 alias prop="xprop"
 alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
-
+bindkey -s '^o' 'lf\n'
 
 # alias funcitons 
 nls() {

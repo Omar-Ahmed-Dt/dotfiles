@@ -86,7 +86,7 @@ vim.opt.hlsearch = true
 vim.api.nvim_set_option_value("colorcolumn", "100", {})
 
 -- global
-vim.go.acd = true -- open terminal in the same path
+-- vim.go.acd = true -- open terminal in the same path
 
 -- -- Change theme settings
 -- lvim.colorscheme = "lunar"
