@@ -85,6 +85,7 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
 #### Virtual OS 
  * ubuntu
 ---
+<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
 
 | Utility  | Packages            |
 | -----     | --------------- |
@@ -113,7 +114,7 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
 | Calendar | khal | 
 | Whatsapp Client  | whatsdesk whatsapp-nativefier | 
 
----
+<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
 
 | Event  | Keybinding |
 | -----     | --------------- |
@@ -156,3 +157,4 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
 | keepassxc | super + q | 
 | scripts via dmenu | super + shift + f | 
 | clipmenu | super + v | 
+<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>

@@ -232,6 +232,6 @@ F9
 # rkeys
 F10
     $HOME/scripts/keys.sh
-# keepass
-# super + t 
-#     ph type --tabbed --prog dmenu
+#keepass
+# super + shift + q
+#     ~/Documents/pass.sh
