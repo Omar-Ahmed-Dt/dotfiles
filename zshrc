@@ -21,13 +21,10 @@ set -o vi
 
 # Theme 
 # ZSH_THEME="random"
-# ZSH_THEME="af-magic"
-# ZSH_THEME="nicoulaj"
 # ZSH_THEME="gallifrey"
-# ZSH_THEME="kennethreitz"
-# ZSH_THEME="lukerandall"
-# ZSH_THEME="miloshadzic"
 ZSH_THEME="sorin"
+# ZSH_THEME="apple"
+# ZSH_THEME="awesomepanda"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -35,7 +32,7 @@ ZSH_THEME="sorin"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git fzf vi-mode)
-plugins=(git fzf)
+plugins=(git fzf colored-man-pages)
 
 # fzf
 DISABLE_FZF_AUTO_COMPLETION="false"
@@ -78,19 +75,20 @@ export LANG=en_US.UTF-8
 
 ####   ARCOLINUX SETTINGS   ####
 # Colored man pages
-function man() {
-	env \
-		LESS_TERMCAP_md=$(tput bold; tput setaf 4) \
-		LESS_TERMCAP_me=$(tput sgr0) \
-		LESS_TERMCAP_mb=$(tput blink) \
-		LESS_TERMCAP_us=$(tput setaf 2) \
-		LESS_TERMCAP_ue=$(tput sgr0) \
-		LESS_TERMCAP_so=$(tput smso) \
-		LESS_TERMCAP_se=$(tput rmso) \
-		PAGER="${commands[less]:-$PAGER}" \
-		man "$@"
-}
-# export PAGER='most'
+# function man() {
+# 	env \
+# 		LESS_TERMCAP_md=$(tput bold; tput setaf 4) \
+# 		LESS_TERMCAP_me=$(tput sgr0) \
+# 		LESS_TERMCAP_mb=$(tput blink) \
+# 		LESS_TERMCAP_us=$(tput setaf 2) \
+# 		LESS_TERMCAP_ue=$(tput sgr0) \
+# 		LESS_TERMCAP_so=$(tput smso) \
+# 		LESS_TERMCAP_se=$(tput rmso) \
+# 		PAGER="${commands[less]:-$PAGER}" \
+# 		man "$@"
+# }
+# export PAGER='bat'
+export PAGER='most'
 
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -200,6 +198,7 @@ alias f="doas find / -iname"
 alias uprsc="xrdb -load ~/.Xresources"
 alias gpu="sudo lvim /etc/optimus-manager/optimus-manager.conf"
 alias smi="nvidia-smi"
+alias ct="kitty +kitten themes"
 alias journ="journalctl -f"
 alias note="io.github.lainsce.Notejot"
 alias rm="rm -i"
@@ -277,3 +276,5 @@ sc(){
 
 # nnn configurations : 
 # ~/.zshenv
+# The plugin will auto execute this zvm_after_select_vi_mode function
+# Change cursor shape for different vi modes.

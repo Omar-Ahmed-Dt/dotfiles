@@ -410,7 +410,6 @@ libtool
 libusb-compat
 light
 lightsoff
-lighttpd
 linux
 linux-atm
 linux-firmware
@@ -494,6 +493,7 @@ notification-daemon
 noto-fonts
 npm
 nss-mdns
+nsxiv
 ntfs-3g
 ntp
 numix-circle-arc-icons-git
@@ -680,6 +680,7 @@ testdisk
 texinfo
 the_platinum_searcher-bin
 the_silver_searcher
+thermald
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin

@@ -156,7 +156,8 @@ bindsym $mod+backslash [instance="pavu"] scratchpad show; [instance="pavu"] move
 for_window [instance="pass"] floating enable 
 for_window [instance="pass"] resize set 1500 1000
 for_window [instance="pass"] move scratchpad
-exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name pass -e keepassxc 
+# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name pass -e keepassxc 
+exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name pass -e ~/Documents/pass.sh
 bindsym $mod+q [instance="pass"] scratchpad show; [instance="pass"] move position center
 #############################
 # Jump to urgent window 
