@@ -216,8 +216,8 @@ super + p
   ~/github/dmscripts/scripts/dm-music
 
 # whatsapp 
-super + shift + w 
-     whatsdesk
+# super + shift + w 
+#      whatsdesk
 
 # logout 
 super + Delete 
