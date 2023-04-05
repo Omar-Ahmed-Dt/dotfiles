@@ -63,7 +63,7 @@ fi
 # zoxide
 eval "$(zoxide init zsh)"
 # Random Color
-# /home/omar/github/shell-color-scripts/colorscript.sh -r 
+/home/omar/github/shell-color-scripts/colorscript.sh -r 
 # echo $(date "+%a %d.%m.%Y %H:%M %p") | ponysay
 
 # User configuration
@@ -75,20 +75,22 @@ export LANG=en_US.UTF-8
 
 ####   ARCOLINUX SETTINGS   ####
 # Colored man pages
-# function man() {
-# 	env \
-# 		LESS_TERMCAP_md=$(tput bold; tput setaf 4) \
-# 		LESS_TERMCAP_me=$(tput sgr0) \
-# 		LESS_TERMCAP_mb=$(tput blink) \
-# 		LESS_TERMCAP_us=$(tput setaf 2) \
-# 		LESS_TERMCAP_ue=$(tput sgr0) \
-# 		LESS_TERMCAP_so=$(tput smso) \
-# 		LESS_TERMCAP_se=$(tput rmso) \
-# 		PAGER="${commands[less]:-$PAGER}" \
-# 		man "$@"
-# }
+function man() {
+	env \
+		LESS_TERMCAP_md=$(tput bold; tput setaf 4) \
+		LESS_TERMCAP_me=$(tput sgr0) \
+		LESS_TERMCAP_mb=$(tput blink) \
+		LESS_TERMCAP_us=$(tput setaf 2) \
+		LESS_TERMCAP_ue=$(tput sgr0) \
+		LESS_TERMCAP_so=$(tput smso) \
+		LESS_TERMCAP_se=$(tput rmso) \
+		PAGER="${commands[less]:-$PAGER}" \
+		man "$@"
+}
+export PAGER='bat --theme=1337 -l man -p'
+# export PAGER='bat --theme gruvbox-dark -l  man -p'
 # export PAGER='bat'
-export PAGER='most'
+# export PAGER='most'
 
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -217,7 +219,7 @@ alias v="lvim $argv"
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
-alias prop="xprop"
+alias prop="xprop | grep WM_CLASS"
 alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 bindkey -s '^o' 'lf\n'
 

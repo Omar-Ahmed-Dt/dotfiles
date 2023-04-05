@@ -86,7 +86,7 @@ bindsym $mod+Ctrl+k move up
 # dt config 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+# bindsym $mod+w layout tabbed
 # bindsym $mod+e layout toggle split
 bindsym $mod+s mode "resize"
 mode "resize" {
@@ -251,7 +251,7 @@ bar {
     separator_symbol "✗" 
     height 25
     workspace_buttons yes
-    font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont Bold 10
+    font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont Bold 9
     # font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont 10.5
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks

@@ -179,6 +179,7 @@ discord
 dmenu
 dmidecode
 dmraid
+dnsmasq
 docker
 docker-compose
 dosfstools
@@ -398,6 +399,7 @@ layan-kde-git
 less
 lib32-pipewire
 lib32-pipewire-jack
+libcgroup
 libdvdcss
 libfido2
 libgsf
@@ -484,6 +486,7 @@ nfs-utils
 nginx-mainline
 nilfs-utils
 nitrogen
+nmap
 nnn-nerd
 noise-suppression-for-voice
 noisetorch
@@ -518,9 +521,10 @@ open-iscsi
 openbox-themes-pambudi-git
 openconnect
 opendoas
-openresolv
 openssh
 openvpn
+openvpn-update-resolv-conf-git
+openvpn-update-systemd-resolved
 optimus-manager
 optimus-manager-qt
 oranchelo-icon-theme-git
@@ -575,6 +579,8 @@ powerpill
 ppp
 pptpclient
 pragha
+protonvpn
+protonvpn-cli
 pulseaudio-equalizer-ladspa
 pv
 python-colorama
@@ -583,6 +589,7 @@ python-pykeepass_cache-git
 python-pynput
 python-pyotp
 python-pyparted
+python-pyqt5
 python-pywal
 qbittorrent
 qjackctl
@@ -654,6 +661,7 @@ speedometer
 speedtest-cli-git
 squashfs-tools
 starship
+stunnel
 sublime-text-4
 sudo
 surfn-icons-git
@@ -671,6 +679,7 @@ sysprof
 sysstat
 system-config-printer
 system76-power
+systemd-resolvconf
 tali
 tcpdump
 tela-circle-icon-theme-git
