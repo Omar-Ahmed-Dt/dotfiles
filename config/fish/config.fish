@@ -241,7 +241,7 @@ alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
-alias prop="xprop"
+# alias prop="xprop"
 
 
 # bare git repo alias for dotfiles
@@ -268,6 +268,7 @@ alias C='doas chmod 777'
 alias c='doas chmod 744'
 alias do='doas'
 /home/omar/github/shell-color-scripts/colorscript.sh -r 
+# echo $(date "+%a %d.%m.%Y %H:%M %p") | ponysay
 alias pmi='doas pacman -S'
 alias pmu='doas pacman -Syyu'
 alias pmuu='paru -Syu'
@@ -355,8 +356,22 @@ alias cd="z"
 alias opdf="~/scripts/ozathura.sh"
 alias ompv="~/scripts/ompv.sh"
 alias cat="lolcat"
+alias prop="xprop | grep WM_CLASS"
+alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 
 # Function for fish 
+
+function se
+    cd ~/scripts
+    fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r sh 
+    cd -
+end 
+
+function sc 
+    cd ~/scripts
+    fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %
+    cd -
+end 
 
 function nls
   ls -l $(nnn -p -)
@@ -534,7 +549,7 @@ export NNN_BMS="m:/media/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/sc
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
 # export NNN_COLORS='1267'
-export NNN_FCOLORS='c1e29368E66033f7c6d6abc4'
+export NNN_FCOLORS='c1e2904be76033f7c6d6abc4'
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_TRASH=1 #to use trash (needs trash-cli) instead of delete. the trash's directory : /home/omar/.local/share/Trash/files
 export NNN_ARCHIVE="\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)"
