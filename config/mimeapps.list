@@ -34,6 +34,7 @@ text/x-c++=lvim.desktop
 application/x-gnome-saved-search=nemo.desktop
 image/webp=org.gnome.eog.desktop
 text/x-python=userapp-kitty-54GMZ1.desktop
+x-scheme-handler/etcher=balena-etcher.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Telegram Desktop-CIISR1.desktop;userapp-Telegram Desktop-HPBJW1.desktop;

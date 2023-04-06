@@ -29,7 +29,7 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
  *  lvim & vscodium (ssh machine)
 
 #### Shell 
- * zsh 
+ * fish 
 
 #### Launcher 
  * [dmenu](https://gitlab.com/dwt1/dmenu-distrotube)
