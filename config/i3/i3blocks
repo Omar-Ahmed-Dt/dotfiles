@@ -93,7 +93,7 @@ border_right=0
 border_left=0
 border_bottom=0
 
-[temperature]
+[temp.sh]
 label=<span color="#51afef">+ </span>
 interval=10
 border=#51afef
