@@ -302,7 +302,7 @@ alias printer='system-config-printer'
 alias printerinstall='hp-setup -u'
 alias epdf='okular'
 alias topdf='sh ~/scripts/topdf.sh'
-alias lf='lfrun'
+# alias lf='lfrun'
 alias gn='cd ~/.config/nnn'
 alias tl='trash-list' 
 alias tr='trash-restore'
@@ -357,7 +357,7 @@ alias opdf="~/scripts/ozathura.sh"
 alias ompv="~/scripts/ompv.sh"
 alias cat="lolcat"
 alias prop="xprop | grep WM_CLASS"
-alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
+# alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 
 # Function for fish 
 
