@@ -161,6 +161,8 @@ clonezilla
 clubhouse-desktop-bin
 conky-lua-archers
 containerd
+cpupower
+cpupower-gui
 cronie
 cryptsetup
 cuda
@@ -367,6 +369,7 @@ i3-swallow-git
 i3-wm
 i3blocks
 i3status
+i7z
 iagno
 imagemagick
 imagewriter
