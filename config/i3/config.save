@@ -1,4 +1,4 @@
-# My configuration file 
+j# My configuration file 
 
 # current displays
 exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
@@ -67,10 +67,17 @@ floating_modifier $mod
 bindsym $mod+space floating toggle
 bindsym $mod+f fullscreen toggle
 # Focus
-bindsym $mod+$left focus left
-bindsym $mod+$down focus down
-bindsym $mod+$up focus up
-bindsym $mod+$right focus right
+# bindsym $mod+$left focus left
+# bindsym $mod+$down focus down
+# bindsym $mod+$up focus up
+# bindsym $mod+$right focus right
+# bindsym $mod+Left focus left
+
+bindsym alt+$left focus left
+bindsym alt+$down focus down
+bindsym alt+$up focus up
+bindsym alt+$right focus right
+bindsym alt+$Left focus left
 
 # bindsym $mod+Down focus down
 # bindsym $mod+Up focus up

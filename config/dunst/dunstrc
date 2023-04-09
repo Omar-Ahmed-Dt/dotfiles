@@ -2,6 +2,7 @@
     monitor = 0
     follow = mouse
     width = 350
+    separator_width = 1
     offset = 20x50
     progress_bar = true
     progress_bar_height = 10
@@ -15,11 +16,14 @@
     horizontal_padding = 8
     text_icon_padding = 0
     frame_width = 2
-    frame_color = "#4A5057"
-    separator_color = frame
+    #frame_color = "#4A5057"
+    frame_color = "#b3cfa7"
+    #separator_color = frame
+    separator_color = "#b3cfa7"
     sort = yes
     idle_threshold = 120
-    font = JetBrains Mono Nerd Font Medium 10
+    # font = JetBrains Mono Nerd Font Medium 10
+    font = "Roboto Mono, Font Awesome 5 Free Regular"
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"

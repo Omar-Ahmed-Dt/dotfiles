@@ -30,15 +30,18 @@ super + shift + x
 
 #Vol up 
 XF86AudioRaiseVolume
-	pamixer -i 5 && pkill -RTMIN+10 i3blocks 
+   ~/scripts/volume_notification.sh up && pkill -RTMIN+10 i3blocks
+	# pamixer -i 5 && pkill -RTMIN+10 i3blocks 
 
 #Vol down 
 XF86AudioLowerVolume
-	pamixer -d 5 && pkill -RTMIN+10 i3blocks 
+   ~/scripts/volume_notification.sh down && pkill -RTMIN+10 i3blocks
+	# pamixer -d 5 && pkill -RTMIN+10 i3blocks 
 
 #vol toggle 
 XF86AudioMute
-	amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
+   ~/scripts/volume_notification.sh mute && pkill -RTMIN+10 i3blocks
+	# amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
 
 # vol up
 F2
