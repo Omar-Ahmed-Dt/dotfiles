@@ -267,8 +267,8 @@ alias p='cd ..'
 alias C='doas chmod 777'
 alias c='doas chmod 744'
 alias do='doas'
-/home/omar/github/shell-color-scripts/colorscript.sh -r 
-# echo $(date "+%a %d.%m.%Y %H:%M %p") | ponysay
+# /home/omar/github/shell-color-scripts/colorscript.sh -r 
+echo $(date "+%a %d.%m.%Y %H:%M %p") | ponysay
 alias pmi='doas pacman -S'
 alias pmu='doas pacman -Syyu'
 alias pmuu='paru -Syu'
@@ -428,7 +428,7 @@ function v
 end
 
 function V
-    doas lvim $argv
+    sudo lvim $argv
 end
 
 function vi 

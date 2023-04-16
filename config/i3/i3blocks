@@ -27,7 +27,7 @@ border_right=0
 border_left=0
 border_bottom=0
 
-[lang.sh]
+[lang]
 command=xkb-switch | xargs echo | awk -F '(' '{print $1}'
 interval=once
 signal=15

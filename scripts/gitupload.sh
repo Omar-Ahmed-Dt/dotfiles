@@ -22,7 +22,7 @@ cp -r ~/.Xresources ~/Documents/GitHub/dotfiles/Xresources
 cp  ~/vim_training/vim_training.ms ~/Documents/GitHub/dotfiles/vim_training.ms
 cp ~/.cache/styli.sh/wallpaper.jpg ~/Documents/GitHub/dotfiles/workflow/
 cp ~/.config/khal/config ~/Documents/GitHub/dotfiles/config/khal/
-cp /usr/local/searxng-docker/searxng-docker.service ~/Documents/GitHub/dotfiles/searxng/
-cp /usr/local/searxng-docker/docker-compose.yaml ~/Documents/GitHub/dotfiles/searxng/
+# cp /usr/local/searxng-docker/searxng-docker.service ~/Documents/GitHub/dotfiles/searxng/
+# cp /usr/local/searxng-docker/docker-compose.yaml ~/Documents/GitHub/dotfiles/searxng/
 cp -r ~/.config/lvim/* ~/Documents/GitHub/dotfiles/config/lvim/
 rm ~/Documents/GitHub/dotfiles/config/lvim/lazy-lock.json

@@ -39,7 +39,8 @@ dunstify "$volume"" %   " -i "$icon_name" -r 555
 fi
 bar=$(seq -s "━" $(($volume/3)) | sed 's/[0-9]//g')
 # Send the notification
-dunstify "$volume"" %   ""$bar" -i "$icon_name" -h int:value:"$volume" -r 555 -t 1000
+# dunstify "$volume"" %   ""$bar" -i "$icon_name" -h int:value:"$volume" -r 555 -t 1000
+dunstify "$volume"" %   " -i "$icon_name" -h int:value:"$volume" -r 555 -t 1000
 }
 
 case $1 in

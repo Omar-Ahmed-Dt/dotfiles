@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/env sh
 
 # Description: Terminal based file previewer
 #
