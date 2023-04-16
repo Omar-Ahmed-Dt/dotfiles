@@ -64,7 +64,6 @@ view_files() {
     [ -f "$target" ] && count="-n $(listimages | grep -a -m 1 -ZznF "$target" | cut -d: -f1)"
     case "$1" in
         nsxiv) listimages | xargs -0 nsxiv -a "${count:--t}" -- ;;
-        sxiv) listimages | xargs -0 swallow sxiv -a "${count:--t}" -- ;;
         sxiv) listimages | xargs -0 sxiv -a "${count:--t}" -- ;;
         imv*) listimages | xargs -0 "$1" "${count:-}" -- ;;
     esac
