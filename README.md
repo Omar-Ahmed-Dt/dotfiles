@@ -1,13 +1,13 @@
 # 🛠 Dotfiles 🛠
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
 
-These are my dotfiles. The documentation for them is in progress, I'm trying to do better. Also, my window manager dots change all the time. I do upload everything here,so you should be able to view previous commits to get to the rice you want.
+These are my dotfiles. I'm trying to do better. Also, my window manager dots change all the time. I do upload everything here,so you should be able to view previous commits to get to the rice you want.
 
 ![img](https://www.padok.fr/hubfs/Images/Blog/dotfiles_git.webp)
 ---
 
 #### Operating System 
- * Linux, ArcoD 
+ * Linux, Arco 
 
 #### Service Manager 
   * systemd
@@ -52,13 +52,13 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
  * sxiv
 
 #### Screen Recorder 
- * ffmpeg 
+ * simplescreenrecorder 
 
 #### pdf Viewer 
  * zathura
 
 #### Resource Monitor
- * gotop
+ * htop
 
 #### Key Binding 
  * sxhkd 
@@ -147,7 +147,7 @@ These are my dotfiles. The documentation for them is in progress, I'm trying to 
 | nnn | shift + Return | 
 | thunderbird | super + shift + m | 
 | mount | super + Insert | 
-| joplin | super + n | 
+| kitti3 | super + n | 
 | record screen | super + print | 
 | virtual machine | super + shift + a | 
 | whatsdesk | super + shift + w | 
