@@ -221,20 +221,20 @@ alias jctl="journalctl -p 3 -xb"
 
 # gpg encryption
 # verify signature for isos
-alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
+# alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
 # receive the key of a developer
-alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
+# alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 
 # youtube-dl
-alias yta-aac="youtube-dl --extract-audio --audio-format aac "
-alias yta-best="youtube-dl --extract-audio --audio-format best "
-alias yta-flac="youtube-dl --extract-audio --audio-format flac "
-alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
-alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
-alias yta-opus="youtube-dl --extract-audio --audio-format opus "
-alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
-alias yta-wav="youtube-dl --extract-audio --audio-format wav "
-alias ytv-best="youtube-dl -f bestvideo+bestaudio "
+# alias yta-aac="youtube-dl --extract-audio --audio-format aac "
+# alias yta-best="youtube-dl --extract-audio --audio-format best "
+# alias yta-flac="youtube-dl --extract-audio --audio-format flac "
+# alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
+# alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
+# alias yta-opus="youtube-dl --extract-audio --audio-format opus "
+# alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
+# alias yta-wav="youtube-dl --extract-audio --audio-format wav "
+# alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
 # switch between shells
 # I do not recommend switching default SHELL from bash.
@@ -248,27 +248,30 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 #alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 
 # termbin
-alias tb="nc termbin.com 9999"
+# alias tb="nc termbin.com 9999"
 
 # the terminal rickroll
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+# alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 # Unlock LBRY tips
-alias tips="lbrynet txo spend --type=support --is_not_my_input --blocking"
+# alias tips="lbrynet txo spend --type=support --is_not_my_input --blocking"
 
 ### DTOS ###
 # Copy/paste all content of /etc/dtos over to home folder. A backup of config is created. (Be careful running this!)
-alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/dtos/* ~'
+# alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/dtos/* ~'
 # Backup contents of /etc/dtos to a backup folder in $HOME.
-alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-(date +%Y.%m.%d-%H.%M.%S)'
+# alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-(date +%Y.%m.%d-%H.%M.%S)'
 
 #my config 
 alias p='cd ..'
 alias C='doas chmod 777'
 alias c='doas chmod 744'
 alias do='doas'
+
 # /home/omar/github/shell-color-scripts/colorscript.sh -r 
-echo $(date "+%a %d.%m.%Y %H:%M %p") | ponysay
+# echo $(date "+%a %d.%m.%Y %H:%M %p") | ponysay
+pokemon-colorscripts --no-title -r 
+
 alias pmi='doas pacman -S'
 alias pmu='doas pacman -Syyu'
 alias pmuu='paru -Syu'
@@ -544,7 +547,7 @@ end
 #my config for nnn file manger alias nnn='nnn -eRx'
 alias nn='nnn -Rxl 5'
 alias n='nnn -Rxl 5'
-export NNN_PLUG='F:fixname;i:imgview;f:fzcd;t:mp3conv;v:preview-tui;s:!bash -i*;o:fzopen;p:rsynccp;m:mtpmount' #to play this plug press ; then choose option 
+export NNN_PLUG='S:upload,F:fixname;i:imgview;f:fzcd;t:mp3conv;v:preview-tui;s:!bash -i*;o:fzopen;p:rsynccp;m:mtpmount' #to play this plug press ; then choose option 
 export NNN_BMS="m:/media/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" #to play this plug press b then choose option 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
