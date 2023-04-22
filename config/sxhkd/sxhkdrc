@@ -1,4 +1,4 @@
-########
+######
 
 # input from keyboard 
 #run : xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
@@ -46,11 +46,11 @@ XF86AudioMute
 	# amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
 
 # vol up
-F2
+F3
    ~/scripts/volume_notification.sh up && pkill -RTMIN+10 i3blocks
 
 # vol down
-F3
+F2
    ~/scripts/volume_notification.sh down && pkill -RTMIN+10 i3blocks
 
 #vol toggle 
@@ -91,7 +91,8 @@ F11
 
 #dmenu 
 super + shift + d 
-    ~/scripts/lan_dmenu.sh && dmenu_run
+    rofi -terminal kitty -show drun -icon-theme "Papirus" -show-icons
+    # ~/scripts/lan_dmenu.sh && dmenu_run
 
 #lang 
 shift + Alt_L
@@ -232,8 +233,8 @@ super + Delete
 super + period
     ~/scripts/lan_dmenu.sh && bemoji -f ~/scripts/emoji
 # lock 
-F9
-    ~/scripts/lock.sh
+# F9
+#     ~/scripts/lock.sh
 # rkeys
 F10
     $HOME/scripts/keys.sh

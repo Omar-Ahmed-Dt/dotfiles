@@ -116,6 +116,7 @@ arcolinux-xfce-git
 arcolinux-xfce-panel-profiles-git
 arcolinux-zsh-git
 asciinema
+auto-cpufreq
 autoconf
 automake
 autotiling
@@ -152,6 +153,7 @@ chromium
 clipmenu-rofi
 clonezilla
 conky-lua-archers
+coreimage
 cronie
 cryptsetup
 cups
@@ -202,6 +204,7 @@ fakeroot
 fatresize
 feh
 ffmpegthumbnailer
+ffsend
 file
 file-roller
 findutils
@@ -354,6 +357,7 @@ mpd
 mpd-mpris
 mpdris2-git
 mpv
+mpv-mpris
 mtools
 mtpfs
 mugshot
@@ -362,6 +366,10 @@ nbd
 ncmpcpp
 ndisc6
 nemo
+nemo-compare
+nemo-fileroller
+nemo-preview
+nemo-share
 neofetch
 neovim
 network-manager-applet
@@ -431,6 +439,7 @@ pkgconf
 pkgfile
 plank
 playerctl
+pokemon-colorscripts-git
 polkit
 polkit-gnome
 ponysay
