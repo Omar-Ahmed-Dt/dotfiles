@@ -130,10 +130,6 @@ base16-alacritty-git
 bash-completion
 bat
 bemoji-git
-bibata-cursor-theme-bin
-bibata-cursor-translucent
-bibata-extra-cursor-theme
-bibata-rainbow-cursor-theme
 bind
 binutils
 bison
@@ -146,9 +142,7 @@ breeze
 brightnessctl
 broadcom-wl-dkms
 btrfs-progs
-capitaine-cursors
 catfish
-catppuccin-cursors-git
 chromium
 clipmenu-rofi
 clonezilla
@@ -174,9 +168,8 @@ dmraid
 dnsmasq
 dosfstools
 downgrade
-dracula-cursors-git
 dracula-gtk-theme
-dracula-icons-git
+dragon-drop
 duf-bin
 dunst
 e2fsprogs
@@ -198,8 +191,6 @@ exfatprogs
 exo
 expac
 f2fs-tools
-faba-icon-theme-git
-faba-mono-icons-git
 fakeroot
 fatresize
 feh
@@ -214,7 +205,6 @@ flameshot
 flat-remix-git
 flex
 fluent-gtk-theme
-fluent-icon-theme-git
 fluent-kde-theme-git
 font-manager
 freetype2
@@ -286,6 +276,7 @@ icons-in-terminal
 imagemagick
 intltool
 inxi
+ipython
 irssi
 iw
 jfsutils
@@ -300,9 +291,7 @@ kripton-theme-git
 kvantum
 kvantum-theme-materia
 kvantum-theme-qogir-git
-la-capitaine-icon-theme-git
 laptop-detect
-layan-cursor-theme-git
 layan-gtk-theme-git
 layan-kde-git
 less
@@ -389,7 +378,6 @@ npm
 nss-mdns
 ntfs-3g
 ntp
-numix-circle-arc-icons-git
 numix-circle-icon-theme-git
 numix-gtk-theme-git
 numix-icon-theme-git
@@ -408,17 +396,14 @@ opendoas
 openresolv
 openssh
 openvpn
-oranchelo-icon-theme-git
 orchis-kde-theme-git
 orchis-theme-git
 os-prober
-oxy-neon
 p7zip
 pace
 pacman
 pamixer
 paper-icon-theme
-papirus-folders-git
 papirus-folders-gui-bin
 papirus-folders-nordic
 papirus-nord
@@ -520,7 +505,6 @@ surfn-mint-y-icons-git
 surfn-plasma-dark-icons-git
 surfn-plasma-dark-tela-icons-git
 surfn-plasma-light-icons-git
-sweet-cursor-theme-git
 sweet-gtk-theme-dark
 sweet-theme-git
 sxhkd
@@ -605,7 +589,6 @@ usbmuxd
 usbutils
 variety
 vim
-vimix-cursors
 virtualbox
 vlc
 vpnc
@@ -627,12 +610,6 @@ wvdial
 xapp
 xclip
 xcolor
-xcursor-arch-cursor-complete
-xcursor-comix
-xcursor-flatbed
-xcursor-neutral
-xcursor-premium
-xcursor-simpleandsoft
 xdg-desktop-portal-gtk
 xdg-user-dirs
 xdo
