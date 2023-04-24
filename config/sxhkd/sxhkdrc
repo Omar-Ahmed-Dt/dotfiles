@@ -1,4 +1,4 @@
-######
+####
 
 # input from keyboard 
 #run : xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
@@ -91,8 +91,8 @@ F11
 
 #dmenu 
 super + shift + d 
-    rofi -terminal kitty -show drun -icon-theme "Papirus" -show-icons
-    # ~/scripts/lan_dmenu.sh && dmenu_run
+    ~/scripts/lan_dmenu.sh && dmenu_run
+    # rofi -terminal kitty -show drun -icon-theme "Papirus" -show-icons
 
 #lang 
 shift + Alt_L

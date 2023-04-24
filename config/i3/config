@@ -193,6 +193,8 @@ exec --no-startup-id xfce4-clipman
 # exec --no-startup-id ~/scripts/multi_lay.sh
 # exec_always ~/scripts/multi_lay.sh
 # exec --no-startup-id slimbookbattery --minimize
+# exec --no-startup-id xmodmap ~/.Xmodmap
+
 # Floating 
 for_window [class="Arcolinux-welcome-app.py"] floating enable
 # for_window [class="thunderbird"] floating enable resize set 1673 1033
@@ -250,8 +252,8 @@ gaps outer 0
 smart_borders on
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 bar {
-    separator_symbol "✗" 
-    # separator_symbol "●"
+    # separator_symbol "✗" 
+    separator_symbol ""
     height 25
     workspace_buttons yes
     font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont Bold 9

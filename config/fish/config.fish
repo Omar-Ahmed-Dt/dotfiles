@@ -360,6 +360,7 @@ alias opdf="~/scripts/ozathura.sh"
 alias ompv="~/scripts/ompv.sh"
 alias cat="lolcat"
 alias prop="xprop | grep WM_CLASS"
+alias dl="~/scripts/dlfile.sh"
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 
 # Function for fish 
@@ -547,7 +548,7 @@ end
 #my config for nnn file manger alias nnn='nnn -eRx'
 alias nn='nnn -Rxl 5'
 alias n='nnn -Rxl 5'
-export NNN_PLUG='S:upload,F:fixname;i:imgview;f:fzcd;t:mp3conv;v:preview-tui;s:!bash -i*;o:fzopen;p:rsynccp;m:mtpmount' #to play this plug press ; then choose option 
+export NNN_PLUG='F:fixname;i:imgview;f:fzcd;t:mp3conv;v:preview-tui;s:!bash -i*;o:fzopen;p:rsynccp;m:mtpmount' #to play this plug press ; then choose option 
 export NNN_BMS="m:/media/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" #to play this plug press b then choose option 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
