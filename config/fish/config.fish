@@ -361,6 +361,9 @@ alias ompv="~/scripts/ompv.sh"
 alias cat="lolcat"
 alias prop="xprop | grep WM_CLASS"
 alias dl="~/scripts/dlfile.sh"
+alias dlmv="~/scripts/mvdragon.sh"
+alias dlcp="~/scripts/cpdrag.sh"
+
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 
 # Function for fish 
