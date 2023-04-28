@@ -3,6 +3,7 @@
 pacman -Qeq > ~/Documents/GitHub/dotfiles/pkgs.txt
 cd ~/.config/
 cp -r alacritty fish neofetch ranger sxhkd zathura htop mpv paru starship.toml vlc dmscripts i3 pcmanfm yay sxiv mimeapps.list dunst polybar_bspwm bspwm /home/omar/Documents/GitHub/dotfiles/config
+rm ~/Documents/GitHub/dotfiles/config/i3/workspace_N.json ~/Documents/GitHub/dotfiles/config/i3/system-overview ~/Documents/GitHub/dotfiles/config/i3/start-conky-i3statusbar.sh
 cd /home/omar/Documents/GitHub/dotfiles/config/dmscripts
 rm dmnote
 cp -r /home/omar/scripts/ /home/omar/Documents/GitHub/dotfiles/
