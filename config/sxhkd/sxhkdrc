@@ -49,12 +49,21 @@ XF86AudioMute
 F3
    ~/scripts/volume_notification.sh up && pkill -RTMIN+10 i3blocks
 
+super + Right
+   ~/scripts/volume_notification.sh up && pkill -RTMIN+10 i3blocks
+
 # vol down
 F2
    ~/scripts/volume_notification.sh down && pkill -RTMIN+10 i3blocks
 
+super + Left
+   ~/scripts/volume_notification.sh down && pkill -RTMIN+10 i3blocks
+
 #vol toggle 
 F1
+   ~/scripts/volume_notification.sh mute && pkill -RTMIN+10 i3blocks
+
+super + shift
    ~/scripts/volume_notification.sh mute && pkill -RTMIN+10 i3blocks
 
 #mic toggle 
