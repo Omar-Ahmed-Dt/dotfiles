@@ -253,6 +253,7 @@ smart_borders on
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 bar {
     # separator_symbol "✗" 
+    # separator_symbol "|"
     separator_symbol ""
     height 25
     workspace_buttons yes

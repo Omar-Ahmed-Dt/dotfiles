@@ -242,13 +242,18 @@ lvim.plugins = {
 --     command = "source ~/.config/lvim/ftplugin/colorizer.lua",
 -- })
 
+-- Hexa color 
+vim.api.nvim_create_autocmd("BufEnter", {
+    pattern = { "*" },
+    command = "ColorizerToggle",
+})
 
+-- Python files 
 vim.api.nvim_create_autocmd("BufEnter", {
     pattern = { "*.py" },
     command = "source ~/.config/lvim/ftplugin/py.lua",
 })
---
---
+
 -- Run sh File
 vim.api.nvim_create_autocmd("BufEnter", {
     pattern = { "*.sh" },
@@ -266,11 +271,3 @@ vim.api.nvim_create_autocmd("BufEnter", {
     pattern = { "*.ms" },
     command = "source ~/.config/lvim/ftplugin/ms.lua",
 })
---
--- Plugins 
--- reload "user.plugins"
--- reload "user.md"
--- reload "user.ms"
--- reload "user.colorizer"
--- reload "user.py"
--- reload "user.sh"

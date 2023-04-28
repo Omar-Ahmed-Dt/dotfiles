@@ -22,7 +22,7 @@ if [ -n "$url" ]; then
   done
 
   # Download the file with curl
-  [ -n "$name" ] && curl -o "$name" "$url" || exit 1
+  [ -n "$name" ] && curl -o "$name.jpg" "$url" || exit 1
 else
   exit 1
 fi
