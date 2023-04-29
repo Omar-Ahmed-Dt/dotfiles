@@ -27,3 +27,6 @@ cp ~/.config/khal/config ~/Documents/GitHub/dotfiles/config/khal/
 # cp /usr/local/searxng-docker/docker-compose.yaml ~/Documents/GitHub/dotfiles/searxng/
 cp -r ~/.config/lvim/* ~/Documents/GitHub/dotfiles/config/lvim/
 rm ~/Documents/GitHub/dotfiles/config/lvim/lazy-lock.json
+cp -r ~/.config/ytfzf/* ~/Documents/GitHub/dotfiles/config/ytfzf/
+cp -r ~/.config/vis/* ~/Documents/GitHub/dotfiles/config/vis/
+rm ~/Documents/GitHub/dotfiles/config/vis/vis.log

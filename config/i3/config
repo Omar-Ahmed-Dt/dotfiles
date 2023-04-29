@@ -264,8 +264,7 @@ bar {
         background #282828
         statusline #eeeeee
         separator #a6cc70
-        # separator #ebdbb2
-        # focused_workspace     #83a598 #458588 #ebdbb2
+        # separator #ed8274
         focused_workspace     #ebdbb2 #282828 #ebdbb2
         active_workspace      #a9a9a9 #5f676a #eeeeee
         inactive_workspace    #584945 #282828 #928374
@@ -273,7 +272,8 @@ bar {
       }
     }
     # class                 border  backgr. text    indicator
-    client.focused          #353439 #fcce7b #e5e5e5 #c678dd
+    # client.focused          #353439 #fcce7b #e5e5e5 #c678dd
+    client.focused          #353439 #fcce7b #e5e5e5 #ed8274
     client.unfocused        #222222 #222222 #aaaaaa #222222
     client.focused_inactive #222222 #222222 #a9a9a9 #222222
     client.placeholder      #222222 #222222 #aaaaaa #222222

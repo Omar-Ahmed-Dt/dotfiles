@@ -89,7 +89,6 @@ vim.opt.breakindent = true
 vim.opt.textwidth = 150
 vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
 vim.opt.hlsearch = true
-
 -- colorcolumn
 vim.api.nvim_set_option_value("colorcolumn", "100", {})
 
@@ -154,8 +153,6 @@ lvim.plugins = {
     { "ellisonleao/gruvbox.nvim" },
     { "lunarvim/github.nvim" },
     { "Mofiqul/dracula.nvim" },
-    -- { "junegunn/fzf.vim" },
-    -- { "ibhagwan/fzf-lua" },
     --
     --
     -- ranger file manager
@@ -271,3 +268,4 @@ vim.api.nvim_create_autocmd("BufEnter", {
     pattern = { "*.ms" },
     command = "source ~/.config/lvim/ftplugin/ms.lua",
 })
+

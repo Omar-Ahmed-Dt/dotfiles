@@ -363,6 +363,8 @@ alias prop="xprop | grep WM_CLASS"
 alias dl="~/scripts/dlfile.sh"
 alias dlmv="~/scripts/mvdragon.sh"
 alias dlcp="~/scripts/cpdrag.sh"
+alias ytm="ytfzf --pages=5 -m -t"
+alias ytv="ytfzf --pages=5 -t"
 
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 
