@@ -144,6 +144,7 @@ broadcom-wl-dkms
 btrfs-progs
 catfish
 chromium
+cli-visualizer
 clipmenu-rofi
 clonezilla
 conky-lua-archers
@@ -347,6 +348,7 @@ mpd-mpris
 mpdris2-git
 mpv
 mpv-mpris
+mpv-thumbnail-script
 mtools
 mtpfs
 mugshot
@@ -574,6 +576,7 @@ tumbler
 udftools
 udiskie
 udisks2
+ueberzug
 ufw
 unace
 unimatrix-git
@@ -710,6 +713,7 @@ xwallpaper
 yad
 yay-bin
 yt-dlp
+ytfzf
 z
 zafiro-icon-theme
 zathura
