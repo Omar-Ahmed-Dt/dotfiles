@@ -1,4 +1,3 @@
-# video_pref="bestvideo[hight<=?720][fps<=?30]"
 # autdio_pref='bestaudio/audio'
 # is_detach=yes
 # thumbnail_viewer='kitty'
@@ -18,7 +17,7 @@
 #a sample config below:
 
 # Variables {{{
-ytdl_pref="248+bestaudio/best"
+ytdl_pref="bestvideo[height<=?1080]+bestaudio/best"
 ##scrape 1 video link per channel instead of the default 2
 sub_link_count=1
 show_thumbnails=1

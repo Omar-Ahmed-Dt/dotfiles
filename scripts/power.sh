@@ -8,4 +8,3 @@ case $OPT in
 	shutdown) [ "$(printf "No\\nYes" | dmenu -i -fn 'NotoMonoRegular:bold:pixelsize=16' -p "Really shutdown?")" = "Yes" ] && shutdown now ;;
 	*) ;;
 esac
-
