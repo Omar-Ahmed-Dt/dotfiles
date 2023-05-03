@@ -15,6 +15,7 @@ alsa-lib
 alsa-plugins
 alsa-tools
 alsa-utils
+android-sdk-build-tools
 appstream
 arandr
 arc-darkest-theme-git
@@ -226,6 +227,7 @@ gnome-screenshot
 gnome-software
 gnome-software-packagekit-plugin
 gnu-netcat
+go
 google-chrome
 gpart
 gparted
@@ -483,6 +485,7 @@ sardi-orb-colora-mint-y-icons-git
 sardi-orb-colora-mixing-icons-git
 sardi-orb-colora-variations-icons-git
 scour
+scrcpy
 screen
 scrot
 sddm
@@ -573,6 +576,7 @@ ttf-roboto-mono
 ttf-sourcecodepro-nerd
 ttf-ubuntu-font-family
 tumbler
+udevil
 udftools
 udiskie
 udisks2

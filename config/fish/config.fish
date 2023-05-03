@@ -284,8 +284,8 @@ alias pmc='doas pacman -Sc' #clean the cache after upgrade my system
 alias pmg='pamac-manager'
 alias pmf="pacman -Qqo"
 alias bs='browser-sync start --server --files "*.js, *.html, *.css"'
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 alias e='exit'
+# export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 alias tomp3='sh ~/scripts/tomp3.sh'
 alias install='makepkg -si'
 alias md='mkdir'
@@ -363,8 +363,8 @@ alias prop="xprop | grep WM_CLASS"
 alias dl="~/scripts/dlfile.sh"
 alias dlmv="~/scripts/mvdragon.sh"
 alias dlcp="~/scripts/cpdrag.sh"
-alias ytm="ytfzf --pages=5 -m -t"
-alias ytv="ytfzf --pages=5 -t"
+alias ytm="ytfzf --pages=2 -m -t -l"
+alias ytv="ytfzf --pages=2 -t -l"
 
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 
