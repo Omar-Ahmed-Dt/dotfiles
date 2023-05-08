@@ -45,7 +45,7 @@ dunstify "$volume"" %   " -i "$icon_name" -h int:value:"$volume" -r 555 -t 1000
 
 case $1 in
     up)
-	amixer -D pulse set Master on > /dev/null
+	# amixer -D pulse set Master on > /dev/null
 	pamixer -i 5
 	send_notification
 	;;

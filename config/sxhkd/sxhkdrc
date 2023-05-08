@@ -1,8 +1,6 @@
 ####
-
 # input from keyboard 
 #run : xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
-
 #Reload sxhkd 
 shift + Escape
 	pkill -USR1 -x sxhkd
@@ -12,11 +10,6 @@ super + shift + r
 #Terminal 
 super + Return
     kitty 
-
-# run script via dmenu 
-# super + shift + f
-#     ~/scripts/run_dmenu.sh
-
 # browser
 super + shift + b 
     ~/scripts/browser.sh
@@ -24,226 +17,150 @@ super + shift + b
 #file manger gui 
 super + shift + Return
     nemo ~/
-	# pcmanfm /home/omar
-
 #xkill 
 super + shift + x 
 	xkill
-
 #Vol up 
 XF86AudioRaiseVolume
    ~/scripts/volume_notification.sh up && pkill -RTMIN+10 i3blocks
-	# pamixer -i 5 && pkill -RTMIN+10 i3blocks 
-
 #Vol down 
 XF86AudioLowerVolume
    ~/scripts/volume_notification.sh down && pkill -RTMIN+10 i3blocks
-	# pamixer -d 5 && pkill -RTMIN+10 i3blocks 
-
 #vol toggle 
 XF86AudioMute
    ~/scripts/volume_notification.sh mute && pkill -RTMIN+10 i3blocks
-	# amixer -q set Master toggle && pkill -RTMIN+10 i3blocks
-
 # vol up
 super + Right
    ~/scripts/volume_notification.sh up && pkill -RTMIN+10 i3blocks
-# F3
-#    ~/scripts/volume_notification.sh up && pkill -RTMIN+10 i3blocks
-
 # vol down
 super + Left
    ~/scripts/volume_notification.sh down && pkill -RTMIN+10 i3blocks
-# F2
-#    ~/scripts/volume_notification.sh down && pkill -RTMIN+10 i3blocks
-
 #vol toggle 
 super + m 
    ~/scripts/volume_notification.sh mute && pkill -RTMIN+10 i3blocks
-# F1
-#    ~/scripts/volume_notification.sh mute && pkill -RTMIN+10 i3blocks
-
 #mic toggle 
 XF86AudioMicMute
    pactl set-source-mute @DEFAULT_SOURCE@ toggle && pkill -RTMIN+17 i3blocks
-
 #mic up 
 super + equal
    amixer set Capture 5%+ && pkill -RTMIN+17 i3blocks
-
 #mic down 
 super + minus
    amixer set Capture 5%- && pkill -RTMIN+17 i3blocks
-
 # mic mute
 super + BackSpace 
       amixer -q sset Capture toggle && pkill -RTMIN+17 i3blocks
-
 #light up 
 XF86MonBrightnessUp
 		light -A 5 && pkill -RTMIN+20 i3blocks
-
 #LIGHT DOWN 
 XF86MonBrightnessDown
 		light -U 5 && pkill -RTMIN+20 i3blocks
-
 #light up 
 F12
 		light -A 5 && pkill -RTMIN+20 i3blocks
-
 #light down 
 F11
 		light -U 5 && pkill -RTMIN+20 i3blocks
-
 #dmenu 
 super + shift + d 
     ~/scripts/lan_dmenu.sh && dmenu_run
     # rofi -terminal kitty -show drun -icon-theme "Papirus" -show-icons
-
 #lang 
 shift + Alt_L
     setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
-
 shift + Alt_R
 	setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ar || setxkbmap us && pkill -RTMIN+15 i3blocks
-
 #power 
 super + Escape 
 	/home/omar/scripts/power.sh
-
 #play pause 
 XF86AudioPlay
 	playerctl play-pause
-
 #play next 
 XF86AudioNext
 	playerctl next
-
 #play pre
 XF86AudioPrev 
 	 playerctl previous
-
 #play stop 
 XF86AudioStop 
 	playerctl stop
-
 #mpd previous
 ctrl + XF86AudioPrev 
     mpc prev 
-
 #mpd next
 ctrl + XF86AudioNext 
     mpc next
-
 #mpd stop
 ctrl + XF86AudioPlay
     mpc toggle 
-
 #clipboard 
 super + v 
-
     ~/scripts/lan_dmenu.sh && clipmenu
-	# clipmenu  
-
 #screeen record 
 super + Print
 	simplescreenrecorder
-#     ~/scripts/select_dmenurecording.sh
-
 #mpv youtube 
 super + shift + p 
   ~/scripts/mpvload
-
 #mp3-youtube-dl 
 super + shift + y
     /home/omar/scripts/ytdmenu.sh
-
 #screenshot 
 Print
     /home/omar/scripts/flameshot.sh
-
 #screenshot 
 super + shift + s 
     /home/omar/scripts/flameshot.sh
-
 #kill process 
 super + shift + k 
     /home/omar/github/dmscripts/scripts/dm-kill
-
 #github disktop
 super + shift + g 
     github-desktop
-
 #kill mpv 
 super + d 
     pkill mpv 
-
 #hub 
 super + shift + o 
 	~/scripts/hub.sh
-
-
 #nnn file manger 
 shift + Return
     ~/scripts/nnn.sh
-
 #open vim
 super + shift + v 
     kitty -e lvim
-
 # mail  
 super + shift + m
     thunderbird
-
 #mount 
 super + Insert
 	~/scripts/mount_umount.sh
-
 # Pause button 
 ctrl + Pause
     mpc toggle 
-
 # Pause button 
 ctrl + space
     mpc toggle 
-
 # Pause button
 Pause
 	playerctl play-pause
-
-# joplin 
-# super + n
-# 	joplin-desktop 
-
 # mpc stop 
 ctrl + BackSpace 
 	mpc stop 
-
 # virtual machine 
 super + shift + a
  		virtualbox 
-
 # music script 
 super + p 
   ~/github/dmscripts/scripts/dm-music
-
-# whatsapp 
-# super + shift + w 
-#      whatsdesk
-
 # logout 
 super + Delete 
 	pkill i3
-
 # emoji 
 super + period
     ~/scripts/lan_dmenu.sh && bemoji -f ~/scripts/emoji
-# lock 
-# F9
-#     ~/scripts/lock.sh
 # rkeys
 F10
     $HOME/scripts/keys.sh
-#keepass
-# super + shift + q
-#     ~/Documents/pass.sh

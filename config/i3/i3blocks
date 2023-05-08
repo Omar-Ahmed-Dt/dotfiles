@@ -7,16 +7,6 @@ color=#ebdbb2
 separator_block_width=15
 markup=pango
 
-#[recordpid.sh]
-#align=center
-#border_top=1
-#border=#ff79c6
-#border_right=0
-#border_left=0
-#interval=once
-#signal=9
-#border_bottom=0
-
 [currently_playing]
 command=~/scripts/currently_playing
 interval=persist
