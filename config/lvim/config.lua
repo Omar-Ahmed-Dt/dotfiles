@@ -251,7 +251,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
     command = "source ~/.config/lvim/ftplugin/py.lua",
 })
 
--- Run sh File
+-- Run Bash File
 vim.api.nvim_create_autocmd("BufEnter", {
     pattern = { "*.sh" },
     command = "source ~/.config/lvim/ftplugin/sh.lua",

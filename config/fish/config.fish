@@ -285,7 +285,6 @@ alias pmg='pamac-manager'
 alias pmf="pacman -Qqo"
 alias bs='browser-sync start --server --files "*.js, *.html, *.css"'
 alias e='exit'
-# export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 alias tomp3='sh ~/scripts/tomp3.sh'
 alias install='makepkg -si'
 alias md='mkdir'
@@ -365,6 +364,7 @@ alias dlmv="~/scripts/mvdragon.sh"
 alias dlcp="~/scripts/cpdrag.sh"
 alias ytm="ytfzf --pages=2 -m -t -l"
 alias ytv="ytfzf --pages=2 -t -l"
+alias phn="~/scripts/scrcpy.sh"
 
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 
@@ -553,11 +553,12 @@ end
 #my config for nnn file manger alias nnn='nnn -eRx'
 alias nn='nnn -Rxl 5'
 alias n='nnn -Rxl 5'
-export NNN_PLUG='F:fixname;i:imgview;f:fzcd;t:mp3conv;v:preview-tui;s:!bash -i*;o:fzopen;p:rsynccp;m:mtpmount' #to play this plug press ; then choose option 
+# export NNN_PLUG='c:!convert "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;F:fixname;i:imgview;f:fzcd;t:mp3conv;v:preview-tui;s:!bash -i*;o:fzopen;p:rsynccp;m:mtpmount' #to play this plug press ; then choose option 
+export NNN_PLUG='c:!convert "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;F:fixname;i:imgview;f:fzcd;t:mp3conv;v:preview-tui;s:!bash
+-i*;p:rsynccp;n:nmount' #to play this plug press ; then choose option 
 export NNN_BMS="m:/media/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" #to play this plug press b then choose option 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
-# export NNN_COLORS='1267'
 export NNN_FCOLORS='c1e2904be76033f7c6d6abc4'
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_TRASH=1 #to use trash (needs trash-cli) instead of delete. the trash's directory : /home/omar/.local/share/Trash/files

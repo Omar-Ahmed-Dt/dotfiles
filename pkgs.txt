@@ -195,6 +195,7 @@ expac
 f2fs-tools
 fakeroot
 fatresize
+fd
 feh
 ffmpegthumbnailer
 ffsend
@@ -299,6 +300,7 @@ layan-gtk-theme-git
 layan-kde-git
 less
 libdvdcss
+libesmtp
 libfido2
 libgsf
 libmtp
@@ -428,6 +430,7 @@ pkgconf
 pkgfile
 plank
 playerctl
+pmount
 pokemon-colorscripts-git
 polkit
 polkit-gnome
@@ -494,6 +497,7 @@ sed
 sg3_utils
 simple-scan
 simplescreenrecorder
+skim
 slimbookbattery
 slop
 smartmontools
@@ -502,6 +506,7 @@ sparklines-git
 speedtest-cli-git
 squashfs-tools
 starship
+stress
 sublime-text-4
 sudo
 surfn-arc-breeze-icons-git
@@ -568,8 +573,8 @@ ttf-linux-libertine-g
 ttf-material-design-iconic-font
 ttf-monofur
 ttf-ms-fonts
-ttf-nerd-fonts-symbols-1000-em
-ttf-nerd-fonts-symbols-1000-em-mono
+ttf-nerd-fonts-symbols
+ttf-nerd-fonts-symbols-mono
 ttf-proggy-clean
 ttf-roboto
 ttf-roboto-mono
