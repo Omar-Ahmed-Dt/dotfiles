@@ -2,6 +2,7 @@
 
 # current displays
 exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
+
 # Set 
 set $term kitty
 set $EDITOR lvim
@@ -185,7 +186,10 @@ exec --no-startup-id redshift -P -O 3250 &
 # exec --no-startup-id redshift 
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 exec --no-startup-id dunst
-# exec_always --no-startup-id xhost +local:root 
+
+# lvim and acpi
+exec_always --no-startup-id xhost +local:root 
+
 exec --no-startup-id $HOME/scripts/keys.sh 
 exec --no-startup-id easyeffects --gapplication-service
 exec --no-startup-id flameshot

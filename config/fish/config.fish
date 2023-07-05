@@ -268,9 +268,10 @@ alias C='doas chmod 777'
 alias c='doas chmod 744'
 alias do='doas'
 
-# /home/omar/github/shell-color-scripts/colorscript.sh -r 
+/home/omar/github/shell-color-scripts/colorscript.sh -r 
 # echo $(date "+%a %d.%m.%Y %H:%M %p") | ponysay
-pokemon-colorscripts --no-title -r 
+# pokemon-colorscripts --no-title -r 
+# fastfetch
 
 alias pmi='doas pacman -S'
 alias pmu='doas pacman -Syyu'
@@ -365,6 +366,7 @@ alias dlcp="~/scripts/cpdrag.sh"
 alias ytm="ytfzf --pages=2 -m -t -l"
 alias ytv="ytfzf --pages=2 -t -l"
 alias phn="~/scripts/scrcpy.sh"
+alias pipes="pipes.sh"
 
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 

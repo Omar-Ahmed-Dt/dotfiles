@@ -1,5 +1,6 @@
 #!/bin/bash
-echo $(date "+%a %d.%m.%Y %H:%M %p") | ponysay
+# echo $(date "+%a %d.%m.%Y %H:%M %p") | ponysay
+/home/omar/github/shell-color-scripts/colorscript.sh -r 
 # neofetch 
 cd ~/youtube-dl
 echo "---------------------------------------------"
