@@ -73,8 +73,8 @@ border_right=0
 border_left=0
 border_bottom=0
 
-[cpu_usage]
-#label= CPU: 
+[cpu_avarage.sh]
+##label= CPU: 
 label=<span color="#ff665c">  </span> 
 interval=5
 border=#ff665c
