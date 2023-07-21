@@ -73,7 +73,7 @@ border_right=0
 border_left=0
 border_bottom=0
 
-[cpu_avarage.sh]
+[cpu_average.sh]
 ##label= CPU: 
 label=<span color="#ff665c">  </span> 
 interval=5
@@ -84,14 +84,14 @@ border_right=0
 border_left=0
 border_bottom=0
 
-[temp.sh]
-label=<span color="#51afef">+ </span>
-interval=10
-border=#51afef
-border_top=1
-border_right=0
-border_left=0
-border_bottom=0
+#[temp.sh]
+#label=<span color="#51afef">+ </span>
+#interval=10
+#border=#51afef
+#border_top=1
+#border_right=0
+#border_left=0
+#border_bottom=0
 
 [ram.sh]
 interval=5 
