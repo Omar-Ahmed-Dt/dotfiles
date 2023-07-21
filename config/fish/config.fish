@@ -339,6 +339,7 @@ alias rd='zaread'
 alias size='du -sh'
 alias gm='cd /media'
 alias code='vscodium'
+# alias code='flatpak run com.vscodium.codium'
 alias gsh="~/scripts/gsh.sh"
 alias theme="~/scripts/kitty_theme.sh"
 alias f="doas find / -iname"
@@ -367,6 +368,7 @@ alias ytm="ytfzf --pages=2 -m -t -l"
 alias ytv="ytfzf --pages=2 -t -l"
 alias phn="~/scripts/scrcpy.sh"
 alias pipes="pipes.sh"
+alias tn="kitty @ set-tab-title"
 
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 

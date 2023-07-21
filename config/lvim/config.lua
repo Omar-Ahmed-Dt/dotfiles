@@ -153,6 +153,12 @@ lvim.plugins = {
     { "ellisonleao/gruvbox.nvim" },
     { "lunarvim/github.nvim" },
     { "Mofiqul/dracula.nvim" },
+    {"barrett-ruth/live-server.nvim"},
+    {
+      "turbio/bracey.vim",
+       cmd = {"Bracey", "BracyStop", "BraceyReload", "BraceyEval"},
+       build = "npm install --prefix server",
+    },
     --
     --
     -- ranger file manager

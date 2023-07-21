@@ -223,6 +223,7 @@ fish
 five-or-more
 flameshot
 flat-remix-git
+flatpak
 flatpak-builder-tools-git
 flex
 fluent-gtk-theme
@@ -240,6 +241,7 @@ gedit
 gettext
 ghex
 ghostscript
+gimp
 git
 gitahead-bin
 gitg
@@ -254,6 +256,7 @@ gnome-chess
 gnome-connections
 gnome-devel-docs
 gnome-dictionary
+gnome-disk-utility
 gnome-games
 gnome-klotski
 gnome-mahjongg
@@ -462,6 +465,7 @@ openvpn
 orchis-kde-theme-git
 orchis-theme-git
 os-prober
+otf-symbola
 p7zip
 pace
 pacman
@@ -508,6 +512,7 @@ python-aiohttp
 python-cloudscraper
 python-colorama
 python-django
+python-flask
 python-m3u8
 python-pip
 python-pyopenssl
@@ -661,6 +666,7 @@ ttf-proggy-clean
 ttf-roboto
 ttf-roboto-mono
 ttf-sourcecodepro-nerd
+ttf-symbola
 ttf-ubuntu-font-family
 tumbler
 udevil
@@ -806,6 +812,7 @@ xorg-xwininfo
 xorg-xwud
 xwallpaper
 yad
+yarn
 yay-bin
 yt-dlp
 ytfzf
@@ -816,7 +823,9 @@ zathura-cb
 zathura-djvu
 zathura-pdf-mupdf
 zenity
+zoom
 zoxide
+zram-generator
 zsh
 zsh-completions
 zsh-syntax-highlighting

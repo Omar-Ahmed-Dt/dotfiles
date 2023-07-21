@@ -56,7 +56,7 @@ bindsym $mod+Shift+c kill
 # bindsym $mod+shift+q exec --no-startup-id i3exit logout
 bindsym $mod+a focus parent
 bindsym $mod+z focus child
-# bindsym $mod+b bar mode toggle
+bindsym $mod+b bar mode toggle
 # Indicator 
 # split in horizontal orientation
 bindsym $mod+i split h
@@ -107,8 +107,8 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 # navigate workspaces next / previous
-bindsym $mod1+Tab workspace next
-bindsym $mod+Tab workspace prev
+# bindsym $mod1+Tab workspace next
+# bindsym $mod+Tab workspace prev
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
@@ -257,8 +257,8 @@ smart_borders on
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 bar {
     # separator_symbol "✗" 
-    # separator_symbol "|"
-    separator_symbol ""
+    separator_symbol "|"
+    # separator_symbol ""
     height 25
     workspace_buttons yes
     font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont Bold 8.5
