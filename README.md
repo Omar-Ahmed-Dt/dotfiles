@@ -27,6 +27,9 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 #### Terminal 
  * kitty
 
+#### Terminal Multiplexer 
+ * tmux
+
 #### Editor 
  *  lvim & vscodium (ssh machine)
 
