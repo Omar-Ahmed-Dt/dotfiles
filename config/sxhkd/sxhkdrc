@@ -164,3 +164,10 @@ super + period
 # rkeys
 F10
     $HOME/scripts/keys.sh
+# tmux 
+super + shift + t 
+    kitty -e tmux
+# web 
+super + shift + w 
+    ~/scripts/web.sh
+
