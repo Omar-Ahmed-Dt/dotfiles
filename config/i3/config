@@ -135,7 +135,7 @@ for_window [instance="date"] floating enable
 for_window [instance="date"] resize set 733 500
 for_window [instance="date"] move scratchpad
 exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name date -e khal --color interactive
-bindsym $mod+shift+t [instance="date"] scratchpad show; [instance="date"] move position center
+bindsym $mod+t [instance="date"] scratchpad show; [instance="date"] move position center
 # calc
 for_window [instance="calc"] floating enable 
 for_window [instance="calc"] resize set 900 325

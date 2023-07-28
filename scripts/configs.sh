@@ -2,7 +2,7 @@
 #
 DMEDITOR="lvim"
 
-actions=(configs bash fish i3 i3_blocks mpv_input mpv_config kitty sxhkd sxiv zathura ncmpcpp ncmpcpp_bindings mimeapps lvim zsh)
+actions=(configs bash fish i3 i3_blocks mpv_input mpv_config kitty sxhkd sxiv zathura ncmpcpp ncmpcpp_bindings mimeapps lvim zsh tmux)
 
 selected=$(printf '%s\n' "${actions[@]}" | dmenu -i -l 20 -p "Edit Configs: ")
 
@@ -23,5 +23,6 @@ case "$selected" in
     mimeapps)          $DMEDITOR $HOME/.config/mimeapps.list ;;
     lvim)              $DMEDITOR $HOME/.config/lvim/config.lua ;;
     zsh)               $DMEDITOR $HOME/.zshrc;;
+    tmux)              $DMEDITOR $HOME/.tmux.conf;;
 esac 
 

@@ -10,7 +10,7 @@
 # -p is needed as we use prompts, alternative programs have to handle prompts well.
 
 DMENU="dmenu -i -l 20 -p"
-DMBROWSER="brave"
+DMBROWSER="firefox"
 #DMBROWSER="qutebrowser"
 
 DMTERM="kitty -e"
@@ -115,11 +115,13 @@ declare -A websearch
 
 # Search Engines
 #websearch[bing]="https://www.bing.com/search?q="
-websearch[startpage]="https://www.startpage.com/"
+websearch[searx]="https://searxng.nicfab.eu/searxng/search?q=" 
+
+# websearch[startpage]="https://www.startpage.com/"
 websearch[google]="https://www.google.com/search?q="
 websearch[youtube]="https://www.youtube.com/results?search_query="
-websearch[brave]="https://search.brave.com/search?q="
-websearch[duckduckgo]="https://duckduckgo.com/?q="
+# websearch[brave]="https://search.brave.com/search?q="
+# websearch[duckduckgo]="https://duckduckgo.com/?q="
 #websearch[gemini search \(https\)]="https://portal.mozz.us/gemini/geminispace.info/search%3F"
 #websearch[qwant]="https://www.qwant.com/?q="
 #websearch[swisscows]="https://swisscows.com/web?query="
@@ -140,8 +142,8 @@ websearch[duckduckgo]="https://duckduckgo.com/?q="
 #websearch[gumtree]="https://www.gumtree.com/search?search_category=all&q="
 # Linux
 websearch[archaur]="https://aur.archlinux.org/packages/?O=0&K="
-#websearch[archpkg]="https://archlinux.org/packages/?sort=&q="
-websearch[archwiki]="https://wiki.archlinux.org/index.php?search="
+websearch[archpkg]="https://archlinux.org/packages/?sort=&q="
+# websearch[archwiki]="https://wiki.archlinux.org/index.php?search="
 #websearch[debianpkg]="https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=names&keywords="
 # Development
 #websearch[github]="https://github.com/search?q="
