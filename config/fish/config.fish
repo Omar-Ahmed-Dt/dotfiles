@@ -11,7 +11,9 @@ set VISUAL "lvim"
 #set DISPLAY ":0.0"
 
 ### "bat" as manpager
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+# bat --list-themes | less
+# set -x MANPAGER "sh -c 'bat --theme gruvbox-dark -l man -p'"
+set -x MANPAGER "sh -c 'bat --theme Monokai -l man -p'"
 
 ### SET EITHER DEFAULT EMACS MODE OR VI MODE ###
 function fish_user_key_bindings
@@ -274,6 +276,7 @@ alias do='doas'
 # fastfetch
 
 alias pmi='doas pacman -S'
+# alias pmu='doas pacman -Syyu --noconfirm'
 alias pmu='doas pacman -Syyu'
 alias pmuu='paru -Syu'
 alias pmr='doas pacman -Rs'
@@ -284,10 +287,10 @@ alias pmn='pacman -Q | wc -l'
 alias pmc='doas pacman -Sc' #clean the cache after upgrade my system 
 alias pmg='pamac-manager'
 alias pmf="pacman -Qqo"
-alias bs='browser-sync start --server --files "*.js, *.html, *.css"'
+# alias bs='browser-sync start --server --files "*.js, *.html, *.css"'
 alias e='exit'
 alias tomp3='sh ~/scripts/tomp3.sh'
-alias install='makepkg -si'
+# alias install='makepkg -si'
 alias md='mkdir'
 alias config='/home/omar/scripts/configs.sh'
 alias blk='lsblk'
@@ -341,13 +344,13 @@ alias gm='cd /media'
 alias code='vscodium'
 # alias code='flatpak run com.vscodium.codium'
 alias gsh="~/scripts/gsh.sh"
-alias theme="~/scripts/kitty_theme.sh"
+# alias theme="~/scripts/kitty_theme.sh"
 alias f="doas find / -iname"
 alias uprsc="xrdb -load ~/.Xresources"
 alias gpu="sudo lvim /etc/optimus-manager/optimus-manager.conf"
 alias smi="nvidia-smi"
 alias rmft="rm ~/.config/fish/functions/fish_prompt.fish"
-alias ct="kitty +kitten themes"
+alias theme="kitty +kitten themes"
 alias journ="journalctl -f"
 alias note="io.github.lainsce.Notejot"
 alias rm="rm -i"
@@ -364,15 +367,27 @@ alias prop="xprop | grep WM_CLASS"
 alias dl="~/scripts/dlfile.sh"
 alias dlmv="~/scripts/mvdragon.sh"
 alias dlcp="~/scripts/cpdrag.sh"
-alias ytm="ytfzf --pages=2 -m -t -l"
-alias ytv="ytfzf --pages=2 -t -l"
+alias ytm="ytfzf --pages=2 -m -t -l -s"
+alias ytv="ytfzf --pages=2 -t -l -s"
+# alias ytm="ytfzf -m -t -l"
+# alias ytv="ytfzf -t -l"
 alias phn="~/scripts/scrcpy.sh"
 alias pipes="pipes.sh"
-alias tn="kitty @ set-tab-title"
+alias ssh="kitty +kitten ssh"
+
 
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 
 # Function for fish 
+
+# function pms
+#     # pacman -Ss $argv | grep / | awk -F/ '{print $2}' | awk '{print $1}'
+#     pacman -Ss $argv | grep / | awk -F/ '{print $2}'
+# end
+
+# function pmss
+#     paru -Ss $argv | grep / | awk -F/ '{print $2}'
+# end
 
 function se
     cd ~/scripts
@@ -555,16 +570,17 @@ function __fzf_cd -d "Change directory"
 end
 
 #my config for nnn file manger alias nnn='nnn -eRx'
-alias nn='nnn -Rxl 5'
+alias nn='nnn -Rxl 5' 
 alias n='nnn -Rxl 5'
-# export NNN_PLUG='c:!convert "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;F:fixname;i:imgview;f:fzcd;t:mp3conv;v:preview-tui;s:!bash -i*;o:fzopen;p:rsynccp;m:mtpmount' #to play this plug press ; then choose option 
-export NNN_PLUG='c:!convert "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;F:fixname;i:imgview;f:fzcd;t:mp3conv;v:preview-tui;s:!bash
--i*;p:rsynccp;n:nmount' #to play this plug press ; then choose option 
-export NNN_BMS="m:/media/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" #to play this plug press b then choose option 
+export NNN_PLUG='c:!convert "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!bash
+-i*;p:rsynccp;n:nmount' 
+export NNN_BMS="m:/media/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
 export NNN_FCOLORS='c1e2904be76033f7c6d6abc4'
 export NNN_FIFO=/tmp/nnn.fifo
-export NNN_TRASH=1 #to use trash (needs trash-cli) instead of delete. the trash's directory : /home/omar/.local/share/Trash/files
+export NNN_TRASH=1
 export NNN_ARCHIVE="\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)"
 export NNN_RCLONE='rclone mount --read-only --no-checksum'
+export NNN_LOCKER='unimatrix -l=aAcCegGkmnopPrRsS -s 95'
+export NNN_HELP='fortune'

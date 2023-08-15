@@ -132,7 +132,7 @@ base
 base16-alacritty-git
 bash-completion
 bashtop
-bat
+bat-cat-git
 bauh
 bemoji-git
 bind
@@ -326,6 +326,8 @@ i3lock-color
 iagno
 icons-in-terminal
 imagemagick
+imv
+instaloader
 intltool
 inxi
 iperf
@@ -531,6 +533,7 @@ redshift
 refind
 reflector
 reiserfsprogs
+ripdrag-git
 ripgrep
 ripgrep-all
 ristretto
@@ -690,6 +693,7 @@ usbutils
 vagrant
 variety
 vim
+virt-manager
 virtualbox
 visual-studio-code-insiders-bin
 vlc
@@ -814,8 +818,9 @@ xwallpaper
 yad
 yarn
 yay-bin
+youtube-dl
 yt-dlp
-ytfzf
+ytfzf-git
 z
 zafiro-icon-theme
 zathura

@@ -170,4 +170,6 @@ super + shift + t
 # web 
 super + shift + w 
     ~/scripts/web.sh
-
+# lock
+# super + 0
+#     ~/scripts/lock.sh && pkill -RTMIN+20 i3blocks 

@@ -153,11 +153,11 @@ lvim.plugins = {
     { "ellisonleao/gruvbox.nvim" },
     { "lunarvim/github.nvim" },
     { "Mofiqul/dracula.nvim" },
-    {"barrett-ruth/live-server.nvim"},
+    { "barrett-ruth/live-server.nvim" },
     {
-      "turbio/bracey.vim",
-       cmd = {"Bracey", "BracyStop", "BraceyReload", "BraceyEval"},
-       build = "npm install --prefix server",
+        "turbio/bracey.vim",
+        cmd = { "Bracey", "BracyStop", "BraceyReload", "BraceyEval" },
+        build = "npm install --prefix server",
     },
     --
     --
@@ -245,17 +245,17 @@ lvim.plugins = {
 --     command = "source ~/.config/lvim/ftplugin/colorizer.lua",
 -- })
 
--- Hexa color 
+-- Hexa color
 vim.api.nvim_create_autocmd("BufEnter", {
     pattern = { "*" },
     command = "ColorizerToggle",
 })
 
--- Python files 
-vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = { "*.py" },
-    command = "source ~/.config/lvim/ftplugin/py.lua",
-})
+-- Python files
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--     pattern = { "*.py" },
+--     command = "source ~/.config/lvim/ftplugin/py.lua",
+-- })
 
 -- Run Bash File
 vim.api.nvim_create_autocmd("BufEnter", {
@@ -270,8 +270,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 -- Run groff to generate pdf file
-vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = { "*.ms" },
-    command = "source ~/.config/lvim/ftplugin/ms.lua",
-})
-
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--     pattern = { "*.ms" },
+--     command = "source ~/.config/lvim/ftplugin/ms.lua",
+-- })
