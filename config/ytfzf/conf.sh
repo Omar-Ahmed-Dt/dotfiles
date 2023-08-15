@@ -6,7 +6,6 @@
 # enable_hist=no
 # enable_submenus=yes
 
-
 # This is a sample config file, refer to ytfzf(5) for more information
 
 # In the previous version of ytfzf this file had all the examples, with all defaults set,
@@ -17,6 +16,10 @@
 #a sample config below:
 
 # Variables {{{
+#
+# conflict with ctrl + p 
+next_page_action_shortcut=alt-p
+
 ytdl_pref="bestvideo[height<=?1080]+bestaudio/best"
 ##scrape 1 video link per channel instead of the default 2
 sub_link_count=1
@@ -24,12 +27,11 @@ show_thumbnails=1
 # }}}
 #
 ##Functions {{{
-external_menu () {
-   #use rofi instead of dmenu
-   rofi -dmenu -width 1500 -p "$1"
-}
+# external_menu () {
+#    rofi -dmenu -width 1500 -p "$1"
+# }
 
-#use vlc instead of mpv
+# use vlc instead of mpv
 # video_player () {
 #    #check if detach is enabled
 #    case "$is_detach" in
