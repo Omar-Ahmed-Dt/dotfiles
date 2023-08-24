@@ -135,6 +135,10 @@ bashtop
 bat-cat-git
 bauh
 bemoji-git
+bibata-cursor-theme-bin
+bibata-cursor-translucent
+bibata-extra-cursor-theme
+bibata-rainbow-cursor-theme
 bind
 binutils
 bison
@@ -148,7 +152,9 @@ breeze
 brightnessctl
 broadcom-wl-dkms
 btrfs-progs
+capitaine-cursors
 catfish
+catppuccin-cursors-git
 cava
 chromium
 cli-visualizer
@@ -181,6 +187,7 @@ docker
 docker-compose
 dosfstools
 downgrade
+dracula-cursors-git
 dracula-gtk-theme
 dragon-drop
 duf-bin
@@ -350,6 +357,7 @@ kvantum
 kvantum-theme-materia
 kvantum-theme-qogir-git
 laptop-detect
+layan-cursor-theme-git
 layan-gtk-theme-git
 layan-kde-git
 less
@@ -468,6 +476,7 @@ orchis-kde-theme-git
 orchis-theme-git
 os-prober
 otf-symbola
+oxy-neon
 p7zip
 pace
 pacman
@@ -600,6 +609,7 @@ surfn-mint-y-icons-git
 surfn-plasma-dark-icons-git
 surfn-plasma-dark-tela-icons-git
 surfn-plasma-light-icons-git
+sweet-cursor-theme-git
 sweet-gtk-theme-dark
 sweet-theme-git
 swell-foop
@@ -693,6 +703,7 @@ usbutils
 vagrant
 variety
 vim
+vimix-cursors
 virt-manager
 virtualbox
 visual-studio-code-insiders-bin
@@ -718,6 +729,12 @@ wvdial
 xapp
 xclip
 xcolor
+xcursor-arch-cursor-complete
+xcursor-comix
+xcursor-flatbed
+xcursor-neutral
+xcursor-premium
+xcursor-simpleandsoft
 xdg-desktop-portal-gtk
 xdg-user-dirs
 xdo
