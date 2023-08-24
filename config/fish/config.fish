@@ -240,9 +240,9 @@ alias jctl="journalctl -p 3 -xb"
 
 # switch between shells
 # I do not recommend switching default SHELL from bash.
-alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
-alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
-alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
+alias tobash="doas chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="doas chsh $USER -s /bin/zsh && echo 'Now log out.'"
+alias tofish="doas chsh $USER -s /bin/fish && echo 'Now log out.'"
 # alias prop="xprop"
 
 
@@ -270,7 +270,7 @@ alias C='doas chmod 777'
 alias c='doas chmod 744'
 alias do='doas'
 
-/home/omar/github/shell-color-scripts/colorscript.sh -r 
+$HOME/github/shell-color-scripts/colorscript.sh -r # && $HOME/scripts/clock3.sh
 # echo $(date "+%a %d.%m.%Y %H:%M %p") | ponysay
 # pokemon-colorscripts --no-title -r 
 # fastfetch
@@ -347,17 +347,17 @@ alias gsh="~/scripts/gsh.sh"
 # alias theme="~/scripts/kitty_theme.sh"
 alias f="doas find / -iname"
 alias uprsc="xrdb -load ~/.Xresources"
-alias gpu="sudo lvim /etc/optimus-manager/optimus-manager.conf"
+alias gpu="doas lvim /etc/optimus-manager/optimus-manager.conf"
 alias smi="nvidia-smi"
 alias rmft="rm ~/.config/fish/functions/fish_prompt.fish"
 alias theme="kitty +kitten themes"
 alias journ="journalctl -f"
 alias note="io.github.lainsce.Notejot"
 alias rm="rm -i"
-alias V="sudoedit"
+alias V="doasedit"
 alias rf='source ~/.config/fish/config.fish'
 alias rkeys="~/scripts/keys.sh"
-alias rmpm="sudo rm /var/lib/pacman/db.lck"
+alias rmpm="doas rm /var/lib/pacman/db.lck"
 alias cd="z"
 # alias ssh="kitty +kitten ssh"
 alias opdf="~/scripts/ozathura.sh"
@@ -436,7 +436,7 @@ function pmsii
 end 
 #search pkg and remove it 
 function pmsr
-    pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns
+    pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro doas pacman -Rns
 end
 #search in scripts and open it 
 function sc
@@ -456,7 +456,7 @@ function v
 end
 
 function V
-    sudo lvim $argv
+    doas lvim $argv
 end
 
 function vi 

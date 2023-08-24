@@ -1,5 +1,5 @@
 #!/bin/bash
-OPT=$(echo -e "lock\nlogout\nreboot\nsuspend\nshutdown" | dmenu -p "Choose action: ")
+OPT=$(echo -e "lock\nlogout\nreboot\nsuspend\nshutdown" | dmenu -i -p "Choose action: ")
 case $OPT in
 	lock ) [ "$(printf "No\\nYes" | dmenu -i -fn 'NotoMonoRegular:bold:pixelsize=16' -p "Really lock?")" = "Yes" ] && ~/scripts/lock.sh && pkill -RTMIN+20 i3blocks ;;
 	logout ) [ "$(printf "No\\nYes" | dmenu -i -fn 'NotoMonoRegular:bold:pixelsize=16' -p "Really logout?")" = "Yes" ] && pkill i3 ;; 

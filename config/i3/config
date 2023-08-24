@@ -49,7 +49,7 @@ bindsym $mod+Shift+9 move container to workspace $WS9
 bindsym $mod+Shift+c kill
 bindsym $mod+a focus parent
 bindsym $mod+z focus child
-bindsym $mod+b bar mode toggle
+# bindsym $mod+b bar mode toggle
 # Indicator 
 # split in horizontal orientation
 bindsym $mod+i split h
