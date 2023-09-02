@@ -374,6 +374,7 @@ alias ytv="ytfzf --pages=2 -t -l -s"
 alias phn="~/scripts/scrcpy.sh"
 alias pipes="pipes.sh"
 alias ssh="kitty +kitten ssh"
+alias spt="speedtest-cli --simple"
 
 
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
@@ -574,7 +575,7 @@ alias nn='nnn -Rxl 5'
 alias n='nnn -Rxl 5'
 export NNN_PLUG='c:!convert "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!bash
 -i*;p:rsynccp;n:nmount' 
-export NNN_BMS="m:/media/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
+export NNN_BMS="m:/run/media/omar/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
 export NNN_FCOLORS='c1e2904be76033f7c6d6abc4'

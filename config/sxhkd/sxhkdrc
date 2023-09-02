@@ -135,8 +135,8 @@ super + shift + v
 super + shift + m
     thunderbird
 #mount 
-super + Insert
-	~/scripts/mount_umount.sh
+# super + Insert
+# 	~/scripts/mount_umount.sh
 # Pause button 
 ctrl + Pause
     mpc toggle 

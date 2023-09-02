@@ -208,6 +208,7 @@ edu-vimix-dark-tela-git
 efibootmgr
 endeavour
 ethtool
+evhz-git
 evolution
 exfatprogs
 exo
@@ -239,6 +240,7 @@ font-manager
 four-in-a-row
 freetype2
 fsarchiver
+g203-led-git
 galculator
 garcon
 gawk
@@ -357,6 +359,7 @@ kvantum
 kvantum-theme-materia
 kvantum-theme-qogir-git
 laptop-detect
+laptop-mode-tools
 layan-cursor-theme-git
 layan-gtk-theme-git
 layan-kde-git
@@ -370,10 +373,13 @@ libgsf
 libmtp
 libopenraw
 libpwquality
+libratbag
 libreoffice-still
 libtool
 libusb-compat
 light
+lightdm
+lightdm-slick-greeter
 lightsoff
 linux
 linux-atm
@@ -513,7 +519,6 @@ polkit-gnome
 ponysay
 poppler-glib
 poppler-qt5
-powertop
 ppp
 pptpclient
 pulseaudio-equalizer-ladspa
@@ -523,6 +528,7 @@ python-aiohttp
 python-cloudscraper
 python-colorama
 python-django
+python-evdev
 python-flask
 python-m3u8
 python-pip
@@ -588,7 +594,6 @@ sg3_utils
 simple-scan
 simplescreenrecorder
 skim
-slimbookbattery
 slop
 smartmontools
 sof-firmware
@@ -637,8 +642,6 @@ thunar-volman
 thunderbird
 time
 tk
-tlp
-tlpui
 tmux
 tpm2-tss
 trash-cli
@@ -848,6 +851,7 @@ zenity
 zoom
 zoxide
 zram-generator
+zsa-udev
 zsh
 zsh-completions
 zsh-syntax-highlighting
