@@ -17,6 +17,7 @@ cp -r ~/.config/nnn/plugins ~/Documents/GitHub/dotfiles/config/nnn
 cp -r ~/.config/kitty/kitty.conf ~/Documents/GitHub/dotfiles/config/kitty
 cp -r ~/.config/kitty/kitty2.conf ~/Documents/GitHub/dotfiles/config/kitty
 cp -r ~/.config/kitty/theme.conf ~/Documents/GitHub/dotfiles/config/kitty
+cp -r ~/.config/kitty/dracula.conf ~/Documents/GitHub/dotfiles/config/kitty/
 cp -r ~/.zshrc ~/Documents/GitHub/dotfiles/zshrc
 cp -r ~/.zshenv ~/Documents/GitHub/dotfiles/zshenv
 cp -r ~/.Xresources ~/Documents/GitHub/dotfiles/Xresources
