@@ -227,8 +227,8 @@ bar {
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks
     colors {
-        # background #040000
         background #282828
+        # background #282c34
         statusline #eeeeee
         separator #a6cc70
         focused_workspace     #ebdbb2 #282828 #ebdbb2

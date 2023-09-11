@@ -5,9 +5,9 @@ set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 ### EXPORT ###
 set fish_greeting                                 # Supresses fish's intro message
 set TERMINAL "kitty"                         # Sets the terminal type
-set EDITOR "lvim"
-set VISUAL "lvim"
-#export EDITOR=/usr/bin/lvim
+set EDITOR   "lvim"
+set VISUAL   "lvim"
+
 #set DISPLAY ":0.0"
 
 ### "bat" as manpager
@@ -374,8 +374,8 @@ alias ytv="ytfzf --pages=2 -t -l -s"
 alias phn="~/scripts/scrcpy.sh"
 alias pipes="pipes.sh"
 alias ssh="kitty +kitten ssh"
-alias spt="speedtest-cli --simple"
-
+alias st="speedtest-cli --simple --secure"
+alias stm="nload -u m -m wlp3s0"
 
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 

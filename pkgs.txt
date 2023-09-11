@@ -135,10 +135,6 @@ bashtop
 bat-cat-git
 bauh
 bemoji-git
-bibata-cursor-theme-bin
-bibata-cursor-translucent
-bibata-extra-cursor-theme
-bibata-rainbow-cursor-theme
 bind
 binutils
 bison
@@ -152,9 +148,7 @@ breeze
 brightnessctl
 broadcom-wl-dkms
 btrfs-progs
-capitaine-cursors
 catfish
-catppuccin-cursors-git
 cava
 chromium
 cli-visualizer
@@ -187,7 +181,6 @@ docker
 docker-compose
 dosfstools
 downgrade
-dracula-cursors-git
 dracula-gtk-theme
 dragon-drop
 duf-bin
@@ -286,7 +279,6 @@ gnome-tweaks
 gnu-netcat
 go
 go-tools
-google-chrome
 gotop-bin
 gpart
 gparted
@@ -334,6 +326,7 @@ i3blocks
 i3lock-color
 iagno
 icons-in-terminal
+iftop
 imagemagick
 imv
 instaloader
@@ -360,7 +353,6 @@ kvantum-theme-materia
 kvantum-theme-qogir-git
 laptop-detect
 laptop-mode-tools
-layan-cursor-theme-git
 layan-gtk-theme-git
 layan-kde-git
 less
@@ -448,6 +440,7 @@ networkmanager-pptp
 networkmanager-vpnc
 nfs-utils
 nilfs-utils
+nload
 nmap
 nnn-nerd
 nomacs
@@ -482,7 +475,6 @@ orchis-kde-theme-git
 orchis-theme-git
 os-prober
 otf-symbola
-oxy-neon
 p7zip
 pace
 pacman
@@ -614,7 +606,6 @@ surfn-mint-y-icons-git
 surfn-plasma-dark-icons-git
 surfn-plasma-dark-tela-icons-git
 surfn-plasma-light-icons-git
-sweet-cursor-theme-git
 sweet-gtk-theme-dark
 sweet-theme-git
 swell-foop
@@ -706,7 +697,6 @@ usbutils
 vagrant
 variety
 vim
-vimix-cursors
 virt-manager
 virtualbox
 visual-studio-code-insiders-bin
@@ -732,12 +722,6 @@ wvdial
 xapp
 xclip
 xcolor
-xcursor-arch-cursor-complete
-xcursor-comix
-xcursor-flatbed
-xcursor-neutral
-xcursor-premium
-xcursor-simpleandsoft
 xdg-desktop-portal-gtk
 xdg-user-dirs
 xdo

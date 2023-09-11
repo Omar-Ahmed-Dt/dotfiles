@@ -164,12 +164,6 @@ super + period
 # rkeys
 F10
     $HOME/scripts/keys.sh
-# tmux 
-super + shift + t 
-    kitty -e tmux
 # web 
 super + shift + w 
     ~/scripts/web.sh
-# lock
-# super + 0
-#     ~/scripts/lock.sh && pkill -RTMIN+20 i3blocks 
