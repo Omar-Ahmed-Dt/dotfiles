@@ -6,13 +6,16 @@ shift + Escape
 	pkill -USR1 -x sxhkd
 # Reload i3
 super + shift + r 
-    i3-msg reload && i3-msg restart
+    i3-msg reload  && i3-msg restart
 #Terminal 
 super + Return
     kitty 
 # browser
-super + shift + b 
+super + shift + u
     ~/scripts/browser.sh
+# firefox
+super + shift + b
+    firefox
 
 #file manger gui 
 super + shift + Return
@@ -36,8 +39,8 @@ super + Right
 super + Left
    ~/scripts/volume_notification.sh down && pkill -RTMIN+10 i3blocks
 #vol toggle 
-super + m 
-   ~/scripts/volume_notification.sh mute && pkill -RTMIN+10 i3blocks
+# super + m 
+#    ~/scripts/volume_notification.sh mute && pkill -RTMIN+10 i3blocks
 #mic toggle 
 XF86AudioMicMute
    pactl set-source-mute @DEFAULT_SOURCE@ toggle && pkill -RTMIN+17 i3blocks

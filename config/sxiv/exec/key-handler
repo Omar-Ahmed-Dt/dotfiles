@@ -33,7 +33,7 @@ do
   "w") 
       xwallpaper --stretch "$file" &&
       cp "$file" ~/.cache/styli.sh/wallpaper.jpg 
-      notify-send -i ~/logo/wall.jpg "$file has been set as your wallpaper." && exit 0
+      notify-send -t 1500 -i ~/logo/wall.jpg "$file has been set as your wallpaper." && exit 0
     ;;
 
   "g")

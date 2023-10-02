@@ -18,6 +18,7 @@ alsa-plugins
 alsa-tools
 alsa-utils
 android-sdk-build-tools
+anydesk-bin
 appstream
 arandr
 arc-darkest-theme-git
@@ -157,6 +158,7 @@ clonezilla
 conky-lua-archers
 coreimage
 cpanminus
+cpupower
 cronie
 cryptsetup
 cups
@@ -208,6 +210,7 @@ exo
 expac
 extension-manager
 f2fs-tools
+facebook-desktop-app
 facebook-nativefier
 fakeroot
 fastfetch
@@ -229,6 +232,7 @@ flatpak-builder-tools-git
 flex
 fluent-gtk-theme
 fluent-kde-theme-git
+folly
 font-manager
 four-in-a-row
 freetype2
@@ -279,6 +283,7 @@ gnome-tweaks
 gnu-netcat
 go
 go-tools
+google-chrome
 gotop-bin
 gpart
 gparted
@@ -303,6 +308,7 @@ guake
 gufw
 gutenprint
 guvcview
+gvfs-mtp
 gzip
 halo-icons-git
 hardcode-fixer-git
@@ -331,6 +337,7 @@ imagemagick
 imv
 instaloader
 intltool
+invada-studio-plugins-lv2
 inxi
 iperf
 ipython
@@ -352,7 +359,6 @@ kvantum
 kvantum-theme-materia
 kvantum-theme-qogir-git
 laptop-detect
-laptop-mode-tools
 layan-gtk-theme-git
 layan-kde-git
 less
@@ -385,6 +391,7 @@ lsb-release
 lsd
 lshw
 lsof
+lsp-plugins
 lsscsi
 luna-icon-theme-git
 lvm2
@@ -396,7 +403,6 @@ man-pages
 mangohud
 materia-gtk-theme
 materia-kde
-mc
 mdadm
 meld
 memtest86+
@@ -404,6 +410,7 @@ menulibre
 mesa
 mesa-utils
 mintstick-git
+mission-center
 mkinitcpio
 mkinitcpio-nfs-utils
 mkinitcpio-openswap
@@ -432,6 +439,7 @@ nemo-preview
 nemo-share
 neofetch
 neovim
+neovim-nvim-treesitter
 network-manager-applet
 networkmanager
 networkmanager-openconnect
@@ -514,6 +522,7 @@ poppler-qt5
 ppp
 pptpclient
 pulseaudio-equalizer-ladspa
+purple-facebook
 pv
 pydflatex
 python-aiohttp
@@ -524,6 +533,7 @@ python-evdev
 python-flask
 python-m3u8
 python-pip
+python-pynvim
 python-pyopenssl
 python-pyparted
 python-pywal
@@ -586,6 +596,7 @@ sg3_utils
 simple-scan
 simplescreenrecorder
 skim
+slimbookbattery
 slop
 smartmontools
 sof-firmware
@@ -633,7 +644,10 @@ thunar-volman
 thunderbird
 time
 tk
+tlp
+tlpui-git
 tmux
+tp_smapi
 tpm2-tss
 trash-cli
 ttf-anonymous-pro
