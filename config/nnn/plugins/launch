@@ -31,7 +31,7 @@ get_selection() {
     fi
 }
 
-if selection=$( get_selection ); then
+if selection=$(get_selection); then
     setsid "$selection" 2>/dev/null 1>/dev/null &
 
     if [ -n "$1" ]; then

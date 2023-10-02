@@ -89,6 +89,8 @@ vim.opt.breakindent = true
 vim.opt.textwidth = 150
 vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
 vim.opt.hlsearch = true
+
+
 -- colorcolumn
 vim.api.nvim_set_option_value("colorcolumn", "100", {})
 

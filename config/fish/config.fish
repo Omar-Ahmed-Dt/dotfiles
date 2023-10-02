@@ -265,14 +265,14 @@ alias tofish="doas chsh $USER -s /bin/fish && echo 'Now log out.'"
 # alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-(date +%Y.%m.%d-%H.%M.%S)'
 
 #my config 
-alias p='cd ..'
+# alias p='cd ..'
 alias C='doas chmod 777'
 alias c='doas chmod 744'
 alias do='doas'
 
-$HOME/github/shell-color-scripts/colorscript.sh -r # && $HOME/scripts/clock3.sh
+# $HOME/github/shell-color-scripts/colorscript.sh -r # && $HOME/scripts/clock3.sh
 # echo $(date "+%a %d.%m.%Y %H:%M %p") | ponysay
-# pokemon-colorscripts --no-title -r 
+pokemon-colorscripts --no-title -r 
 # fastfetch
 
 alias pmi='doas pacman -S'
@@ -339,7 +339,7 @@ alias smus='mpd && ncmpcpp'
 alias mus='ncmpcpp'
 alias emus='pkill mpd'
 alias rd='zaread'
-alias size='du -sh'
+alias size='du -sh 2> /dev/null'
 alias gm='cd /media'
 alias code='vscodium'
 # alias code='flatpak run com.vscodium.codium'
@@ -376,6 +376,8 @@ alias pipes="pipes.sh"
 alias ssh="kitty +kitten ssh"
 alias st="speedtest-cli --simple --secure"
 alias stm="nload -u m -m wlp3s0"
+alias mc="missioncenter"
+alias wsh="~/scripts/windows.sh"
 
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 
@@ -463,7 +465,6 @@ end
 function vi 
     vim $argv 
 end 
-
 ####################################
 ####################################
 #cd any directory by alias sd 
@@ -574,11 +575,12 @@ end
 alias nn='nnn -Rxl 5' 
 alias n='nnn -Rxl 5'
 export NNN_PLUG='c:!convert "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!bash
--i*;p:rsynccp;n:nmount' 
-export NNN_BMS="m:/run/media/omar/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
+-i*;p:rsynccp;n:nmount;z:autojump'
+export NNN_BMS="m:/media/sdb1/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
 export NNN_FCOLORS='c1e2904be76033f7c6d6abc4'
+export NNN_COLORS="2136"                           
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_TRASH=1
 export NNN_ARCHIVE="\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)"

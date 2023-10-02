@@ -1,6 +1,7 @@
 #!/bin/bash
 declare options=("Firefox
 Brave
+google-chrome-stable
 Chromium"
 )
 
@@ -15,6 +16,9 @@ case "$choice" in
     ;;
     Brave)
         choice="brave"
+    ;;
+    google-chrome-stable)
+        choice="google-chrome-stable"
     ;;
     Chromium)
         choice="chromium"

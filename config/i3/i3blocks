@@ -74,8 +74,9 @@ border_left=0
 border_bottom=0
 
 [cpu_average.sh]
-##label= CPU: 
+#label= CPU: 
 label=<span color="#ff665c">  </span> 
+#label=<span color="#ff665c">CPU: </span> 
 interval=5
 border=#ff665c
 COLOR_NORMAL=#ebdbb2

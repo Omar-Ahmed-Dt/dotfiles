@@ -49,7 +49,7 @@ bindsym $mod+Shift+9 move container to workspace $WS9
 bindsym $mod+Shift+c kill
 bindsym $mod+a focus parent
 bindsym $mod+z focus child
-# bindsym $mod+b bar mode toggle
+bindsym $mod+b bar mode toggle
 # Indicator 
 # split in horizontal orientation
 bindsym $mod+i split h
@@ -86,14 +86,13 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-bindsym $mod+Shift+minus move scratchpad
-# Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+Shift+equal scratchpad show
+# bindsym $mod+Shift+minus move scratchpad
+# bindsym $mod+Shift+equal scratchpad show
+
 # kitti3 
 exec_always --no-startup-id kitti3 -p CC -s 0.8 0.7 -n n1
 # exec_always --no-startup-id kitti3 -p CT -s 0.8 0.7 -n n1
-bindsym $mod+n nop n1
+bindsym $mod+Shift+t nop n1
 #
 #############################
 #scratchpad
@@ -166,6 +165,7 @@ exec --no-startup-id $HOME/scripts/keys.sh
 exec --no-startup-id easyeffects --gapplication-service
 exec --no-startup-id flameshot
 exec --no-startup-id xfce4-clipman
+exec --no-startup-id slimbookbattery --minimize
 
 # Floating 
 for_window [class="Arcolinux-welcome-app.py"] floating enable
@@ -227,10 +227,10 @@ bar {
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks
     colors {
-        background #282828
-        # background #282c34
+        # background #282828
+        background #282c34
         statusline #eeeeee
-        separator #a6cc70
+        separator #eeeeee
         focused_workspace     #ebdbb2 #282828 #ebdbb2
         active_workspace      #a9a9a9 #5f676a #eeeeee
         inactive_workspace    #584945 #282828 #928374
