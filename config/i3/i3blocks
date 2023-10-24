@@ -134,7 +134,7 @@ border_bottom=0
 [clock3.sh]
 interval=30
 border=#e5b566
-label=<span color="#e5b566"> </span>
+label=<span color="#ebdbb2">日 </span>
 border_top=1
 border_right=0
 border_top=1

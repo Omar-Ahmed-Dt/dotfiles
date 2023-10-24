@@ -3,7 +3,7 @@
 # Prints out battery percentage
 
 CHARGING_ICON=' '
-WARNING_ICON='⚠️  🔔 '
+WARNING_ICON='⚠️ 🔔 '
 BATTERY_FULL_ICON=''
 BATTERY_2_ICON=''
 BATTERY_3_ICON=''
@@ -26,7 +26,7 @@ get_battery()
 		charging=$(cat /sys/class/power_supply/BAT0/status)
 		if [[ "$charging" == "Charging" ]]; then
 			ICON="$CHARGING_ICON"
-		elif [[ $capacity -le 25 ]]; then
+		elif [[ $capacity -le 18 ]]; then
 			ICON="$WARNING_ICON"
 		fi
 
@@ -44,4 +44,3 @@ get_battery()
 }
 
 get_battery 
-# dmen

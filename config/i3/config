@@ -92,7 +92,7 @@ mode "resize" {
 # kitti3 
 exec_always --no-startup-id kitti3 -p CC -s 0.8 0.7 -n n1
 # exec_always --no-startup-id kitti3 -p CT -s 0.8 0.7 -n n1
-bindsym $mod+Shift+t nop n1
+bindsym $mod+shift+o nop n1
 #
 #############################
 #scratchpad
@@ -168,6 +168,7 @@ exec --no-startup-id xfce4-clipman
 exec --no-startup-id slimbookbattery --minimize
 
 # Floating 
+for_window [class="SimpleScreenRecorder"] floating enable
 for_window [class="Arcolinux-welcome-app.py"] floating enable
 for_window [class="yad"] floating enable
 for_window [class="Arcolinux-calamares-tool.py"] floating enable
@@ -220,7 +221,7 @@ gaps outer 0
 smart_borders on
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 bar {
-    separator_symbol "|"
+    separator_symbol "三"
     height 25
     workspace_buttons yes
     font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont Bold 8

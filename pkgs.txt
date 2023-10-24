@@ -12,6 +12,7 @@ adobe-source-sans-fonts
 aic94xx-firmware
 alacritty
 alacritty-themes
+albert
 alsa-firmware
 alsa-lib
 alsa-plugins
@@ -355,7 +356,7 @@ khal
 kitti3
 kitty
 kripton-theme-git
-kvantum
+kvantum-qt5-git
 kvantum-theme-materia
 kvantum-theme-qogir-git
 laptop-detect
@@ -404,6 +405,7 @@ mangohud
 materia-gtk-theme
 materia-kde
 mdadm
+megabasterd-bin
 meld
 memtest86+
 menulibre
@@ -448,6 +450,7 @@ networkmanager-pptp
 networkmanager-vpnc
 nfs-utils
 nilfs-utils
+nitter-git
 nload
 nmap
 nnn-nerd
@@ -483,6 +486,7 @@ orchis-kde-theme-git
 orchis-theme-git
 os-prober
 otf-symbola
+p3x-onenote
 p7zip
 pace
 pacman
@@ -637,6 +641,7 @@ text-engine
 the_platinum_searcher-bin
 the_silver_searcher
 thermald
+thorium-browser-bin
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
@@ -689,6 +694,8 @@ ttf-roboto-mono
 ttf-sourcecodepro-nerd
 ttf-symbola
 ttf-ubuntu-font-family
+tty-clock
+tty-countdown-git
 tumbler
 udevil
 udftools

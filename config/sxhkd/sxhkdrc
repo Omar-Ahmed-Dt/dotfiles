@@ -11,12 +11,11 @@ super + shift + r
 super + Return
     kitty 
 # browser
-super + shift + u
+super + shift + b
     ~/scripts/browser.sh
 # firefox
-super + shift + b
-    firefox
-
+# super + shift + b
+#     firefox
 #file manger gui 
 super + shift + Return
     nemo ~/
@@ -126,7 +125,7 @@ super + shift + k
 super + d 
     pkill mpv 
 #hub 
-super + shift + o 
+super + o 
 	~/scripts/hub.sh
 #nnn file manger 
 shift + Return
@@ -170,3 +169,6 @@ F10
 # web 
 super + shift + w 
     ~/scripts/web.sh
+# windows 
+# super + shift + i
+#     kitty -e ~/scripts/windows.sh

@@ -378,6 +378,8 @@ alias st="speedtest-cli --simple --secure"
 alias stm="nload -u m -m wlp3s0"
 alias mc="missioncenter"
 alias wsh="~/scripts/windows.sh"
+alias mega="megabasterd"
+alias clock="tty-clock -scbt"
 
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 
@@ -398,11 +400,11 @@ function se
     cd -
 end 
 
-function sc 
-    cd ~/scripts
-    fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %
-    cd -
-end 
+# function sc 
+    # cd ~/scripts
+    # fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | awk '{print $3}' | xargs -r -I % $EDITOR %
+    # cd -
+# end 
 
 function nls
   ls -l $(nnn -p -)
@@ -443,17 +445,23 @@ function pmsr
 end
 #search in scripts and open it 
 function sc
-    du -a ~/scripts/ | awk '{print $2}' | fzf --preview='head -$LINES {}'| xargs -r $EDITOR
+    cd ~/scripts/
+    fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %
+    cd - 
+    # du -a ~/scripts/ | awk '{print $2}' | fzf --preview='head -$LINES {}' | xargs -r $EDITOR 
 end 
 # excution selected script 
 function se
-    du -a ~/scripts/ | awk '{print $2}' | fzf --preview='head -$LINES {}' | xargs -r sh
+    cd ~/scripts/
+    fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r /bin/bash
+    cd - 
+    # du -a ~/scripts/ | awk '{print $2}' | fzf --preview='head -$LINES {}' | xargs -r sh
 end 
 #search in $pwd and open it 
-function sf 
-    fzf --preview='head -$LINES {}'| xargs -r -I % $EDITOR % 
-end 
-alias to lvim 
+# function sf 
+#     fzf --preview='head -$LINES {}'| xargs -r -I % $EDITOR % 
+# end 
+# alias to lvim 
 function v
     lvim $argv
 end

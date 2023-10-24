@@ -1,3 +1,3 @@
 #!/bin/bash
-pkg_=$(checkupdates | wc -l)
-echo "$pkg_ pkgs"
+pkg=$(checkupdates | wc -l)
+echo "$pkg pkgs"
