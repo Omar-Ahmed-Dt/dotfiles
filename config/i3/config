@@ -1,27 +1,36 @@
 # from xrandr pkg 
 exec --no-startup-id xrandr --output eDP-1 --auto
 
-# Set 
+# :) 
 set $term kitty
 set $EDITOR lvim
-# Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 set $mod1 Mod1
-# 
 set $up k
 set $down j
 set $left h
 set $right l
-#
-set $WS1   1: 
-set $WS2   2: 
-set $WS3   3: 
-set $WS4   4: 
-set $WS5   5: 
-set $WS6   6: 
-set $WS7   7: 
-set $WS8   8: 
-set $WS9   9: 
+
+# workspaces names
+# set $WS1   1: 
+# set $WS2   2: 
+# set $WS3   3: 
+# set $WS4   4: 
+# set $WS5   5: 
+# set $WS6   6: 
+# set $WS7   7: 
+# set $WS8   8: 
+# set $WS9   9: 
+
+set $WS1   1: 一
+set $WS2   2: 二 
+set $WS3   3: 三
+set $WS4   4: 四
+set $WS5   5: 五
+set $WS6   6: 六
+set $WS7   7: 七
+set $WS8   8: 八
+set $WS9   9: 九
 
 # Switch to workspace
 bindsym $mod+1 workspace $WS1
@@ -50,16 +59,11 @@ bindsym $mod+Shift+c kill
 bindsym $mod+a focus parent
 bindsym $mod+z focus child
 bindsym $mod+b bar mode toggle
-# Indicator 
-# split in horizontal orientation
 bindsym $mod+i split h
-# split in vertical orientation
 bindsym $mod+u split v
-# Floating and Fullscreen
 floating_modifier $mod
 bindsym $mod+space floating toggle
 bindsym $mod+f fullscreen toggle
-# Focus
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
@@ -86,12 +90,9 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-# bindsym $mod+Shift+minus move scratchpad
-# bindsym $mod+Shift+equal scratchpad show
 
 # kitti3 
 exec_always --no-startup-id kitti3 -p CC -s 0.8 0.7 -n n1
-# exec_always --no-startup-id kitti3 -p CT -s 0.8 0.7 -n n1
 bindsym $mod+shift+o nop n1
 #
 #############################
@@ -104,7 +105,6 @@ exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name mus -e ncmpcpp
 bindsym $mod+Shift+n [instance="mus"] scratchpad show; [instance="mus"] move position center
 # cal
 for_window [instance="date"] floating enable 
-# for_window [instance="date"] resize set 1000 900
 for_window [instance="date"] resize set 733 500
 for_window [instance="date"] move scratchpad
 exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name date -e khal --color interactive
@@ -140,21 +140,16 @@ default_orientation horizontal
 exec_always --no-startup-id autotiling
 
 
-# for_window [class="Vivaldi-stable"] focus
 # auto start
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id blueberry-tray
 exec --no-startup-id nm-applet
 exec_always --no-startup-id numlockx on
-# exec --no-startup-id volumeicon
-exec --no-startup-id feh --bg-fill /home/omar/.cache/styli.sh/wallpaper.jpg & 
 exec_always --no-startup-id sxhkd 
 exec --no-startup-id mpd
 exec --no-startup-id clipmenud
 exec --no-startup-id xfce4-power-manager &
-# exec --no-startup-id blugon
 exec --no-startup-id redshift -P -O 3250 &
-# exec --no-startup-id redshift 
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 exec --no-startup-id dunst
 
@@ -166,6 +161,7 @@ exec --no-startup-id easyeffects --gapplication-service
 exec --no-startup-id flameshot
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id slimbookbattery --minimize
+exec --no-startup-id xautolock -time 2 -locker "betterlockscreen -l dim"
 
 # Floating 
 for_window [class="SimpleScreenRecorder"] floating enable
@@ -228,7 +224,6 @@ bar {
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks
     colors {
-        # background #282828
         background #282c34
         statusline #eeeeee
         separator #eeeeee
@@ -239,9 +234,10 @@ bar {
       }
     }
     # class                 border  backgr. text    indicator
-    client.focused          #353439 #fcce7b #e5e5e5 #ed8274
-    client.unfocused        #222222 #222222 #aaaaaa #222222
-    client.focused_inactive #222222 #222222 #a9a9a9 #222222
-    client.placeholder      #222222 #222222 #aaaaaa #222222
-    client.urgent           #d42121 #d42121 #f7f7f7 #d42121
-    client.background       #242424
+    # client.focused          #353439 #fcce7b #e5e5e5 #ed8274
+    client.focused            #353439 #343746 #e5e5e5 #ed8274
+    client.unfocused          #222222 #222222 #aaaaaa #222222
+    client.focused_inactive   #222222 #222222 #a9a9a9 #222222
+    client.placeholder        #222222 #222222 #aaaaaa #222222
+    client.urgent             #d42121 #d42121 #f7f7f7 #d42121
+    client.background         #242424
