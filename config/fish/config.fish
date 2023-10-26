@@ -270,9 +270,9 @@ alias C='doas chmod 777'
 alias c='doas chmod 744'
 alias do='doas'
 
-# $HOME/github/shell-color-scripts/colorscript.sh -r # && $HOME/scripts/clock3.sh
+$HOME/github/shell-color-scripts/colorscript.sh -r # && $HOME/scripts/clock3.sh
 # echo $(date "+%a %d.%m.%Y %H:%M %p") | ponysay
-pokemon-colorscripts --no-title -r 
+# pokemon-colorscripts --no-title -r 
 # fastfetch
 
 alias pmi='doas pacman -S'

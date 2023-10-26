@@ -741,6 +741,7 @@ wpa_supplicant
 wttr
 wvdial
 xapp
+xautolock
 xclip
 xcolor
 xdg-desktop-portal-gtk
