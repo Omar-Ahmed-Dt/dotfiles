@@ -108,7 +108,7 @@ for_window [instance="date"] floating enable
 for_window [instance="date"] resize set 733 500
 for_window [instance="date"] move scratchpad
 exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name date -e khal --color interactive
-bindsym $mod+t [instance="date"] scratchpad show; [instance="date"] move position center
+bindsym $mod+Shift+t [instance="date"] scratchpad show; [instance="date"] move position center
 # calc
 for_window [instance="calc"] floating enable 
 for_window [instance="calc"] resize set 900 325
@@ -145,6 +145,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id blueberry-tray
 exec --no-startup-id nm-applet
 exec_always --no-startup-id numlockx on
+exec --no-startup-id feh --bg-fill /home/omar/.cache/wall/wallpaper.jpg & 
 exec_always --no-startup-id sxhkd 
 exec --no-startup-id mpd
 exec --no-startup-id clipmenud
@@ -161,7 +162,7 @@ exec --no-startup-id easyeffects --gapplication-service
 exec --no-startup-id flameshot
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id slimbookbattery --minimize
-exec --no-startup-id xautolock -time 2 -locker "betterlockscreen -l dim"
+# exec --no-startup-id xautolock -time 2 -locker "betterlockscreen -l dim"
 
 # Floating 
 for_window [class="SimpleScreenRecorder"] floating enable
@@ -234,8 +235,8 @@ bar {
       }
     }
     # class                 border  backgr. text    indicator
-    # client.focused          #353439 #fcce7b #e5e5e5 #ed8274
-    client.focused            #353439 #343746 #e5e5e5 #ed8274
+    client.focused          #353439 #fcce7b #e5e5e5 #ed8274
+    # client.focused            #353439 #343746 #e5e5e5 #ed8274
     client.unfocused          #222222 #222222 #aaaaaa #222222
     client.focused_inactive   #222222 #222222 #a9a9a9 #222222
     client.placeholder        #222222 #222222 #aaaaaa #222222
