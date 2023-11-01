@@ -136,6 +136,9 @@ super + shift + v
 # mail  
 super + shift + m
     thunderbird
+# evolution  
+super + m
+    evolution
 #mount 
 # super + Insert
 # 	~/scripts/mount_umount.sh

@@ -137,6 +137,10 @@ bashtop
 bat-cat-git
 bauh
 bemoji-git
+bibata-cursor-theme-bin
+bibata-cursor-translucent
+bibata-extra-cursor-theme
+bibata-rainbow-cursor-theme
 bind
 binutils
 bison
@@ -150,7 +154,9 @@ breeze
 brightnessctl
 broadcom-wl-dkms
 btrfs-progs
+capitaine-cursors
 catfish
+catppuccin-cursors-git
 cava
 chromium
 cli-visualizer
@@ -166,6 +172,7 @@ cups
 cups-filters
 cups-pdf
 d-spy
+davmail
 dconf-editor
 ddrescue
 debugedit
@@ -184,6 +191,7 @@ docker
 docker-compose
 dosfstools
 downgrade
+dracula-cursors-git
 dracula-gtk-theme
 dragon-drop
 duf-bin
@@ -205,7 +213,7 @@ efibootmgr
 endeavour
 ethtool
 evhz-git
-evolution
+evolution-ews
 exfatprogs
 exo
 expac
@@ -330,6 +338,7 @@ hyphen-en
 i3-swallow-git
 i3-wm
 i3blocks
+i3ipc-glib-git
 i3lock-color
 iagno
 icons-in-terminal
@@ -340,6 +349,7 @@ instaloader
 intltool
 invada-studio-plugins-lv2
 inxi
+iotop
 iperf
 ipython
 irssi
@@ -360,6 +370,7 @@ kvantum-qt5-git
 kvantum-theme-materia
 kvantum-theme-qogir-git
 laptop-detect
+layan-cursor-theme-git
 layan-gtk-theme-git
 layan-kde-git
 less
@@ -457,6 +468,7 @@ nnn-nerd
 nomacs
 nordzy-icon-theme-git
 noto-fonts
+noto-fonts-cjk
 noto-fonts-emoji
 npm
 nss-mdns
@@ -486,6 +498,7 @@ orchis-kde-theme-git
 orchis-theme-git
 os-prober
 otf-symbola
+oxy-neon
 p3x-onenote
 p7zip
 pace
@@ -525,6 +538,7 @@ poppler-glib
 poppler-qt5
 ppp
 pptpclient
+protonmail-nativefier
 pulseaudio-equalizer-ladspa
 purple-facebook
 pv
@@ -613,6 +627,7 @@ squashfs-tools
 stacer
 starship
 stress
+stress-ng
 sublime-text-4
 sudo
 surfn-arc-breeze-icons-git
@@ -621,6 +636,7 @@ surfn-mint-y-icons-git
 surfn-plasma-dark-icons-git
 surfn-plasma-dark-tela-icons-git
 surfn-plasma-light-icons-git
+sweet-cursor-theme-git
 sweet-gtk-theme-dark
 sweet-theme-git
 swell-foop
@@ -718,6 +734,7 @@ usbutils
 vagrant
 variety
 vim
+vimix-cursors
 virt-manager
 virtualbox
 visual-studio-code-insiders-bin
@@ -744,6 +761,12 @@ xapp
 xautolock
 xclip
 xcolor
+xcursor-arch-cursor-complete
+xcursor-comix
+xcursor-flatbed
+xcursor-neutral
+xcursor-premium
+xcursor-simpleandsoft
 xdg-desktop-portal-gtk
 xdg-user-dirs
 xdo
@@ -856,7 +879,6 @@ zathura-pdf-mupdf
 zenity
 zoom
 zoxide
-zram-generator
 zsa-udev
 zsh
 zsh-completions
