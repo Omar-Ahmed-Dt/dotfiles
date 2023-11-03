@@ -420,6 +420,7 @@ megabasterd-bin
 meld
 memtest86+
 menulibre
+mercury-browser-bin
 mesa
 mesa-utils
 mintstick-git

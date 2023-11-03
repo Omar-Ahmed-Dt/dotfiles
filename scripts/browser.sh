@@ -1,5 +1,6 @@
 #!/bin/bash
-declare options=("Firefox
+declare options=("Mercury
+Firefox
 Brave
 Google-chrome-stable
 Chromium"
@@ -10,6 +11,9 @@ choice=$(echo -e "${options[@]}" | dmenu -i -l 20 -g 2 -X 0 -Y 0 -W 680 -p 'laun
 case "$choice" in 
    quit)
        echo "program terminated." && exit 1
+   ;;
+   Mercury)
+       choice="mercury-browser"
    ;;
    Firefox)
        choice="firefox"
