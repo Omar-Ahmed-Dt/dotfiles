@@ -33,6 +33,9 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 #### Editor 
  *  lvim & vscodium (ssh machine)
 
+#### Editor 
+ * joplin-desktop 
+
 #### Shell 
  * fish 
 
@@ -126,7 +129,6 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 | Reload sxhkd | shift + Escape |
 | terminal | super + Return | 
 | browser  | super + shift + b |
-| lvim | super + shift + v |
 | nemo | super + shift + Return | 
 | xkill | super + shift + x | 
 | dmenu | super + shift + d | 
@@ -138,28 +140,24 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 | youtube-dl download | super + shift + y | 
 | screendmenu | Print | 
 | kill process | super + shift + k | 
-| github disktop | super + shift + g | 
 | emoji | super + . | 
-| kill mpv | super + d | 
 | kalker | super + c | 
 | khal | super + shift + t | 
-| hub | super + shift + o | 
+| hub | super + o | 
 | ncmpcpp | super + shift + n | 
 | mpc pause | ctrl + space  |
 | mpc stop | ctrl + Backspace |
 | nnn | shift + Return | 
 | thunderbird | super + shift + m | 
 | mount | super + Insert | 
-| kitti3 | super + n | 
+| kitti3 | super + shift + o | 
 | record screen | super + print | 
 | virtual machine | super + shift + a | 
-| whatsdesk | super + shift + w | 
-| logout | super + Delete | 
+| websearch | super + shift + w | 
 | pavucontrol | super + Backslash | 
 | mic down | super + minus | 
 | mic up | super + equal | 
 | mic mute | super + Backspace | 
 | keepassxc | super + q | 
-| scripts via dmenu | super + shift + f | 
 | clipmenu | super + v | 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>

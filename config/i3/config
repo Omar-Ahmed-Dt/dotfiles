@@ -136,9 +136,16 @@ bindsym $mod+q [instance="pass"] scratchpad show; [instance="pass"] move positio
 #############################
 # Jump to urgent window 
 # for_window [urgent=latest] focus
+# don't care about urgent windows 
+focus_on_window_activation focus
 default_orientation horizontal
 exec_always --no-startup-id autotiling
 
+# i3-back
+# Start the daemon which listens to focus changes and sets _back mark
+exec --no-startup-id /usr/bin/i3-back
+# Bind a switch key, which focuses the previously focused window
+bindsym $mod+Tab [con_mark=_back] focus
 
 # auto start
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -162,9 +169,11 @@ exec --no-startup-id easyeffects --gapplication-service
 exec --no-startup-id flameshot
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id slimbookbattery --minimize
+exec --no-startup-id joplin-desktop 
 # exec --no-startup-id xautolock -time 2 -locker "betterlockscreen -l dim"
 
 # Floating 
+for_window [class="Joplin"] floating enable
 for_window [class="SimpleScreenRecorder"] floating enable
 for_window [class="Arcolinux-welcome-app.py"] floating enable
 for_window [class="yad"] floating enable

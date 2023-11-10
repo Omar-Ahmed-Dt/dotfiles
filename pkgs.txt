@@ -137,10 +137,6 @@ bashtop
 bat-cat-git
 bauh
 bemoji-git
-bibata-cursor-theme-bin
-bibata-cursor-translucent
-bibata-extra-cursor-theme
-bibata-rainbow-cursor-theme
 bind
 binutils
 bison
@@ -154,15 +150,13 @@ breeze
 brightnessctl
 broadcom-wl-dkms
 btrfs-progs
-capitaine-cursors
 catfish
-catppuccin-cursors-git
 cava
 chromium
 cli-visualizer
 clipmenu-rofi
 clonezilla
-conky-lua-archers
+conky
 coreimage
 cpanminus
 cpupower
@@ -191,7 +185,6 @@ docker
 docker-compose
 dosfstools
 downgrade
-dracula-cursors-git
 dracula-gtk-theme
 dragon-drop
 duf-bin
@@ -335,6 +328,7 @@ hwinfo
 hyperv
 hyphen
 hyphen-en
+i3-back-bin
 i3-swallow-git
 i3-wm
 i3blocks
@@ -355,6 +349,7 @@ ipython
 irssi
 iw
 jfsutils
+joplin-electron
 jq
 jsoncpp
 jupiter
@@ -370,7 +365,6 @@ kvantum-qt5-git
 kvantum-theme-materia
 kvantum-theme-qogir-git
 laptop-detect
-layan-cursor-theme-git
 layan-gtk-theme-git
 layan-kde-git
 less
@@ -473,7 +467,6 @@ noto-fonts-cjk
 noto-fonts-emoji
 npm
 nss-mdns
-nsxiv
 ntfs-3g
 ntp
 numix-circle-icon-theme-git
@@ -499,7 +492,6 @@ orchis-kde-theme-git
 orchis-theme-git
 os-prober
 otf-symbola
-oxy-neon
 p3x-onenote
 p7zip
 pace
@@ -558,6 +550,7 @@ python-pyparted
 python-pywal
 python-requirements-parser
 python-toml
+python-tweepy
 python-unidecode
 qbittorrent
 qogir-gtk-theme-git
@@ -637,7 +630,6 @@ surfn-mint-y-icons-git
 surfn-plasma-dark-icons-git
 surfn-plasma-dark-tela-icons-git
 surfn-plasma-light-icons-git
-sweet-cursor-theme-git
 sweet-gtk-theme-dark
 sweet-theme-git
 swell-foop
@@ -735,7 +727,6 @@ usbutils
 vagrant
 variety
 vim
-vimix-cursors
 virt-manager
 virtualbox
 visual-studio-code-insiders-bin
@@ -743,6 +734,7 @@ vlc
 vpnc
 vscodium-bin
 w3m
+walk
 wd719x-firmware
 we10x-icon-theme-git
 webkit2gtk
@@ -762,12 +754,6 @@ xapp
 xautolock
 xclip
 xcolor
-xcursor-arch-cursor-complete
-xcursor-comix
-xcursor-flatbed
-xcursor-neutral
-xcursor-premium
-xcursor-simpleandsoft
 xdg-desktop-portal-gtk
 xdg-user-dirs
 xdo
