@@ -379,7 +379,7 @@ alias stm="nload -u m -m wlp3s0"
 alias mc="missioncenter"
 alias wsh="~/scripts/windows.sh"
 alias mega="megabasterd"
-alias clock="tty-clock -scbt"
+alias clock="tty-clock -xscbt"
 
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 
@@ -473,6 +473,10 @@ end
 function vi 
     vim $argv 
 end 
+
+function lk
+  set loc (walk --icons $argv); and cd $loc;
+end
 ####################################
 ####################################
 #cd any directory by alias sd 

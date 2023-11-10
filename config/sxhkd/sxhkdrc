@@ -18,7 +18,7 @@ super + shift + b
 #     firefox
 #file manger gui 
 super + shift + Return
-    nemo ~/
+    pcmanfm ~/
 #xkill 
 super + shift + x 
 	xkill
@@ -175,3 +175,7 @@ super + shift + w
 # windows 
 # super + shift + i
 #     kitty -e ~/scripts/windows.sh
+# joplin 
+super + shift + j 
+    joplin-desktop
+

@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/bin/bash
+#
+# nnn plugins => imgview ,, edit below line: 
+# sxiv) listimages | xargs -0 swallow sxiv -a "${count:--t}" -- ;;
+#
 while read file
 do
         case "$1" in
