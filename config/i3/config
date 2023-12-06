@@ -58,7 +58,7 @@ bindsym $mod+Shift+9 move container to workspace $WS9
 bindsym $mod+Shift+c kill
 bindsym $mod+a focus parent
 bindsym $mod+z focus child
-bindsym $mod+b bar mode toggle
+# bindsym $mod+b bar mode toggle
 bindsym $mod+i split h
 bindsym $mod+u split v
 floating_modifier $mod
@@ -171,6 +171,9 @@ exec --no-startup-id xfce4-clipman
 exec --no-startup-id slimbookbattery --minimize
 exec --no-startup-id joplin-desktop 
 # exec --no-startup-id xautolock -time 2 -locker "betterlockscreen -l dim"
+# pcmanfm --daemon-mode:  
+exec --no-startup-id pcmanfm -d 
+exec --no-startup-id caffeine 
 
 # Floating 
 for_window [class="Joplin"] floating enable
@@ -228,6 +231,7 @@ smart_borders on
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 bar {
     separator_symbol "三"
+    # separator_symbol "●"
     height 25
     workspace_buttons yes
     font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont Bold 8

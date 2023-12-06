@@ -1,17 +1,5 @@
 #!/bin/sh
 
-# Module showing network traffic. Shows how much data has been received (RX) or
-# transmitted (TX) since the previous time this script ran. So if run every
-# second, gives network traffic per second.
-
-#case $BLOCK_BUTTON in
-#	1) setsid -f "$TERMINAL" -e bmon ;;
-#	3) notify-send "🌐 Network traffic module" " : Traffic received
-# : Traffic transmitted" ;;
-#	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
-#esac
-
-
 update() {
     sum=0
     for arg; do
@@ -27,9 +15,4 @@ update() {
 rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
 tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
 
-#printf "🔻%4sB %4sB\\n" $(numfmt --to=iec $rx) #$(numfmt --to=iec $tx)
-#printf " %3sB   %3sB\\n" $(numfmt --to=iec $rx) $(numfmt --to=iec $tx)
-
-#printf "  %3sB  %3sB\\n" $(numfmt --to=iec $rx) $(numfmt --to=iec $tx)
 printf "  %3sB - %3sB\\n" $(numfmt --to=iec $rx) $(numfmt --to=iec $tx)
-#printf "⤵️ %3sB  ⤴️ %3sB\\n" $(numfmt --to=iec $rx) $(numfmt --to=iec $tx)

@@ -219,7 +219,8 @@ alias .5='cd ../../../../..'
 #alias newtag='git tag -a'
 
 # get error messages from journalctl
-alias jctl="journalctl -p 3 -xb"
+# alias jctl="journalctl -p 3 -xb"
+alias jctl="journalctl -e"
 
 # gpg encryption
 # verify signature for isos
@@ -323,7 +324,7 @@ alias m='~/scripts/matrix.sh'
 alias gx='cd /usr/share/xsessions'
 alias ft='xdg-mime query filetype'
 alias fd='xdg-mime query default'
-alias search='find / -iname'
+# alias search='find / -iname'
 alias rip='~/scripts/rip.sh' #to get public ip 
 alias ip='ip --color a' #to get private ip 
 alias ll='lsd -lh'
@@ -345,7 +346,7 @@ alias code='vscodium'
 # alias code='flatpak run com.vscodium.codium'
 alias gsh="~/scripts/gsh.sh"
 # alias theme="~/scripts/kitty_theme.sh"
-alias f="doas find / -iname"
+# alias f="doas find / -iname"
 alias uprsc="xrdb -load ~/.Xresources"
 alias gpu="doas lvim /etc/optimus-manager/optimus-manager.conf"
 alias smi="nvidia-smi"
@@ -360,8 +361,8 @@ alias rkeys="~/scripts/keys.sh"
 alias rmpm="doas rm /var/lib/pacman/db.lck"
 alias cd="z"
 # alias ssh="kitty +kitten ssh"
-alias opdf="~/scripts/ozathura.sh"
-alias ompv="~/scripts/ompv.sh"
+alias op="~/scripts/ozathura.sh"
+alias ov="~/scripts/ompv.sh"
 alias cat="lolcat"
 alias prop="xprop | grep WM_CLASS"
 alias dl="~/scripts/dlfile.sh"
@@ -380,6 +381,7 @@ alias mc="missioncenter"
 alias wsh="~/scripts/windows.sh"
 alias mega="megabasterd"
 alias clock="tty-clock -xscbt"
+# alias sudo="doas"
 
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 
@@ -476,6 +478,10 @@ end
 
 function lk
   set loc (walk --icons $argv); and cd $loc;
+end
+
+function f 
+    doas find / -iname $argv 2> /dev/null | grep $argv
 end
 ####################################
 ####################################
@@ -584,11 +590,11 @@ function __fzf_cd -d "Change directory"
 end
 
 #my config for nnn file manger alias nnn='nnn -eRx'
-alias nn='nnn -Rxl 5' 
-alias n='nnn -Rxl 5'
+alias nn='nnn -Rrxl 5' 
+alias n='nnn -Rrxl 5'
 export NNN_PLUG='c:!convert "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!bash
 -i*;p:rsynccp;n:nmount;z:autojump'
-export NNN_BMS="m:/media/sdb1/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
+export NNN_BMS="m:/run/media/omar/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
 export NNN_FCOLORS='c1e2904be76033f7c6d6abc4'

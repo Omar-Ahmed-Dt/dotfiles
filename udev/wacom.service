@@ -1,0 +1,16 @@
+[Unit]
+Description=Configure my Wacom tablet
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/local/bin/wacom.sh
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Type=oneshot
+Environment=DISPLAY=:0  # Set the appropriate display number
+
+[Install]
+WantedBy=default.target
+WantedBy=multi-user.target
+WantedBy=graphical-session.target
