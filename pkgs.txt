@@ -9,6 +9,7 @@ adobe-source-han-sans-cn-fonts
 adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-kr-fonts
 adobe-source-sans-fonts
+advcpmv
 aic94xx-firmware
 alacritty
 alacritty-themes
@@ -150,13 +151,14 @@ breeze
 brightnessctl
 broadcom-wl-dkms
 btrfs-progs
+caffeine-ng
 catfish
 cava
 chromium
 cli-visualizer
 clipmenu-rofi
 clonezilla
-conky
+conky-lua-archers
 coreimage
 cpanminus
 cpupower
@@ -436,6 +438,8 @@ mpv-thumbnail-script
 mtools
 mtpfs
 mugshot
+mypaint
+nagios
 nano
 nbd
 ncmpcpp
@@ -566,6 +570,7 @@ ripdrag-git
 ripgrep
 ripgrep-all
 ristretto
+rnote
 rofi
 rp-pppoe
 rsync
@@ -618,6 +623,7 @@ speedtest-cli-git
 spotify
 spotify-tray-git
 squashfs-tools
+squid
 stacer
 starship
 stress
@@ -734,6 +740,7 @@ vlc
 vpnc
 vscodium-bin
 w3m
+wacom-settings-git
 walk
 wd719x-firmware
 we10x-icon-theme-git
@@ -850,6 +857,8 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xournal
+xournalpp
 xwallpaper
 yad
 yarn

@@ -1,2 +1,2 @@
 #! /bin/bash 
-uptime -p | sed 's/hour/h/' | sed 's/minutes/m/'
+uptime -p | sed 's/days/d/' | sed 's/hours/h/' | sed 's/minutes/m/' | sed 's/up/UP/'
