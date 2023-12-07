@@ -182,5 +182,9 @@ super + shift + j
 # super + n
 #    p3x-onenote
 # xournalpp 
+super + n
+    rnote
+   # xournalpp 
+# scrivano 
 # super + n
-#    xournalpp 
+#     com.github.scrivanolabs.scrivano
