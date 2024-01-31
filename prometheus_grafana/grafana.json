@@ -83,7 +83,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 10,
+        "h": 12,
         "w": 12,
         "x": 0,
         "y": 0
@@ -179,7 +179,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 10,
+        "h": 12,
         "w": 12,
         "x": 12,
         "y": 0
@@ -314,10 +314,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 9,
+        "h": 10,
         "w": 24,
         "x": 0,
-        "y": 10
+        "y": 12
       },
       "id": 3,
       "options": {
@@ -363,20 +363,20 @@
       "type": "timeseries"
     }
   ],
-  "refresh": "",
+  "refresh": "5s",
   "schemaVersion": 39,
   "tags": [],
   "templating": {
     "list": []
   },
   "time": {
-    "from": "now-6h",
-    "to": "now"
+    "from": "2024-01-30T15:40:14.029Z",
+    "to": "2024-01-31T03:40:14.029Z"
   },
   "timepicker": {},
   "timezone": "",
   "title": "My Dashboard",
   "uid": "ab8956bc-d627-40c6-b76f-7bbcb7bcf883",
-  "version": 12,
+  "version": 14,
   "weekStart": ""
 }
