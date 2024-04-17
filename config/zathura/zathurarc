@@ -18,6 +18,7 @@ map gg goto top
 
 #colors : 
 set default-bg                  "#2E3440"
+# set default-bg                  "#000000"
 set default-fg                  "#3B4252"
 
 set statusbar-fg                "#D8DEE9"

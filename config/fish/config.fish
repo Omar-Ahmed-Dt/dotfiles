@@ -267,8 +267,8 @@ alias tofish="doas chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 #my config 
 # alias p='cd ..'
-alias C='doas chmod 777'
-alias c='doas chmod 744'
+alias X='doas chmod 777'
+alias x='doas chmod 744'
 alias do='doas'
 
 $HOME/github/shell-color-scripts/colorscript.sh -r # && $HOME/scripts/clock3.sh
@@ -283,7 +283,8 @@ alias pmuu='paru -Syu'
 alias pmr='doas pacman -Rs'
 alias pmR='doas pacman -Rd --nodeps' #remove pkg without dependencies
 alias pmii='paru -S'
-alias pmq='pacman -Qq'
+# alias pmq='pacman -Qq'
+alias pmq='pacman -Q'
 alias pmn='pacman -Q | wc -l'
 alias pmc='doas pacman -Sc' #clean the cache after upgrade my system 
 alias pmg='pamac-manager'
@@ -326,7 +327,7 @@ alias ft='xdg-mime query filetype'
 alias fd='xdg-mime query default'
 # alias search='find / -iname'
 alias rip='~/scripts/rip.sh' #to get public ip 
-alias ip='ip --color a' #to get private ip 
+alias ip='ip --color' #to get private ip 
 alias ll='lsd -lh'
 alias la="lsd -lah"
 alias l="lsd"
@@ -351,7 +352,7 @@ alias uprsc="xrdb -load ~/.Xresources"
 alias gpu="doas lvim /etc/optimus-manager/optimus-manager.conf"
 alias smi="nvidia-smi"
 alias rmft="rm ~/.config/fish/functions/fish_prompt.fish"
-alias kt="kitty +kitten themes"
+alias theme="kitty +kitten themes"
 alias journ="journalctl -f"
 alias note="io.github.lainsce.Notejot"
 alias rm="rm -i"
@@ -377,11 +378,14 @@ alias pipes="pipes.sh"
 alias ssh="kitty +kitten ssh"
 alias st="speedtest-cli --simple --secure"
 alias stm="nload -u m -m wlp3s0"
-alias mc="missioncenter"
+# alias mc="missioncenter"
 alias wsh="~/scripts/windows.sh"
 alias mega="megabasterd"
 alias clock="tty-clock -xscbt"
 # alias sudo="doas"
+alias ping="ping -c 10"
+alias us="~/scripts/ssh.sh"
+alias br="ipman"
 
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 
@@ -594,7 +598,7 @@ alias nn='nnn -Rrxl 5'
 alias n='nnn -Rrxl 5'
 export NNN_PLUG='c:!convert "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!bash
 -i*;p:rsynccp;n:nmount;z:autojump'
-export NNN_BMS="r:$HOME/rnote;m:/run/media/omar/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
+export NNN_BMS="a:$HOME/home_docker/metube/videos;r:$HOME/rnote;m:/media/sdb1/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
 export NNN_FCOLORS='c1e2904be76033f7c6d6abc4'

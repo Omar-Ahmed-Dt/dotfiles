@@ -44,10 +44,11 @@ super + Left
 XF86AudioMicMute
    pactl set-source-mute @DEFAULT_SOURCE@ toggle && pkill -RTMIN+17 i3blocks
 #mic up 
-super + equal
+# super + equal
+super + Up
    amixer set Capture 5%+ && pkill -RTMIN+17 i3blocks
 #mic down 
-super + minus
+super + Down
    amixer set Capture 5%- && pkill -RTMIN+17 i3blocks
 # mic mute
 super + BackSpace 
@@ -136,9 +137,10 @@ super + shift + v
 # mail  
 super + shift + m
     thunderbird
-# evolution  
+# messenger  
 super + m
-    evolution
+    messenger
+    # evolution
 #mount 
 # super + Insert
 # 	~/scripts/mount_umount.sh
@@ -159,7 +161,8 @@ super + shift + a
  		virtualbox 
 # music script 
 super + p 
-  ~/github/dmscripts/scripts/dm-music
+    ~/scripts/ocr.sh
+  # ~/github/dmscripts/scripts/dm-music
 # logout 
 super + Delete 
 	pkill i3
@@ -188,3 +191,6 @@ super + n
 # scrivano 
 # super + n
 #     com.github.scrivanolabs.scrivano
+# vscode 
+super + shift + e 
+    vscodium

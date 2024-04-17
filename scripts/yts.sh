@@ -6,6 +6,9 @@ declare -a playlists=(
 "sad lofi for lost souls ~ https://www.youtube.com/watch?v=7k9FBNqGhBg"
 "the lonliest feeling in the world ~ https://www.youtube.com/watch?v=7AHGD1IvssY"
 "The Best of Beethoven ~ https://www.youtube.com/watch?v=W-fFHeTX70Q&t=13s"
+"Antonio Vivaldi ~ https://www.youtube.com/watch?v=xbJyTLEN_W0"
+"The best of Tchaikovsky ~ https://www.youtube.com/watch?v=DG87oy53_zM"
+"Egyptian Ambient Meditation ~ https://www.youtube.com/watch?v=6vhxzTT6QHM"
 "exit"
 )
 

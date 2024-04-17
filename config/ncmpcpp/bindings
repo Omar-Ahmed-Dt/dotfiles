@@ -154,8 +154,6 @@ def_key "space"
 #def_key "s"
 #  stop
 #
-#def_key "p"
-#  pause
 #
 #def_key ">"
 #  next
@@ -465,6 +463,8 @@ def_key "s"
 def_key "x"
   delete_playlist_items
 def_key "P"
+ pause
+def_key "p"
   show_playlist
 def_key "o"
   jump_to_playing_song
