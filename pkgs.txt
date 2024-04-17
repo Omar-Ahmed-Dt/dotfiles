@@ -28,6 +28,7 @@ arc-gtk-theme
 arc-icon-theme
 arch-install-scripts
 archiso
+archlinux-java-run
 archlinux-keyring
 archlinux-logout-git
 archlinux-tweak-tool-git
@@ -136,10 +137,13 @@ base16-alacritty-git
 bash-completion
 bashtop
 bat-cat-git
+batsignal
 bauh
+beekeeper-studio
 bemoji-git
 bind
 binutils
+birdtray
 bison
 blueberry
 bluez
@@ -152,6 +156,7 @@ brightnessctl
 broadcom-wl-dkms
 btrfs-progs
 caffeine-ng
+cargo-c
 catfish
 cava
 chromium
@@ -182,13 +187,15 @@ discount
 dmenu
 dmidecode
 dmraid
-dnsmasq
 docker
 docker-compose
 dosfstools
 downgrade
 dracula-gtk-theme
 dragon-drop
+drawio
+drawio-desktop
+droidcam
 duf-bin
 dunst
 dust
@@ -219,6 +226,7 @@ facebook-nativefier
 fakeroot
 fastfetch
 fatresize
+fbmessenger-bin
 fd
 feh
 ffmpegthumbnailer
@@ -294,6 +302,7 @@ gparted
 gpick
 gpm
 gptfdisk
+grafana
 graphite-gtk-theme-git
 grep
 groff
@@ -320,6 +329,7 @@ hardinfo-gtk3
 hddtemp
 hdparm
 helvum
+herbe
 hitori
 hollywood
 htop-vim
@@ -347,6 +357,7 @@ invada-studio-plugins-lv2
 inxi
 iotop
 iperf
+ipman
 ipython
 irssi
 iw
@@ -356,8 +367,9 @@ jq
 jsoncpp
 jupiter
 jupyter-notebook
+jwt-cli
 kalker
-kdenlive
+kdenlive-release-git
 keepassxc
 khal
 kitti3
@@ -371,8 +383,10 @@ layan-gtk-theme-git
 layan-kde-git
 less
 lib32-libcanberra
+lib32-svt-av1
 libbacktrace-git
 libdvdcss
+libelectron
 libesmtp
 libfido2
 libgsf
@@ -405,6 +419,7 @@ luna-icon-theme-git
 lvm2
 lxappearance
 m4
+maim
 make
 man-db
 man-pages
@@ -415,6 +430,7 @@ mdadm
 megabasterd-bin
 meld
 memtest86+
+memtester
 menulibre
 mercury-browser-bin
 mesa
@@ -441,6 +457,7 @@ mugshot
 mypaint
 nagios
 nano
+nasm
 nbd
 ncmpcpp
 ndisc6
@@ -452,6 +469,7 @@ nemo-share
 neofetch
 neovim
 neovim-nvim-treesitter
+neovim-remote
 network-manager-applet
 networkmanager
 networkmanager-openconnect
@@ -485,6 +503,7 @@ obs-studio
 obsidian-icon-theme
 oh-my-zsh-git
 okular
+onlyoffice-bin
 open-iscsi
 openbox-themes-pambudi-git
 openconnect
@@ -535,6 +554,8 @@ poppler-glib
 poppler-qt5
 ppp
 pptpclient
+prometheus
+prometheus-node-exporter
 protonmail-nativefier
 pulseaudio-equalizer-ladspa
 purple-facebook
@@ -559,6 +580,7 @@ python-unidecode
 qbittorrent
 qogir-gtk-theme-git
 qogir-icon-theme
+qopenvpn
 qt5ct
 quadrapassel
 rate-mirrors-bin
@@ -572,8 +594,11 @@ ripgrep-all
 ristretto
 rnote
 rofi
+rofi-power-menu
 rp-pppoe
 rsync
+rust
+rutorrent
 rxvt-unicode
 rxvt-unicode-terminfo
 samba
@@ -616,11 +641,11 @@ skim
 slimbookbattery
 slop
 smartmontools
+snapchat
 sof-firmware
 sox
 sparklines-git
 speedtest-cli-git
-spotify
 spotify-tray-git
 squashfs-tools
 squid
@@ -634,7 +659,6 @@ surfn-arc-breeze-icons-git
 surfn-icons-git
 surfn-mint-y-icons-git
 surfn-plasma-dark-icons-git
-surfn-plasma-dark-tela-icons-git
 surfn-plasma-light-icons-git
 sweet-gtk-theme-dark
 sweet-theme-git
@@ -650,6 +674,8 @@ tcpdump
 tela-circle-icon-theme-git
 telegram-desktop
 terminus-font
+tesseract-data-ara
+tesseract-data-eng
 testdisk
 texinfo
 text-engine
@@ -667,9 +693,12 @@ tk
 tlp
 tlpui-git
 tmux
+todoist
 tp_smapi
 tpm2-tss
 trash-cli
+tree-sitter-cli
+trivy
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-caladea
@@ -730,6 +759,8 @@ urxvt-resize-font-git
 usb_modeswitch
 usbmuxd
 usbutils
+v4l2loopback-dkms
+v4l2loopback-utils
 vagrant
 variety
 vim
@@ -742,6 +773,7 @@ vscodium-bin
 w3m
 wacom-settings-git
 walk
+watchdog
 wd719x-firmware
 we10x-icon-theme-git
 webkit2gtk
@@ -755,6 +787,7 @@ wireplumber
 wireshark-qt
 wmctrl
 wpa_supplicant
+wsdd
 wttr
 wvdial
 xapp
@@ -857,11 +890,11 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-xournal
 xournalpp
 xwallpaper
 yad
 yarn
+yasm
 yay-bin
 youtube-dl
 yt-dlp

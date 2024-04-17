@@ -14,4 +14,3 @@ else
 	ffmpeg -f x11grab -framerate 28 -video_size "$W"x"$H" -i :0.0+"$X,$Y" -f pulse -i default ~/ffmpeg/screencast/$(date +%s).mkv & echo $! > $PIDFILE
 
 fi
-
