@@ -46,7 +46,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
  * nnn  
 
 #### Gui File Manager 
- * nemo
+ * thunar
 
 #### Music Player 
  * mpd & ncmpcpp
@@ -70,10 +70,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
  * sxhkd 
 
 #### Browser 
- * mercury-browser 
-
-#### Search Engine 
- * searXNG 
+ * firefox 
 
 #### Color Temperature
  * redshift
@@ -129,19 +126,17 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 | Reload sxhkd | shift + Escape |
 | terminal | super + Return | 
 | browser  | super + shift + b |
-| nemo | super + shift + Return | 
+| thunar | super + shift + Return | 
 | xkill | super + shift + x | 
 | dmenu | super + shift + d | 
 | power | super + Escape | 
 | clipboard | super  + v | 
 | resources | super + shift + h | 
 | screenshot | print |  
-| youtube in mpv | super + shift + p | 
+| screenshot | PrtSc |  
 | youtube-dl download | super + shift + y | 
-| screendmenu | Print | 
 | kill process | super + shift + k | 
 | emoji | super + . | 
-| kalker | super + c | 
 | khal | super + shift + t | 
 | hub | super + o | 
 | ncmpcpp | super + shift + n | 
@@ -149,11 +144,9 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 | mpc stop | ctrl + Backspace |
 | nnn | shift + Return | 
 | thunderbird | super + shift + m | 
-| mount | super + Insert | 
 | kitti3 | super + shift + o | 
 | record screen | super + print | 
 | virtual machine | super + shift + a | 
-| websearch | super + shift + w | 
 | pavucontrol | super + Backslash | 
 | mic down | super + minus | 
 | mic up | super + equal | 
