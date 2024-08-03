@@ -90,7 +90,8 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 #### Virtual OS 
  * ubuntu
 ---
-<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
+<!-- <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p> -->
+<p align="center"><img src="https://github.com/catppuccin/catppuccin/blob/main/assets/footers/ext_black_monochromatic.svg" /></p>
 
 | Utility  | Packages            |
 | -----     | --------------- |
