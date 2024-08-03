@@ -4,7 +4,7 @@ command=/home/omar/scripts/$BLOCK_NAME
 # :)
 align=center
 separator=true
-# color=#ebdbb2
+color=#ebdbb2
 markup=pango
 
 # :)
@@ -13,8 +13,8 @@ command=~/scripts/currently_playing
 interval=persist
 align=center
 border_top=0
-border=#D2B48C
-color=#D2B48C
+border=#7bc275
+color=#7bc275
 border_right=0
 border_left=0
 border_bottom=0
@@ -25,9 +25,9 @@ command=xkb-switch | xargs echo | awk -F '(' '{print $1}'
 interval=once
 signal=15
 border_top=0
-label=<span color="#BA8EAF">  </span>
-border=#BA8EAF
-color=#BA8EAF
+label=<span color="#bd93f9">  </span>
+border=#bd93f9
+color=#bd93f9
 border_right=0
 border_left=0
 border_bottom=0
@@ -56,9 +56,9 @@ border_bottom=0
 # :)
 [uptime.sh]
 interval=60
-label=<span color="#7EB08A"><b>  </b></span>
-border=#7EB08A
-color=#7EB08A
+label=<span color="#cb5760"><b>  </b></span>
+border=#cb5760
+color=#cb5760
 border_top=0
 border_right=0
 border_left=0
@@ -67,9 +67,9 @@ border_bottom=0
 # :)
 [nettraf.sh]
 interval=2
-label=<span color="#D2B48C">  </span>
-border=#D2B48C
-color=#D2B48C
+label=<span color="#7bc275">  </span>
+border=#7bc275
+color=#7bc275
 border_top=0
 border_right=0
 border_left=0
@@ -78,9 +78,9 @@ border_bottom=0
 # :)
 [battery.sh]
 interval=10
-# label=<span color="#BA8EAF"> </span>
-border=#BA8EAF
-color=#BA8EAF
+# label=<span color="#bd93f9"> </span>
+border=#bd93f9
+color=#bd93f9
 border_top=0
 border_right=0
 border_left=0
@@ -88,10 +88,10 @@ border_bottom=0
 
 # :)
 [cpu_average.sh]
-label=<span color="#7EA4B0">  </span> 
+label=<span color="#d4a067">  </span> 
 interval=5
-border=#7EA4B0
-color=#7EA4B0
+border=#d4a067
+color=#d4a067
 COLOR_NORMAL=#ebdbb2
 border_top=0
 border_right=0
@@ -122,9 +122,9 @@ border_bottom=0
 [backlight.sh]
 interval=once
 signal=20
-label=<span color="#7EB08A"> </span>
-border=#7EB08A
-color=#7EB08A
+label=<span color="#cb5760"> </span>
+border=#cb5760
+color=#cb5760
 border_top=0
 border_right=0
 border_left=0
@@ -133,8 +133,8 @@ border_bottom=0
 
 # :)
 [micro.sh]
-border=#D2B48C
-color=#D2B48C
+border=#7bc275
+color=#7bc275
 interval=once
 signal=17
 border_top=0
@@ -145,8 +145,8 @@ border_bottom=0
 
 # :)
 [volume-pipewire]
-border=#BA8EAF
-color=#BA8EAF
+border=#bd93f9
+color=#bd93f9
 interval=once
 signal=10
 border_top=0
@@ -158,9 +158,9 @@ border_bottom=0
 # :)
 [clock3.sh]
 interval=30
-border=#7EA4B0
-color=#7EA4B0
-label=<span color="#7EA4B0">日 </span>
+border=#d4a067
+color=#d4a067
+label=<span color="#d4a067">日 </span>
 border_top=0
 border_right=0
 border_top=0

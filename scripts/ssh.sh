@@ -25,12 +25,4 @@ for ((i=1; i<=max_attempts; i++)); do
     sleep 1
 done
 
-ssh US2
-
-
-
-# Check if all attempts failed
-# if [ $? -ne 0 ]; then
-#     echo "All attempts failed. Exiting script."
-# fi
-
+ssh myserver

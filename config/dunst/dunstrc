@@ -16,13 +16,10 @@
     horizontal_padding = 8
     text_icon_padding = 0
     frame_width = 2
-    #frame_color = "#4A5057"
     frame_color = "#b3cfa7"
-    #separator_color = frame
     separator_color = "#b3cfa7"
     sort = yes
     idle_threshold = 120
-    # font = JetBrains Mono Nerd Font Medium 10
     font = "Roboto Mono, Font Awesome 5 Free Regular"
     line_height = 0
     markup = full
@@ -39,10 +36,7 @@
     icon_position = left
     min_icon_size = 0
     max_icon_size = 32
-    #icon_path = /usr/share/icons/Papirus/32x32
-    #icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/:/usr/share/icons/Adwaita/16x16/legacy/
-    #icon_path= /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/
-    icon_path= /usr/share/icons/Sardi-Mono/scalable/apps
+    icon_path = /usr/share/icons/Papirus/32x32/apps
     sticky_history = yes
     history_length = 20
     always_run_script = true

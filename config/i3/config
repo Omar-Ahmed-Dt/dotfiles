@@ -22,15 +22,25 @@ set $right l
 # set $WS8   8: 
 # set $WS9   9: 
 
-set $WS1   1: 一
-set $WS2   2: 二 
-set $WS3   3: 三
-set $WS4   4: 四
-set $WS5   5: 五
-set $WS6   6: 六
-set $WS7   7: 七
-set $WS8   8: 八
-set $WS9   9: 九
+# set $WS1   1: 一
+# set $WS2   2: 二 
+# set $WS3   3: 三
+# set $WS4   4: 四
+# set $WS5   5: 五
+# set $WS6   6: 六
+# set $WS7   7: 七
+# set $WS8   8: 八
+# set $WS9   9: 九
+
+set $WS1   1: web
+set $WS2   2: wr
+set $WS3   3: pdf
+set $WS4   4: chat
+set $WS5   5: mails
+set $WS6   6: fm
+set $WS7   7: term1
+set $WS8   8: term2
+set $WS9   9: tele
 
 # Switch to workspace
 bindsym $mod+1 workspace $WS1
@@ -97,7 +107,7 @@ bindsym $mod+shift+o nop n1
 #
 #############################
 #scratchpad
-# ncmpcpp
+#ncmpcpp
 for_window [instance="mus"] floating enable 
 for_window [instance="mus"] resize set 1000 900
 for_window [instance="mus"] move scratchpad
@@ -110,11 +120,11 @@ for_window [instance="date"] move scratchpad
 exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name date -e khal --color interactive
 bindsym $mod+Shift+t [instance="date"] scratchpad show; [instance="date"] move position center
 # calc
-for_window [instance="calc"] floating enable 
-for_window [instance="calc"] resize set 900 325
-for_window [instance="calc"] move scratchpad
-exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name calc -e kalker 
-bindsym $mod+c [instance="calc"] scratchpad show; [instance="calc"] move position center
+# for_window [instance="calc"] floating enable 
+# for_window [instance="calc"] resize set 900 325
+# for_window [instance="calc"] move scratchpad
+# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name calc -e kalker 
+# bindsym $mod+c [instance="calc"] scratchpad show; [instance="calc"] move position center
 # htop
 for_window [instance="monitor"] floating enable 
 for_window [instance="monitor"] resize set 1500 1000
@@ -158,7 +168,7 @@ exec --no-startup-id feh --bg-fill /home/omar/.cache/wall/wallpaper.jpg &
 exec_always --no-startup-id sxhkd 
 exec --no-startup-id mpd
 exec --no-startup-id clipmenud
-exec --no-startup-id xfce4-power-manager &
+# exec --no-startup-id xfce4-power-manager &
 exec --no-startup-id redshift -P -O 3250 &
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 exec --no-startup-id dunst
@@ -167,10 +177,10 @@ exec --no-startup-id dunst
 exec_always --no-startup-id xhost +local:root 
 
 exec --no-startup-id $HOME/scripts/keys.sh 
-exec --no-startup-id easyeffects --gapplication-service
+# exec --no-startup-id easyeffects --gapplication-service
 exec --no-startup-id flameshot
 exec --no-startup-id xfce4-clipman
-exec --no-startup-id slimbookbattery --minimize
+# exec --no-startup-id slimbookbattery --minimize
 exec --no-startup-id joplin-desktop 
 # exec --no-startup-id xautolock -time 2 -locker "betterlockscreen -l dim"
 # pcmanfm --daemon-mode:  
@@ -234,6 +244,7 @@ smart_borders on
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 bar {
     separator_symbol "三"
+    # separator_symbol "|"
     # separator_symbol "●"
     height 25
     workspace_buttons yes

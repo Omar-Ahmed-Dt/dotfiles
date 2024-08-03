@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Prints out battery percentage
 
 CHARGING_ICON=' '

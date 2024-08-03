@@ -10,20 +10,12 @@
 
 -- colorscheme
 --
--- lvim.colorscheme = "darkplus"
--- lvim.colorscheme = "gruvbox"
-lvim.colorscheme = "tomorrow"
--- lvim.colorscheme = "onedarker"
--- lvim.colorscheme = "system76"
 -- lvim.colorscheme = "tomorrow"
---lvim.colorscheme = "habamax"
--- lvim.colorscheme = "tokyonight"
--- lvim.colorscheme = "github"
--- lvim.colorscheme = "aurora"
+lvim.colorscheme = "gruvbox"
 --
 -- Statusline
--- lvim.builtin.lualine.style = "default"
-lvim.builtin.lualine.style = "lvim"
+lvim.builtin.lualine.style = "default"
+-- lvim.builtin.lualine.style = "lvim"
 -- lvim.builtin.lualine.style = "none"
 --
 -- reload
@@ -262,6 +254,15 @@ lvim.plugins = {
 --     command = "source ~/.config/lvim/ftplugin/colorizer.lua",
 -- })
 
+-- Function to write a file with sudo
+vim.cmd([[
+  command! W execute 'w !sudo tee % >/dev/null' <bar> edit!
+]])
+
+-- Optionally, you can map this command for convenience
+vim.api.nvim_set_keymap('n', '<leader>w', ':W<CR>', { noremap = true, silent = true })
+
+
 -- Hexa color
 vim.api.nvim_create_autocmd("BufEnter", {
     pattern = { "*" },
@@ -291,3 +292,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
 --     pattern = { "*.ms" },
 --     command = "source ~/.config/lvim/ftplugin/ms.lua",
 -- })
+-- local lspconfig = require('lspconfig')
+
+-- lspconfig.bashls.setup {}
