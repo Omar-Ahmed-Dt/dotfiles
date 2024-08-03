@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import musicpd
+import musicpd # install using aur: python-musicpd
 from datetime import datetime, timedelta
 import cgi
 import os.path

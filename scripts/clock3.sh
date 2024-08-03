@@ -1,4 +1,8 @@
 #!/bin/sh
+case "$BLOCK_BUTTON" in
+    1) kitty $HOME ;;
+esac
+
 
 clock=$(date '+%I')
 

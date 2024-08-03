@@ -23,9 +23,9 @@ volume=$(echo "${statusLine}" | awk -F ' ' '{print $5}' | tr -d '[]%')
 # fi
 
 if [[ "${status}" == "on" ]]; then
-  bin_color="#7bc275"
+  bin_color="#D2B48c"
   echo "<span color='${bin_color}'>  </span>"${volume} %
 else
-  bin_color="#7bc275"
+  bin_color="#D2B48c"
   echo "<span color='${bin_color}'>  </span>"${volume} [" OFF "]
 fi

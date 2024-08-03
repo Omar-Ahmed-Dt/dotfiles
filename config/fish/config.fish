@@ -1,9 +1,15 @@
+set fish_cursor_default block
+set fish_cursor_insert line
+set fish_cursor_replace_one underscore
+set fish_cursor_replace underscore
+set fish_cursor_visual block
+##
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 
 
 ### EXPORT ###
-set fish_greeting                                 # Supresses fish's intro message
+# set fish_greeting                                 # Supresses fish's intro message
 set TERMINAL "kitty"                         # Sets the terminal type
 set EDITOR   "lvim"
 set VISUAL   "lvim"
@@ -17,83 +23,82 @@ set -x MANPAGER "sh -c 'bat --theme Monokai -l man -p'"
 
 ### SET EITHER DEFAULT EMACS MODE OR VI MODE ###
 function fish_user_key_bindings
-  # fish_default_key_bindings
   fish_vi_key_bindings
 end
 ### END OF VI MODE ###
 
 ### AUTOCOMPLETE AND HIGHLIGHT COLORS ###
-set fish_color_normal brcyan
-set fish_color_autosuggestion '#7d7d7d'
-set fish_color_command brcyan
-set fish_color_error '#ff6c6b'
-set fish_color_param brcyan
+# set fish_color_normal brcyan
+# set fish_color_autosuggestion '#7d7d7d'
+# set fish_color_command brcyan
+# set fish_color_error '#ff6c6b'
+# set fish_color_param brcyan
 
 ### SPARK ###
-set -g spark_version 1.0.0
+# set -g spark_version 1.0.0
 
-complete -xc spark -n __fish_use_subcommand -a --help -d "Show usage help"
-complete -xc spark -n __fish_use_subcommand -a --version -d "$spark_version"
-complete -xc spark -n __fish_use_subcommand -a --min -d "Minimum range value"
-complete -xc spark -n __fish_use_subcommand -a --max -d "Maximum range value"
+# complete -xc spark -n __fish_use_subcommand -a --help -d "Show usage help"
+# complete -xc spark -n __fish_use_subcommand -a --version -d "$spark_version"
+# complete -xc spark -n __fish_use_subcommand -a --min -d "Minimum range value"
+# complete -xc spark -n __fish_use_subcommand -a --max -d "Maximum range value"
 
-function spark -d "sparkline generator"
-    if isatty
-        switch "$argv"
-            case {,-}-v{ersion,}
-                echo "spark version $spark_version"
-            case {,-}-h{elp,}
-                echo "usage: spark [--min=<n> --max=<n>] <numbers...>  Draw sparklines"
-                echo "examples:"
-                echo "       spark 1 2 3 4"
-                echo "       seq 100 | sort -R | spark"
-                echo "       awk \\\$0=length spark.fish | spark"
-            case \*
-                echo $argv | spark $argv
-        end
-        return
-    end
+# function spark -d "sparkline generator"
+#     if isatty
+#         switch "$argv"
+#             case {,-}-v{ersion,}
+#                 echo "spark version $spark_version"
+#             case {,-}-h{elp,}
+#                 echo "usage: spark [--min=<n> --max=<n>] <numbers...>  Draw sparklines"
+#                 echo "examples:"
+#                 echo "       spark 1 2 3 4"
+#                 echo "       seq 100 | sort -R | spark"
+#                 echo "       awk \\\$0=length spark.fish | spark"
+#             case \*
+#                 echo $argv | spark $argv
+#         end
+#         return
+#     end
 
-    command awk -v FS="[[:space:],]*" -v argv="$argv" '
-        BEGIN {
-            min = match(argv, /--min=[0-9]+/) ? substr(argv, RSTART + 6, RLENGTH - 6) + 0 : ""
-            max = match(argv, /--max=[0-9]+/) ? substr(argv, RSTART + 6, RLENGTH - 6) + 0 : ""
-        }
-        {
-            for (i = j = 1; i <= NF; i++) {
-                if ($i ~ /^--/) continue
-                if ($i !~ /^-?[0-9]/) data[count + j++] = ""
-                else {
-                    v = data[count + j++] = int($i)
-                    if (max == "" && min == "") max = min = v
-                    if (max < v) max = v
-                    if (min > v ) min = v
-                }
-            }
-            count += j - 1
-        }
-        END {
-            n = split(min == max && max ? "▅ ▅" : "▁ ▂ ▃ ▄ ▅ ▆ ▇ █", blocks, " ")
-            scale = (scale = int(256 * (max - min) / (n - 1))) ? scale : 1
-            for (i = 1; i <= count; i++)
-                out = out (data[i] == "" ? " " : blocks[idx = int(256 * (data[i] - min) / scale) + 1])
-            print out
-        }
-    '
-end
+#     command awk -v FS="[[:space:],]*" -v argv="$argv" '
+#         BEGIN {
+#             min = match(argv, /--min=[0-9]+/) ? substr(argv, RSTART + 6, RLENGTH - 6) + 0 : ""
+#             max = match(argv, /--max=[0-9]+/) ? substr(argv, RSTART + 6, RLENGTH - 6) + 0 : ""
+#         }
+#         {
+#             for (i = j = 1; i <= NF; i++) {
+#                 if ($i ~ /^--/) continue
+#                 if ($i !~ /^-?[0-9]/) data[count + j++] = ""
+#                 else {
+#                     v = data[count + j++] = int($i)
+#                     if (max == "" && min == "") max = min = v
+#                     if (max < v) max = v
+#                     if (min > v ) min = v
+#                 }
+#             }
+#             count += j - 1
+#         }
+#         END {
+#             n = split(min == max && max ? "▅ ▅" : "▁ ▂ ▃ ▄ ▅ ▆ ▇ █", blocks, " ")
+#             scale = (scale = int(256 * (max - min) / (n - 1))) ? scale : 1
+#             for (i = 1; i <= count; i++)
+#                 out = out (data[i] == "" ? " " : blocks[idx = int(256 * (data[i] - min) / scale) + 1])
+#             print out
+#         }
+#     '
+# end
 ### END OF SPARK ###
 
 
 ### FUNCTIONS ###
 # Spark functions
-function letters
-    cat $argv | awk -vFS='' '{for(i=1;i<=NF;i++){ if($i~/[a-zA-Z]/) { w[tolower($i)]++} } }END{for(i in w) print i,w[i]}' | sort | cut -c 3- | spark | lolcat
-    printf  '%s\n' 'abcdefghijklmnopqrstuvwxyz'  ' ' | lolcat
-end
+# function letters
+#     cat $argv | awk -vFS='' '{for(i=1;i<=NF;i++){ if($i~/[a-zA-Z]/) { w[tolower($i)]++} } }END{for(i in w) print i,w[i]}' | sort | cut -c 3- | spark | lolcat
+#     printf  '%s\n' 'abcdefghijklmnopqrstuvwxyz'  ' ' | lolcat
+# end
 
-function commits
-    git log --author="$argv" --format=format:%ad --date=short | uniq -c | awk '{print $1}' | spark | lolcat
-end
+# function commits
+#     git log --author="$argv" --format=format:%ad --date=short | uniq -c | awk '{print $1}' | spark | lolcat
+# end
 
 # Functions needed for !! and !$
 #function __history_previous_command
@@ -126,9 +131,9 @@ end
 # Function for creating a backup file
 # ex: backup file.txt
 # result: copies file as file.txt.bak
-function backup --argument filename
-    cp $filename $filename.bak
-end
+# function backup --argument filename
+#     cp $filename $filename.bak
+# end
 
 # Function for copying files and directories, even recursively.
 # ex: copy DIRNAME LOCATIONS
@@ -199,27 +204,12 @@ alias clear='echo -en "\x1b[2J\x1b[1;1H" ; echo; echo; seq 1 (tput cols) | sort 
 #alias doas="doas --"
 
 # navigation
-alias ..='cd ..'
-alias ...='cd ../..'
+alias .1='cd ..'
+alias .2='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
-# git
-#alias addup='git add -u'
-#alias addall='git add .'
-#alias branch='git branch'
-#alias checkout='git checkout'
-#alias clone='git clone'
-#alias commit='git commit -m'
-#alias fetch='git fetch'
-#alias pull='git pull origin'
-#alias push='git push origin'
-#alias tag='git tag'
-#alias newtag='git tag -a'
-
-# get error messages from journalctl
-# alias jctl="journalctl -p 3 -xb"
 alias jctl="journalctl -e"
 
 # gpg encryption
@@ -272,7 +262,6 @@ alias x='doas chmod 744'
 alias do='doas'
 
 $HOME/github/shell-color-scripts/colorscript.sh -r # && $HOME/scripts/clock3.sh
-# echo $(date "+%a %d.%m.%Y %H:%M %p") | ponysay
 # pokemon-colorscripts --no-title -r 
 # fastfetch
 
@@ -299,7 +288,7 @@ alias blk='lsblk'
 alias img='~/scripts/sxivall1.sh'
 alias imgall='~/scripts/sxivall2.sh'
 alias gc='cd ~/.config'
-alias cdi='cd ~/.config/i3'
+# alias cdi='cd ~/.config/i3'
 alias ram='ps axh -o cmd:15,%mem --sort=-%mem | head | string trim'
 alias cpu='ps axh -o cmd:15,%cpu --sort=-%cpu | head'
 alias bup='sh /home/omar/scripts/gitupload.sh'
@@ -309,9 +298,9 @@ alias dfd='dust -r'
 alias printer='system-config-printer'
 alias printerinstall='hp-setup -u'
 alias epdf='okular'
-alias topdf='sh ~/scripts/topdf.sh'
+# alias topdf='sh ~/scripts/topdf.sh'
 # alias lf='lfrun'
-alias gn='cd ~/.config/nnn'
+# alias gn='cd ~/.config/nnn'
 alias tl='trash-list' 
 alias tr='trash-restore'
 alias gt='cd ~/.local/share/Trash/files'
@@ -320,7 +309,7 @@ alias gs='cd ~/scripts'
 alias pr='proxychains'
 alias pf='proxychains firefox'
 alias toand='sh ~/scripts/android.sh'
-alias N='prime-run'
+# alias N='prime-run'
 alias m='~/scripts/matrix.sh'
 alias gx='cd /usr/share/xsessions'
 alias ft='xdg-mime query filetype'
@@ -328,15 +317,16 @@ alias fd='xdg-mime query default'
 # alias search='find / -iname'
 alias rip='~/scripts/rip.sh' #to get public ip 
 alias ip='ip --color' #to get private ip 
-alias ll='lsd -lh'
-alias la="lsd -lah"
-alias l="lsd"
-alias ls="lsd"
-alias llp="lsd -lh --permission octal"
-alias lls="lsd -lhS"
-alias llt="lsd -lht"
-alias llS="lsd -l --total-size 2> /dev/null"
-alias calc='gnome-calculator'
+alias ll='lsd -lh --icon-theme unicode'
+alias la="lsd -lah --icon-theme unicode"
+alias l="lsd --icon-theme unicode"
+alias ls="lsd --icon-theme unicode"
+alias llp="lsd -lh --permission octal --icon-theme unicode"
+alias lls="lsd -lhS --icon-theme unicode"
+alias llt="lsd -lht --icon-theme unicode"
+alias llS="lsd -l --total-size 2> /dev/null --icon-theme unicode"
+alias gcalc='gnome-calculator'
+alias calc='kalker'
 alias smus='mpd && ncmpcpp'
 alias mus='ncmpcpp'
 alias emus='pkill mpd'
@@ -362,8 +352,8 @@ alias rkeys="~/scripts/keys.sh"
 alias rmpm="doas rm /var/lib/pacman/db.lck"
 alias cd="z"
 # alias ssh="kitty +kitten ssh"
-alias op="~/scripts/ozathura.sh"
-alias ov="~/scripts/ompv.sh"
+# alias op="~/scripts/ozathura.sh"
+# alias ov="~/scripts/ompv.sh"
 alias cat="lolcat"
 alias prop="xprop | grep WM_CLASS"
 alias dl="~/scripts/dlfile.sh"
@@ -386,6 +376,10 @@ alias clock="tty-clock -xscbt"
 alias ping="ping -c 10"
 alias us="~/scripts/ssh.sh"
 alias br="ipman"
+alias dr='~/scripts/dr.sh'
+alias mm='~/scripts/mount_manager.sh'
+alias chmm='~/scripts/kill_mnt_processes.sh'
+alias topdf='~/scripts/extract_pages.sh'
 
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 
@@ -473,7 +467,7 @@ function v
 end
 
 function V
-    doas lvim $argv
+    sudo -E lvim $argv
 end
 
 function vi 
@@ -543,62 +537,62 @@ end
 ####################################
 # name: sashimi prompt 
 
-function __fzf_cd -d "Change directory"
-    set -l commandline (__fzf_parse_commandline)
-    set -l dir $commandline[1]
-    set -l fzf_query $commandline[2]
+# function __fzf_cd -d "Change directory"
+#     set -l commandline (__fzf_parse_commandline)
+#     set -l dir $commandline[1]
+#     set -l fzf_query $commandline[2]
 
-    if not type -q argparse
-        # Fallback for fish shell version < 2.7
-        function argparse
-            functions -e argparse # deletes itself
-        end
-        if contains -- --hidden $argv; or contains -- -h $argv
-            set _flag_hidden "yes"
-        end
-    end
+#     if not type -q argparse
+#         # Fallback for fish shell version < 2.7
+#         function argparse
+#             functions -e argparse # deletes itself
+#         end
+#         if contains -- --hidden $argv; or contains -- -h $argv
+#             set _flag_hidden "yes"
+#         end
+#     end
 
-    # Fish shell version >= v2.7, use argparse
-    set -l options  "h/hidden"
-    argparse $options -- $argv
+#     # Fish shell version >= v2.7, use argparse
+#     set -l options  "h/hidden"
+#     argparse $options -- $argv
 
-    set -l COMMAND
+#     set -l COMMAND
 
-    set -q FZF_CD_COMMAND
-    or set -l FZF_CD_COMMAND "
-    command find -L \$dir -mindepth 1 \\( -path \$dir'*/\\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' \\) -prune \
-    -o -type d -print 2> /dev/null | sed 's@^\./@@'"
+#     set -q FZF_CD_COMMAND
+#     or set -l FZF_CD_COMMAND "
+#     command find -L \$dir -mindepth 1 \\( -path \$dir'*/\\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' \\) -prune \
+#     -o -type d -print 2> /dev/null | sed 's@^\./@@'"
 
-    set -q FZF_CD_WITH_HIDDEN_COMMAND
-    or set -l FZF_CD_WITH_HIDDEN_COMMAND "
-    command find -L \$dir \
-    \\( -path '*/\\.git*' -o -fstype 'dev' -o -fstype 'proc' \\) -prune \
-    -o -type d -print 2> /dev/null | sed 1d | cut -b3-"
+#     set -q FZF_CD_WITH_HIDDEN_COMMAND
+#     or set -l FZF_CD_WITH_HIDDEN_COMMAND "
+#     command find -L \$dir \
+#     \\( -path '*/\\.git*' -o -fstype 'dev' -o -fstype 'proc' \\) -prune \
+#     -o -type d -print 2> /dev/null | sed 1d | cut -b3-"
 
-    if set -q _flag_hidden
-        set COMMAND $FZF_CD_WITH_HIDDEN_COMMAND
-    else
-        set COMMAND $FZF_CD_COMMAND
-    end
+#     if set -q _flag_hidden
+#         set COMMAND $FZF_CD_WITH_HIDDEN_COMMAND
+#     else
+#         set COMMAND $FZF_CD_COMMAND
+#     end
 
-    eval "$COMMAND | "(__fzfcmd)" +m $FZF_DEFAULT_OPTS $FZF_CD_OPTS --query \"$fzf_query\"" | read -l select
+#     eval "$COMMAND | "(__fzfcmd)" +m $FZF_DEFAULT_OPTS $FZF_CD_OPTS --query \"$fzf_query\"" | read -l select
 
-    if not test -z "$select"
-        builtin cd "$select"
+#     if not test -z "$select"
+#         builtin cd "$select"
 
-        # Remove last token from commandline.
-        commandline -t ""
-    end
+#         # Remove last token from commandline.
+#         commandline -t ""
+#     end
 
-    commandline -f repaint
-end
+#     commandline -f repaint
+# end
 
 #my config for nnn file manger alias nnn='nnn -eRx'
 alias nn='nnn -Rrxl 5' 
 alias n='nnn -Rrxl 5'
 export NNN_PLUG='c:!convert "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!bash
--i*;p:rsynccp;n:nmount;z:autojump'
-export NNN_BMS="a:$HOME/home_docker/metube/videos;r:$HOME/rnote;m:/media/sdb1/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
+-i*;p:rsynccp;n:nmount;z:autojump;d:~/scripts/dr.sh'
+export NNN_BMS="a:$HOME/home_docker/metube/videos;r:$HOME/rnote;m:/mnt/sdb1/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
 export NNN_FCOLORS='c1e2904be76033f7c6d6abc4'

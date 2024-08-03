@@ -1,6 +1,6 @@
 #!/bin/bash
-declare options=("Mercury
-Firefox
+declare options=("Firefox
+Mercury
 Brave
 Google-chrome-stable
 Chromium"

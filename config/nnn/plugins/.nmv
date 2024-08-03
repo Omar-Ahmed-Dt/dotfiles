@@ -17,27 +17,28 @@
 # Shell: bash
 # Author: KlzXS
 
+# shellcheck disable=SC1090,SC1091
+. "$(dirname "$0")"/.nnn-plugin-helper
+
 EDITOR="${EDITOR:-vi}"
 TMPDIR="${TMPDIR:-/tmp}"
-INCLUDE_HIDDEN="${INCLUDE_HIDDEN:-0}"
+NNN_INCLUDE_HIDDEN="${NNN_INCLUDE_HIDDEN:-0}"
 VERBOSE="${VERBOSE:-0}"
 RECURSIVE="${RECURSIVE:-0}"
 
-selection=${NNN_SEL:-${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection}
+case "$NNN_TRASH" in
+	1)
+		RM_UTIL="trash-put" ;;
+	2)
+		RM_UTIL="gio trash" ;;
+	*)
+		RM_UTIL="rm -ri" ;;
+esac
+
 exit_status=0
 
-dst_file=$(mktemp "$TMPDIR/.nnnXXXXXX")
-
-if [ -s "$selection" ]; then
-	printf "Rename 'c'urrent / 's'election? "
-	read -r resp
-
-    if ! [ "$resp" = "c" ] && ! [ "$resp" = "s" ]; then
-        exit 1
-    fi
-fi
-
-if [ "$resp" = "s" ]; then
+if nnn_use_selection "Rename"; then
+	# shellcheck disable=SC2154
 	arr=$(tr '\0' '\n' < "$selection")
 else
 	findcmd="find . ! -name ."
@@ -46,7 +47,7 @@ else
 		findcmd="$findcmd -prune"
 	fi
 
-	if [ "$INCLUDE_HIDDEN" -eq 0 ]; then
+	if [ "$NNN_INCLUDE_HIDDEN" -eq 0 ]; then
 		findcmd="$findcmd ! -name \".*\""
 	fi
 
@@ -61,6 +62,9 @@ fi
 
 lines=$(printf "%s\n" "$arr" | wc -l)
 width=${#lines}
+
+dst_file=$(mktemp "$TMPDIR/.nnnXXXXXX")
+trap 'rm -f "$dst_file"' EXIT
 
 printf "%s" "$arr" | awk '{printf("%'"${width}"'d %s\n", NR, $0)}' > "$dst_file"
 
@@ -164,8 +168,7 @@ done <"$dst_file"
 
 unset "items[0]"
 for item in "${items[@]}"; do
-	rm -ri "$item"
+	$RM_UTIL "$item"
 done
 
-rm "$dst_file"
 exit $exit_status
