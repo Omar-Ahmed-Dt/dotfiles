@@ -11,11 +11,11 @@ super + shift + r
 super + Return
     kitty 
 # browser
-super + shift + b
+super +  b
     ~/scripts/browser.sh
 # firefox
-# super + shift + b
-#     firefox
+super + shift + b
+    firefox
 #file manger gui 
 super + shift + Return
     thunar 
@@ -70,10 +70,11 @@ super + shift + d
     ~/scripts/lan_dmenu.sh && dmenu_run
     # rofi -terminal kitty -show drun -icon-theme "Papirus" -show-icons
 #lang 
-shift + Alt_L
+# shift + Alt_L
+super + space
     setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ara || setxkbmap us && pkill -RTMIN+15 i3blocks
-shift + Alt_R
-	setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ara || setxkbmap us && pkill -RTMIN+15 i3blocks
+# shift + Alt_R
+	# setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ara || setxkbmap us && pkill -RTMIN+15 i3blocks
 #power 
 super + Escape 
 	/home/omar/scripts/power.sh
@@ -105,8 +106,8 @@ super + v
 super + Print
 	simplescreenrecorder
 #mpv youtube 
-super + shift + p 
-  ~/scripts/mpvload
+# super + shift + p 
+#   ~/scripts/mpvload
 #mp3-youtube-dl 
 super + shift + y
     /home/omar/scripts/ytdmenu.sh
@@ -172,8 +173,8 @@ super + period
 F10
     $HOME/scripts/keys.sh
 # web 
-super + shift + w 
-    ~/scripts/web.sh
+# super + shift + w 
+#     ~/scripts/web.sh
 # windows 
 # super + shift + i
 #     kitty -e ~/scripts/windows.sh

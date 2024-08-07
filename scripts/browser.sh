@@ -1,8 +1,7 @@
 #!/bin/bash
-declare options=("Firefox
-Mercury
+declare options=("Google-chrome-stable
+Firefox
 Brave
-Google-chrome-stable
 Chromium"
 )
 
@@ -12,9 +11,9 @@ case "$choice" in
    quit)
        echo "program terminated." && exit 1
    ;;
-   Mercury)
-       choice="mercury-browser"
-   ;;
+   # Mercury)
+   #     choice="mercury-browser"
+   # ;;
    Firefox)
        choice="firefox"
    ;;
