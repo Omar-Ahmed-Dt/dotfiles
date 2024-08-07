@@ -72,7 +72,8 @@ bindsym $mod+z focus child
 bindsym $mod+i split h
 bindsym $mod+u split v
 floating_modifier $mod
-bindsym $mod+space floating toggle
+# bindsym $mod+space floating toggle
+bindsym $mod+t floating toggle
 bindsym $mod+f fullscreen toggle
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
@@ -100,6 +101,9 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+# Disable automatic window focus
+# focus_follows_mouse no
 
 # kitti3 
 exec_always --no-startup-id kitti3 -p CC -s 0.8 0.7 -n n1
@@ -176,7 +180,7 @@ exec --no-startup-id dunst
 # lvim and acpi
 exec_always --no-startup-id xhost +local:root 
 
-exec --no-startup-id $HOME/scripts/keys.sh 
+# exec --no-startup-id $HOME/scripts/keys.sh 
 # exec --no-startup-id easyeffects --gapplication-service
 exec --no-startup-id flameshot
 exec --no-startup-id xfce4-clipman

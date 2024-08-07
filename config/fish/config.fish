@@ -13,6 +13,7 @@ set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 set TERMINAL "kitty"                         # Sets the terminal type
 set EDITOR   "lvim"
 set VISUAL   "lvim"
+set -x BROWSER firefox
 
 #set DISPLAY ":0.0"
 
@@ -588,8 +589,8 @@ end
 # end
 
 #my config for nnn file manger alias nnn='nnn -eRx'
-alias nn='nnn -Rrxl 5' 
-alias n='nnn -Rrxl 5'
+alias nn='nnn -rxl 5' 
+alias n='nnn -rxl 5'
 export NNN_PLUG='c:!convert "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!bash
 -i*;p:rsynccp;n:nmount;z:autojump;d:~/scripts/dr.sh'
 export NNN_BMS="a:$HOME/home_docker/metube/videos;r:$HOME/rnote;m:/mnt/sdb1/;g:$HOME/Documents/GitHub;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 

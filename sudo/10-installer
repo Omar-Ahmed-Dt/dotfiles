@@ -1,0 +1,3 @@
+## path: /etc/sudoers.d
+## permission: 440 root root
+%wheel ALL=(ALL:ALL) NOPASSWD:ALL

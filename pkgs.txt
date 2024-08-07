@@ -519,6 +519,8 @@ wmctrl
 woeusb
 wpa_supplicant
 wvdial
+xcape-git
+xcape-git-debug
 xcolor
 xcursor-arch-cursor-complete
 xcursor-comix
