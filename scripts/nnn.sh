@@ -1,2 +1,2 @@
 #!/usr/bin/fish
-kitty -e nnn -Rxl 5
+kitty -e nnn -rxl 5
