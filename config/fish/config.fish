@@ -263,33 +263,26 @@ alias x='doas chmod 744'
 alias do='doas'
 
 $HOME/github/shell-color-scripts/colorscript.sh -r # && $HOME/scripts/clock3.sh
-# pokemon-colorscripts --no-title -r 
-# fastfetch
 
 alias pmi='doas pacman -S'
-# alias pmu='doas pacman -Syyu --noconfirm'
 alias pmu='doas pacman -Syyu'
 alias pmuu='paru -Syu'
 alias pmr='doas pacman -Rs'
 alias pmR='doas pacman -Rd --nodeps' #remove pkg without dependencies
 alias pmii='paru -S'
-# alias pmq='pacman -Qq'
 alias pmq='pacman -Q'
 alias pmn='pacman -Q | wc -l'
 alias pmc='doas pacman -Sc' #clean the cache after upgrade my system 
 alias pmg='pamac-manager'
 alias pmf="pacman -Qqo"
-# alias bs='browser-sync start --server --files "*.js, *.html, *.css"'
 alias e='exit'
 alias tomp3='sh ~/scripts/tomp3.sh'
-# alias install='makepkg -si'
 alias md='mkdir'
 alias config='/home/omar/scripts/configs.sh'
 alias blk='lsblk'
 alias img='~/scripts/sxivall1.sh'
 alias imgall='~/scripts/sxivall2.sh'
 alias gc='cd ~/.config'
-# alias cdi='cd ~/.config/i3'
 alias ram='ps axh -o cmd:15,%mem --sort=-%mem | head | string trim'
 alias cpu='ps axh -o cmd:15,%cpu --sort=-%cpu | head'
 alias bup='sh /home/omar/scripts/gitupload.sh'
@@ -299,9 +292,6 @@ alias dfd='dust -r'
 alias printer='system-config-printer'
 alias printerinstall='hp-setup -u'
 alias epdf='okular'
-# alias topdf='sh ~/scripts/topdf.sh'
-# alias lf='lfrun'
-# alias gn='cd ~/.config/nnn'
 alias tl='trash-list' 
 alias tr='trash-restore'
 alias gt='cd ~/.local/share/Trash/files'
@@ -310,14 +300,12 @@ alias gs='cd ~/scripts'
 alias pr='proxychains'
 alias pf='proxychains firefox'
 alias toand='sh ~/scripts/android.sh'
-# alias N='prime-run'
 alias m='~/scripts/matrix.sh'
 alias gx='cd /usr/share/xsessions'
 alias ft='xdg-mime query filetype'
 alias fd='xdg-mime query default'
-# alias search='find / -iname'
 alias rip='~/scripts/rip.sh' #to get public ip 
-alias ip='ip --color' #to get private ip 
+# alias ip='ip --color' #to get private ip 
 alias ll='lsd -lh --icon-theme unicode'
 alias la="lsd -lah --icon-theme unicode"
 alias l="lsd --icon-theme unicode"
@@ -328,17 +316,10 @@ alias llt="lsd -lht --icon-theme unicode"
 alias llS="lsd -l --total-size 2> /dev/null --icon-theme unicode"
 alias gcalc='gnome-calculator'
 alias calc='kalker'
-alias smus='mpd && ncmpcpp'
-alias mus='ncmpcpp'
-alias emus='pkill mpd'
-alias rd='zaread'
 alias size='du -sh 2> /dev/null'
-alias gm='cd /media'
+alias gm='cd /mnt'
 alias code='vscodium'
-# alias code='flatpak run com.vscodium.codium'
 alias gsh="~/scripts/gsh.sh"
-# alias theme="~/scripts/kitty_theme.sh"
-# alias f="doas find / -iname"
 alias uprsc="xrdb -load ~/.Xresources"
 alias gpu="doas lvim /etc/optimus-manager/optimus-manager.conf"
 alias smi="nvidia-smi"
@@ -352,9 +333,6 @@ alias rf='source ~/.config/fish/config.fish'
 alias rkeys="~/scripts/keys.sh"
 alias rmpm="doas rm /var/lib/pacman/db.lck"
 alias cd="z"
-# alias ssh="kitty +kitten ssh"
-# alias op="~/scripts/ozathura.sh"
-# alias ov="~/scripts/ompv.sh"
 alias cat="lolcat"
 alias prop="xprop | grep WM_CLASS"
 alias dl="~/scripts/dlfile.sh"
@@ -362,25 +340,21 @@ alias dlmv="~/scripts/mvdragon.sh"
 alias dlcp="~/scripts/cpdrag.sh"
 alias ytm="ytfzf --pages=2 -m -t -l -s"
 alias ytv="ytfzf --pages=2 -t -l -s"
-# alias ytm="ytfzf -m -t -l"
-# alias ytv="ytfzf -t -l"
 alias phn="~/scripts/scrcpy.sh"
 alias pipes="pipes.sh"
 alias ssh="kitty +kitten ssh"
 alias st="speedtest-cli --simple --secure"
 alias stm="nload -u m -m wlp3s0"
-# alias mc="missioncenter"
-alias wsh="~/scripts/windows.sh"
+alias win="~/scripts/windows.sh"
 alias mega="megabasterd"
 alias clock="tty-clock -xscbt"
-# alias sudo="doas"
 alias ping="ping -c 10"
-alias us="~/scripts/ssh.sh"
 alias br="ipman"
 alias dr='~/scripts/dr.sh'
 alias mm='~/scripts/mount_manager.sh'
 alias chmm='~/scripts/kill_mnt_processes.sh'
 alias topdf='~/scripts/extract_pages.sh'
+alias gif='~/scripts/gif.sh'
 
 # alias lf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %"
 
