@@ -33,6 +33,8 @@ application/x-xopp=com.github.xournalpp.xournalpp.desktop
 image/svg+xml=org.xfce.ristretto.desktop
 text/markdown=codium.desktop
 x-scheme-handler/tonsite=org.telegram.desktop.desktop
+x-scheme-handler/msteams=teams.desktop
+application/x-zerosize=libreoffice-writer.desktop
 
 [Added Associations]
 application/x-xopp=com.github.xournalpp.xournalpp.desktop;
@@ -43,3 +45,4 @@ image/svg+xml=org.xfce.ristretto.desktop;
 text/markdown=codium.desktop;
 application/x-shellscript=userapp-kitty -e lvim-PQI3O2.desktop;userapp-kitty -e -L42TR2.desktop;
 x-scheme-handler/tonsite=org.telegram.desktop.desktop;
+application/x-zerosize=libreoffice-writer.desktop;

@@ -1,21 +1,8 @@
---[[
- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
- `lvim` is the global options object
-]]
-
--- vim options
--- vim.opt.shiftwidth = 2
--- vim.opt.tabstop = 2
--- vim.opt.relativenumber = true
-
--- colorscheme
---
--- lvim.colorscheme = "tomorrow"
 lvim.colorscheme = "gruvbox"
 --
 -- Statusline
-lvim.builtin.lualine.style = "default"
--- lvim.builtin.lualine.style = "lvim"
+-- lvim.builtin.lualine.style = "default"
+lvim.builtin.lualine.style = "lvim"
 -- lvim.builtin.lualine.style = "none"
 --
 -- reload
@@ -39,6 +26,13 @@ lvim.keys.normal_mode["<S-j>"] = ":HopWord<cr>"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
+-- Function to write a file with sudo
+vim.cmd([[
+  command! W execute 'w !sudo tee % >/dev/null' <bar> edit!
+]])
+
+-- Optionally, you can map this command for convenience
+vim.api.nvim_set_keymap('n', '<leader>w', ':W<CR>', { noremap = true, silent = true })
 vim.opt.backspace = vim.opt.backspace + { "nostop" } -- Don't stop backspace at insert
 vim.opt.clipboard = "unnamedplus"                    -- Connection to the system clipboard
 vim.opt.cmdheight = 0                                -- hide command line unless needed
@@ -79,19 +73,10 @@ vim.opt.foldmethod = "manual"                        -- folding set to "expr" fo
 vim.opt.cmdheight = 2                                -- more space in the neovim command line for displaying messages
 vim.opt.cmdheight = 2                                -- more space in the neovim command line for displaying messages
 vim.opt.breakindent = true
-vim.opt.textwidth = 150
-vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
+vim.opt.guifont = "monospace:h17"                    -- the font used in graphical neovim applications
 vim.opt.hlsearch = true
-
-
--- colorcolumn
-vim.api.nvim_set_option_value("colorcolumn", "100", {})
-
--- global
--- vim.go.acd = true -- open terminal in the same path
-
--- -- Change theme settings
--- lvim.colorscheme = "lunar"
+vim.opt.textwidth = 150
+vim.opt.colorcolumn = "150"
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
@@ -205,7 +190,8 @@ lvim.plugins = {
         build = "cd app && npm install",
         ft = "markdown",
         config = function()
-            vim.g.mkdp_auto_start = 1
+            vim.g.mkdp_auto_start = 1 -- Automatically start preview when opening Markdown files
+            -- vim.g.mkdp_refresh_slow = 1 -- Optional: make preview updates smoother for larger documents
         end,
     },
 
@@ -245,20 +231,6 @@ lvim.plugins = {
 
 }
 
--- Run ColorizerToggle for hexa
--- vim.api.nvim_create_autocmd("BufEnter", {
---     pattern = { "*" },
---     command = "ColorizerToggle",
---     command = "source ~/.config/lvim/ftplugin/colorizer.lua",
--- })
-
--- Function to write a file with sudo
-vim.cmd([[
-  command! W execute 'w !sudo tee % >/dev/null' <bar> edit!
-]])
-
--- Optionally, you can map this command for convenience
-vim.api.nvim_set_keymap('n', '<leader>w', ':W<CR>', { noremap = true, silent = true })
 
 
 -- Hexa color
@@ -266,12 +238,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
     pattern = { "*" },
     command = "ColorizerToggle",
 })
-
--- Python files
--- vim.api.nvim_create_autocmd("BufEnter", {
---     pattern = { "*.py" },
---     command = "source ~/.config/lvim/ftplugin/py.lua",
--- })
 
 -- Run Bash File
 vim.api.nvim_create_autocmd("BufEnter", {
@@ -284,12 +250,3 @@ vim.api.nvim_create_autocmd("BufEnter", {
     pattern = { "*.md" },
     command = "source ~/.config/lvim/ftplugin/md.lua",
 })
-
--- Run groff to generate pdf file
--- vim.api.nvim_create_autocmd("BufEnter", {
---     pattern = { "*.ms" },
---     command = "source ~/.config/lvim/ftplugin/ms.lua",
--- })
--- local lspconfig = require('lspconfig')
-
--- lspconfig.bashls.setup {}
