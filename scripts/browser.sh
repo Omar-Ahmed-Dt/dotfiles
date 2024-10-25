@@ -18,7 +18,7 @@ case "$choice" in
        choice="firefox"
    ;;
    Brave)
-       choice="brave"
+       choice="brave --password-store=basic"
    ;;
    Google-chrome-stable)
        choice="google-chrome-stable"
