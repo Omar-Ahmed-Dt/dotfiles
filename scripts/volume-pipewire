@@ -156,7 +156,8 @@ sed 's/.*= "\(.*\)".*/\1/')
         # echo "Sound inactive"
         vol=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
         echo "$vol"
-        COLOR='#222225'
+        COLOR='#32302f'
+        # COLOR='#222225'
     fi
 
     if [[ $SUBSCRIBE == 1 ]] ; then

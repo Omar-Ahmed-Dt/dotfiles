@@ -123,11 +123,11 @@ for_window [instance="mus"] move scratchpad
 exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name mus -e ncmpcpp
 bindsym $mod+Shift+n [instance="mus"] scratchpad show; [instance="mus"] move position center
 # cal
-for_window [instance="date"] floating enable 
-for_window [instance="date"] resize set 733 500
-for_window [instance="date"] move scratchpad
-exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name date -e khal --color interactive
-bindsym $mod+Shift+t [instance="date"] scratchpad show; [instance="date"] move position center
+# for_window [instance="date"] floating enable 
+# for_window [instance="date"] resize set 733 500
+# for_window [instance="date"] move scratchpad
+# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name date -e khal --color interactive
+# bindsym $mod+Shift+t [instance="date"] scratchpad show; [instance="date"] move position center
 # calc
 # for_window [instance="calc"] floating enable 
 # for_window [instance="calc"] resize set 900 325
@@ -261,7 +261,8 @@ bar {
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks
     colors {
-        background #282c34
+        background #32302f
+        # background #282c34
         statusline #eeeeee
         separator #eeeeee
         focused_workspace     #ebdbb2 #282828 #ebdbb2

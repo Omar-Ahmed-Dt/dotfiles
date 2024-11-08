@@ -1,7 +1,6 @@
 #!/bin/bash
 declare options=("Google-chrome-stable
 Firefox
-Brave
 Chromium"
 )
 
@@ -17,9 +16,9 @@ case "$choice" in
    Firefox)
        choice="firefox"
    ;;
-   Brave)
-       choice="brave --password-store=basic"
-   ;;
+   # Brave)
+   #     choice="brave --password-store=basic"
+   # ;;
    Google-chrome-stable)
        choice="google-chrome-stable"
    ;;
@@ -28,34 +27,3 @@ case "$choice" in
    ;;
 esac
 "$choice"
-
-# declare options=("Thorium
-# Firefox
-# Brave
-# Google-chrome-stable
-# Chromium"
-# )
-
-# choice=$(echo -e "${options[@]}" | dmenu -i -l 20 -g 2 -X 0 -Y 0 -W 680 -p 'launch browser: ' )
-
-# case "$choice" in 
-#     quit)
-#         echo "program terminated." && exit 1
-#     ;;
-#     Thorium)
-#         choice="thorium-browser"
-#     ;;
-#     Firefox)
-#         choice="firefox"
-#     ;;
-#     Brave)
-#         choice="brave"
-#     ;;
-#     Google-chrome-stable)
-#         choice="google-chrome-stable"
-#     ;;
-#     Chromium)
-#         choice="chromium"
-#     ;;
-# esac
-# "$choice"
