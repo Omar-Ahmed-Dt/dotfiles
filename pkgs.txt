@@ -162,6 +162,7 @@ ffmpegthumbnailer
 file-roller
 firefox
 fish
+fisher
 flameshot
 flat-remix-git
 fluent-gtk-theme

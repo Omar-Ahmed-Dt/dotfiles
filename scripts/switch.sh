@@ -12,7 +12,8 @@ windows=$(echo "$windows" | \
                     $1 = ""; printf "%s\n", $0}')
 
 
-target=$(echo "$windows" | dmenu -l 40 -i -p switch: | tr -s '[:blank:]' | cut -d ' ' -f 2-)
+# target=$(echo "$windows" | dmenu  -l 40 -i -p switch: | tr -s '[:blank:]' | cut -d ' ' -f 2-)
+target=$(echo "$windows" | rofi -dmenu -i -p switch: | tr -s '[:blank:]' | cut -d ' ' -f 2-)
 
 if [[ -n $target ]]; then
     wmctrl -a "$target"
