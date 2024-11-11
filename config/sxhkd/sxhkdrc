@@ -1,6 +1,5 @@
 ####
 # input from keyboard 
-#run : xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 #Reload sxhkd 
 shift + Escape
 	pkill -USR1 -x sxhkd
@@ -37,9 +36,6 @@ super + Right
 # vol down
 super + Left
    ~/scripts/volume_notification.sh down && pkill -RTMIN+10 i3blocks
-#vol toggle 
-# super + m 
-#    ~/scripts/volume_notification.sh mute && pkill -RTMIN+10 i3blocks
 #mic toggle 
 XF86AudioMicMute
    pactl set-source-mute @DEFAULT_SOURCE@ toggle && pkill -RTMIN+17 i3blocks
@@ -73,8 +69,6 @@ super + shift + d
 # shift + Alt_L
 super + space
     setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ara || setxkbmap us && pkill -RTMIN+15 i3blocks
-# shift + Alt_R
-	# setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ara || setxkbmap us && pkill -RTMIN+15 i3blocks
 #power 
 super + Escape 
 	/home/omar/scripts/power.sh
@@ -105,9 +99,6 @@ super + v
 #screeen record 
 super + Print
 	simplescreenrecorder
-#mpv youtube 
-# super + shift + p 
-#   ~/scripts/mpvload
 #mp3-youtube-dl 
 super + shift + y
     /home/omar/scripts/ytdmenu.sh
@@ -120,9 +111,6 @@ super + shift + s
 #kill process 
 super + shift + k 
     /home/omar/github/dmscripts/scripts/dm-kill
-#github disktop
-# super + shift + g 
-#     github-desktop
 #kill mpv 
 super + d 
     pkill mpv 
@@ -138,9 +126,6 @@ super + shift + v
 # mail  
 super + shift + m
     thunderbird
-#mount 
-# super + Insert
-# 	~/scripts/mount_umount.sh
 # Pause button 
 ctrl + Pause
     mpc toggle 
@@ -159,7 +144,6 @@ super + shift + a
 # ocr 
 super + e 
     ~/scripts/ocr.sh
-  # ~/github/dmscripts/scripts/dm-music
 # multi ocr
 Insert
     ~/scripts/multi_ocr.sh
@@ -172,39 +156,12 @@ super + period
 # rkeys
 F10
     $HOME/scripts/keys.sh
-# web 
-# super + shift + w 
-#     ~/scripts/web.sh
-# windows 
-# super + shift + i
-#     kitty -e ~/scripts/windows.sh
-# joplin 
-# super + shift + j 
-#     joplin-desktop
-# p3x-onenote
-# super + n
-#    p3x-onenote
 # xournalpp 
 super + n
     rnote
-   # xournalpp 
-# scrivano 
-# super + n
-#     com.github.scrivanolabs.scrivano
-# vscode 
-# super + shift + e 
-#     vscodium
-# whatsapp
-# super + w
-#     zapzap
-    # whatsdesk
-    # whatsapp-nativefier
 # messenger
 super + m
     messenger-nativefier
-# zathura 
-# super + shift + z 
-#     zathura
 # switch
 super + shift + w 
     ~/scripts/switch.sh
