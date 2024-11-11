@@ -589,6 +589,7 @@ xrectsel
 xterm
 xwallpaper
 yay-bin
+youtube-dl
 yt-dlp
 ytfzf
 z

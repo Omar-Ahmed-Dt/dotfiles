@@ -4,6 +4,7 @@ set fish_cursor_insert line
 set fish_cursor_replace_one underscore
 set fish_cursor_replace underscore
 set fish_cursor_visual block
+# set -x TERM xterm-256color
 ##
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
@@ -24,6 +25,13 @@ function fish_user_key_bindings
 end
 
 alias clear='echo -en "\x1b[2J\x1b[1;1H" ; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
+alias cl='clear'
+# bind ctrl+l :  
+function fish_user_key_bindings
+    bind -M insert \cl 'clear; commandline -f execute'    # Bind Ctrl + L to clear and press enter in insert mode
+    # bind -M insert \cl 'clear'    # Bind Ctrl + L to clear and press enter in insert mode
+    # bind -M default \cl 'clear'   # Bind Ctrl + L to clear and press enter in normal mode
+end
 
 # navigation
 alias .1='cd ..'
@@ -131,17 +139,19 @@ alias swm="~/scripts/switch.sh"
 alias mega="megabasterd"
 alias clock="tty-clock -xscbt"
 alias ping="ping -c 10"
-alias br="ipman"
 alias dr='~/scripts/dr.sh'
 alias mm='~/scripts/mount_manager.sh'
 alias chmm='~/scripts/kill_mnt_processes.sh'
 alias topdf='~/scripts/extract_pages.sh'
 alias gif='~/scripts/gif.sh'
-alias bat='bat --theme gruvbox-dark -l man'
+alias bat='bat --theme gruvbox-dark'
 alias rm='trash-put -ir'
 alias rmprm='trash-empty -vi'
 alias dbls='~/scripts/dbdb.sh'
 alias db='~/scripts/dbrowse.sh'
+alias RM='trash-empty'
+alias kh='khal calendar'
+alias gt='git'
 
 function se
     cd ~/scripts

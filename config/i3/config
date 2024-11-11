@@ -120,7 +120,8 @@ bindsym $mod+shift+o nop n1
 for_window [instance="mus"] floating enable 
 for_window [instance="mus"] resize set 1000 900
 for_window [instance="mus"] move scratchpad
-exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name mus -e ncmpcpp
+# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name mus -e ncmpcpp
+exec --no-startup-id $term --name mus -e ncmpcpp
 bindsym $mod+Shift+n [instance="mus"] scratchpad show; [instance="mus"] move position center
 # cal
 # for_window [instance="date"] floating enable 
@@ -138,7 +139,8 @@ bindsym $mod+Shift+n [instance="mus"] scratchpad show; [instance="mus"] move pos
 for_window [instance="monitor"] floating enable 
 for_window [instance="monitor"] resize set 1500 1000
 for_window [instance="monitor"] move scratchpad
-exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name monitor -e htop 
+# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name monitor -e htop 
+exec --no-startup-id $term --name monitor -e htop 
 bindsym $mod+shift+h [instance="monitor"] scratchpad show; [instance="monitor"] move position center
 # Pavucontrol
 for_window [instance="pavu"] floating enable 
@@ -271,8 +273,9 @@ bar {
         urgent_workspace      #cc241d #900000 #fb4934
       }
     }
-    # class                 border  backgr. text    indicator
-    client.focused          #353439 #fcce7b #e5e5e5 #ed8274
+    # class                   border  backgr. text    indicator
+    # client.focused          #353439 #fcce7b #e5e5e5 #ed8274
+    client.focused            #353439 #7daea3 #e5e5e5 #d4be98
     client.unfocused          #222222 #222222 #aaaaaa #222222
     client.focused_inactive   #222222 #222222 #a9a9a9 #222222
     client.placeholder        #222222 #222222 #aaaaaa #222222
