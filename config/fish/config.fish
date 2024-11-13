@@ -151,7 +151,6 @@ alias dbls='~/scripts/dbdb.sh'
 alias db='~/scripts/dbrowse.sh'
 alias RM='trash-empty'
 alias kh='khal calendar'
-alias gt='git'
 
 function se
     cd ~/scripts
