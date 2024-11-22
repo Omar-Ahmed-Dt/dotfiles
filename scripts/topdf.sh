@@ -5,5 +5,3 @@ do
     output=`echo $inpute | sed -e 's/\..*$//g'`
     soffice --headless --convert-to pdf "$inpute"
 done 
-
-

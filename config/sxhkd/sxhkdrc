@@ -147,10 +147,7 @@ super + e
 # multi ocr
 Insert
     ~/scripts/multi_ocr.sh
-# logout 
-super + Delete 
-	pkill i3
-# emoji 
+# emoji
 super + period
     ~/scripts/lan_dmenu.sh && bemoji -f ~/scripts/emoji
 # rkeys

@@ -4,4 +4,3 @@
 setxkbmap -option caps:escape
 # mapping escape to caps 
 # setxkbmap -option caps:swapescape
-

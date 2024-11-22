@@ -180,6 +180,7 @@ gifcast
 gifsicle
 gimp
 git
+git-delta
 gksu
 gnome-calculator
 gnu-netcat
@@ -281,6 +282,8 @@ nbd
 ncmpcpp
 ndisc6
 neofetch
+neohtop
+neohtop-debug
 neovim
 nerd-fonts-source-code-pro
 network-manager-applet
@@ -423,7 +426,12 @@ slurp
 smartmontools
 sof-firmware
 speedtest-cli
+spicetify-cli
+spicetify-cli-debug
 splix
+spotify
+spotify-tray-git
+spotify-tray-git-debug
 squashfs-tools
 starship
 stress
