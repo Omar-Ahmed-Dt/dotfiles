@@ -93,15 +93,10 @@ bindsym $mod+Ctrl+k move up
 
 bindsym $mod+s mode "resize"
 mode "resize" {
-        bindsym h resize shrink width 4 px or 4 ppt
-        bindsym k resize grow height 4 px or 4 ppt
-        bindsym j resize shrink height 4 px or 4 ppt
-        bindsym l resize grow width 4 px or 4 ppt
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 4 px or 4 ppt
-        bindsym Down resize grow height 4 px or 4 ppt
-        bindsym Up resize shrink height 4 px or 4 ppt
-        bindsym Right resize grow width 4 px or 4 ppt
+        bindsym Shift+j resize shrink width 2 px or 2 ppt
+        bindsym k       resize grow height 2 px or 2 ppt
+        bindsym j       resize shrink height 2 px or 2 ppt
+        bindsym Shift+k resize grow width 2 px or 2 ppt
         # exit resize mode: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -123,18 +118,6 @@ for_window [instance="mus"] move scratchpad
 # exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name mus -e ncmpcpp
 exec --no-startup-id $term --name mus -e ncmpcpp
 bindsym $mod+Shift+n [instance="mus"] scratchpad show; [instance="mus"] move position center
-# cal
-# for_window [instance="date"] floating enable 
-# for_window [instance="date"] resize set 733 500
-# for_window [instance="date"] move scratchpad
-# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name date -e khal --color interactive
-# bindsym $mod+Shift+t [instance="date"] scratchpad show; [instance="date"] move position center
-# calc
-# for_window [instance="calc"] floating enable 
-# for_window [instance="calc"] resize set 900 325
-# for_window [instance="calc"] move scratchpad
-# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name calc -e kalker 
-# bindsym $mod+c [instance="calc"] scratchpad show; [instance="calc"] move position center
 # htop
 for_window [instance="monitor"] floating enable 
 for_window [instance="monitor"] resize set 1500 1000
@@ -166,7 +149,6 @@ exec_always --no-startup-id autotiling
 # Start the daemon which listens to focus changes and sets _back mark
 exec --no-startup-id /usr/bin/i3-back
 # Bind a switch key, which focuses the previously focused window
-# bindsym $mod+Tab [con_mark=_back] focus
 bindsym $mod+Tab [con_mark=_back] focus
 bindsym mod1+Tab workspace back_and_forth
 
@@ -179,7 +161,6 @@ exec --no-startup-id feh --bg-fill /home/omar/.cache/wall/wallpaper.jpg &
 exec_always --no-startup-id sxhkd 
 exec_always --no-startup-id mpd
 exec --no-startup-id clipmenud
-# exec --no-startup-id xfce4-power-manager &
 exec_always --no-startup-id redshift -P -O 3250 &
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 exec --no-startup-id dunst
@@ -187,18 +168,9 @@ exec --no-startup-id dunst
 # lvim and acpi
 exec_always --no-startup-id xhost +local:root 
 
-# exec --no-startup-id $HOME/scripts/keys.sh 
-# exec --no-startup-id easyeffects --gapplication-service
 exec_always --no-startup-id flameshot
 exec_always --no-startup-id xfce4-clipman
-# exec --no-startup-id slimbookbattery --minimize
-# exec --no-startup-id joplin-desktop 
-# exec --no-startup-id xautolock -time 2 -locker "betterlockscreen -l dim"
-# pcmanfm --daemon-mode:  
-# exec --no-startup-id pcmanfm -d 
 exec_always --no-startup-id caffeine 
-
-
 # Floating 
 for_window [class="Joplin"] floating enable
 for_window [class="SimpleScreenRecorder"] floating enable
@@ -255,8 +227,6 @@ smart_borders on
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 bar {
     separator_symbol "三"
-    # separator_symbol "|"
-    # separator_symbol "●"
     height 25
     workspace_buttons yes
     font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont Bold 8
@@ -274,8 +244,7 @@ bar {
       }
     }
     # class                   border  backgr. text    indicator
-    # client.focused          #353439 #fcce7b #e5e5e5 #ed8274
-    client.focused            #353439 #7daea3 #e5e5e5 #d4be98
+    client.focused          #353439 #fcce7b #e5e5e5 #ed8274
     client.unfocused          #222222 #222222 #aaaaaa #222222
     client.focused_inactive   #222222 #222222 #a9a9a9 #222222
     client.placeholder        #222222 #222222 #aaaaaa #222222

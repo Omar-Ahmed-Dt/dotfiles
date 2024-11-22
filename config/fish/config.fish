@@ -27,11 +27,11 @@ end
 alias clear='echo -en "\x1b[2J\x1b[1;1H" ; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
 alias cl='clear'
 # bind ctrl+l :  
-function fish_user_key_bindings
-    bind -M insert \cl 'clear; commandline -f execute'    # Bind Ctrl + L to clear and press enter in insert mode
+# function fish_user_key_bindings
+#     bind -M insert \cl 'clear; commandline -f execute'    # Bind Ctrl + L to clear and press enter in insert mode
     # bind -M insert \cl 'clear'    # Bind Ctrl + L to clear and press enter in insert mode
     # bind -M default \cl 'clear'   # Bind Ctrl + L to clear and press enter in normal mode
-end
+# end
 
 # navigation
 alias .1='cd ..'
@@ -146,11 +146,11 @@ alias topdf='~/scripts/extract_pages.sh'
 alias gif='~/scripts/gif.sh'
 alias bat='bat --theme gruvbox-dark'
 alias rm='trash-put -ir'
-alias rmprm='trash-empty -vi'
+alias rmPrm='trash-empty -vi'
 alias dbls='~/scripts/dbdb.sh'
 alias db='~/scripts/dbrowse.sh'
-alias RM='trash-empty'
 alias kh='khal calendar'
+alias chft='kitty +list-fonts | grep "Source Code Pro"'
 
 function se
     cd ~/scripts
@@ -285,8 +285,8 @@ end
 # nnn configs
 alias nn='nnn -Rrxl 5' 
 alias n='nnn -rRxl 5'
-export NNN_PLUG='c:!convert "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!fish
--i*;p:rsynccp;n:nmount;z:autojump;d:~/scripts/dr.sh'
+export NNN_PLUG='C:!magick "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!fish
+-i*;p:rsynccp;n:nmount;z:autojump;d:~/scripts/dr.sh;c:~/scripts/tomp4.sh'
 export NNN_BMS="a:$HOME/home_docker/metube/videos;r:$HOME/rnote;m:/mnt/sdb1/;g:$HOME/Documents/GitHub;D:$HOME/Documents/;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
