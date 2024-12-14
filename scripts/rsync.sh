@@ -2,7 +2,6 @@
 
 # Configuration
 SOURCE_DIR="/home/omar/"
-# DEST_DIR="/run/media/omar/My Passport"
 DEST_DIR="/mnt"
 LOG_FILE="/var/log/home_backup.log"
 EXCLUDE=".cache"

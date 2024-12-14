@@ -134,6 +134,8 @@ dmenu
 dmidecode
 dmraid
 dnsmasq
+docker
+docker-compose
 dosfstools
 dracula-gtk-theme
 dracula-icons-git
@@ -181,6 +183,7 @@ gifsicle
 gimp
 git
 git-delta
+github-desktop-bin
 gksu
 gnome-calculator
 gnu-netcat
@@ -204,6 +207,7 @@ gvfs-smb
 halo-icons-git
 hawkeye-quicklook-git
 hdparm
+helm
 highlight
 hplip
 htop-vim
@@ -216,6 +220,7 @@ i3blocks
 i3status
 imagewriter
 iotop
+ipython
 iw
 jfsutils
 kalker
@@ -226,6 +231,7 @@ khal
 kitti3
 kitty
 kripton-theme-git
+kubectl
 kvantum-qt5-git
 kvantum-theme-materia
 kvantum-theme-qogir-git
@@ -233,6 +239,7 @@ la-capitaine-icon-theme-git
 laptop-detect
 layan-gtk-theme-git
 layan-kde-git
+lens-bin
 less
 libadwaita-without-adwaita-git
 libayatana-appindicator
@@ -297,6 +304,7 @@ nfs-utils
 nilfs-utils
 nitrogen
 nnn-nerd
+nodejs
 nordzy-icon-theme-git
 noto-fonts
 noto-fonts-emoji
@@ -456,6 +464,23 @@ terminus-font
 tesseract-data-ara
 tesseract-data-eng
 testdisk
+texlive-langarabic
+texlive-langchinese
+texlive-langcjk
+texlive-langcyrillic
+texlive-langczechslovak
+texlive-langenglish
+texlive-langeuropean
+texlive-langfrench
+texlive-langgerman
+texlive-langgreek
+texlive-langitalian
+texlive-langjapanese
+texlive-langkorean
+texlive-langother
+texlive-langpolish
+texlive-langportuguese
+texlive-langspanish
 the_silver_searcher
 thunar
 thunar-archive-plugin

@@ -23,8 +23,8 @@ for file in $selected_files; do
 
   # Check if the conversion was successful
   if [ $? -eq 0 ]; then
-    echo "Converted $file to $output_file successfully."
+    notify-send "Converted $file to $output_file successfully."
   else
-    echo "Failed to convert $file. Skipping..."
+    notify-send "Failed to convert $file. Skipping..."
   fi
 done
