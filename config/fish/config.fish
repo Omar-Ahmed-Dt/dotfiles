@@ -131,7 +131,7 @@ alias ytm="ytfzf --pages=2 -m -t -l -s"
 alias ytv="ytfzf --pages=2 -t -l -s"
 alias phn="~/scripts/scrcpy.sh"
 alias pipes="pipes.sh"
-alias ssh="kitty +kitten ssh"
+# alias ssh="kitty +kitten ssh"
 alias st="speedtest-cli --simple --secure"
 alias stm="nload -u m -m wlp3s0"
 alias win="~/scripts/windows.sh"
@@ -151,6 +151,8 @@ alias dbls='~/scripts/dbdb.sh'
 alias db='~/scripts/dbrowse.sh'
 alias kh='khal calendar'
 alias chft='kitty +list-fonts | grep "Source Code Pro"'
+alias k='kubectl'
+alias h='helm'
 
 function se
     cd ~/scripts

@@ -64,9 +64,7 @@ F11
 #dmenu 
 super + shift + d 
     ~/scripts/lan_dmenu.sh && dmenu_run
-    # rofi -terminal kitty -show drun -icon-theme "Papirus" -show-icons
 #lang 
-# shift + Alt_L
 super + space
     setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ara || setxkbmap us && pkill -RTMIN+15 i3blocks
 #power 
