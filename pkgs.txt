@@ -120,6 +120,7 @@ cli-visualizer
 clipman
 clipmenu-rofi
 clonezilla
+conky
 cpupower
 cryptsetup
 cups
@@ -351,7 +352,7 @@ pcmanfm
 pcsclite
 pdfjam-extras
 pdftk
-picom-git
+picom
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -529,6 +530,7 @@ ttf-opensans
 ttf-roboto
 ttf-roboto-mono
 ttf-ubuntu-font-family
+ttf-weather-icons
 tumbler
 udftools
 ueberzug
