@@ -20,3 +20,5 @@ rm ~/Documents/GitHub/dotfiles/config/lvim/lazy-lock.json
 cp -r ~/.config/ytfzf/* ~/Documents/GitHub/dotfiles/config/ytfzf/
 cp -r ~/.config/vis/* ~/Documents/GitHub/dotfiles/config/vis/
 rm ~/Documents/GitHub/dotfiles/config/vis/vis.log
+cp -r /home/omar/.config/conky/ ~/Documents/GitHub/dotfiles/config/
+cp ~/.config/picom.conf ~/Documents/GitHub/dotfiles/config/
