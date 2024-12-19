@@ -294,6 +294,7 @@ neohtop
 neohtop-debug
 neovim
 nerd-fonts-source-code-pro
+netdata
 network-manager-applet
 networkmanager
 networkmanager-openconnect
