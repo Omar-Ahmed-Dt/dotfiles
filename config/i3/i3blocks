@@ -8,9 +8,9 @@ separator=true
 markup=pango
 
 # :)
-[currently_playing]
-command=~/scripts/currently_playing
-interval=persist
+[currently_playing.sh]
+# interval=persist
+interval=1
 align=center
 border_top=1
 border=#ebdbb2
@@ -150,7 +150,7 @@ border_bottom=0
 interval=30
 border=#ebdbb2
 color=#ebdbb2
-label=<span color="#ebdbb2">日 </span>
+# label=<span color="#ebdbb2">日 </span>
 border_top=1
 border_right=0
 border_top=1
