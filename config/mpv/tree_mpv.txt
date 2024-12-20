@@ -1,0 +1,61 @@
+.
+├── fonts
+│   ├── uosc_icons.otf
+│   └── uosc_textures.ttf
+├── input.conf
+├── memo-history.log
+├── mpv.conf
+├── script-opts
+│   ├── memo.conf
+│   ├── thumbfast.conf
+│   └── uosc.conf
+├── scripts
+│   ├── memo.lua
+│   ├── thumbfast.lua
+│   └── uosc
+│       ├── bin
+│       │   ├── ziggy-darwin
+│       │   ├── ziggy-linux
+│       │   └── ziggy-windows.exe
+│       ├── char-conv
+│       │   └── zh.json
+│       ├── elements
+│       │   ├── BufferingIndicator.lua
+│       │   ├── Button.lua
+│       │   ├── Controls.lua
+│       │   ├── Curtain.lua
+│       │   ├── CycleButton.lua
+│       │   ├── Element.lua
+│       │   ├── Elements.lua
+│       │   ├── ManagedButton.lua
+│       │   ├── Menu.lua
+│       │   ├── Menu.zip
+│       │   ├── PauseIndicator.lua
+│       │   ├── Speed.lua
+│       │   ├── Timeline.lua
+│       │   ├── TopBar.lua
+│       │   ├── Updater.lua
+│       │   ├── Volume.lua
+│       │   └── WindowBorder.lua
+│       ├── intl
+│       │   ├── de.json
+│       │   ├── es.json
+│       │   ├── fr.json
+│       │   ├── ro.json
+│       │   ├── ru.json
+│       │   ├── uk.json
+│       │   └── zh-hans.json
+│       ├── lib
+│       │   ├── ass.lua
+│       │   ├── buttons.lua
+│       │   ├── char_conv.lua
+│       │   ├── cursor.lua
+│       │   ├── intl.lua
+│       │   ├── menus.lua
+│       │   ├── std.lua
+│       │   ├── text.lua
+│       │   └── utils.lua
+│       └── main.lua
+└── tree_mpv.txt
+
+10 directories, 49 files

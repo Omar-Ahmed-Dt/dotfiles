@@ -2,7 +2,7 @@
 #
 pacman -Qeq > ~/Documents/GitHub/dotfiles/pkgs.txt
 cd ~/.config/
-cp -r alacritty fish neofetch sxhkd zathura htop mpv paru dmscripts i3 pcmanfm yay sxiv mimeapps.list dunst /home/omar/Documents/GitHub/dotfiles/config
+cp -r alacritty fish neofetch sxhkd zathura htop paru dmscripts i3 pcmanfm yay sxiv mimeapps.list dunst /home/omar/Documents/GitHub/dotfiles/config
 cd /home/omar/Documents/GitHub/dotfiles/config/dmscripts
 rm dmnote
 cp -r /home/omar/scripts/ /home/omar/Documents/GitHub/dotfiles/
@@ -22,3 +22,6 @@ cp -r ~/.config/vis/* ~/Documents/GitHub/dotfiles/config/vis/
 rm ~/Documents/GitHub/dotfiles/config/vis/vis.log
 cp -r /home/omar/.config/conky/ ~/Documents/GitHub/dotfiles/config/
 cp ~/.config/picom.conf ~/Documents/GitHub/dotfiles/config/
+cp ~/.config/mpv/mpv.conf   ~/Documents/GitHub/dotfiles/config/mpv/
+cp ~/.config/mpv/input.conf ~/Documents/GitHub/dotfiles/config/mpv/
+cp ~/.config/mpv/tree_mpv.txt ~/Documents/GitHub/dotfiles/config/mpv/
