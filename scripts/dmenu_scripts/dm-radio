@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+#
+# Script name: dm-radio
+# Description: Choose between online radio stations; stations defined in dmscripts config.
+# Dependencies: dmenu, fzf, rofi, mpv, notify-send, yt-dlp
+# GitLab: https://www.gitlab.com/dwt1/dmscripts
+# License: https://www.gitlab.com/dwt1/dmscripts/LICENSE
+# Contributors: Derek Taylor
+
+# Set with the flags "-e", "-u","-o pipefail" cause the script to fail
+# if certain things happen, which is a good thing.  Otherwise, we can
+# get hidden bugs that are hard to discover.
+set -euo pipefail
+
+# shellcheck disable=SC1091
+source ./_dm-helper.sh 2>/dev/null || source _dm-helper.sh 2>/dev/null
+
+source_dmscripts_configs
+
+if configs_are_different; then
+    echo "$(date): configs are different" >>"$DM_CONFIG_DIFF_LOGFILE"
+    sleep 1
+fi
+
+menu() {
+    printf '%s\n' "Quit"
+    # As this is loaded from other file it is technically not defined.
+    # shellcheck disable=SC2154
+    printf '%s\n' "${!radio_stations[@]}" | sort
+}
+
+# Functions for sending notification messages
+start_radio() {
+    notify-send "Starting dm-radio" "Playing station: $1. 🎶"
+}
+
+end_radio() {
+    notify-send "Stopping dm-radio" "You have quit dm-radio. 🎶"
+}
+
+main() {
+    if [ -z "${!radio_stations[*]}" ]; then
+        notify-send "dm-radio: BREAKING CHANGES" "Due to breaking changes you must edit all declare statements in your config to include the g option. declare -A -> declare -Ag, declare -a -> declare -ag"
+        echo "$(date): dm-radio: BREAKING CHANGES: Due to breaking changes you must edit all declare statements in your config to include the g option.
+are -A -> declare -Ag
+are -a -> declare -ag" >>"$DM_CONFIG_DIFF_LOGFILE"
+        sleep 2
+        exit 1
+    fi
+
+    # Choosing a radio station from array sourced in 'config'.
+    choice=$(menu | ${MENU} 'Choose radio station:') || exit 1
+
+    case $choice in
+    Quit)
+        end_radio
+        pkill -f http
+        exit
+        ;;
+    *)
+        pkill -f http || echo "mpv not running."
+        start_radio "$choice"
+        mpv --volume="${DMRADIOVOLUME:-100}" "${radio_stations["${choice}"]}"
+        return
+        ;;
+    esac
+
+}
+
+MENU="$(get_menu_program "$@")"
+[[ "${BASH_SOURCE[0]}" == "${0}" ]] && main

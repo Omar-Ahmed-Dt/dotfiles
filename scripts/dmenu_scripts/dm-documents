@@ -1,0 +1,54 @@
+#!/bin/bash
+#
+# Script name: dm-documents
+# Description: Search for PDFs to open.
+# Dependencies: dmenu, fzf, rofi, zathura
+# GitLab: https://www.gitlab.com/dwt1/dmscripts
+# License: https://www.gitlab.com/dwt1/dmscripts/LICENSE
+# Contributors: Derek Taylor
+#               HostGrady
+
+# Set with the flags "-e", "-u","-o pipefail" cause the script to fail
+# if certain things happen, which is a good thing.  Otherwise, we can
+# get hidden bugs that are hard to discover.
+
+set -euo pipefail
+
+# shellcheck disable=SC1091
+source ./_dm-helper.sh 2>/dev/null || source _dm-helper.sh 2>/dev/null
+
+source_dmscripts_configs
+
+if configs_are_different; then
+    echo "$(date): configs are different" >>"$DM_CONFIG_DIFF_LOGFILE"
+    sleep 1
+fi
+
+main() {
+    PDF_VIEWER=zathura
+    files="$(find "$HOME" -maxdepth 4 -iname "*.pdf")"
+    choice=$(printf '%s\n' "${files[@]}" \
+        | cut -d '/' -f4- \
+        | sed -e 's/Documents/Dcs/g' \
+            -e 's/Downloads/Dwn/g' \
+            -e 's/Pictures/Pic/g' \
+            -e 's/Images/Img/g' \
+            -e 's/.pdf//g' \
+        | sort -g \
+        | ${MENU} "File: ") || exit 1
+    if [ "$choice" ]; then
+        file=$(
+            printf '%s' "$choice" \
+                | sed -e 's/Dcs/Documents/g' \
+                    -e 's/Dwn/Downloads/g' \
+                    -e 's/Pic/Pictures/g' \
+                    -e 's/Img/Images/g'
+        )
+        "${PDF_VIEWER}" "$HOME/${file}.pdf"
+    else
+        echo "Program Terminated." && exit 0
+    fi
+}
+
+MENU="$(get_menu_program "$@")"
+[[ "${BASH_SOURCE[0]}" == "${0}" ]] && main

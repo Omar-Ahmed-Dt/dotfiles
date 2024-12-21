@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+#
+# Script name: dm-reddit
+# Description: A simple reddit viewer using reddio.
+# Dependencies: dmenu, fzf, rofi, reddio, yad
+# GitLab: https://www.gitlab.com/dwt1/dmscripts
+# License: https://www.gitlab.com/dwt1/dmscripts/LICENSE
+# Contributors: Derek Taylor
+#               HostGrady
+#               Simon Ingelsson
+
+# Set with the flags "-e", "-u","-o pipefail" cause the script to fail
+# if certain things happen, which is a good thing.  Otherwise, we can
+# get hidden bugs that are hard to discover.
+set -euo pipefail
+
+# shellcheck disable=SC1091
+source ./_dm-helper.sh 2>/dev/null || source _dm-helper.sh 2>/dev/null
+
+source_dmscripts_configs
+
+if configs_are_different; then
+    echo "$(date): configs are different" >>"$DM_CONFIG_DIFF_LOGFILE"
+    sleep 1
+fi
+
+main() {
+    if [ -z "${!reddit_list[*]}" ]; then
+        notify-send "dm-reddit: BREAKING CHANGES" "Due to breaking changes you must edit all declare statements in your config to include the g option. declare -A -> declare -Ag, declare -a -> declare -ag"
+        echo "$(date): dm-reddit: BREAKING CHANGES: Due to breaking changes you must edit all declare statements in your config to include the g option.
+are -A -> declare -Ag
+are -a -> declare -ag" >>"$DM_CONFIG_DIFF_LOGFILE"
+        sleep 2
+        exit 1
+    fi
+
+    # Picking a subreddit from the above reddit_list.
+    # As this is loaded from other file it is technically not defined
+    # shellcheck disable=SC2154
+    reddit_list+=("Quit")
+    _subreddit=$(printf '%s\n' "${reddit_list[@]}" | ${MENU} "Choose a subreddit:") || exit 1
+    if [ "$_subreddit" = "Quit" ]; then
+        echo "User chose to quit!"
+        exit 0
+    fi
+
+    # Show the last 20 posts (titles and ids) from the chosen subreddit.
+    post_title=$(bash reddio print -f '$num. $title $id$nl' -l 20 "$_subreddit" \
+        | ${MENU} 'Last 20 posts on '"$_subreddit")
+
+    # Display contents of chosen post in a yad text box.
+    post_id=$(printf '%s\n' "${post_title##* }")
+    bash reddio print -f ' TITLE: $title$nl SUBMITTED: $created_pretty$nl AUTHOR: $author$nl$nl$text' by_id/"$post_id" \
+        | yad --text-info --height=600 --width=600 || exit 1
+}
+
+MENU="$(get_menu_program "$@")"
+[[ "${BASH_SOURCE[0]}" == "${0}" ]] && main

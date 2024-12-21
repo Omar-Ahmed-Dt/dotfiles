@@ -1,0 +1,129 @@
+#!/usr/bin/env bash
+
+# script name: dm-usbmount
+# Description: Mount/unmount usb drives using dmenu. No fancy daemon required.
+# Dependencies: dmenu, fzf, rofi, udisks2
+# Author: Murtaza Udaipurwala
+#               Derek Taylor
+
+# Set with the flags "-e", "-u","-o pipefail" cause the script to fail
+# if certain things happen, which is a good thing.  Otherwise, we can
+# get hidden bugs that are hard to discover.
+set -euo pipefail
+
+# shellcheck disable=SC1091
+source ./_dm-helper.sh 2>/dev/null || source _dm-helper.sh 2>/dev/null
+
+source_dmscripts_configs
+
+if configs_are_different; then
+    echo "$(date): configs are different" >>"$DM_CONFIG_DIFF_LOGFILE"
+    sleep 1
+fi
+
+help() {
+    printf '%s' "Usage: $(basename "$0") [options]
+$(grep '^# Description: ' "$0" | sed 's/# Description: /Description: /g')
+$(grep '^# Dependencies: ' "$0" | sed 's/# Dependencies: /Dependencies: /g')
+
+The folowing OPTIONS are accepted:
+    -h  displays this help page
+    -d  mount using 'dmenu'
+    -D  umount using 'dmenu'
+    -f  mount using 'fzf'
+    -F  umount using 'fzf'
+    -r  mount using 'rofi'
+    -R  umount using 'rofi'
+
+Running" " $(basename "$0") " "without any argument displays this help text.
+Run 'man dmscripts' for more information"
+}
+
+drive_count() {
+    count="$(echo "$1" | wc -l)"
+}
+
+mount_all() {
+    while IFS= read -r drive; do
+        udisksctl mount -b "${drive%% *}"
+    done < <(printf '%s\n' "$mountable")
+}
+
+unmount_all() {
+    while IFS= read -r drive; do
+        udisksctl unmount -b "$drive"
+        # done < <(printf '%s\n' "$mounted")
+    done < <(printf '%s\n' "${mounted%%* }")
+}
+
+mount() {
+    mountable="$(lsblk -lp | awk '/^\/dev\/sd.*part $/ { print $1 " ("$4")" }')"
+    [ "$mountable" = "" ] && exit 1
+
+    drive_count "$mountable"
+    [ "$count" = "1" ] && options="$mountable" || options="$mountable\nall"
+
+    chosen="$(printf '%s' "$options" | ${MENU} "Drive to mount?")" || exit 1
+    if [ "$chosen" = "all" ]; then
+        mount_all
+    else
+        udisksctl mount -b "${chosen%% *}"
+    fi
+}
+
+unmount() {
+    # mounted="$(lsblk -lp | awk '/run/ { print $1 }')"
+    mounted="$(lsblk -lp | grep 'run')"
+    [ "$mounted" = "" ] && exit 1
+
+    # drive_count "$mounted"
+    drive_count "${mounted%%* }"
+    # [ "$count" = "1" ] && options="$mounted" || options="$mounted\nall"
+    [ "$count" = "1" ] && options="${mounted%%* }" || options="${mounted%%* }\nall"
+
+    chosen="$(printf '%s' "${options}" | ${MENU} "Drive to unmount?")"
+    if [ "$chosen" = "all" ]; then
+        unmount_all
+    else
+        udisksctl unmount -b "$chosen"
+    fi
+}
+
+no_opt=1
+# If script is run with '-d', it will use 'dmenu'
+# If script is run with '-f', it will use 'fzf'
+# If script is run with '-d', it will use 'rofi'
+while getopts "dDfFrRh" arg 2>/dev/null; do
+    case "${arg}" in
+    d) # shellcheck disable=SC2153
+        MENU=${DMENU}
+        [[ "${BASH_SOURCE[0]}" == "${0}" ]] && mount
+        ;;
+    D) # shellcheck disable=SC2153
+        MENU=${DMENU}
+        [[ "${BASH_SOURCE[0]}" == "${0}" ]] && unmount
+        ;;
+    f) # shellcheck disable=SC2153
+        MENU=${FMENU}
+        [[ "${BASH_SOURCE[0]}" == "${0}" ]] && mount
+        ;;
+    F) # shellcheck disable=SC2153
+        MENU=${FMENU}
+        [[ "${BASH_SOURCE[0]}" == "${0}" ]] && unmount
+        ;;
+    r) # shellcheck disable=SC2153
+        MENU=${RMENU}
+        [[ "${BASH_SOURCE[0]}" == "${0}" ]] && mount
+        ;;
+    R) # shellcheck disable=SC2153
+        MENU=${RMENU}
+        [[ "${BASH_SOURCE[0]}" == "${0}" ]] && unmount
+        ;;
+    h) help ;;
+    *) printf '%s\n' "Error: invalid option" "Type $(basename "$0") -h for help" ;;
+    esac
+    no_opt=0
+done
+
+# If script is run with NO argument, it will use 'dmenu'
+[ $no_opt = 1 ] && MENU=${DMENU} && [[ "${BASH_SOURCE[0]}" == "${0}" ]] && help "$@"
