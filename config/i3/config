@@ -11,38 +11,18 @@ set $down j
 set $left h
 set $right l
 
+
 # workspaces names
-# set $WS1   1: 
-# set $WS2   2: 
-# set $WS3   3: 
-# set $WS4   4: 
-# set $WS5   5: 
-# set $WS6   6: 
-# set $WS7   7: 
-# set $WS8   8: 
-# set $WS9   9: 
+set $WS1  1:Browser
+set $WS2  2:Notes
+set $WS3  3:Files
+set $WS4  4:Chat
+set $WS5  5:Media
+set $WS6  6:Dev
+set $WS7  7:Term
+set $WS8  8:Downloads
+set $WS9  9:Server
 
-# set $WS1   1: 一
-# set $WS2   2: 二 
-# set $WS3   3: 三
-# set $WS4   4: 四
-# set $WS5   5: 五
-# set $WS6   6: 六
-# set $WS7   7: 七
-# set $WS8   8: 八
-# set $WS9   9: 九
-# set $WS0   0: 零
-
-set $WS1   1: web
-set $WS2   2: wr
-set $WS3   3: pdf
-set $WS4   4: chat
-set $WS5   5: mails
-set $WS6   6: fm
-set $WS7   7: term1
-set $WS8   8: term2
-set $WS9   9: tele
-# set $WS0   0: gui
 
 # Switch to workspace
 bindsym $mod+1 workspace $WS1
@@ -54,7 +34,6 @@ bindsym $mod+6 workspace $WS6
 bindsym $mod+7 workspace $WS7
 bindsym $mod+8 workspace $WS8
 bindsym $mod+9 workspace $WS9
-# bindsym $mod+0 workspace $WS0
 
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $WS1
@@ -66,7 +45,6 @@ bindsym $mod+Shift+6 move container to workspace $WS6
 bindsym $mod+Shift+7 move container to workspace $WS7
 bindsym $mod+Shift+8 move container to workspace $WS8
 bindsym $mod+Shift+9 move container to workspace $WS9
-# bindsym $mod+Shift+0 move container to workspace $WS0
 
 # Keybinding 
 bindsym $mod+Shift+minus move scratchpad
