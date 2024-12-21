@@ -1,0 +1,87 @@
+#!/usr/bin/env bash
+#
+# Script name: dm-youtube
+# Description: Youtube subscription manager without API access
+# Dependencies: dmenu, curl, a browser (brave by default)
+# Gitlab: https://www.gitlab.com/dwt1/dmscripts
+# License: https://www.gitlab.com/dwt1/dmscripts/LICENSE
+# Contributors: HostGrady
+#               Derek Taylor
+
+# Set with the flags "-e", "-u","-o pipefail" cause the script to fail
+# if certain things happen, which is a good thing.  Otherwise, we can
+# get hidden bugs that are hard to discover.
+set -euo pipefail
+
+# shellcheck disable=SC1091
+source ./_dm-helper.sh 2>/dev/null || source _dm-helper.sh 2>/dev/null
+
+source_dmscripts_configs
+
+if configs_are_different; then
+    echo "$(date): configs are different" >>"$DM_CONFIG_DIFF_LOGFILE"
+    sleep 1
+fi
+
+# this is a function for parsing youtube rss, see _dm-helper.sh for information on xmlgetnext
+parse_youtube_feed() {
+    echo "$1" | while xmlgetnext; do
+        case $DM_XML_TAG in
+        'entry')
+            title=''
+            link=''
+            published=''
+            ;;
+        'media:title')
+            title="$DM_XML_VALUE"
+            ;;
+        'yt:videoId')
+            link="$DM_XML_VALUE"
+            ;;
+        'published')
+            published="$(date --date="${DM_XML_VALUE}" "+%Y-%m-%d %H:%M")"
+            ;;
+        '/entry')
+            echo " ${published} | ${link} | ${title}"
+            ;;
+        esac
+    done
+}
+
+main() {
+    local _feed_url _channel _video
+    local _channel_id _video_id _video_list
+
+    if [ -z "${!youtube_channels[*]}" ]; then
+        notify-send "dm-youtube: BREAKING CHANGES" "Due to breaking changes you must edit all declare statements in your config to include the g option. declare -A -> declare -Ag, declare -a -> declare -ag"
+        echo "$(date): dm-youtube: BREAKING CHANGES: Due to breaking changes you must edit all declare statements in your config to include the g option.
+are -A -> declare -Ag
+are -a -> declare -ag" >>"$DM_CONFIG_DIFF_LOGFILE"
+        sleep 2
+        exit 1
+    fi
+    # Sorts the array and lets you select a channel with dmenu
+    # As this is loaded from other file it is technically not defined
+    # shellcheck disable=SC2154
+    _channel=$(printf '%s\n' "${!youtube_channels[@]}" | sort | ${MENU} 'Select Channel:')
+
+    # The way it's done here is most effective, it searchs for "=" then it takes
+    # everything before the = sign and leaves us with our variable used in the
+    # _feed_url variable
+    _channel_id=$(curl -s -f -L "${youtube_channels[${_channel}]}" | grep -o "channel_id=.*" | sed 's/".*//g')
+    _feed_url="https://www.youtube.com/feeds/videos.xml?channel_id=${_channel_id##*=}"
+    # parse rss
+    _video_list=$(parse_youtube_feed "$(curl -s "${_feed_url}")")
+
+    _video=$(printf '%s\n' "${_video_list}" | sort -r | ${MENU} 'Select Video')
+    _video_id=$(echo "${_video}" | cut -d'|' -f2 | sed -e 's/^[ \t]*//')
+
+    if [[ -n ${_video_id} ]]; then
+        # After the video is chosen, run it in your web browser
+        # shellcheck disable=SC2154
+        ${DMBROWSER} "https://www.youtube.com/watch?v=${_video_id}"
+    fi
+}
+
+MENU="$(get_menu_program "$@")"
+[[ "${BASH_SOURCE[0]}" == "${0}" ]] && main

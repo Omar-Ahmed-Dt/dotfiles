@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-
-# Script name: dm-ip
-# Description: Get IP from interface or external.
-# Dependencies: dmenu, fzf, rofi, dig, ip, jq
+#
+# Script name: dm-dictionary
+# Description: Uses didyoumean as a spellchecker.
+# Dependencies: dmenu, fzf, rofi, didyoumean
 # GitLab: https://www.gitlab.com/dwt1/dmscripts
 # License: https://www.gitlab.com/dwt1/dmscripts/LICENSE
-# Contributors: Simon Ingelsson
+# Contributors: Francesco Prem Solidoro
 #               Derek Taylor
 
 # Set with the flags "-e", "-u","-o pipefail" cause the script to fail
@@ -24,19 +24,14 @@ if configs_are_different; then
 fi
 
 main() {
-    declare -A _ips
+    WORD="$(printf '%s' "" | ${MENU} "Enter Word:")"
 
-    _external=$(dig +short myip.opendns.com @resolver1.opendns.com)
-    _ips[external]="${_external}"
+    if ! [ "${WORD}" ] || [ "${WORD}" = "quit" ]; then
+        printf 'No word inserted\n' >&2
+        exit 0
+    fi
 
-    for _iface in $(ip -4 -j addr | jq -r '.[] |{ name: .ifname, ip: .addr_info[].local} | join(":")'); do
-        _ips[${_iface%:*}]="${_iface##*:}"
-    done
-
-    selected="$(printf '%s\n' "${!_ips[@]}" | ${MENU} "ips:")"
-    [ -z "${selected}" ] && exit 1
-    echo "${_ips["${selected}"]}" | cp2cb
-    notify-send "IP (in clipboard)" " ${selected}: ${_ips["${selected}"]}"
+    dym -c "$WORD" | ${MENU} "Select Correct Spelling:" | xclip -selection clipboard
 }
 
 MENU="$(get_menu_program "$@")"

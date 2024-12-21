@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+#
+# Script name: dm-eq-profiles
+# Description: Allows you to switch between predefined equalizer profiles easily.
+# Dependencies: dmenu, fzf, rofi, easyeffects
+# GitLab: https://www.gitlab.com/dwt1/dmscripts
+# License: https://www.gitlab.com/dwt1/dmscripts/LICENSE
+# Contributors: Allen (aaw3_)
+#               Derek Taylor
+
+# Note: Avoid using commas in preset names otherwise it will cause errors when trying to parse the presets list
+
+# Set with the flags "-e", "-u","-o pipefail" cause the script to fail
+# if certain things happen, which is a good thing.  Otherwise, we can
+# get hidden bugs that are hard to discover.
+set -euo pipefail
+
+# shellcheck disable=SC1091
+source ./_dm-helper.sh 2>/dev/null || source _dm-helper.sh 2>/dev/null
+
+source_dmscripts_configs
+
+if configs_are_different; then
+    echo "$(date): configs are different" >>"$DM_CONFIG_DIFF_LOGFILE"
+    sleep 1
+fi
+
+main() {
+    # shellcheck disable=SC2154
+
+    #Retrieve profiles form easyeffects
+    all_profiles=$(easyeffects -p)
+
+    #Separate profiles
+    output_profiles=$(echo "${all_profiles}" | head -1)
+    input_profiles=$(echo "${all_profiles}" | tail -1)
+
+    #Trim the beginning of I/O profiles
+    output_profiles="${output_profiles:16}"
+    input_profiles="${input_profiles:15}"
+
+    IFS=',' read -r -a output_array <<<"${output_profiles}"
+    IFS=',' read -r -a input_array <<<"${input_profiles}"
+
+    declare -a eq_profiles
+
+    for element in "${output_array[@]}"; do
+        eq_profiles+=("O: ${element}")
+    done
+
+    for element in "${input_array[@]}"; do
+        eq_profiles+=("I: ${element}")
+    done
+
+    eq_profiles+=("Quit")
+
+    #echo $output_profiles
+    #echo $input_profiles
+
+    _profile=$(printf '%s\n' "${eq_profiles[@]}" | ${MENU} "Choose a profile:") || exit 1
+
+    if [[ $_profile == "Quit" ]]; then echo "Program Terminated" && exit 0; fi
+
+    easyeffects -l "${_profile:3}"
+}
+
+MENU="$(get_menu_program "$@")"
+[[ "${BASH_SOURCE[0]}" == "${0}" ]] && main

@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+#
+# Script name: dm-lights
+# Description: A tool to manage your backlights
+# Dependencies: light dmenu fzf rofi
+# GitLab: https://www.gitlab.com/dwt1/dmscripts
+# License: https://www.gitlab.com/dwt1/dmscripts/LICENSE
+# Contributors: HostGrady
+
+# Set with the flags "-e", "-u","-o pipefail" cause the script to fail
+# if certain things happen, which is a good thing.  Otherwise, we can
+# get hidden bugs that are hard to discover.
+set -euo pipefail
+
+# shellcheck disable=SC1091
+source ./_dm-helper.sh 2>/dev/null || source _dm-helper.sh 2>/dev/null
+
+source_dmscripts_configs
+
+if configs_are_different; then
+    echo "$(date): configs are different" >>"$DM_CONFIG_DIFF_LOGFILE"
+    sleep 1
+fi
+
+put_x_to_head() {
+    local array="${1}"
+    local search_term="${2}"
+    local arr_head=""
+    local arr_order=""
+
+    for value in $array; do
+        if [ "$value" = "$search_term" ]; then
+            arr_head="$value"
+        else
+            if [ -z "$arr_order" ]; then
+                arr_order="$value"
+            else
+                arr_order="$arr_order $value"
+            fi
+        fi
+    done
+    echo "$arr_head $arr_order"
+}
+
+main() {
+    local _prompt
+    local res
+    local options
+    local value=0
+    declare -a options=(
+        "+5"
+        "-5"
+        "set"
+        "quit"
+    )
+
+    while :; do
+        _prompt="$(light -G)"
+        res="$(printf "%s\n" "${options[@]}" | ${MENU} "What do you want to do (current brightness: ${_prompt})")"
+
+        # This probably is bad practice but I don't really care for now
+        # shellcheck disable=SC2207
+        declare -a options=($(put_x_to_head "${options[*]}" "${res}"))
+        case "$res" in
+        "+"*)
+            value="${res/+/}"
+            echo "$value"
+            if ! light -A "$value"; then
+                notify-send "dm-lights" "Hey, you probably need to add yourself to the video group and then reboot (or you didn't put a number)"
+                exit 1
+            fi
+            ;;
+        "-"*)
+            value="${res/-/}"
+            echo "$value"
+            if ! light -U "$value"; then
+                notify-send "dm-lights" "Hey, you probably need to add yourself to the video group and then reboot (or you didn't put a number)"
+                exit 1
+            fi
+            ;;
+
+        "set")
+            value="$(printf "0\n25\n50\n75\n100\n" | ${MENU} "What value")"
+            echo "$value"
+            if ! light -S "$value"; then
+                notify-send "dm-lights" "Hey, you probably need to add yourself to the video group and then reboot (or you didn't put a number)"
+                exit 1
+            fi
+            ;;
+        "quit") echo "User chose to quit!" && exit 0 ;;
+        *) echo "Error! Invalid choice" && exit 1 ;;
+        esac
+    done
+}
+
+MENU="$(get_menu_program "$@")"
+[[ "${BASH_SOURCE[0]}" == "${0}" ]] && main

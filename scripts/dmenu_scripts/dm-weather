@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-
-# Script name: dm-ip
-# Description: Get IP from interface or external.
-# Dependencies: dmenu, fzf, rofi, dig, ip, jq
+#
+# Script name: dm-weather
+# Description: Simple graphical weather app
+# Dependencies: dmenu, curl, yad
 # GitLab: https://www.gitlab.com/dwt1/dmscripts
 # License: https://www.gitlab.com/dwt1/dmscripts/LICENSE
-# Contributors: Simon Ingelsson
+# Contributors: HostGrady
 #               Derek Taylor
 
 # Set with the flags "-e", "-u","-o pipefail" cause the script to fail
@@ -24,19 +24,17 @@ if configs_are_different; then
 fi
 
 main() {
-    declare -A _ips
+    # Here we obtain the location from the list in the config
+    # As this is loaded from other file it is technically not defined
+    # shellcheck disable=SC2154
+    _location="$(printf '%s\n' "${weather_locations}" | ${MENU} "Where do you want to see the weather?")"
+    echo "$_location"
 
-    _external=$(dig +short myip.opendns.com @resolver1.opendns.com)
-    _ips[external]="${_external}"
+    # If $weather_opts is unset, give it an empty value
+    weather_opts+=''
 
-    for _iface in $(ip -4 -j addr | jq -r '.[] |{ name: .ifname, ip: .addr_info[].local} | join(":")'); do
-        _ips[${_iface%:*}]="${_iface##*:}"
-    done
-
-    selected="$(printf '%s\n' "${!_ips[@]}" | ${MENU} "ips:")"
-    [ -z "${selected}" ] && exit 1
-    echo "${_ips["${selected}"]}" | cp2cb
-    notify-send "IP (in clipboard)" " ${selected}: ${_ips["${selected}"]}"
+    # Curl wttr.in, a CLI weather app.
+    curl -s "https://wttr.in/${_location// /%20}?T&${weather_opts}" | yad --text-info --maximized
 }
 
 MENU="$(get_menu_program "$@")"

@@ -1,39 +1,45 @@
 #!/usr/bin/env bash
 #
 # Script name: dm-colpick
-# Description: Copy a color to your clipboard using dmenu, change the colors if needed
-# Dependencies: dmenu, xclip
+# Description: Copy a color to your clipboard; colors listed in dmscripts config.
+# Dependencies: dmenu, fzf, rofi, xclip
 # GitLab: https://www.gitlab.com/dwt1/dmscripts
 # License: https://www.gitlab.com/dwt1/dmscripts/LICENSE
 # Contributors: sloopy3333
 #               Simon Ingelsson
 #               HostGrady
+#               Derek Taylor
 
 # Set with the flags "-e", "-o pipefail" cause the script to fail
 # if certain things happen, which is a good thing.  Otherwise, we can
 # get hidden bugs that are hard to discover.
 set -euo pipefail
 
-_path="$(cd "$(dirname "${BASH_SOURCE[0]}")" && cd "$(dirname "$(readlink "${BASH_SOURCE[0]}" || echo ".")")" && pwd)"
-if [[  -f "${_path}/_dm-helper.sh" ]]; then
-  # shellcheck disable=SC1090,SC1091
-  source "${_path}/_dm-helper.sh"
-else
-  # shellcheck disable=SC1090
-  echo "No helper-script found"
+# shellcheck disable=SC1091
+source ./_dm-helper.sh 2>/dev/null || source _dm-helper.sh 2>/dev/null
+
+source_dmscripts_configs
+
+if configs_are_different; then
+    echo "$(date): configs are different" >>"$DM_CONFIG_DIFF_LOGFILE"
+    sleep 1
 fi
 
-# script will not hit this if there is no config-file to load
-# shellcheck disable=SC1090
-source "$(get_config)"
-
-
 main() {
-  # As this is loaded from other file it is technically not defined
-  # shellcheck disable=SC2154
-  selected="$(printf '%s\n' "${!colpick_list[@]}" | ${DMENU} "color:" "$@")"
-  [ -z "${selected}" ] && exit 1
-  echo "${colpick_list["${selected}"]}" | cp2cb
+    if [ -z "${!colpick_list[*]}" ]; then
+        notify-send "dm-colpick: BREAKING CHANGES" "Due to breaking changes you must edit all declare statements in your config to include the g option. declare -A -> declare -Ag, declare -a -> declare -ag"
+        echo "$(date): dm-colpick: BREAKING CHANGES: Due to breaking changes you must edit all declare statements in your config to include the g option. 
+declare -A -> declare -Ag
+declare -a -> declare -ag" >>"$DM_CONFIG_DIFF_LOGFILE"
+        sleep 2
+        exit 1
+    fi
+    # As this is loaded from other file it is technically not defined
+    # shellcheck disable=SC2154
+    selected="$(printf '%s\n' "${!colpick_list[@]}" | ${MENU} "color:")"
+    [ -z "${selected}" ] && exit 1
+    echo "${colpick_list["${selected}"]}" | cp2cb
 }
 
-[[ "${BASH_SOURCE[0]}" == "${0}" ]] && main "$@"
+MENU="$(get_menu_program "$@")"
+[[ "${BASH_SOURCE[0]}" == "${0}" ]] && main
