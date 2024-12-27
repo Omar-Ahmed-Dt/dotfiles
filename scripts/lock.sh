@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# <<command
 PICTURE=/tmp/i3lock.png
 SCREENSHOT="scrot -z $PICTURE"
 
@@ -19,3 +20,7 @@ i3lock -k -e --bar-indicator \
        -i $PICTURE
 
 rm $PICTURE
+
+# command
+
+# betterlockscreen -l dimblur -- --time-str="%H:%M"
