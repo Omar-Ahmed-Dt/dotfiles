@@ -147,7 +147,8 @@ Insert
     ~/scripts/multi_ocr.sh
 # emoji
 super + period
-    ~/scripts/lan_dmenu.sh && bemoji -f ~/scripts/emoji
+    ~/scripts/lan_dmenu.sh && bemoji
+    # ~/scripts/lan_dmenu.sh && bemoji -f ~/scripts/emoji
 # rkeys
 F10
     $HOME/scripts/keys.sh

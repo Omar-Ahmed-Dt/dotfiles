@@ -112,6 +112,7 @@ brightnessctl
 brillo
 broadcom-wl-dkms
 btrfs-progs
+caffeine-ng
 calc
 chaotic-keyring
 chaotic-mirrorlist
@@ -215,6 +216,7 @@ htop-vim
 hunspell-en_us
 hw-probe
 hyperv
+i3-auto-tiling
 i3-swallow-git
 i3-wm
 i3blocks
@@ -283,6 +285,7 @@ modemmanager
 moka-icon-theme-git
 mpc
 mpd
+mpd-mpris
 mtools
 mypaint
 nano
@@ -331,7 +334,7 @@ opendoas
 openresolv
 openssh
 openvpn
-optimus-manager
+optimus-manager-qt
 oranchelo-icon-theme-git
 orchis-kde-theme-git
 orchis-theme-git
@@ -348,6 +351,7 @@ partclone
 parted
 partimage
 paru-bin
+passmenu-rs-git-debug
 pavucontrol
 pcmanfm
 pcsclite

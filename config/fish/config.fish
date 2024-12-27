@@ -17,7 +17,7 @@ set VISUAL   "lvim"
 set -x BROWSER firefox
 
 ### "bat" as manpager
-set -x MANPAGER "sh -c 'bat --theme gruvbo-dark -l man'"
+# set -x MANPAGER "sh -c 'bat --theme gruvbo-dark -l man'"
 
 ### SET EITHER DEFAULT EMACS MODE OR VI MODE ###
 function fish_user_key_bindings
