@@ -380,6 +380,7 @@ pv
 python-ewmh
 python-musicpd
 python-pip
+python-pipx
 python-pulsectl
 python-pykeepass
 python-pynput
