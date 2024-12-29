@@ -153,7 +153,7 @@ super + period
 F10
     $HOME/scripts/keys.sh
 # xournalpp 
-super + n
+super + shift + t
     rnote
 # messenger
 super + m

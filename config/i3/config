@@ -122,8 +122,8 @@ bindsym $mod+q [instance="pass"] scratchpad show; [instance="pass"] move positio
 # don't care about urgent windows 
 focus_on_window_activation focus
 default_orientation horizontal
-# exec_always --no-startup-id autotiling
-exec_always --no-startup-id i3-auto-tiling 
+exec_always --no-startup-id autotiling
+# exec_always --no-startup-id i3-auto-tiling 
 
 # i3-back
 # Start the daemon which listens to focus changes and sets _back mark
