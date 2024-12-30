@@ -1,2 +1,1 @@
 ACTION=="change", SUBSYSTEM=="power_supply", RUN+="/usr/share/slimbookbattery/src/ac_power.py"
-
