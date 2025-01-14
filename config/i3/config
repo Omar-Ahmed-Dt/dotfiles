@@ -1,5 +1,5 @@
 # from xrandr pkg 
-exec --no-startup-id xrandr --output eDP-1 --auto
+# exec --no-startup-id xrandr --output eDP-1 --auto
 
 # :) 
 set $term kitty
@@ -123,7 +123,6 @@ bindsym $mod+q [instance="pass"] scratchpad show; [instance="pass"] move positio
 focus_on_window_activation focus
 default_orientation horizontal
 exec_always --no-startup-id autotiling
-# exec_always --no-startup-id i3-auto-tiling 
 
 # i3-back
 # Start the daemon which listens to focus changes and sets _back mark
