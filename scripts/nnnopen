@@ -8,7 +8,7 @@ mime=$(file -b --mime-type "$1")
 echo $mime
 # m3u files report as text/plain for some reason
 if [[ "${1#*.}" = "m3u" ]];then
-	swallow mpv --player-operation-mode=pseudo-gui "$1"
+	swallow mpv "$1"
 
 # text/*
 #elif [[ "${mime%/*}" = "text" ]];then
@@ -19,7 +19,7 @@ elif [[ "${mime%/*}" = "image" ]];then
 	sxiv -ab "$1"
 # video/*
 elif [[ "${mime%/*}" = "video" || "${mime%/*}" = "audio" ]];then
-	swallow mpv --player-operation-mode=pseudo-gui "$1"
+	swallow mpv "$1"
 # ebooks 
 elif [[ "$mime" = "application/epub+zip" ]];then
 	zathura "$1"
@@ -35,6 +35,9 @@ elif [[ "$mime" = "application/vnd.openxmlformats-officedocument.wordprocessingm
 	libreoffice "$1"
 elif [[ "$mime" = "application/vnd.openxmlformats-officedocument.presentationml.presentation" ]];then
 	libreoffice "$1"
+# rnote
+elif [[ "$mime" = "application/gzip" ]];then
+	rnote "$1"
 # html 
 elif [[ "$mime" = "text/html" ]];then
 	firefox "$1"
@@ -62,4 +65,14 @@ elif [[ "$mime" = "text/x-java" ]];then
 	kitty -e lvim "$1"
 elif [[ "$mime" = "text/xml" ]];then
 	kitty -e lvim "$1"
+elif [[ "$mime" = "text/x-ruby" ]];then
+	kitty -e lvim "$1"
+elif [[ "$mime" = "text/x-file" ]];then
+	kitty -e lvim "$1"
+# word docs 
+elif [[ "$mime" = "application/vnd.oasis.opendocument.text" ]];then
+	libreoffice "$1"
+elif [[ "$mime" = "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ]];then
+	libreoffice "$1"
+
 fi

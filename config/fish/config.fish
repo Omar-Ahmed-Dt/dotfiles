@@ -1,9 +1,14 @@
+## Gruvbox Theme:
 # theme_gruvbox dark
+
+# :)
 set fish_cursor_default block
 set fish_cursor_insert line
 set fish_cursor_replace_one underscore
 set fish_cursor_replace underscore
 set fish_cursor_visual block
+
+## xterm: 
 # set -x TERM xterm-256color
 ##
 set -e fish_user_paths
@@ -59,6 +64,7 @@ $HOME/github/shell-color-scripts/colorscript.sh -r # && $HOME/scripts/clock3.sh
 alias pmi='doas pacman -S'
 alias pmu='doas pacman -Syyu'
 alias pmuu='paru -Syu'
+alias pmo='doas pacman -Sy'
 alias pmr='doas pacman -Rs'
 alias pmR='doas pacman -Rd --nodeps' #remove pkg without dependencies
 alias pmii='paru -S'
@@ -95,14 +101,22 @@ alias ft='xdg-mime query filetype'
 alias fd='xdg-mime query default'
 alias rip='~/scripts/rip.sh' #to get public ip 
 # alias ip='ip --color' #to get private ip 
-alias ll='lsd -lh --icon-theme unicode'
-alias la="lsd -lah --icon-theme unicode"
-alias l="lsd --icon-theme unicode"
-alias ls="lsd --icon-theme unicode"
-alias llp="lsd -lh --permission octal --icon-theme unicode"
-alias lls="lsd -lhS --icon-theme unicode"
-alias llt="lsd -lht --icon-theme unicode"
-alias llS="lsd -l --total-size 2> /dev/null --icon-theme unicode"
+# alias ll='lsd -lh --icon-theme unicode'
+# alias la="lsd -lah --icon-theme unicode"
+# alias l="lsd --icon-theme unicode"
+# alias ls="lsd --icon-theme unicode"
+# alias llp="lsd -lh --permission octal --icon-theme unicode"
+# alias lls="lsd -lhS --icon-theme unicode"
+# alias llt="lsd -lht --icon-theme unicode"
+# alias llS="lsd -l --total-size 2> /dev/null --icon-theme unicode"
+alias ll='lsd -lh'
+alias la="lsd -lah"
+alias l="lsd"
+alias ls="lsd"
+alias llp="lsd -lh --permission octal"
+alias lls="lsd -lhS"
+alias llt="lsd -lht"
+alias llS="lsd -l --total-size 2> /dev/null"
 alias gcalc='gnome-calculator'
 alias calc='kalker'
 alias size='du -sh 2> /dev/null'
@@ -111,7 +125,8 @@ alias code='vscodium'
 alias gsh="~/scripts/gsh.sh"
 alias uprsc="xrdb -load ~/.Xresources"
 alias gpu="doas lvim /etc/optimus-manager/optimus-manager.conf"
-alias smi="nvidia-smi"
+alias ns="nvidia-smi"
+alias nr="prime-run"
 alias rmft="rm ~/.config/fish/functions/fish_prompt.fish"
 alias theme="kitty +kitten themes"
 alias journ="journalctl -f"
@@ -153,6 +168,7 @@ alias khal='khal calendar'
 alias chft='kitty +list-fonts | grep "Source Code Pro"'
 alias k='kubectl'
 alias h='helm'
+# alias mpv='prime-run mpv'
 
 function se
     cd ~/scripts
@@ -292,8 +308,8 @@ export NNN_PLUG='C:!magick "$nnn" png:- | xclip -sel clipboard -t image/png*;u:u
 export NNN_BMS="a:$HOME/home_docker/metube/videos;r:$HOME/rnote;m:/mnt/sdb1/;g:$HOME/Documents/GitHub;D:$HOME/Documents/;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
-export NNN_FCOLORS='c1e2904be76033f7c6d6abc4'
-export NNN_COLORS="2136"                           
+export NNN_FCOLORS='c1e2904d976033f7c6d6ab84'
+export NNN_COLORS='1234'
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_TRASH=1
 export NNN_ARCHIVE="\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)"

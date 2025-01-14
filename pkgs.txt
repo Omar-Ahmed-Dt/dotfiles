@@ -98,6 +98,7 @@ base-devel
 bash-completion
 bash-language-server
 bat
+bbswitch
 bemoji
 bind
 blueberry
@@ -244,12 +245,14 @@ layan-gtk-theme-git
 layan-kde-git
 lens-bin
 less
+lib32-nvidia-utils
 libadwaita-without-adwaita-git
 libayatana-appindicator
 libfido2
 libindicator-gtk3
 libreoffice-still
 libusb-compat
+libva-nvidia-driver
 light
 linux
 linux-atm
@@ -308,6 +311,7 @@ networkmanager-vpnc
 nfs-utils
 nilfs-utils
 nitrogen
+nmap
 nnn-nerd
 nodejs
 nordzy-icon-theme-git
@@ -323,7 +327,6 @@ numlockx
 nvidia-dkms
 nvidia-prime
 nvidia-settings
-nvidia-utils
 nvme-cli
 obsidian-icon-theme
 okular
@@ -334,6 +337,7 @@ opendoas
 openresolv
 openssh
 openvpn
+optimus-manager-git
 optimus-manager-qt
 oranchelo-icon-theme-git
 orchis-kde-theme-git
@@ -552,6 +556,7 @@ virtualbox
 volumeicon
 vpnc
 vscodium-bin
+warp-terminal
 wd719x-firmware
 we10x-icon-theme-git
 wezterm
