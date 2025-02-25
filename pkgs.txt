@@ -33,7 +33,7 @@ arcolinux-config-all-desktops-git
 arcolinux-dconf-all-desktops-git
 arcolinux-desktop-trasher-git
 arcolinux-grub-theme-vimix-git
-arcolinux-gtk3-sardi-arc-git
+arcolinux-gtk-sardi-arc-git
 arcolinux-i3wm-git
 arcolinux-keyring
 arcolinux-local-xfce4-git
@@ -148,7 +148,6 @@ dunst
 dust
 e2fsprogs
 easyeffects
-edid-decode-git
 edk2-shell
 efibootmgr
 etcher-bin
@@ -223,6 +222,7 @@ i3-wm
 i3blocks
 i3status
 imagewriter
+instagram-nativefier
 iotop
 ipython
 iw
@@ -245,12 +245,14 @@ layan-gtk-theme-git
 layan-kde-git
 lens-bin
 less
+lib32-llvm
 lib32-nvidia-utils
 libadwaita-without-adwaita-git
 libayatana-appindicator
 libfido2
 libindicator-gtk3
 libreoffice-still
+librewolf-bin
 libusb-compat
 libva-nvidia-driver
 light
@@ -280,6 +282,8 @@ messenger-nativefier
 micro
 mictray
 mintstick-git
+mission-center-git
+mission-center-git-debug
 mkinitcpio
 mkinitcpio-nfs-utils
 mkinitcpio-openswap
@@ -289,6 +293,7 @@ moka-icon-theme-git
 mpc
 mpd
 mpd-mpris
+mpv-mpris
 mtools
 mypaint
 nano
@@ -328,6 +333,7 @@ nvidia-dkms
 nvidia-prime
 nvidia-settings
 nvme-cli
+obs-studio
 obsidian-icon-theme
 okular
 open-iscsi
@@ -371,16 +377,17 @@ plata-theme
 playerctl
 plocate
 pokemon-colorscripts-git
-pokemon-terminal-git
 pokeshell
 polkit
 polkit-gnome
 polybar
 ponysay
+postgresql
 powertop
 ppp
 pptpclient
 pv
+pwgen
 python-ewmh
 python-musicpd
 python-pip
@@ -438,6 +445,7 @@ screen
 sddm
 sdparm
 sg3_utils
+signal-desktop
 simplescreenrecorder
 slack-desktop
 slimbookbattery-git
@@ -497,6 +505,7 @@ thunar
 thunar-archive-plugin
 thunar-volman
 thunderbird
+timidity++
 tlp
 tlp-rdw
 tmux
@@ -548,6 +557,8 @@ upd72020x-fw
 usb_modeswitch
 usbmuxd
 usbutils
+v4l2loopback-dc-dkms
+v4l2loopback-dkms
 vagrant
 ventoy-bin
 vim

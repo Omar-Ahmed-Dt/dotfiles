@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR FZF_COMPLETE:2
-SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25\x20\x2d\x2dlayout\x3dreverse\x20\x2d\x2dborder
+SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dlayout\x3dreverse\x20\x2d\x2dborder\x3dbold\x20\x2d\x2dborder\x3drounded\x20\x2d\x2dmargin\x3d3\x25\x20\x2d\x2dcolor\x3ddark
 SETUVAR FZF_DISABLE_KEYBINDINGS:0
 SETUVAR FZF_FIND_FILE_COMMAND:ag\x20\x2dl\x20\x2d\x2dhidden\x20\x2d\x2dignore\x20\x2egit
 SETUVAR FZF_LEGACY_KEYBINDINGS:0

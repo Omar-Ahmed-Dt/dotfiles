@@ -1,6 +1,11 @@
 ## Gruvbox Theme:
 # theme_gruvbox dark
 
+function fish_greeting
+     $HOME/github/shell-color-scripts/colorscript.sh -r 
+     # pokemon-colorscripts --no-title -r -b
+end
+
 # :)
 set fish_cursor_default block
 set fish_cursor_insert line
@@ -23,6 +28,10 @@ set -x BROWSER firefox
 
 ### "bat" as manpager
 # set -x MANPAGER "sh -c 'bat --theme gruvbo-dark -l man'"
+
+# Set fzf defaults
+# set FZF_DEFAULT_OPTS "--layout=reverse --border=bold --border=rounded --margin=3% --color=dark"
+# fzf --fish | source
 
 ### SET EITHER DEFAULT EMACS MODE OR VI MODE ###
 function fish_user_key_bindings
@@ -59,7 +68,6 @@ alias X='doas chmod 777'
 alias x='doas chmod 744'
 alias do='doas'
 
-$HOME/github/shell-color-scripts/colorscript.sh -r # && $HOME/scripts/clock3.sh
 
 alias pmi='doas pacman -S'
 alias pmu='doas pacman -Syyu'
@@ -73,13 +81,8 @@ alias pmn='pacman -Q | wc -l'
 alias pmc='doas pacman -Sc' #clean the cache after upgrade my system 
 alias pmg='pamac-manager'
 alias pmf="pacman -Qqo"
-alias e='exit'
-alias tomp3='sh ~/scripts/tomp3.sh'
 alias md='mkdir'
 alias config='/home/omar/scripts/configs.sh'
-alias blk='lsblk'
-alias img='~/scripts/sxivall1.sh'
-alias imgall='~/scripts/sxivall2.sh'
 alias gc='cd ~/.config'
 alias ram='ps axh -o cmd:15,%mem --sort=-%mem | head | string trim'
 alias cpu='ps axh -o cmd:15,%cpu --sort=-%cpu | head'
@@ -92,8 +95,8 @@ alias printerinstall='hp-setup -u'
 alias epdf='okular'
 alias gt='cd ~/.local/share/Trash/files'
 alias gs='cd ~/scripts'
-alias pr='proxychains'
-alias pf='proxychains firefox'
+# alias pr='proxychains'
+# alias pf='proxychains firefox'
 alias toand='sh ~/scripts/android.sh'
 alias m='~/scripts/matrix.sh'
 alias gx='cd /usr/share/xsessions'
@@ -127,9 +130,7 @@ alias uprsc="xrdb -load ~/.Xresources"
 alias gpu="doas lvim /etc/optimus-manager/optimus-manager.conf"
 alias ns="nvidia-smi"
 alias nr="prime-run"
-alias rmft="rm ~/.config/fish/functions/fish_prompt.fish"
 alias theme="kitty +kitten themes"
-alias journ="journalctl -f"
 alias note="io.github.lainsce.Notejot"
 # alias rm="rm -i"
 alias V="doasedit"
@@ -305,7 +306,7 @@ alias nn='nnn -Rrxl 5'
 alias n='nnn -rRxl 5'
 export NNN_PLUG='C:!magick "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!fish
 -i*;p:rsynccp;n:nmount;z:autojump;d:~/scripts/dr.sh;c:~/scripts/tomp4.sh'
-export NNN_BMS="a:$HOME/home_docker/metube/videos;r:$HOME/rnote;m:/mnt/sdb1/;g:$HOME/Documents/GitHub;D:$HOME/Documents/;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
+export NNN_BMS="a:$HOME/home_docker/metube/videos;r:$HOME/rnote;m:/mnt/;g:$HOME/Documents/GitHub;D:$HOME/Documents/;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
 export NNN_FCOLORS='c1e2904d976033f7c6d6ab84'
