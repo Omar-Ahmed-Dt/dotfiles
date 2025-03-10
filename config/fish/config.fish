@@ -13,7 +13,7 @@ set fish_cursor_replace_one underscore
 set fish_cursor_replace underscore
 set fish_cursor_visual block
 
-## xterm: 
+# xterm: 
 # set -x TERM xterm-256color
 ##
 set -e fish_user_paths
@@ -79,8 +79,8 @@ alias pmii='paru -S'
 alias pmq='pacman -Q'
 alias pmn='pacman -Q | wc -l'
 alias pmc='doas pacman -Sc' #clean the cache after upgrade my system 
-alias pmg='pamac-manager'
-alias pmf="pacman -Qqo"
+# alias pmg='pamac-manager'
+# alias pmf="pacman -Qqo"
 alias md='mkdir'
 alias config='/home/omar/scripts/configs.sh'
 alias gc='cd ~/.config'
@@ -169,6 +169,7 @@ alias khal='khal calendar'
 alias chft='kitty +list-fonts | grep "Source Code Pro"'
 alias k='kubectl'
 alias h='helm'
+alias tg='tgpt'
 # alias mpv='prime-run mpv'
 
 function se
@@ -249,6 +250,7 @@ end
 function f 
     doas find / -iname $argv 2> /dev/null | grep $argv
 end
+
 ####################################
 ####################################
 #cd any directory by alias sd 

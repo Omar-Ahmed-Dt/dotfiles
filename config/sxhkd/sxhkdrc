@@ -14,7 +14,7 @@ super +  b
     ~/scripts/browser.sh
 # firefox
 super + shift + b
-    firefox
+    waterfox
 #file manger gui 
 super + shift + Return
     thunar 

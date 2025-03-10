@@ -1,6 +1,6 @@
 #!/bin/bash
 declare options=("Google-chrome-stable
-Firefox
+Waterfox
 Chromium"
 )
 
@@ -13,8 +13,8 @@ case "$choice" in
    # Mercury)
    #     choice="mercury-browser"
    # ;;
-   Firefox)
-       choice="firefox"
+   Waterfox)
+       choice="waterfox"
    ;;
    # Brave)
    #     choice="brave --password-store=basic"

@@ -143,7 +143,7 @@ exec --no-startup-id clipmenud
 exec_always --no-startup-id redshift -P -O 3250 &
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 exec --no-startup-id picom --experimental-backends
-exec --no-startup-id conky 
+# exec --no-startup-id conky 
 exec --no-startup-id dunst
 
 # lvim and acpi

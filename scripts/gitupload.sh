@@ -24,4 +24,4 @@ cp -r /home/omar/.config/conky/ ~/Documents/GitHub/dotfiles/config/
 cp ~/.config/picom.conf ~/Documents/GitHub/dotfiles/config/
 cp ~/.config/mpv/mpv.conf   ~/Documents/GitHub/dotfiles/config/mpv/
 cp ~/.config/mpv/input.conf ~/Documents/GitHub/dotfiles/config/mpv/
-cp ~/.config/mpv/tree_mpv.txt ~/Documents/GitHub/dotfiles/config/mpv/
+# cp ~/.config/mpv/tree_mpv.txt ~/Documents/GitHub/dotfiles/config/mpv/
