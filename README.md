@@ -70,7 +70,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
  * sxhkd 
 
 #### Browser 
- * firefox 
+ * waterfox 
 
 #### Color Temperature
  * redshift
@@ -104,7 +104,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 | Terminal and some tools | alacritty fish zsh kitty exa fzf cmatrix xdotool xclip maim flameshot |
 | Diagnostic | htop gotop bashtop bpytop nvtop | 
 | Nvidia | nvidia nvidia-lts optimus-manager | 
-| Browsers | brave-bin firefox google-chrome chromium qutebrowser librewolf mercury-browser | 
+| Browsers | brave-bin firefox google-chrome chromium qutebrowser librewolf mercury-browser waterfox | 
 | pdf tools | zathura okular zathura-pdf-mupdf xournal | 
 | Launcher Themes | python-pywal qt5ct lxappearance kvantum | 
 | Firewall | gufw | 

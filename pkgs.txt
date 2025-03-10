@@ -128,11 +128,13 @@ cryptsetup
 cups
 cups-pdf
 cups-pk-helper
+dbus-daemon-units
 ddrescue
 dex
 dhclient
 dialog
 diffutils
+dive
 dmenu
 dmidecode
 dmraid
@@ -243,6 +245,7 @@ la-capitaine-icon-theme-git
 laptop-detect
 layan-gtk-theme-git
 layan-kde-git
+lazygit
 lens-bin
 less
 lib32-llvm
@@ -320,6 +323,7 @@ nmap
 nnn-nerd
 nodejs
 nordzy-icon-theme-git
+notification-daemon
 noto-fonts
 noto-fonts-emoji
 nss-mdns
@@ -500,11 +504,14 @@ texlive-langother
 texlive-langpolish
 texlive-langportuguese
 texlive-langspanish
+tgpt-git
+tgpt-git-debug
 the_silver_searcher
 thunar
 thunar-archive-plugin
 thunar-volman
 thunderbird
+tig
 timidity++
 tlp
 tlp-rdw
@@ -568,6 +575,7 @@ volumeicon
 vpnc
 vscodium-bin
 warp-terminal
+waterfox-bin
 wd719x-firmware
 we10x-icon-theme-git
 wezterm
@@ -578,6 +586,7 @@ whatsapp-nativefier
 whatsapp-nativefier-debug
 whatsdesk-bin
 whitesur-icon-theme-git
+wireguard-tools
 wireless-regdb
 wireless_tools
 wmctrl
