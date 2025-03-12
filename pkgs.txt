@@ -219,6 +219,7 @@ hunspell-en_us
 hw-probe
 hyperv
 i3-auto-tiling
+i3-back-bin
 i3-swallow-git
 i3-wm
 i3blocks
