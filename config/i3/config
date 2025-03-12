@@ -152,6 +152,7 @@ exec_always --no-startup-id xhost +local:root
 exec_always --no-startup-id flameshot
 exec_always --no-startup-id xfce4-clipman
 exec_always --no-startup-id caffeine  #Install it using pmii caffeine-ng
+
 # Floating 
 for_window [class="Joplin"] floating enable
 for_window [class="SimpleScreenRecorder"] floating enable
