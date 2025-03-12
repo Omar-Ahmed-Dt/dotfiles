@@ -77,6 +77,8 @@ alias pmr='doas pacman -Rs'
 alias pmR='doas pacman -Rd --nodeps' #remove pkg without dependencies
 alias pmii='paru -S'
 alias pmq='pacman -Q'
+alias pmqf="expac --timefmt='%Y-%m-%d %H:%M:%S' '%l %n %v' | sort -r | fzf"
+alias pmqt="expac --timefmt='%Y-%m-%d %H:%M:%S' '%l %n %v' | sort -r"
 alias pmn='pacman -Q | wc -l'
 alias pmc='doas pacman -Sc' #clean the cache after upgrade my system 
 # alias pmg='pamac-manager'
@@ -209,7 +211,7 @@ function pmsi
 end
 #search pkg with yay and install it 
 function pmsii 
-    yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk "{print \$2}")' | xargs -ro  yay -S
+    paru -Slq | fzf -m --preview 'paru -Si {1}' | xargs -ro paru -S
 end 
 #search pkg and remove it 
 function pmsr
@@ -220,14 +222,12 @@ function sc
     cd ~/scripts/
     fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %
     cd - 
-    # du -a ~/scripts/ | awk '{print $2}' | fzf --preview='head -$LINES {}' | xargs -r $EDITOR 
 end 
 # excution selected script 
 function se
     cd ~/scripts/
     fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r /bin/bash
     cd - 
-    # du -a ~/scripts/ | awk '{print $2}' | fzf --preview='head -$LINES {}' | xargs -r sh
 end 
 
 # alias to lvim 

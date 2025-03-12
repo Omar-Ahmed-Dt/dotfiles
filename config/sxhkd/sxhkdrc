@@ -5,7 +5,8 @@ shift + Escape
 	pkill -USR1 -x sxhkd
 # Reload i3
 super + shift + r 
-    i3-msg reload  && i3-msg restart
+    i3-msg reload
+    # i3-msg reload  && i3-msg restart
 #Terminal 
 super + Return
     kitty 
