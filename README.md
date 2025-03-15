@@ -113,7 +113,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 | Office | libreoffice | 
 | Mail | thunderbird mailspring evolution | 
 | Meetings | zoom droidcam |
-| Password Manager | keepassxc | 
+| Password Manager | bitwarden | 
 | Blue Light Filter | redshift | 
 | Note | joplin | 
 | Calendar | khal | 
@@ -151,6 +151,5 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 | mic down | super + minus | 
 | mic up | super + equal | 
 | mic mute | super + Backspace | 
-| keepassxc | super + q | 
 | clipmenu | super + v | 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
