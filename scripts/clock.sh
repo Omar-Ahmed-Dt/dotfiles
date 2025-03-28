@@ -24,4 +24,4 @@ clock=$(date '+%I')
 
 # echo "$(date '+%a.%d.%b') $icon $(date '+%I:%M %p')"
 # echo "$(date '+%a.%d.%b') $(date '+%I:%M %p')"
-echo "$(date '+%d.%b.%a') $(date '+%I:%M %p')"
+echo "$(date '+%a.%d.%b') $(date '+%I:%M %p')"

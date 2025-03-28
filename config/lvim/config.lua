@@ -126,6 +126,12 @@ lvim.builtin.dap.active = true -- (default: false)
 lvim.builtin.terminal.active = true
 
 lvim.plugins = {
+    -- {
+    --     "MeanderingProgrammer/render-markdown.nvim",
+    --     dependencies = { "nvim-treesitter/nvim-treesitter" },
+    --     config = function() require("render-markdown").setup({}) end
+    -- },
+
     {
         "metakirby5/codi.vim",
         cmd = "Codi",

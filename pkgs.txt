@@ -115,6 +115,7 @@ broadcom-wl-dkms
 btrfs-progs
 caffeine-ng
 calc
+certbot
 chaotic-keyring
 chaotic-mirrorlist
 chromium
@@ -122,7 +123,6 @@ cli-visualizer
 clipman
 clipmenu-rofi
 clonezilla
-conky
 cpupower
 cryptsetup
 cups
@@ -145,6 +145,8 @@ dosfstools
 dracula-gtk-theme
 dracula-icons-git
 dragon
+dragon-drop
+dropbox
 duf
 dunst
 dust
@@ -166,7 +168,6 @@ faba-mono-icons-git
 fatresize
 ffmpegthumbnailer
 file-roller
-firefox
 fish
 fisher
 flameshot
@@ -198,6 +199,7 @@ gparted
 gpm
 gptfdisk
 graphite-gtk-theme-git
+grok-cli-debug
 grub
 gsfonts
 gst-plugins-bad
@@ -230,6 +232,8 @@ iotop
 ipython
 iw
 jfsutils
+joplin
+joplin-desktop
 kalker
 kdenlive
 keepassxc
@@ -246,6 +250,8 @@ la-capitaine-icon-theme-git
 laptop-detect
 layan-gtk-theme-git
 layan-kde-git
+lazydocker
+lazydocker-debug
 lazygit
 lens-bin
 less
@@ -322,7 +328,7 @@ nilfs-utils
 nitrogen
 nmap
 nnn-nerd
-nodejs
+nodejs-lts-iron
 nordzy-icon-theme-git
 notification-daemon
 noto-fonts
@@ -339,6 +345,7 @@ nvidia-prime
 nvidia-settings
 nvme-cli
 obs-studio
+obsidian
 obsidian-icon-theme
 okular
 open-iscsi
@@ -370,7 +377,6 @@ passmenu-rs-git-debug
 pavucontrol
 pcmanfm
 pcsclite
-pdfjam-extras
 pdftk
 picom
 pipewire
@@ -407,6 +413,7 @@ qogir-gtk-theme-git
 qogir-icon-theme
 qt5ct
 rate-mirrors-bin
+rclone
 recordmydesktop
 redshift
 refind
@@ -450,7 +457,6 @@ screen
 sddm
 sdparm
 sg3_utils
-signal-desktop
 simplescreenrecorder
 slack-desktop
 slimbookbattery-git
@@ -458,7 +464,6 @@ slurp
 smartmontools
 sof-firmware
 speedtest-cli
-spicetify-cli
 spicetify-cli-debug
 splix
 spotify
@@ -483,28 +488,12 @@ tcpdump
 teams
 teams-debug
 tela-circle-icon-theme-git
-telegram-desktop
+telegram-desktop-bin
+telegram-desktop-bin-debug
 terminus-font
 tesseract-data-ara
 tesseract-data-eng
 testdisk
-texlive-langarabic
-texlive-langchinese
-texlive-langcjk
-texlive-langcyrillic
-texlive-langczechslovak
-texlive-langenglish
-texlive-langeuropean
-texlive-langfrench
-texlive-langgerman
-texlive-langgreek
-texlive-langitalian
-texlive-langjapanese
-texlive-langkorean
-texlive-langother
-texlive-langpolish
-texlive-langportuguese
-texlive-langspanish
 tgpt-git
 tgpt-git-debug
 the_silver_searcher
@@ -520,6 +509,7 @@ tmux
 tpm2-tss
 trash-cli
 tree
+trivy
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-caladea
@@ -530,6 +520,7 @@ ttf-croscore
 ttf-dejavu
 ttf-droid
 ttf-eurof
+ttf-exo-2
 ttf-fantasque-sans-mono
 ttf-fira-code
 ttf-fira-mono
@@ -575,6 +566,7 @@ virtualbox
 volumeicon
 vpnc
 vscodium-bin
+wacomtablet
 warp-terminal
 waterfox-bin
 wd719x-firmware

@@ -144,11 +144,11 @@ mode = "~Alt"
 mods = "Shift"
 
 [scrolling]
-history = 5000
+history = 5000 
 
 [window]
 dynamic_padding = false
-opacity = 1.0
+opacity = 0.95
 title = "Alacritty"
 
 [window.class]
