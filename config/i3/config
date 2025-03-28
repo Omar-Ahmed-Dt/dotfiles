@@ -111,11 +111,11 @@ for_window [instance="pavu"] move scratchpad
 exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name pavu -e pavucontrol 
 bindsym $mod+backslash [instance="pavu"] scratchpad show; [instance="pavu"] move position center
 # keepassxc
-for_window [instance="pass"] floating enable 
-for_window [instance="pass"] resize set 1500 1000
-for_window [instance="pass"] move scratchpad
-exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name pass -e ~/Documents/pass.sh
-bindsym $mod+q [instance="pass"] scratchpad show; [instance="pass"] move position center
+# for_window [instance="pass"] floating enable 
+# for_window [instance="pass"] resize set 1500 1000
+# for_window [instance="pass"] move scratchpad
+# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name pass -e ~/Documents/pass.sh
+# bindsym $mod+q [instance="pass"] scratchpad show; [instance="pass"] move position center
 #############################
 # Jump to urgent window 
 # for_window [urgent=latest] focus
@@ -142,7 +142,7 @@ exec_always --no-startup-id mpd
 exec --no-startup-id clipmenud
 exec_always --no-startup-id redshift -P -O 3250 &
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
-exec --no-startup-id picom --experimental-backends
+exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 # exec --no-startup-id conky 
 exec --no-startup-id dunst
 
@@ -152,9 +152,10 @@ exec_always --no-startup-id xhost +local:root
 exec_always --no-startup-id flameshot
 exec_always --no-startup-id xfce4-clipman
 exec_always --no-startup-id caffeine  #Install it using pmii caffeine-ng
+exec_always --no-startup-id dropbox start -i 
 
 # Floating 
-for_window [class="Joplin"] floating enable
+# for_window [class="Joplin"] floating enable
 for_window [class="SimpleScreenRecorder"] floating enable
 for_window [class="Arcolinux-welcome-app.py"] floating enable
 for_window [class="yad"] floating enable
@@ -206,7 +207,6 @@ gaps inner 3
 gaps outer 0
 # smart_gaps on
 smart_borders on
-exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
 # theme: 
 set $bg        #282828
@@ -221,12 +221,12 @@ set $darkgray  #1d2021
 set $lightgray #bdae93
 
 bar {
-    # separator_symbol "三"
     height 20
     workspace_buttons yes
     font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont Bold 8
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks
+    # status_command i3blocks -c ~/.config/i3/i3blocks_nocolor
     colors {
         background   $bg 
         separator    $yellow

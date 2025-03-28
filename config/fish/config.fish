@@ -172,6 +172,7 @@ alias chft='kitty +list-fonts | grep "Source Code Pro"'
 alias k='kubectl'
 alias h='helm'
 alias tg='tgpt'
+alias dp='dropbox start -i'
 # alias mpv='prime-run mpv'
 
 function se

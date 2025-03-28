@@ -164,4 +164,5 @@ super + shift + w
     ~/scripts/switch.sh
 # mpv with clipboard
 super + shift + p
-    xclip -o | xargs mpv
+    obsidian 
+    # joplin-desktop

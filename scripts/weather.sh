@@ -30,3 +30,4 @@ iconval=${icons%?}
             esac
 
 printf "$icon $Temp°$symbol\n"
+# printf "$Temp°$symbol\n"

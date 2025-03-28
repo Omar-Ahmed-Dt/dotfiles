@@ -10,7 +10,7 @@
 # -p is needed as we use prompts, alternative programs have to handle prompts well.
 
 DMENU="dmenu -i -l 30 -p"
-DMBROWSER="firefox"
+DMBROWSER="waterfox"
 #DMBROWSER="qutebrowser"
 
 DMTERM="kitty -e"
