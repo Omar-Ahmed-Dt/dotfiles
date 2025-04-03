@@ -33,8 +33,8 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 #### Editor 
  *  lvim & vscodium (ssh machine)
 
-#### Editor 
- * joplin-desktop 
+#### Notes 
+ * Obsidian & joplin-desktop 
 
 #### Shell 
  * fish 

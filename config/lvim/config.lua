@@ -1,8 +1,8 @@
 lvim.colorscheme = "gruvbox"
 --
 -- Statusline
--- lvim.builtin.lualine.style = "default"
-lvim.builtin.lualine.style = "lvim"
+lvim.builtin.lualine.style = "default"
+-- lvim.builtin.lualine.style = "lvim"
 -- lvim.builtin.lualine.style = "none"
 --
 -- reload
@@ -76,7 +76,7 @@ vim.opt.breakindent = true
 vim.opt.guifont = "monospace:h17"                    -- the font used in graphical neovim applications
 vim.opt.hlsearch = true
 vim.opt.textwidth = 150
-vim.opt.colorcolumn = "150"
+vim.opt.colorcolumn = "120"
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
@@ -126,11 +126,8 @@ lvim.builtin.dap.active = true -- (default: false)
 lvim.builtin.terminal.active = true
 
 lvim.plugins = {
-    -- {
-    --     "MeanderingProgrammer/render-markdown.nvim",
-    --     dependencies = { "nvim-treesitter/nvim-treesitter" },
-    --     config = function() require("render-markdown").setup({}) end
-    -- },
+
+    { "RRethy/vim-illuminate",        enabled = false },
 
     {
         "metakirby5/codi.vim",
@@ -190,14 +187,12 @@ lvim.plugins = {
 
     -- For markdown-preview
     --
-    --
     {
         "iamcco/markdown-preview.nvim",
         build = "cd app && npm install",
-        ft = "markdown",
+        ft = { "markdown" },
         config = function()
-            vim.g.mkdp_auto_start = 1 -- Automatically start preview when opening Markdown files
-            -- vim.g.mkdp_refresh_slow = 1 -- Optional: make preview updates smoother for larger documents
+            vim.g.mkdp_auto_start = 0
         end,
     },
 
@@ -237,22 +232,24 @@ lvim.plugins = {
 
 }
 
-
-
--- Hexa color
-vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = { "*" },
-    command = "ColorizerToggle",
+-- Markdown
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    callback = function()
+        vim.keymap.set("n", "<C-p>", function()
+            vim.cmd("w")                     -- Save the file
+            vim.cmd("MarkdownPreviewToggle") -- Toggle preview
+        end, { buffer = true, silent = true })
+    end,
 })
 
--- Run Bash File
-vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = { "*.sh" },
-    command = "source ~/.config/lvim/ftplugin/sh.lua",
-})
---
--- Run markdown File
-vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = { "*.md" },
-    command = "source ~/.config/lvim/ftplugin/md.lua",
+-- Bash
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "sh",
+    callback = function()
+        vim.keymap.set("n", "<C-p>", function()
+            vim.cmd("w")       -- Save the file
+            vim.cmd("!bash %") -- Run the current file
+        end, { buffer = true, silent = true })
+    end,
 })
