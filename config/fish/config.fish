@@ -1,6 +1,8 @@
 ## Gruvbox Theme:
 # theme_gruvbox dark
 
+# the current promp theme: omf theme >> clearance
+
 function fish_greeting
      $HOME/github/shell-color-scripts/colorscript.sh -r 
      # pokemon-colorscripts --no-title -r -b

@@ -190,6 +190,7 @@ git
 git-delta
 github-desktop-bin
 gksu
+glow
 gnome-calculator
 gnu-netcat
 go
@@ -264,7 +265,9 @@ libindicator-gtk3
 libreoffice-still
 librewolf-bin
 libusb-compat
+libva-intel-driver
 libva-nvidia-driver
+libva-utils
 light
 linux
 linux-atm
@@ -277,6 +280,7 @@ lsd
 lshw
 lsscsi
 luna-icon-theme-git
+lunarvim-git-debug
 lvm2
 lxappearance
 maim
@@ -314,6 +318,7 @@ neofetch
 neohtop
 neohtop-debug
 neovim
+neovim-remote
 nerd-fonts-source-code-pro
 netdata
 network-manager-applet
@@ -340,7 +345,7 @@ numix-circle-arc-icons-git
 numix-gtk-theme-git
 numix-kde-theme-git
 numlockx
-nvidia-dkms
+nvidia
 nvidia-prime
 nvidia-settings
 nvme-cli
@@ -411,6 +416,8 @@ python-virtualenv
 python-wheel
 qogir-gtk-theme-git
 qogir-icon-theme
+qrcodegen-cmake
+qrcodegencpp-cmake
 qt5ct
 rate-mirrors-bin
 rclone
