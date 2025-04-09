@@ -121,7 +121,8 @@ shift + Return
     ~/scripts/nnn.sh
 #open vim
 super + shift + v 
-    kitty -e lvim
+    kitty -e nvim
+    # kitty -e lvim
 # mail  
 super + shift + m
     thunderbird
