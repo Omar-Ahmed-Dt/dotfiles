@@ -1,8 +1,8 @@
 lvim.colorscheme = "gruvbox"
 --
 -- Statusline
-lvim.builtin.lualine.style = "default"
--- lvim.builtin.lualine.style = "lvim"
+-- lvim.builtin.lualine.style = "default"
+lvim.builtin.lualine.style = "lvim"
 -- lvim.builtin.lualine.style = "none"
 --
 -- reload
@@ -118,8 +118,8 @@ lvim.builtin.treesitter.ensure_installed = {
     "yaml",
 }
 
-lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.highlight.enable = true
+-- lvim.builtin.treesitter.ignore_install = { "haskell" }
+-- lvim.builtin.treesitter.highlight.enable = true
 
 lvim.builtin.alpha.active = true
 lvim.builtin.dap.active = true -- (default: false)
@@ -156,19 +156,7 @@ lvim.plugins = {
             vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
         end,
     },
-    --
-    --
-    -- ranger file manager
-    -- {
-    --     "kevinhwang91/rnvimr",
-    --     cmd = "RnvimrToggle",
-    --     config = function()
-    --         vim.g.rnvimr_draw_border = 1
-    --         vim.g.rnvimr_pick_enable = 1
-    --         vim.g.rnvimr_bw_enable = 1
-    --     end,
-    -- },
-    ----
+
     {
         "norcalli/nvim-colorizer.lua",
         config = function()

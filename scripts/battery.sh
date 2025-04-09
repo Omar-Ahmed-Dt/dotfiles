@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Prints out battery percentage
 
 CHARGING_ICON=' '
@@ -44,4 +43,4 @@ get_battery()
 	echo "$ICON$BAT_ICON  $capacity% $remain"
 }
 
-get_battery 
+get_battery

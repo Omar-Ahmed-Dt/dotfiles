@@ -15,6 +15,9 @@ set fish_cursor_replace_one underscore
 set fish_cursor_replace underscore
 set fish_cursor_visual block
 
+# goLang Config
+# set -Ux PATH $PATH $HOME/go/bin
+
 # xterm: 
 # set -x TERM xterm-256color
 ##
@@ -24,12 +27,12 @@ set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 
 ### EXPORT ###
 set TERMINAL "kitty"                         # Sets the terminal type
-set EDITOR   "lvim"
-set VISUAL   "lvim"
-set -x BROWSER firefox
+set EDITOR   "nvim"
+set VISUAL   "nvim"
+set -x BROWSER waterfox
 
 ### "bat" as manpager
-# set -x MANPAGER "sh -c 'bat --theme gruvbo-dark -l man'"
+# set -x MANPAGER "sh -c 'bat --theme gruvbox-dark -l man'"
 
 # Set fzf defaults
 # set FZF_DEFAULT_OPTS "--layout=reverse --border=bold --border=rounded --margin=3% --color=dark"
@@ -131,7 +134,7 @@ alias gm='cd /mnt'
 alias code='vscodium'
 alias gsh="~/scripts/gsh.sh"
 alias uprsc="xrdb -load ~/.Xresources"
-alias gpu="doas lvim /etc/optimus-manager/optimus-manager.conf"
+alias gpu="doas nvim /etc/optimus-manager/optimus-manager.conf"
 alias ns="nvidia-smi"
 alias nr="prime-run"
 alias theme="kitty +kitten themes"
@@ -176,6 +179,8 @@ alias h='helm'
 alias tg='tgpt'
 alias dp='dropbox start -i'
 # alias mpv='prime-run mpv'
+alias mx='ncpamixer -t i'
+alias gv='cd .config/nvim'
 
 function se
     cd ~/scripts
@@ -233,13 +238,13 @@ function se
     cd - 
 end 
 
-# alias to lvim 
+# alias to nvim 
 function v
-    lvim $argv
+    nvim $argv
 end
 
 function V
-    sudo -E lvim $argv
+    sudo -E nvim $argv
 end
 
 function vi 

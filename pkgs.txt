@@ -88,6 +88,7 @@ arcolinux-xlunch-git
 arcolinuxd-system-config-git
 arconet-xfce
 ark
+asio
 auto-cpufreq
 autotiling
 awesome-terminal-fonts
@@ -115,6 +116,7 @@ broadcom-wl-dkms
 btrfs-progs
 caffeine-ng
 calc
+cameractrls
 certbot
 chaotic-keyring
 chaotic-mirrorlist
@@ -128,8 +130,10 @@ cryptsetup
 cups
 cups-pdf
 cups-pk-helper
+cursor-bin
 dbus-daemon-units
 ddrescue
+delve
 dex
 dhclient
 dialog
@@ -142,6 +146,7 @@ dnsmasq
 docker
 docker-compose
 dosfstools
+downgrade
 dracula-gtk-theme
 dracula-icons-git
 dragon
@@ -195,6 +200,7 @@ gnome-calculator
 gnu-netcat
 go
 google-chrome
+gopls
 gpart
 gparted
 gpm
@@ -210,6 +216,7 @@ gst-plugins-ugly
 gufw
 gummy
 gutenprint
+guvcview
 gvfs-smb
 halo-icons-git
 hawkeye-quicklook-git
@@ -228,7 +235,6 @@ i3-wm
 i3blocks
 i3status
 imagewriter
-instagram-nativefier
 iotop
 ipython
 iw
@@ -259,9 +265,11 @@ less
 lib32-llvm
 lib32-nvidia-utils
 libadwaita-without-adwaita-git
+libajantv2
 libayatana-appindicator
 libfido2
 libindicator-gtk3
+liboobs
 libreoffice-still
 librewolf-bin
 libusb-compat
@@ -280,6 +288,7 @@ lsd
 lshw
 lsscsi
 luna-icon-theme-git
+lunarvim-git
 lunarvim-git-debug
 lvm2
 lxappearance
@@ -313,6 +322,8 @@ mypaint
 nano
 nbd
 ncmpcpp
+ncpamixer
+ncpamixer-debug
 ndisc6
 neofetch
 neohtop
@@ -331,9 +342,10 @@ networkmanager-vpnc
 nfs-utils
 nilfs-utils
 nitrogen
+nlohmann-json
 nmap
 nnn-nerd
-nodejs-lts-iron
+nodejs
 nordzy-icon-theme-git
 notification-daemon
 noto-fonts
@@ -345,11 +357,16 @@ numix-circle-arc-icons-git
 numix-gtk-theme-git
 numix-kde-theme-git
 numlockx
-nvidia
+nvidia-dkms
 nvidia-prime
 nvidia-settings
+nvm
 nvme-cli
+obs-backgroundremoval
+obs-backgroundremoval-debug
 obs-studio
+obs-vaapi
+obs-vaapi-debug
 obsidian
 obsidian-icon-theme
 okular
@@ -486,6 +503,7 @@ surfn-mint-y-icons-git
 surfn-plasma-light-icons-git
 sweet-gtk-theme-dark
 sweet-theme-git
+swig
 sxhkd
 sxiv
 syslinux
@@ -565,11 +583,13 @@ usbmuxd
 usbutils
 v4l2loopback-dc-dkms
 v4l2loopback-dkms
+v4l2loopback-utils
 vagrant
 ventoy-bin
 vim
 vimix-icon-theme-git
 virtualbox
+vlc-luajit
 volumeicon
 vpnc
 vscodium-bin
@@ -578,6 +598,7 @@ warp-terminal
 waterfox-bin
 wd719x-firmware
 we10x-icon-theme-git
+websocketpp
 wezterm
 wget
 whatsapp-for-linux
