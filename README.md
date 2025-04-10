@@ -1,96 +1,86 @@
-# 🛠 Dotfiles 🛠
-<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
+# Dotfiles 🛠
 
-These are my dotfiles. I'm trying to do better. Also, my window manager dots change all the time. I do upload everything here,so you should be able to view previous commits to get to the rice you want.
+These are my dotfiles. I'm trying to do better. Also, my window manager dots change all the time. I do upload everything here.
 
 ![img](https://www.padok.fr/hubfs/Images/Blog/dotfiles_git.webp)
----
 
-#### Operating System 
- * Linux, Arco 
+**Operating System**
+ - Arco Linux 
 
-#### Service Manager 
-  * systemd
+**Desktop Display Manager**
+  - sddm
 
-#### Desktop Display Manager 
-  * sddm
+**Window Manager**
+ - i3  
 
-#### Window Manager 
- * i3  
+**Status Bar**
+ - i3blocks 
 
-#### Status Bar 
- * i3blocks 
+**Screen Locker**
+ - i3lock 
 
-### Screen Locker
- * i3lock 
+**Terminal**
+ - kitty
 
-#### Terminal 
- * kitty
+**Editor**
+ -  nvim | vscodium
 
-#### Terminal Multiplexer 
- * tmux
+**Notes**
+ - Obsidian | joplin-desktop 
 
-#### Editor 
- *  nvim & vscodium (ssh machine)
+**Shell** 
+ - fish 
 
-#### Notes 
- * Obsidian & joplin-desktop 
+**Launcher**
+ - dmenu
 
-#### Shell 
- * fish 
+**File Manager**
+ - nnn | thunar
 
-#### Launcher 
- * [dmenu](https://gitlab.com/dwt1/dmenu-distrotube)
+**Music Player**
+ - mpd & ncmpcpp
 
-#### Terminal File Manager 
- * nnn  
+**Video Player**
+ - mpv 
 
-#### Gui File Manager 
- * thunar
+**Photo Viewer**
+ - sxiv
 
-#### Music Player 
- * mpd & ncmpcpp
+**screenshot**
+- flameshot
 
-#### Video Player 
- * mpv 
+**Screen Recorder**
+ - simplescreenrecorder 
 
-#### Photo Viewer 
- * sxiv
+**pdf Viewer**
+ - zathura
 
-#### Screen Recorder 
- * simplescreenrecorder 
+**Resource Monitor**
+ - htop-vim
 
-#### pdf Viewer 
- * zathura
+**key Binding**
+ - sxhkd 
 
-#### Resource Monitor
- * htop
+**Browser**
+ - waterfox 
 
-#### Key Binding 
- * sxhkd 
+**Color Temperature**
+ - redshift
 
-#### Browser 
- * waterfox 
+**Firewall**
+ - guwf 
 
-#### Color Temperature
- * redshift
+**Office**
+ - libreoffice-still
 
-#### Firewall 
- * guwf 
+**Mail Client**
+ - thunderbird
 
-#### Office 
- * libreoffice-still
+**Virtual Machine**
+ - vbox
 
-#### Mail Client 
- * thunderbird
-
-#### Virtual Machine 
- * vbox
-
-#### Virtual OS 
- * ubuntu
----
-<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
+**Virtual OS** 
+ - ubuntu
 
 | Utility  | Packages            |
 | -----     | --------------- |
@@ -99,7 +89,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 | Display |  xorg-server xorg-xrandr lightdm lightdm-gtk-greeter xorg-xrdb sddm |
 | Editor and IDE | [nvchad](https://nvchad.com/) vscodium |
 | Scripts | [dm-scripts](https://gitlab.com/dwt1/dmscripts)|
-| Multimedia | pipewire [install pipewire](https://github.com/Omar-Ahmed-Dt/dotfiles/blob/main/scripts/pipewire_install.sh) pulseaudio pulsemixer mpv mpv-mpris mpd mpDris2 mpc moc ncmpcpp youtube-dl yt-dlp ffmpeg simplescreenrecorder obs | 
+| Multimedia | pipewire [install pipewire](https://github.com/Omar-Ahmed-Dt/dotfiles/blob/main/scripts/pipewire_install.sh) pulseaudio pulsemixer mpv mpv-mpris mpd mpDris2 mpc moc ncmpcpp youtube-dl yt-dlp ffmpeg ncpamixer simplescreenrecorder obs | 
 | File Manager | nnn nemo | 
 | Terminal and some tools | alacritty fish zsh kitty exa fzf cmatrix xdotool xclip maim flameshot |
 | Diagnostic | htop gotop bashtop bpytop nvtop | 
@@ -112,14 +102,10 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 | Laptop Battery Life | tlp tlp-rdw auto-cpufreq slimbookbattery | 
 | Office | libreoffice | 
 | Mail | thunderbird mailspring evolution | 
-| Meetings | zoom droidcam |
 | Password Manager | bitwarden | 
 | Blue Light Filter | redshift | 
-| Note | joplin | 
+| Note | Obsidian joplin | 
 | Calendar | khal | 
-| Whatsapp Client  | whatsdesk whatsapp-nativefier | 
-
-<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
 
 | Event  | Keybinding |
 | -----     | --------------- |
@@ -131,13 +117,12 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 | dmenu | super + shift + d | 
 | power | super + Escape | 
 | clipboard | super  + v | 
-| resources | super + shift + h | 
 | screenshot | print |  
 | screenshot | PrtSc |  
 | youtube-dl download | super + shift + y | 
 | kill process | super + shift + k | 
 | emoji | super + . | 
-| khal | super + shift + t | 
+| rnote | super + shift + t | 
 | hub | super + o | 
 | ncmpcpp | super + shift + n | 
 | mpc pause | ctrl + space  |
@@ -147,9 +132,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 | kitti3 | super + shift + o | 
 | record screen | super + print | 
 | virtual machine | super + shift + a | 
-| pavucontrol | super + Backslash | 
 | mic down | super + minus | 
 | mic up | super + equal | 
 | mic mute | super + Backspace | 
 | clipmenu | super + v | 
-<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
