@@ -443,6 +443,7 @@ redshift
 refind
 reflector
 reiserfsprogs
+repgrep
 ripdrag-git
 ripgrep
 ristretto
