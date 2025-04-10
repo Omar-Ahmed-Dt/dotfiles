@@ -15,8 +15,8 @@ DMBROWSER="waterfox"
 
 DMTERM="kitty -e"
 
-#DMEDITOR="lvim"
-DMEDITOR="lvim"
+#DMEDITOR="nvim"
+DMEDITOR="nvim"
 
 # TODO: Rename this variable to something more traditional
 logout_locker='slock'
@@ -89,7 +89,6 @@ confedit_list[mimeapps]="$HOME/.config/mimeapps.list"
 # confedit_list[polybar_bspwm]="$HOME/.config/polybar_bspwm/config"
 # confedit_list[bspwm]="$HOME/.config/bspwm/bspwmrc"
 # confedit_list[sxhkd_bspwm]="$HOME/.config/bspwm/sxhkd/sxhkdrc"
-confedit_list[lvim]="$HOME/.config/lvim/config.lua"
 
 # dm-reddit config
 declare -a reddit_list=(

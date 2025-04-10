@@ -1,11 +1,5 @@
 return {
-    -- {
-    --     "stevearc/conform.nvim",
-    --     -- event = 'BufWritePre', -- uncomment for format on save
-    --     opts = require "configs.conform",
-    -- },
 
-    -- These are some examples, uncomment them if you want to see them work!
     {
         "neovim/nvim-lspconfig",
         config = function()
@@ -39,6 +33,7 @@ return {
         end,
     },
 
+    -- markdown-preview
       {
         "iamcco/markdown-preview.nvim",
         build = "cd app && npm install",
@@ -47,6 +42,5 @@ return {
             vim.g.mkdp_auto_start = 0
         end,
     },
-
 
 }

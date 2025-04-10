@@ -20,15 +20,18 @@ M.base46 = {
 
 -- statusline
 M.ui = {
-  statusline = {
-    theme = "default",  -- can be: "default", "vscode", "vscode_colored", "minimal"
-
-    -- default/round/block/arrow separators work only for default statusline theme
-    -- round and block will work for minimal theme only
-    separator_style = "default", -- only affects default/minimal themes
-    order = nil,
-    modules = nil,
-  },
+   tabufline = {
+        order = { "treeOffset", "buffers", "tabs" },  -- removed "btns"
+   },
+    statusline = {
+      theme = "default",  -- can be: "default", "vscode", "vscode_colored", "minimal"
+    
+      -- default/round/block/arrow separators work only for default statusline theme
+      -- round and block will work for minimal theme only
+      separator_style = "default", -- only affects default/minimal themes
+      order = nil,
+      modules = nil,
+    },
 } 
 
 -- Dashboard
