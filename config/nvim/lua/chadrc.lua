@@ -7,14 +7,58 @@ local M = {}
 
 M.base46 = {
 	theme = "gruvbox",
+    transparency = true,
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+	hl_override = {
+		Comment = { italic = true },
+		["@comment"] = { italic = true },
+        -- CursorLine={
+        --     bg = "white",
+        -- },
+	},
 }
 
-M.nvdash = { load_on_startup = true }
+-- statusline
+M.ui = {
+  statusline = {
+    theme = "default",  -- can be: "default", "vscode", "vscode_colored", "minimal"
+
+    -- default/round/block/arrow separators work only for default statusline theme
+    -- round and block will work for minimal theme only
+    separator_style = "default", -- only affects default/minimal themes
+    order = nil,
+    modules = nil,
+  },
+} 
+
+-- Dashboard
+M.nvdash = {
+    load_on_startup = true,
+    header = {
+    "██╗  ██╗███████╗██████╗  █████╗ ",
+    "██║  ██║██╔════╝██╔══██╗██╔══██╗",
+    "███████║█████╗  ██████╔╝███████║",
+    "██╔══██║██╔══╝  ██╔══██╗██╔══██║",
+    "██║  ██║███████╗██║  ██║██║  ██║",
+    "╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝",
+    "                               ",
+  },
+
+}
+
+-- Terminal
+-- M.term = {
+--     winopts = { number = false, relativenumber = false },
+--     sizes = { sp = 0.3, vsp = 0.2, ["bo sp"] = 0.3, ["bo vsp"] = 0.2 },
+--     float = {
+--       relative = "editor",
+--       row = 0.3,
+--       col = 0.25,
+--       width = 0.5,
+--       height = 0.4,
+--       border = "single",
+--     },
+-- }
 
 -- the command :W that writes the current buffer using sudo.-
 vim.api.nvim_create_user_command("W", "w !sudo tee % > /dev/null", { bang = true })

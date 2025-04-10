@@ -19,3 +19,4 @@ n = {
   -- ["<leader>mp"] = { "<cmd>Glow<CR>", "Markdown Preview with Glow" },
 }
 
+
