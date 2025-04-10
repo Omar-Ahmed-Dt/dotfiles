@@ -97,7 +97,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 | Permissions  | doas |
 | Aur Helper  | paru yay git |
 | Display |  xorg-server xorg-xrandr lightdm lightdm-gtk-greeter xorg-xrdb sddm |
-| Editor and IDE | nvchad vscodium |
+| Editor and IDE | [nvchad](https://nvchad.com/) vscodium |
 | Scripts | [dm-scripts](https://gitlab.com/dwt1/dmscripts)|
 | Multimedia | pipewire [install pipewire](https://github.com/Omar-Ahmed-Dt/dotfiles/blob/main/scripts/pipewire_install.sh) pulseaudio pulsemixer mpv mpv-mpris mpd mpDris2 mpc moc ncmpcpp youtube-dl yt-dlp ffmpeg simplescreenrecorder obs | 
 | File Manager | nnn nemo | 
