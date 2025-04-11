@@ -49,7 +49,7 @@ alias cl='clear'
 # function fish_user_key_bindings
 #     bind -M insert \cl 'clear; commandline -f execute'    # Bind Ctrl + L to clear and press enter in insert mode
     # bind -M insert \cl 'clear'    # Bind Ctrl + L to clear and press enter in insert mode
-    # bind -M default \cl 'clear'   # Bind Ctrl + L to clear and press enter in normal mode
+#     bind -M default \cl 'clear'   # Bind Ctrl + L to clear and press enter in normal mode
 # end
 
 # navigation
@@ -104,7 +104,7 @@ alias gt='cd ~/.local/share/Trash/files'
 alias gs='cd ~/scripts'
 # alias pr='proxychains'
 # alias pf='proxychains firefox'
-alias toand='sh ~/scripts/android.sh'
+# alias toand='sh ~/scripts/android.sh'
 alias m='~/scripts/matrix.sh'
 alias gx='cd /usr/share/xsessions'
 alias ft='xdg-mime query filetype'
@@ -129,18 +129,17 @@ alias llt="lsd -lht"
 alias llS="lsd -l --total-size 2> /dev/null"
 alias gcalc='gnome-calculator'
 alias calc='kalker'
-alias size='du -sh 2> /dev/null'
 alias gm='cd /mnt'
 alias code='vscodium'
 alias gsh="~/scripts/gsh.sh"
-alias uprsc="xrdb -load ~/.Xresources"
-alias gpu="doas nvim /etc/optimus-manager/optimus-manager.conf"
+# alias uprsc="xrdb -load ~/.Xresources"
+# alias gpu="doas nvim /etc/optimus-manager/optimus-manager.conf"
 alias ns="nvidia-smi"
 alias nr="prime-run"
 alias theme="kitty +kitten themes"
 alias note="io.github.lainsce.Notejot"
 # alias rm="rm -i"
-alias V="doasedit"
+# alias V="doasedit"
 alias rf='source ~/.config/fish/config.fish'
 alias rkeys="~/scripts/keys.sh"
 alias rmpm="doas rm /var/lib/pacman/db.lck"
@@ -251,9 +250,9 @@ function vi
     vim $argv 
 end 
 
-function lk
-  set loc (walk --icons $argv); and cd $loc;
-end
+# function lk
+#   set loc (walk --icons $argv); and cd $loc;
+# end
 
 function f 
     doas find / -iname $argv 2> /dev/null | grep $argv

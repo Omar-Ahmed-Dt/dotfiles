@@ -346,6 +346,8 @@ nlohmann-json
 nmap
 nnn-nerd
 nodejs
+noisetorch
+noisetorch-debug
 nordzy-icon-theme-git
 notification-daemon
 noto-fonts

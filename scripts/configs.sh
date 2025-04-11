@@ -15,13 +15,13 @@ case "$selected" in
 	mpv_input)         $DMEDITOR $HOME/.config/mpv/input.conf ;;
 	mpv_config)        $DMEDITOR $HOME/.config/mpv/mpv.conf ;;
 	kitty)             $DMEDITOR $HOME/.config/kitty/kitty.conf ;;
-  sxhkd)             $DMEDITOR $HOME/.config/sxhkd/sxhkdrc ;;
-  sxiv)              $DMEDITOR $HOME/.config/sxiv/exec/key-handler ;;
-  zathura)           $DMEDITOR $HOME/.config/zathura/zathurarc ;;
-  ncmpcpp)           $DMEDITOR $HOME/.config/ncmpcpp/config ;;
-  ncmpcpp_bindings)  $DMEDITOR $HOME/.config/ncmpcpp/bindings ;;
-  mimeapps)          $DMEDITOR $HOME/.config/mimeapps.list ;;
-  zsh)               $DMEDITOR $HOME/.zshrc;;
-  tmux)              $DMEDITOR $HOME/.tmux.conf;;
-  picom)             $DMEDITOR $HOME/.config/i3/picom.conf ;;
+    sxhkd)             $DMEDITOR $HOME/.config/sxhkd/sxhkdrc ;;
+    sxiv)              $DMEDITOR $HOME/.config/sxiv/exec/key-handler ;;
+    zathura)           $DMEDITOR $HOME/.config/zathura/zathurarc ;;
+    ncmpcpp)           $DMEDITOR $HOME/.config/ncmpcpp/config ;;
+    ncmpcpp_bindings)  $DMEDITOR $HOME/.config/ncmpcpp/bindings ;;
+    mimeapps)          $DMEDITOR $HOME/.config/mimeapps.list ;;
+    zsh)               $DMEDITOR $HOME/.zshrc;;
+    tmux)              $DMEDITOR $HOME/.tmux.conf;;
+    picom)             $DMEDITOR $HOME/.config/i3/picom.conf ;;
 esac 

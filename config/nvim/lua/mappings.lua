@@ -18,5 +18,3 @@ n = {
   -- ["<Leader>du"] = { function() require("dapui").toggle() end, "Toggle DAP UI" },
   -- ["<leader>mp"] = { "<cmd>Glow<CR>", "Markdown Preview with Glow" },
 }
-
-

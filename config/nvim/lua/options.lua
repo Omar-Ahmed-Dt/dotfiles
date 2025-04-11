@@ -11,7 +11,7 @@ vim.cmd [[
 ]]
 
 -- Optional: extra guide line for max width (like column 120)
-opt.colorcolumn = "120"
+opt.colorcolumn = "110"
 
 -- Other good UX defaults
 opt.number = true
