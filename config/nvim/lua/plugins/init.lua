@@ -34,7 +34,7 @@ return {
     },
 
     -- markdown-preview
-      {
+    {
         "iamcco/markdown-preview.nvim",
         build = "cd app && npm install",
         ft = { "markdown" },
@@ -42,5 +42,19 @@ return {
             vim.g.mkdp_auto_start = 0
         end,
     },
+
+    -- markdown preview live
+    {
+    "MeanderingProgrammer/render-markdown.nvim",
+    ft = "markdown", -- Load only for Markdown files
+    dependencies = { "nvim-treesitter/nvim-treesitter" }, -- Requires Tree-sitter
+    config = function()
+      require("render-markdown").setup({
+        -- Optional configuration (defaults are fine for basic use)
+        enabled = true, -- Enable rendering by default
+        render_modes = { "n", "v" }, -- Render in normal and visual modes
+      })
+    end,
+  },
 
 }

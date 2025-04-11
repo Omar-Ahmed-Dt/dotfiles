@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "gruvbox",
+	theme = "everforest",
     transparency = true,
 
 	hl_override = {
@@ -20,15 +20,17 @@ M.base46 = {
 
 -- statusline
 M.ui = {
-   tabufline = {
-        order = { "treeOffset", "buffers", "tabs" },  -- removed "btns"
+    -- top bar(tabufline)
+    tabufline = {
+        order = { "treeOffset", "buffers", "tabs" },  -- removed "btns" 
    },
+
     statusline = {
       theme = "default",  -- can be: "default", "vscode", "vscode_colored", "minimal"
     
       -- default/round/block/arrow separators work only for default statusline theme
       -- round and block will work for minimal theme only
-      separator_style = "default", -- only affects default/minimal themes
+      separator_style = "arrow", -- only affects default/minimal themes
       order = nil,
       modules = nil,
     },
