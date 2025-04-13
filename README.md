@@ -2,8 +2,6 @@
 
 These are my dotfiles. I'm trying to do better. Also, my window manager dots change all the time. I do upload everything here.
 
-![img](https://www.padok.fr/hubfs/Images/Blog/dotfiles_git.webp)
-
 **Operating System**
  - Arch Linux 
 
