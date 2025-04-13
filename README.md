@@ -5,7 +5,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 ![img](https://www.padok.fr/hubfs/Images/Blog/dotfiles_git.webp)
 
 **Operating System**
- - Arco Linux 
+ - Arch Linux 
 
 **Desktop Display Manager**
   - sddm
