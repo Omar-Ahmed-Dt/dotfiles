@@ -39,7 +39,7 @@ application/yaml=userapp-kitty -e lvim-PQI3O2.desktop
 
 [Added Associations]
 application/x-xopp=com.github.xournalpp.xournalpp.desktop;
-application/pdf=libreoffice-writer.desktop;librewolf.desktop;com.github.xournalpp.xournalpp.desktop;okularApplication_pdf.desktop;com.github.flxzt.rnote.desktop;
+application/pdf=chromium.desktop;libreoffice-writer.desktop;librewolf.desktop;com.github.xournalpp.xournalpp.desktop;okularApplication_pdf.desktop;com.github.flxzt.rnote.desktop;
 text/plain=codium.desktop;userapp-kitty -e lvim-PQI3O2.desktop;
 image/jpeg=org.xfce.ristretto.desktop;
 image/svg+xml=org.xfce.ristretto.desktop;

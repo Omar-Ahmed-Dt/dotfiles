@@ -5,7 +5,7 @@ path=$(pwd)
 script_path="$path"
 
 # the editor of your choice
-script_editor="lvim"
+script_editor="nvim"
 
 # check for argument (script name)
 
