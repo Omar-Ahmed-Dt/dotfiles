@@ -140,7 +140,7 @@ ctrl + BackSpace
 	mpc stop 
 # virtual machine 
 super + shift + a
- 		virtualbox 
+    virtualbox 
 # ocr 
 super + e 
     ~/scripts/ocr.sh
@@ -155,8 +155,8 @@ super + period
 F10
     $HOME/scripts/keys.sh
 # xournalpp 
-super + shift + t
-    rnote
+# super + shift + t
+#     rnote
 # messenger
 super + m
     messenger-nativefier
@@ -167,3 +167,5 @@ super + shift + w
 super + shift + p
     obsidian 
     # joplin-desktop
+super + backslash
+    dmenu_path | dmenu | xargs ~/scripts/toggle.sh

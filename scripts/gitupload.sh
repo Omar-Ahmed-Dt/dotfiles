@@ -1,5 +1,6 @@
 #!/bin/bash 
-#
+
+
 pacman -Qeq > ~/Documents/GitHub/dotfiles/pkgs.txt
 cd ~/.config/
 cp -r alacritty fish neofetch sxhkd zathura htop paru dmscripts i3 pcmanfm yay sxiv mimeapps.list dunst /home/omar/Documents/GitHub/dotfiles/config

@@ -10,6 +10,7 @@ adobe-source-sans-fonts
 adobe-source-serif-fonts
 advcpmv
 aic94xx-firmware
+aicommits
 alacritty
 alsa-firmware
 alsa-plugins
@@ -138,6 +139,8 @@ dex
 dhclient
 dialog
 diffutils
+display3d
+display3d-debug
 dive
 dmenu
 dmidecode
@@ -193,6 +196,7 @@ gifsicle
 gimp
 git
 git-delta
+git-graph
 github-desktop-bin
 gksu
 glow
@@ -241,6 +245,7 @@ iw
 jfsutils
 joplin
 joplin-desktop
+jupyter-nbconvert
 kalker
 kdenlive
 keepassxc
@@ -255,6 +260,7 @@ kvantum-theme-materia
 kvantum-theme-qogir-git
 la-capitaine-icon-theme-git
 laptop-detect
+larksuite-bin-debug
 layan-gtk-theme-git
 layan-kde-git
 lazydocker
@@ -330,7 +336,6 @@ neohtop
 neohtop-debug
 neovim
 neovim-remote
-nerd-fonts-source-code-pro
 netdata
 network-manager-applet
 networkmanager
@@ -389,6 +394,7 @@ otf-libertinus
 p3x-onenote
 pacman-contrib
 pamixer
+pandoc-cli
 papirus-folders-gui-bin
 papirus-folders-nordic
 papirus-linux-universe
@@ -522,6 +528,8 @@ terminus-font
 tesseract-data-ara
 tesseract-data-eng
 testdisk
+texlive-basic
+texlive-latex
 tgpt-git
 tgpt-git-debug
 the_silver_searcher
@@ -535,6 +543,8 @@ tlp
 tlp-rdw
 tmux
 tpm2-tss
+tracker
+tracker-debug
 trash-cli
 tree
 trivy
@@ -575,6 +585,7 @@ ttf-nerd-fonts-symbols-mono
 ttf-opensans
 ttf-roboto
 ttf-roboto-mono
+ttf-sourcecodepro-nerd
 ttf-ubuntu-font-family
 ttf-weather-icons
 tumbler
