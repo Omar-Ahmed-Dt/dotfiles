@@ -10,7 +10,6 @@ adobe-source-sans-fonts
 adobe-source-serif-fonts
 advcpmv
 aic94xx-firmware
-aicommits
 alacritty
 alsa-firmware
 alsa-plugins
