@@ -34,6 +34,9 @@ M.ui = {
       order = nil,
       modules = nil,
     },
+    nvimtree = {
+        enabled = false,
+    }
 } 
 
 -- Dashboard

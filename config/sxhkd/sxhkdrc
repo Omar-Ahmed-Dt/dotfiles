@@ -168,4 +168,5 @@ super + shift + p
     obsidian 
     # joplin-desktop
 super + backslash
-    dmenu_path | dmenu | xargs ~/scripts/toggle.sh
+    ~/scripts/toggle.sh
+    # dmenu_path | dmenu | xargs ~/scripts/toggle.sh
