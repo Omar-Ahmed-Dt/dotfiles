@@ -1,0 +1,19 @@
+# Standard host addresses
+127.0.0.1  localhost
+::1        localhost ip6-localhost ip6-loopback
+ff02::1    ip6-allnodes
+ff02::2    ip6-allrouters
+# This host address
+127.0.1.1  omar-81bf
+
+# docker setup
+127.0.0.1 bit.home.local
+127.0.0.1 bmk.home.local
+127.0.0.1 doz.home.local
+127.0.0.1 home.home.local
+127.0.0.1 inv.home.local
+127.0.0.1 met.home.local
+127.0.0.1 net.home.local
+127.0.0.1 npm.home.local
+127.0.0.1 pih.home.local
+127.0.0.1 por.home.local

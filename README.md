@@ -3,7 +3,7 @@
 These are my dotfiles. I'm trying to do better. Also, my window manager dots change all the time. I do upload everything here.
 
 **Operating System**
- - Arch Linux 
+ - Arch Linux [ArcoPro](https://www.arcolinux.info/downloads/)
 
 **Desktop Display Manager**
   - sddm
@@ -73,6 +73,9 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 
 **Mail Client**
  - thunderbird
+
+ **Telegram**
+- fagram
 
 **Virtual Machine**
  - vbox
