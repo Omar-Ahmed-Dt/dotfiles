@@ -94,7 +94,8 @@ alias gc='cd ~/.config'
 alias ram='ps axh -o cmd:15,%mem --sort=-%mem | head | string trim'
 alias cpu='ps axh -o cmd:15,%cpu --sort=-%cpu | head'
 alias bup='sh /home/omar/scripts/gitupload.sh'
-alias df='duf -hide special -style ascii'
+# alias df='duf -hide special -style ascii'
+alias df='dysk'
 alias dfdr='dust'
 alias dfd='dust -r'
 alias printer='system-config-printer'
@@ -143,7 +144,7 @@ alias note="io.github.lainsce.Notejot"
 alias rf='source ~/.config/fish/config.fish'
 alias rkeys="~/scripts/keys.sh"
 alias rmpm="doas rm /var/lib/pacman/db.lck"
-alias cd="z"
+alias cd="z" # zoxide and z pkgs
 alias cat="lolcat"
 alias prop="xprop | grep WM_CLASS"
 alias dl="~/scripts/dlfile.sh"
@@ -180,9 +181,9 @@ alias dp='dropbox start -i'
 # alias mpv='prime-run mpv'
 alias mx='ncpamixer -t i'
 alias gv='cd .config/nvim'
-alias gg='git-graph'
+alias gg='git-graph' # and install git-delta
 # alias tgl='~/scripts/toggle.sh'
-# alias tgl='dmenu_path | dmenu | xargs ~/scripts/toggle.sh & disown'
+alias sxiv="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
 
 function se
     cd ~/scripts

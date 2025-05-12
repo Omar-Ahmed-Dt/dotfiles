@@ -62,9 +62,10 @@ F12
 #light down 
 F11
 		light -U 5 && pkill -RTMIN+20 i3blocks
-#dmenu 
-super + shift + d 
-    ~/scripts/lan_dmenu.sh && dmenu_run
+#dmenu toggle program 
+super + backslash
+    ~/scripts/lan_dmenu.sh && ~/scripts/toggle.sh
+    # ~/scripts/lan_dmenu.sh && dmenu_run
 #lang 
 super + space
     setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ara || setxkbmap us && pkill -RTMIN+15 i3blocks
@@ -150,13 +151,9 @@ Insert
 # emoji
 super + period
     ~/scripts/lan_dmenu.sh && bemoji -n
-    # ~/scripts/lan_dmenu.sh && bemoji -f ~/scripts/emoji
 # rkeys
 F10
     $HOME/scripts/keys.sh
-# xournalpp 
-# super + shift + t
-#     rnote
 # messenger
 super + m
     messenger-nativefier
@@ -166,7 +163,3 @@ super + shift + w
 # mpv with clipboard
 super + shift + p
     obsidian 
-    # joplin-desktop
-super + backslash
-    ~/scripts/toggle.sh
-    # dmenu_path | dmenu | xargs ~/scripts/toggle.sh
