@@ -7,16 +7,17 @@ prog=$(dmenu_path | dmenu -p "Choose a program to toggle:")
 [ -z "$prog" ] && exit
 
 # Check if the program is running
-if pgrep -f "$prog" > /dev/null; then
+if pgrep -f "$prog"; then
     # If running, ask to kill
     choice=$(printf "Yes\nNo" | dmenu -p "$prog is running. Kill it?")
     if [ "$choice" = "Yes" ]; then
-        killall "$prog"
+        # killall "$prog"
+        pkill -f "$prog"
     fi
 else
     # If not running, ask to start
-    choice=$(printf "Yes\nNo" | dmenu -p "$prog is not running. Start it?")
-    if [ "$choice" = "Yes" ]; then
+    # choice=$(printf "Yes\nNo" | dmenu -p "$prog is not running. Start it?")
+    # if [ "$choice" = "Yes" ]; then
         "$prog" &
-    fi
+    # fi
 fi

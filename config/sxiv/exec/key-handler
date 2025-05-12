@@ -72,5 +72,3 @@ case "$1" in
 "C-slash")  rotate 180 ;;
 esac
 comment
-
-
