@@ -1,5 +1,6 @@
 accountsservice
 acpi
+acpid
 adapta-gtk-theme
 adobe-source-code-pro-fonts
 adobe-source-han-sans-cn-fonts
@@ -458,6 +459,8 @@ vis
 vlc
 volumeicon
 vpnc
+vscodium
+wacomtablet
 waterfox-bin
 wd719x-firmware
 we10x-icon-theme-git
@@ -469,6 +472,7 @@ wmctrl
 wpa_supplicant
 wvdial
 xclip
+xcolor
 xcursor-arch-cursor-complete
 xcursor-breeze
 xcursor-comix
@@ -531,6 +535,7 @@ xwallpaper
 yad
 yay-git
 yt-dlp
+yt-x
 z
 zafiro-icon-theme
 zathura

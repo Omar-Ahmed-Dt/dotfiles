@@ -183,7 +183,8 @@ alias mx='ncpamixer -t i'
 alias gv='cd .config/nvim'
 alias gg='git-graph' # and install git-delta
 # alias tgl='~/scripts/toggle.sh'
-alias sxiv="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
+alias sx="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
+alias yx="yt-x"
 
 function se
     cd ~/scripts

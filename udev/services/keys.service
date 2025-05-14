@@ -1,0 +1,7 @@
+[Unit]
+Description=Remap Caps to Escape
+
+[Service]
+Type=oneshot
+# ExecStart=/home/omar/scripts/keys.sh
+ExecStart=/usr/bin/su -l omar -c 'DISPLAY=:0 XAUTHORITY=/home/omar/.Xauthority /usr/bin/setxkbmap -option caps:escape'

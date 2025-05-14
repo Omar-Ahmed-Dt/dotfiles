@@ -111,9 +111,6 @@ super + shift + s
 #kill process 
 super + shift + k 
     /home/omar/github/dmscripts/scripts/dm-kill
-#kill mpv 
-super + p
-    pkill mpv 
 #hub 
 super + o 
 	~/scripts/hub.sh
@@ -160,6 +157,6 @@ super + m
 # switch
 super + shift + w 
     ~/scripts/switch.sh
-# mpv with clipboard
+# obsidian
 super + shift + p
     obsidian 
