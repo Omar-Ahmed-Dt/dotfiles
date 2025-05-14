@@ -1,0 +1,6 @@
+[Unit]
+Description=wacom configurations
+
+[Service]
+Type=oneshot
+ExecStart=/home/omar/scripts/wacom.sh

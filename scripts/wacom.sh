@@ -1,6 +1,7 @@
 #!/bin/bash
 
-
+# Setup correct environment for X11 + DBus
+export DISPLAY=:0
 for i in $(seq 10); do
     if xsetwacom list devices | grep -q Wacom; then
         break
@@ -9,7 +10,7 @@ for i in $(seq 10); do
 done
 
 
-/usr/local/bin/keys.sh
+/home/omar/scripts/keys.sh
 
 
 # xsetwacom list devices
