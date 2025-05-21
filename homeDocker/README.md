@@ -4,7 +4,7 @@ This repository contains individual Docker service configurations, each in its o
 
 ---
 
-## 🚀 Script Overview
+## 🚀 Overview
 
 ### `start_all.sh`
 
