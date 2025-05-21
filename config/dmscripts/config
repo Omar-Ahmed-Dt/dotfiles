@@ -10,6 +10,7 @@
 # -p is needed as we use prompts, alternative programs have to handle prompts well.
 
 DMENU="dmenu -i -l 30 -p"
+# DMENU="rofi -dmenu"
 DMBROWSER="waterfox"
 #DMBROWSER="qutebrowser"
 
@@ -29,12 +30,12 @@ logout_locker='slock'
 # *) should be left blank, global variables are defined above
 
 # include -p in standard dmenu as we use prompts by default
-case "${0##*-}" in
+# case "${0##*-}" in
 #  "colpick") DMENU="dmenu -i -p";;
 #  "confedit") DMENU="dmenu -i -l 30 -p";;
 #  "youtube") DMBROWSER="firefox";;
-  *);;
-esac
+#   *);;
+# esac
 
 # "${0##*-}" means grab the 0th argument (which is always the path to the program) starting from the
 # last dash. This gives us the word after the - which is what we are searching for in the case

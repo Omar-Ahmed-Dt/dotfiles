@@ -1,5 +1,6 @@
 ## Gruvbox Theme:
-# theme_gruvbox dark
+# options: dark {soft , medium , hard} | light {soft, medium, hard}
+# theme_gruvbox dark soft
 
 # the current promp theme: omf theme >> clearance
 
@@ -144,7 +145,7 @@ alias note="io.github.lainsce.Notejot"
 alias rf='source ~/.config/fish/config.fish'
 alias rkeys="~/scripts/keys.sh"
 alias rmpm="doas rm /var/lib/pacman/db.lck"
-alias cd="z" # zoxide and z pkgs
+alias cd="z" # zoxide pkg
 alias cat="lolcat"
 alias prop="xprop | grep WM_CLASS"
 alias dl="~/scripts/dlfile.sh"

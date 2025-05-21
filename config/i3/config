@@ -226,7 +226,7 @@ set $darkgray  #1d2021
 set $lightgray #bdae93
 
 bar {
-    height 20
+    height 17
     workspace_buttons yes
     font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont Bold 8
     position top
