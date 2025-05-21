@@ -1,0 +1,17 @@
+version: '3'
+services:
+  bitwarden:
+    image: vaultwarden/server:latest
+    container_name: bitwarden
+    restart: always
+    # restart: unless-stopped
+    ports:
+      - "7080:80"
+    volumes:
+      - ./data:/data
+    environment:
+      - ADMIN_TOKEN=<token>  # Set an admin token for security
+      - DOMAIN=https://bit.hera.com
+      - WEBSOCKET_ENABLED=true  # Enable WebSocket support for better performance
+      - SIGNUPS_ALLOWED=true  # Allow new users to sign up
+      - LOG_LEVEL=info  # Logging level (debug, info, warn, error)

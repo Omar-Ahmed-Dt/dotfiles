@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  heimdall:
+    image: linuxserver/heimdall:latest
+    container_name: heimdall
+    restart: unless-stopped
+    ports:
+      - "8082:80"    # Web UI (avoiding 80 and 8080)
+      - "4432:443"   # HTTPS (avoiding 443)
+    volumes:
+      - "${PWD}/config:/config"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC

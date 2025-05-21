@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    restart: unless-stopped
+    ports:
+      - "53:53/tcp"    # DNS
+      - "53:53/udp"    # DNS
+      - "8080:80/tcp"  # Web interface (change if port 80 is in use)
+      - "8443:443/tcp" # Optional: HTTPS (if enabled)
+      - "67:67/udp"    # DHCP (only needed if Pi-hole is acting as a DHCP server)
+    environment:
+      TZ: "America/New_York"  # Set your timezone
+      WEBPASSWORD: "root"  # Set the password for the Pi-hole web admin
+      DNS1: "1.1.1.1"  # Cloudflare DNS (Change if needed)
+      DNS2: "8.8.8.8"  # Google DNS (Change if needed)
+    volumes:
+      - "./etc-pihole:/etc/pihole"
+      - "./etc-dnsmasq:/etc/dnsmasq.d"
+    cap_add:
+      - NET_ADMIN  # Allows the container to modify network settings
