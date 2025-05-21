@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  linkding:
+    image: sissbruecker/linkding:latest
+    container_name: linkding
+    restart: unless-stopped
+    ports:
+      - "3030:9090"
+    volumes:
+      - ./linkding-data:/etc/linkding/data
+    environment:
+      - LD_SUPERUSER_NAME=admin
+      - LD_SUPERUSER_PASSWORD=changeme
+      - LD_DB_ENGINE=sqlite
