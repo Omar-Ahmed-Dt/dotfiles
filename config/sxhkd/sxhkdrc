@@ -63,9 +63,11 @@ F12
 F11
 		light -U 5 && pkill -RTMIN+20 i3blocks
 #dmenu toggle program 
-super + backslash
-    ~/scripts/lan_dmenu.sh && ~/scripts/toggle.sh
-    # ~/scripts/lan_dmenu.sh && dmenu_run
+# super + backslash
+    # ~/scripts/lan_dmenu.sh && ~/scripts/toggle.sh
+# run a program
+super + shift + d 
+    ~/scripts/lan_dmenu.sh && dmenu_run
 #lang 
 super + space
     setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ara || setxkbmap us && pkill -RTMIN+15 i3blocks
@@ -108,9 +110,6 @@ Print
 #screenshot 
 super + shift + s 
     flameshot gui -s -c
-#kill process 
-super + shift + k 
-    /home/omar/github/dmscripts/scripts/dm-kill
 #hub 
 super + o 
 	~/scripts/hub.sh
@@ -136,9 +135,6 @@ Pause
 # mpc stop 
 ctrl + BackSpace 
 	mpc stop 
-# virtual machine 
-super + shift + a
-    virtualbox 
 # ocr 
 super + e 
     ~/scripts/ocr.sh
@@ -160,3 +156,6 @@ super + shift + w
 # obsidian
 super + shift + p
     obsidian 
+# kill program
+super + shift + k
+    cd ~/scripts/dmenu_scripts/ && ./dm-kill

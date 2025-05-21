@@ -6,7 +6,8 @@
 local M = {}
 
 M.base46 = {
-	theme = "everforest",
+	-- theme = "gruvbox",
+    theme = "seoul256_dark",
     transparency = true,
 
 	hl_override = {
@@ -69,7 +70,10 @@ M.nvdash = {
 -- }
 
 -- the command :W that writes the current buffer using sudo.-
-vim.api.nvim_create_user_command("W", "w !sudo tee % > /dev/null", { bang = true })
+vim.api.nvim_create_user_command("W", function()
+  vim.cmd('silent! write !sudo tee % > /dev/null')
+  vim.cmd('edit!')
+end, {})
 
 -- Markdown
 vim.api.nvim_create_autocmd("FileType", {

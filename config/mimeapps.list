@@ -36,6 +36,7 @@ x-scheme-handler/tonsite=org.telegram.desktop.desktop
 x-scheme-handler/msteams=teams.desktop
 application/x-zerosize=userapp-kitty -e lvim-PQI3O2.desktop
 application/yaml=userapp-kitty -e lvim-PQI3O2.desktop
+x-scheme-handler/postman=Postman.desktop
 
 [Added Associations]
 application/x-xopp=com.github.xournalpp.xournalpp.desktop;

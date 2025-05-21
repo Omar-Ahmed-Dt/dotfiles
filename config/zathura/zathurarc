@@ -23,6 +23,7 @@ set default-fg                  "#3B4252"
 
 set statusbar-fg                "#D8DEE9"
 set statusbar-bg                "#434C5E"
+# set statusbar-bg                "#000000"
 
 set index-bg                   "#2E3440" 
 set index-fg                   "#ECEFF4" 

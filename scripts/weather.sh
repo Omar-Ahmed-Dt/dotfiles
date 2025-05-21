@@ -1,5 +1,5 @@
 #!/bin/sh
-key="60a0011eb69814c1198802e717248c16"
+key="f5e1f1e008ef313f226adb4529f80494"
 cityid="347497" #city id can be found at https://openweathermap.org in the url bar
 lang="us"
 unit="metric" # use Celsius or Fahrenheit
