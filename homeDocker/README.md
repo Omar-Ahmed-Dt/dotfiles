@@ -15,6 +15,7 @@ This script automatically starts all Docker services
 ```bash
 ./start_all.sh
 ```
+![homeContainers](../workflow/heimdall.png)
 
 ---
 ## 🐳 Docker Services
