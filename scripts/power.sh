@@ -24,8 +24,7 @@ case "$OPT" in
         ;;
     zzz)
         if [ "$(confirm suspend)" = "Yes" ]; then
-            ~/scripts/lock.sh
-            systemctl suspend -i
+            setxkbmap us && pkill -RTMIN+15 i3blocks && slock systemctl suspend -i 
         fi
         ;;
     shutdown)

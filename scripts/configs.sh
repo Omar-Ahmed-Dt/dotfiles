@@ -4,7 +4,7 @@ DMEDITOR="nvim"
 
 actions=(configs fish i3 i3_blocks mpv_input mpv_config kitty sxhkd sxiv zathura mimeapps tmux)
 
-selected=$(printf '%s\n' "${actions[@]}" | dmenu -i -l 20 -p "Edit Configs: ")
+selected=$(printf '%s\n' "${actions[@]}" | dmenu -c -i -l 20 -p "Edit Configs: ")
 
 case "$selected" in
 	configs)           $DMEDITOR $HOME/scripts/configs.sh ;;
