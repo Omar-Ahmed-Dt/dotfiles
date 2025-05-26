@@ -1,11 +1,37 @@
 #!/bin/bash
-OPT=$(echo -e "lock\nkill\nreboot\nzzz\nshutdown" | dmenu -i -p "Choose action: ")
-case $OPT in
-	lock ) [ "$(printf "No\\nYes" | dmenu -i -p "Really lock?")" = "Yes" ] && ~/scripts/lock.sh && pkill -RTMIN+20 i3blocks ;;
-	kill ) [ "$(printf "No\\nYes" | dmenu -i -p "Really exit?")" = "Yes" ] && pkill i3 ;; 
-	reboot) [ "$(printf "No\\nYes" | dmenu -i -p "Really reboot?")" = "Yes" ] && reboot -i ;;
-	# zzz) [ "$(printf "No\\nYes" | dmenu -i -p "Really suspend?")" = "Yes" ] && ~/scripts/lock.sh && systemctl suspend ;;
-	zzz) [ "$(printf "No\\nYes" | dmenu -i -p "Really suspend?")" = "Yes" ] && slock systemctl suspend -i ;;
-	shutdown) [ "$(printf "No\\nYes" | dmenu -i -p "Really shutdown?")" = "Yes" ] && shutdown now ;;
-	*) ;;
+
+# Menu options
+OPTIONS="lock\nkill\nreboot\nzzz\nshutdown"
+
+# Prompt user (centered and vertical)
+OPT=$(echo -e "$OPTIONS" | dmenu -i -c -l 5 -p "Choose action:")
+
+# Confirmation function
+confirm() {
+    printf "No\nYes" | dmenu -i -c -l 2 -p "Really $1?"
+}
+
+# Action handler
+case "$OPT" in
+    lock)
+        [ "$(confirm lock)" = "Yes" ] && ~/scripts/lock.sh && pkill -RTMIN+20 i3blocks
+        ;;
+    kill)
+        [ "$(confirm exit)" = "Yes" ] && pkill i3
+        ;;
+    reboot)
+        [ "$(confirm reboot)" = "Yes" ] && reboot -i
+        ;;
+    zzz)
+        if [ "$(confirm suspend)" = "Yes" ]; then
+            ~/scripts/lock.sh
+            systemctl suspend -i
+        fi
+        ;;
+    shutdown)
+        [ "$(confirm shutdown)" = "Yes" ] && shutdown now
+        ;;
+    *)
+        ;;
 esac
+
