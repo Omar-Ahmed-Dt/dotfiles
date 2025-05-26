@@ -148,6 +148,7 @@ exec --no-startup-id clipmenud
 exec_always --no-startup-id redshift -P -O 3250 &
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
+# exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 # exec --no-startup-id conky 
 exec --no-startup-id dunst
 

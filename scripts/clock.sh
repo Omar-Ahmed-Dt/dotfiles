@@ -1,7 +1,7 @@
 #!/bin/sh
 case "$BLOCK_BUTTON" in
-    1) kitty -e khal --color interactive ;;
-    3) kitty $HOME ;;
+    # 3) kitty -e khal --color interactive ;;
+    1) kitty $HOME ;;
 esac
 
 clock=$(date '+%I')

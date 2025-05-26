@@ -42,6 +42,8 @@ bluez
 bluez-libs
 bluez-utils
 brave-bin
+breeze
+breeze-gtk
 broadcom-wl-dkms
 btop
 btrfs-progs
@@ -146,6 +148,7 @@ khal
 kitti3
 kitty
 kripton-theme-git
+kvantum-qt5
 kvantum-theme-materia
 kvantum-theme-qogir-git
 la-capitaine-icon-theme-git
@@ -176,7 +179,7 @@ lsscsi
 luarocks
 luna-icon-theme-git
 lvm2
-lxappearance
+lxappearance-gtk3
 maim
 man-db
 man-pages
@@ -258,6 +261,7 @@ parted
 partimage
 paru-git
 pavucontrol
+pcmanfm
 pcsclite
 phinger-cursors
 picom-git
@@ -281,6 +285,7 @@ pv
 pwgen
 qogir-gtk-theme-git
 qogir-icon-theme
+qt5ct
 rate-mirrors-bin
 redshift
 refind
@@ -320,6 +325,7 @@ sardi-mono-papirus-colora-variations-icons-git
 sardi-orb-colora-mint-y-icons-git
 sardi-orb-colora-mixing-icons-git
 sardi-orb-colora-variations-icons-git
+scrcpy
 screen
 sddm
 sdparm
@@ -433,7 +439,6 @@ wvdial
 xclip
 xcolor
 xcursor-arch-cursor-complete
-xcursor-breeze
 xcursor-comix
 xcursor-flatbed
 xcursor-neutral
