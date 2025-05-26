@@ -17,7 +17,7 @@ application/json=userapp-kitty -e lvim -I0ED02.desktop
 inode/directory=pcmanfm.desktop
 x-scheme-handler/tg=userapp-Telegram Desktop-H0FHE1.desktop
 application/x-shellscript=userapp-kitty -e lvim-PQI3O2.desktop
-text/plain=userapp-kitty -e nvim.desktop
+text/plain=userapp-kitty -e nvim-DE0S62.desktop
 x-scheme-handler/chrome=userapp-Waterfox-U34Y22.desktop
 application/x-extension-htm=userapp-Waterfox-U34Y22.desktop
 application/x-extension-html=userapp-Waterfox-U34Y22.desktop
@@ -35,22 +35,27 @@ text/markdown=codium.desktop
 x-scheme-handler/tonsite=org.telegram.desktop.desktop
 x-scheme-handler/msteams=teams.desktop
 application/x-zerosize=userapp-kitty -e lvim-PQI3O2.desktop
-application/yaml=userapp-kitty -e lvim-PQI3O2.desktop
+application/yaml=userapp-kitty -e nvim-DE0S62.desktop
 x-scheme-handler/postman=Postman.desktop
 
 [Added Associations]
 application/x-xopp=com.github.xournalpp.xournalpp.desktop;
 application/pdf=chromium.desktop;libreoffice-writer.desktop;librewolf.desktop;com.github.xournalpp.xournalpp.desktop;okularApplication_pdf.desktop;com.github.flxzt.rnote.desktop;
-text/plain=codium.desktop;userapp-kitty -e lvim-PQI3O2.desktop;
+text/plain=nvim.desktop;codium.desktop;userapp-kitty -e nvim-DE0S62.desktop;
 image/jpeg=org.xfce.ristretto.desktop;
 image/svg+xml=org.xfce.ristretto.desktop;
 text/markdown=waterfox.desktop;codium.desktop;
-application/x-shellscript=userapp-kitty -e lvim-PQI3O2.desktop;userapp-kitty -e -L42TR2.desktop;
+application/x-shellscript=userapp-kitty -e -L42TR2.desktop;
 x-scheme-handler/tonsite=org.telegram.desktop.desktop;
-application/x-zerosize=libreoffice-writer.desktop;userapp-kitty -e lvim-PQI3O2.desktop;
+application/x-zerosize=libreoffice-writer.desktop;
 video/mp4=vlc.desktop;
 application/json=userapp-kitty -e lvim -I0ED02.desktop;
-application/yaml=userapp-kitty -e lvim-PQI3O2.desktop;
 image/png=org.xfce.ristretto.desktop;
 x-scheme-handler/http=userapp-Waterfox-U34Y22.desktop;
 x-scheme-handler/https=userapp-Waterfox-U34Y22.desktop;
+application/yaml=userapp-kitty -e nvim-DE0S62.desktop;
+application/x-desktop=userapp-kitty -e nvim-DE0S62.desktop;
+
+[Removed Associations]
+text/plain=userapp-kitty -e lvim-PQI3O2.desktop;
+application/yaml=userapp-kitty -e nvim $1-GLDF62.desktop;

@@ -2,6 +2,7 @@ local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
+map("i", "ne", "!=", { desc = "insert != in insert mode" })
 map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
 map("i", "<C-e>", "<End>", { desc = "move end of line" })
 map("i", "<C-h>", "<Left>", { desc = "move left" })
@@ -17,6 +18,7 @@ map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights" })
 
 map("n", "<C-s>", "<cmd>w<CR>", { desc = "general save file" })
+-- map("n", "<C-i>", "<cmd>w<CR>", { desc = "general save file" })
 map("n", "<C-c>", "<cmd>%y+<CR>", { desc = "general copy whole file" })
 
 -- map("n", "<leader>n", "<cmd>set nu!<CR>", { desc = "toggle line number" })
