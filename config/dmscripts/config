@@ -9,7 +9,7 @@
 
 # -p is needed as we use prompts, alternative programs have to handle prompts well.
 
-DMENU="dmenu -i -l 30 -p"
+DMENU="dmenu -i -c -l 30 -p"
 # DMENU="rofi -dmenu"
 DMBROWSER="waterfox"
 #DMBROWSER="qutebrowser"

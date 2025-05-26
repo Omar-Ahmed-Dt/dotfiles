@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Choose language using dmenu
-LANG=$(echo -e "eng\nara" | dmenu -p "Choose OCR language:")
+LANG=$(echo -e "eng\nara" | dmenu -c -l 2 -p "Choose OCR language:")
 
 # Exit if no selection is made
 if [ -z "$LANG" ]; then
