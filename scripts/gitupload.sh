@@ -27,3 +27,5 @@ cp ~/.config/mpv/mpv.conf   ~/Documents/GitHub/dotfiles/config/mpv/
 cp ~/.config/mpv/input.conf ~/Documents/GitHub/dotfiles/config/mpv/
 cp -r ~/.config/nvim/lua/  ~/Documents/GitHub/dotfiles/config/nvim/
 cp -r ~/.config/flameshot/ ~/Documents/GitHub/dotfiles/config/ 
+cp ~/github/bslock/config.def.h ~/Documents/GitHub/dotfiles/config/bslock/
+

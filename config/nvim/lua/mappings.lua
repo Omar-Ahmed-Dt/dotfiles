@@ -1,7 +1,7 @@
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jk", "<ESC>")
+map("i", "jj", "<ESC>")
 map("i", "ne", "!=", { desc = "insert != in insert mode" })
 map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
 map("i", "<C-e>", "<End>", { desc = "move end of line" })
@@ -79,13 +79,13 @@ map(
 )
 
 -- terminal
-map("t", "<C-x>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })
+map("t", "<C-h>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })
 
 -- new terminals
 -- map("n", "<leader>h", function()
 --   require("nvchad.term").new { pos = "sp" }
 -- end, { desc = "terminal new horizontal term" })
-
+--
 -- map("n", "<leader>v", function()
 --   require("nvchad.term").new { pos = "vsp" }
 -- end, { desc = "terminal new vertical term" })
@@ -104,8 +104,8 @@ map({ "n", "t" }, "<A-i>", function()
 end, { desc = "terminal toggle floating term" })
 
 -- whichkey
-map("n", "<leader>wK", "<cmd>WhichKey <CR>", { desc = "whichkey all keymaps" })
-
-map("n", "<leader>wk", function()
-  vim.cmd("WhichKey " .. vim.fn.input "WhichKey: ")
-end, { desc = "whichkey query lookup" })
+-- map("n", "<leader>wK", "<cmd>WhichKey <CR>", { desc = "whichkey all keymaps" })
+--
+-- map("n", "<leader>wk", function()
+--   vim.cmd("WhichKey " .. vim.fn.input "WhichKey: ")
+-- end, { desc = "whichkey query lookup" })
