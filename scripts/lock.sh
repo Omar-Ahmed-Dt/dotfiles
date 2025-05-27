@@ -8,7 +8,7 @@
 # magick $PICTURE -blur $BLUR $PICTURE
 
 setxkbmap us && pkill -RTMIN+15 i3blocks
-slock
+bslock
 
 # i3lock -k -e --bar-indicator \
 #        --time-str="%I : %M %p" \

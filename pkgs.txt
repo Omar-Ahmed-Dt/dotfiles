@@ -53,6 +53,7 @@ catppuccin-cursors-git
 chromium
 clipmenu-rofi
 clonezilla
+cozette-ttf
 cpupower
 cryptsetup
 cups
@@ -483,6 +484,7 @@ xorg-xkbutils
 xorg-xkill
 xorg-xlsatoms
 xorg-xlsclients
+xorg-xlsfonts
 xorg-xmodmap
 xorg-xpr
 xorg-xprop

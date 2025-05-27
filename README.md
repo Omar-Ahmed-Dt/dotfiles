@@ -15,7 +15,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
  - i3blocks 
 
 **Screen Locker**
- - i3lock 
+ - ![bslock](https://github.com/phenax/bslock)
 
 **Terminal**
  - kitty
