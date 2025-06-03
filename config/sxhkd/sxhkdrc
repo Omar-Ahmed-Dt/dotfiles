@@ -67,7 +67,7 @@ F11
     # ~/scripts/lan_dmenu.sh && ~/scripts/toggle.sh
 # run a program
 super + shift + d 
-    ~/scripts/lan_dmenu.sh && dmenu_run
+    ~/scripts/lan_dmenu.sh && dmenu_run -c -l 20
 #lang 
 super + space
     setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ara || setxkbmap us && pkill -RTMIN+15 i3blocks

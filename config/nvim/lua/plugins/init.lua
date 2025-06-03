@@ -7,6 +7,26 @@ return {
         end,
     },
 
+    -- Terraform syntax highlighting and formatting
+    {
+        "hashivim/vim-terraform",
+        ft = { "terraform", "tf", "hcl" },
+        config = function()
+            vim.g.terraform_fmt_on_save = 1
+            vim.g.terraform_align = 1
+        end,
+    },
+
+    -- Terraform LSP
+    {
+        "neovim/nvim-lspconfig",
+        opts = {
+            servers = {
+                terraformls = {}, -- use default settings for terraform-ls
+            },
+        },
+    },
+
     -- Go LSP
     {
         "ray-x/go.nvim",
@@ -45,47 +65,46 @@ return {
 
     -- markdown preview live
     {
-    "MeanderingProgrammer/render-markdown.nvim",
-    ft = "markdown", -- Load only for Markdown files
-    dependencies = { "nvim-treesitter/nvim-treesitter" }, -- Requires Tree-sitter
-    config = function()
-      require("render-markdown").setup({
-        -- Optional configuration (defaults are fine for basic use)
-        enabled = true, -- Enable rendering by default
-        render_modes = { "n", "v" }, -- Render in normal and visual modes
-      })
-    end,
-  },
-
-   {
-  "nvim-treesitter/nvim-treesitter",
-  opts = {
-    ensure_installed = {
-      "lua", "json", "http", "bash", -- add "http" here
+        "MeanderingProgrammer/render-markdown.nvim",
+        ft = "markdown", -- Load only for Markdown files
+        dependencies = { "nvim-treesitter/nvim-treesitter" }, -- Requires Tree-sitter
+        config = function()
+            require("render-markdown").setup({
+                enabled = true,
+                render_modes = { "n", "v" },
+            })
+        end,
     },
-  },
-  }, 
 
-      {
-    "rest-nvim/rest.nvim",
-    ft = { "http" },
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("rest-nvim").setup({
-        result_split_horizontal = false,
-        skip_ssl_verification = false,
-        highlight = {
-          enabled = true,
-          timeout = 150,
+    {
+        "nvim-treesitter/nvim-treesitter",
+        opts = {
+            ensure_installed = {
+                "lua", "json", "http", "bash", "terraform", "hcl" -- added terraform & hcl
+            },
         },
-        result = {
-          show_url = true,
-          show_curl_command = true,
-          show_http_info = true,
-          show_headers = true,
-        },
-      })
-    end,
-  },
+    },
 
+    {
+        "rest-nvim/rest.nvim",
+        ft = { "http" },
+        dependencies = { "nvim-lua/plenary.nvim" },
+        config = function()
+            require("rest-nvim").setup({
+                result_split_horizontal = false,
+                skip_ssl_verification = false,
+                highlight = {
+                    enabled = true,
+                    timeout = 150,
+                },
+                result = {
+                    show_url = true,
+                    show_curl_command = true,
+                    show_http_info = true,
+                    show_headers = true,
+                },
+            })
+        end,
+    },
 }
+

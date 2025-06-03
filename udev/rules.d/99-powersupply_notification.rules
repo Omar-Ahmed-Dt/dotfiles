@@ -1,0 +1,2 @@
+ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="0", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/omar/.Xauthority" RUN+="/usr/bin/su omar -c '/home/omar/scripts/battery-charging.sh discharging'"
+ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="1", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/omar/.Xauthority" RUN+="/usr/bin/su omar -c '/home/omar/scripts/battery-charging.sh charging'"

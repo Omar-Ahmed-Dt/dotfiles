@@ -1,0 +1,2 @@
+crontab -e
+*/2 * * * * rm -f /tmp/batteryfull /tmp/batteryempty /tmp/batterycritical && /home/omar/scripts/battery-alert.sh

@@ -23,8 +23,10 @@ arc-gtk-theme
 arc-x-icons-theme
 arch-install-scripts
 archlinux-login-backgrounds-git
+auto-cpufreq
 autotiling
 awesome-terminal-fonts
+aws-cli
 ayu-theme
 base
 base-devel
@@ -55,6 +57,7 @@ clipmenu-rofi
 clonezilla
 cozette-ttf
 cpupower
+cronie
 cryptsetup
 cups
 cups-pdf
@@ -240,6 +243,7 @@ nvme-cli
 obs-studio
 obsidian
 obsidian-icon-theme
+okular
 open-iscsi
 openbox-themes-pambudi-git
 openconnect
@@ -354,13 +358,16 @@ systemd-resolvconf
 tcpdump
 tela-circle-icon-theme-git
 terminus-font
+terraform
 tesseract
 tesseract-data-ara
 tesseract-data-eng
 testdisk
 the_silver_searcher
+thorium-browser-bin
 thunar
 thunar-archive-plugin
+thunar-shares-plugin
 thunar-volman
 thunderbird
 tlp

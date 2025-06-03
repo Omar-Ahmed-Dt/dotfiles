@@ -20,7 +20,7 @@ DMTERM="kitty -e"
 DMEDITOR="nvim"
 
 # TODO: Rename this variable to something more traditional
-logout_locker='slock'
+logout_locker='bslock'
 # logout_locker='dm-tool lock'
 
 # This case statement lets you change what the DMENU variable is for different scripts, so if you

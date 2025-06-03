@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Menu options
-OPTIONS="lock\nkill\nreboot\nzzz\nshutdown"
+OPTIONS="lock\nexit\nreboot\nzzz\nshutdown"
 
 # Prompt user (centered and vertical)
 OPT=$(echo -e "$OPTIONS" | dmenu -i -c -l 5 -p "Choose action:")
@@ -16,7 +16,7 @@ case "$OPT" in
     lock)
         [ "$(confirm lock)" = "Yes" ] && ~/scripts/lock.sh && pkill -RTMIN+20 i3blocks
         ;;
-    kill)
+    exit)
         [ "$(confirm exit)" = "Yes" ] && pkill i3
         ;;
     reboot)
