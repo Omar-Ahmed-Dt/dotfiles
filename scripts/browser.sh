@@ -2,11 +2,12 @@
 declare options=("Google-chrome-stable
 Brave
 Waterfox
-Chromium"
+Chromium
+Thorium"
 )
 
 # choice=$(echo -e "${options[@]}" | dmenu -i -l 20 -g 2 -X 0 -Y 0 -W 680 -p 'launch browser: ' )
-choice=$(echo -e "${options[@]}" | dmenu -i -l 4 -c -p 'launch browser: ' )
+choice=$(echo -e "${options[@]}" | dmenu -i -l 5 -c -p 'launch browser: ' )
 
 case "$choice" in 
    Waterfox)
@@ -20,6 +21,9 @@ case "$choice" in
    ;;
     Brave) 
         exec brave --password-store=basic
+    ;;
+    Thorium) 
+        choice="thorium-browser"
     ;;
 esac
 "$choice"
