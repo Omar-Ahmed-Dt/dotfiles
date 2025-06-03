@@ -96,7 +96,7 @@ alias ram='ps axh -o cmd:15,%mem --sort=-%mem | head | string trim'
 alias cpu='ps axh -o cmd:15,%cpu --sort=-%cpu | head'
 alias bup='sh /home/omar/scripts/gitupload.sh'
 # alias df='duf -hide special -style ascii'
-alias df='dysk'
+alias df='dysk -c fs+type+size+used+free+use+mp'
 alias dfdr='dust'
 alias dfd='dust -r'
 alias printer='system-config-printer'
@@ -186,6 +186,7 @@ alias gg='git-graph' # and install git-delta
 # alias tgl='~/scripts/toggle.sh'
 alias sx="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
 alias yx="yt-x"
+alias tf="terraform"
 
 function se
     cd ~/scripts
