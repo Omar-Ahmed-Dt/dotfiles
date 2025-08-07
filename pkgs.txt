@@ -23,6 +23,7 @@ arc-gtk-theme
 arc-x-icons-theme
 arch-install-scripts
 archlinux-login-backgrounds-git
+aur-check-updates
 auto-cpufreq
 autotiling
 awesome-terminal-fonts
@@ -53,6 +54,7 @@ caffeine-ng
 capitaine-cursors
 catppuccin-cursors-git
 chromium
+claude-desktop
 clipmenu-rofi
 clonezilla
 cozette-ttf
@@ -84,6 +86,7 @@ dysk
 e2fsprogs
 edk2-shell
 efibootmgr
+electron25-bin
 ethtool
 exfatprogs
 expac
@@ -107,6 +110,7 @@ foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 foomatic-db-ppds
 fsarchiver
+gemini-cli-debug
 gimp
 git
 git-delta
@@ -128,6 +132,7 @@ gst-plugins-base
 gst-plugins-good
 gst-plugins-ugly
 gutenprint
+gvfs-mtp
 halo-icons-git
 hdparm
 hplip
@@ -140,11 +145,13 @@ i3-swallow-git
 i3-wm
 i3blocks
 i3status
+infracost
 intel-ucode
 inxi
 iw
 iwd
 jfsutils
+jmtpfs
 jq
 kalker-bin
 kdenlive
@@ -152,6 +159,7 @@ khal
 kitti3
 kitty
 kripton-theme-git
+kubectl
 kvantum-qt5
 kvantum-theme-materia
 kvantum-theme-qogir-git
@@ -223,6 +231,7 @@ networkmanager-vpnc
 nfs-utils
 nilfs-utils
 nitrogen
+nmap
 nnn-nerd
 nnn-nerd-debug
 nordzy-icon-theme-git
@@ -288,6 +297,12 @@ ppp
 pptpclient
 pv
 pwgen
+pyinstaller
+pyinstaller-debug
+pyinstaller-hooks-contrib
+python-altgraph
+python-pip
+python-pipx
 qogir-gtk-theme-git
 qogir-icon-theme
 qt5ct
@@ -375,6 +390,7 @@ tlp-rdw
 tmux
 tpm2-tss
 trash-cli
+tree
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-caladea
@@ -389,7 +405,6 @@ ttf-fantasque-sans-mono
 ttf-fira-code
 ttf-fira-mono
 ttf-fira-sans
-ttf-font-awesome
 ttf-hack
 ttf-hactor
 ttf-hellvetica
@@ -428,7 +443,6 @@ vim
 vimix-cursors
 vimix-icon-theme-git
 virtualbox
-vis
 vlc
 volumeicon
 vpnc
@@ -442,6 +456,7 @@ whitesur-icon-theme-git
 wireless-regdb
 wireless_tools
 wmctrl
+woff2-font-awesome
 wpa_supplicant
 wvdial
 xclip

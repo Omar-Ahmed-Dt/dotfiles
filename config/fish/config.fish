@@ -187,6 +187,7 @@ alias gg='git-graph' # and install git-delta
 alias sx="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
 alias yx="yt-x"
 alias tf="terraform"
+alias glow='glow -l'
 
 function se
     cd ~/scripts
