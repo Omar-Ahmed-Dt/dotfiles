@@ -1,0 +1,2 @@
+path:
+/home/omar/Dropbox/Apps/obsidian/.obsidian/snippets/

@@ -1,0 +1,18 @@
+/* Force show scrollbars */
+::-webkit-scrollbar {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-secondary) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-muted) !important;
+    border-radius: 6px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-normal) !important;
+}

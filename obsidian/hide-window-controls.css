@@ -1,0 +1,16 @@
+/* Hide window controls (minimize, maximize, close buttons) */
+.titlebar-button-container.mod-right {
+    display: none !important;
+}
+
+/* Alternative method if the above doesn't work */
+.titlebar-button {
+    display: none !important;
+}
+
+/* Or target specific buttons individually */
+.titlebar-button.mod-minimize,
+.titlebar-button.mod-maximize, 
+.titlebar-button.mod-close {
+    display: none !important;
+}
