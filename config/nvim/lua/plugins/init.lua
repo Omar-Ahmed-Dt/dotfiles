@@ -106,5 +106,41 @@ return {
             })
         end,
     },
-}
 
+    {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        -- lua stuff
+        "lua-language-server",
+        "stylua",
+
+        -- web dev
+        "css-lsp",
+        "html-lsp",
+        "typescript-language-server",
+        "emmet-ls",
+        "json-lsp",
+        "prettier",
+        "eslint-lsp",
+
+        -- shell
+        "bash-language-server",
+        "shfmt",
+        "shellcheck",
+
+        -- python
+        "pyright",
+        "black",
+
+        -- terraform
+        "terraform-ls",
+
+        -- ansible
+        "ansible-language-server",
+        -- docker
+        "dockerfile-language-server"
+      },
+    },
+  },
+}

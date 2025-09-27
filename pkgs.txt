@@ -54,6 +54,8 @@ caffeine-ng
 capitaine-cursors
 catppuccin-cursors-git
 chromium
+claude-code
+claude-code-debug
 claude-desktop
 clipmenu-rofi
 clonezilla
@@ -115,11 +117,13 @@ gimp
 git
 git-delta
 git-graph
+github-cli
 glow
 go
 go-blueprint-bin
 go-blueprint-bin-debug
 google-chrome
+google-cloud-cli
 gpart
 gparted
 gpm
@@ -135,6 +139,7 @@ gutenprint
 gvfs-mtp
 halo-icons-git
 hdparm
+helm
 hplip
 htop-vim
 hwinfo
@@ -153,6 +158,7 @@ iwd
 jfsutils
 jmtpfs
 jq
+k9s
 kalker-bin
 kdenlive
 khal
@@ -378,6 +384,7 @@ tesseract
 tesseract-data-ara
 tesseract-data-eng
 testdisk
+tgpt
 the_silver_searcher
 thorium-browser-bin
 thunar
@@ -431,6 +438,7 @@ ttf-roboto-mono
 ttf-sourcecodepro-nerd
 ttf-ubuntu-font-family
 udftools
+ufw
 upd72020x-fw
 upower
 usb_modeswitch
@@ -438,6 +446,7 @@ usbmuxd
 usbutils
 v4l2loopback-dkms
 v4l2loopback-utils
+vagrant
 variety
 vim
 vimix-cursors
@@ -451,6 +460,7 @@ wacomtablet
 waterfox-bin
 wd719x-firmware
 we10x-icon-theme-git
+weather
 wget
 whitesur-icon-theme-git
 wireless-regdb

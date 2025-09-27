@@ -188,6 +188,9 @@ alias sx="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
 alias yx="yt-x"
 alias tf="terraform"
 alias glow='glow -l'
+alias vu='vagrant up'
+alias vh='vagrant halt'
+alias vs='vagrant ssh'
 
 function se
     cd ~/scripts
@@ -318,6 +321,7 @@ function sd -d "Change directory"
 
     commandline -f repaint
 end
+
 # nnn configs
 alias nn='nnn -Rrxl 5' 
 alias n='nnn -rRxl 5'

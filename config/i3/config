@@ -225,6 +225,7 @@ set $aqua      #689d68
 set $gray      #a89984
 set $darkgray  #1d2021
 set $lightgray #bdae93
+set $white     #EEEEEE
 
 bar {
     height 17
@@ -243,7 +244,7 @@ bar {
       }
     }
     ## class                  border    backgr  text               indicator
-    client.focused            $darkgray $yellow $gray              $purple
+    client.focused            $darkgray $white  $gray              $yellow
     client.unfocused          $bg       $bg     $gray              $bg
     client.focused_inactive   $bg       $bg     $gray              $bg 
     client.placeholder        $bg       $bg     $lightgray         $bg
