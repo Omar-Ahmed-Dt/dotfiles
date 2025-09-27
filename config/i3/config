@@ -208,7 +208,7 @@ for_window [class="io.github.lainsce.Notejot"] floating enable
 new_window normal
 new_float normal
 popup_during_fullscreen smart
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 gaps inner 3
 gaps outer 0
 # smart_gaps on
@@ -235,16 +235,16 @@ bar {
     status_command i3blocks -c ~/.config/i3/i3blocks
     # status_command i3blocks -c ~/.config/i3/i3blocks_nocolor
     colors {
-        background   $bg 
-        separator    $yellow
-        focused_workspace    $lightgray $lightgray $bg
-        inactive_workspace   $darkgray $darkgray $lightgray
-        active_workspace     $darkgray $darkgray $lightgray
-        urgent_workspace     $red $red $bg
+        background           $bg 
+        separator            $yellow
+        focused_workspace    $lightgray $lightgray  $bg
+        inactive_workspace   $darkgray  $darkgray   $lightgray
+        active_workspace     $darkgray  $darkgray   $lightgray
+        urgent_workspace     $red       $red        $bg
       }
     }
     ## class                  border    backgr  text               indicator
-    client.focused            $darkgray $white  $gray              $yellow
+    client.focused            $gray     $blue   $gray              $white
     client.unfocused          $bg       $bg     $gray              $bg
     client.focused_inactive   $bg       $bg     $gray              $bg 
     client.placeholder        $bg       $bg     $lightgray         $bg
