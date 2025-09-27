@@ -11,6 +11,9 @@ EXCLUDE=(
     "go"
     "node_modules"
     "obs"
+    "Documents/sdcard"
+    "Documents/GitHub"
+    "Downloads"
 )
 
 # Functions
