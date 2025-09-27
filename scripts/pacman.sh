@@ -1,3 +1,3 @@
 #!/bin/bash
-pacman=$(aur-check-updates | wc -l)
-echo "$pacman pkgs" 
+pacman=$(checkupdates | wc -l)
+echo "$pacman updates"

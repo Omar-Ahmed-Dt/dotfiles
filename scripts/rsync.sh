@@ -2,9 +2,16 @@
 
 # Configuration
 SOURCE_DIR="/home/omar/"
-DEST_DIR="/mnt"
+DEST_DIR="/mnt/myssd/"
 LOG_FILE="/var/log/home_backup.log"
-EXCLUDE=".cache"
+EXCLUDE=(
+    ".cache"
+    "aur"
+    "github"
+    "go"
+    "node_modules"
+    "obs"
+)
 
 # Functions
 log() {
