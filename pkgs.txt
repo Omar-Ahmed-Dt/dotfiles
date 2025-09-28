@@ -84,6 +84,7 @@ dracula-icons-git
 dropbox
 duf
 dunst
+dust
 dysk
 e2fsprogs
 edk2-shell

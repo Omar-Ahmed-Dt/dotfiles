@@ -36,18 +36,24 @@ close_disk() {
         exit 1
     }
 
-    echo "[+] Disk closed successfully"
+    echo "[*] Powering off $DEVICE..."
+    sudo udisksctl power-off -b "$DEVICE" || {
+        echo "[!] Failed to power off $DEVICE"
+        exit 1
+    }
+
+    echo "[+] Disk closed and powered off successfully"
 }
 
 case "${1:-}" in
-    mount)
+    open)
         open_disk
         ;;
-    umount)
+    close)
         close_disk
         ;;
     *)
-        echo "Usage: $0 {mount|umount}"
+        echo "Usage: $0 {open|close}"
         exit 1
         ;;
 esac
