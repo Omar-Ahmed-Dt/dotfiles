@@ -535,6 +535,7 @@ xterm
 xwallpaper
 yad
 yay-git
+yazi
 yt-dlp
 yt-x
 zafiro-icon-theme
