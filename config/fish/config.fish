@@ -191,6 +191,7 @@ alias glow='glow -l'
 alias vu='vagrant up'
 alias vh='vagrant halt'
 alias vs='vagrant ssh'
+alias y='yazi'
 
 function se
     cd ~/scripts
@@ -326,7 +327,7 @@ end
 alias nn='nnn -Rrxl 5' 
 alias n='nnn -rRxl 5'
 export NNN_PLUG='C:!magick "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!fish -i*;p:rsynccp;n:nmount;z:autojump;d:~/scripts/dr.sh;c:~/scripts/tomp4.sh'
-export NNN_BMS="a:$HOME/home_docker/metube/videos;r:$HOME/rnote;m:/mnt/;g:$HOME/Documents/GitHub;D:$HOME/Documents/;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
+export NNN_BMS="r:$HOME/rnote;m:/mnt/;g:$HOME/Documents/GitHub;D:$HOME/Documents/;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
 export NNN_FCOLORS='c1e2904d976033f7c6d6ab84'

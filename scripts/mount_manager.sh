@@ -6,7 +6,6 @@
 #   ./storage_manager.sh open           # Select a crypto_LUKS device via dmenu -> unlock & mount to /mnt/myssd
 #   ./storage_manager.sh close          # Unmount & lock last opened encrypted device -> power off its base disk
 #   ./storage_manager.sh mount          # Select plain device via dmenu -> mount to /mnt/usb
-#   ./storage_manager.sh unmount        # Unmount plain device at /mnt/usb
 #   ./storage_manager.sh unmount-poweroff  # Unmount plain device at /mnt/usb and power off
 #
 # Notes:
@@ -126,16 +125,6 @@ mount_plain() {
     notify "Mounted $selected_dev at $PLAIN_MOUNTPOINT"
 }
 
-unmount_plain() {
-    if ! is_mounted_mp "$PLAIN_MOUNTPOINT"; then
-        notify "$PLAIN_MOUNTPOINT is not mounted."
-        exit 0
-    fi
-    local dev
-    dev="$(mount | awk -v mp=" on $PLAIN_MOUNTPOINT " '$0 ~ mp {print $1; exit}')"
-    sudo umount "$PLAIN_MOUNTPOINT" || { notify "Failed to unmount $PLAIN_MOUNTPOINT"; exit 1; }
-    notify "Unmounted $dev from $PLAIN_MOUNTPOINT"
-}
 
 unmount_plain_poweroff() {
     if ! is_mounted_mp "$PLAIN_MOUNTPOINT"; then
@@ -267,18 +256,19 @@ case "$cmd" in
     open)              open_encrypted ;;
     close)             close_encrypted ;;
     mount)             mount_plain ;;
-    unmount)           unmount_plain ;;
     unmount-poweroff)  unmount_plain_poweroff ;;
     help|--help|-h)
         cat <<EOF
-storage_manager.sh — manage plain and LUKS external drives
 
 Commands:
+
+# 1. Plain Devices:
+  mount               Mount a plain device to $PLAIN_MOUNTPOINT (dmenu to select)
+  unmount-poweroff    Unmount plain device and power off its base disk
+
+# 2. Encrypted Devices:
   open                Unlock a LUKS (crypto_LUKS) device, mount to $CRYPT_MOUNTPOINT (dmenu to select)
   close               Unmount, lock the last opened encrypted device, and power it off
-  mount               Mount a plain device to $PLAIN_MOUNTPOINT (dmenu to select)
-  unmount             Unmount the plain device from $PLAIN_MOUNTPOINT
-  unmount-poweroff    Unmount plain device and power off its base disk
 
 Env vars you may tweak:
   PLAIN_MOUNTPOINT="$PLAIN_MOUNTPOINT"
