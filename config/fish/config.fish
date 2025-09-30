@@ -326,12 +326,16 @@ end
 # nnn configs
 alias nn='nnn -Rrxl 5' 
 alias n='nnn -rRxl 5'
-export NNN_PLUG='C:!magick "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!fish -i*;p:rsynccp;n:nmount;z:autojump;d:~/scripts/dr.sh;c:~/scripts/tomp4.sh'
+export NNN_PLUG='C:!magick "$nnn" png:- | xclip -sel clipboard -t
+image/png*;u:upload;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!fish
+-i*;p:rsynccp;n:nmount;z:autojump;d:~/scripts/dr.sh;c:~/scripts/tomp4.sh;o:~/scripts/nnn_thunar.sh'
 export NNN_BMS="r:$HOME/rnote;m:/mnt/;g:$HOME/Documents/GitHub;D:$HOME/Documents/;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
-export NNN_FCOLORS='c1e2904d976033f7c6d6ab84'
+# export NNN_FCOLORS='c1e2904d976033f7c6d6ab84'
 export NNN_COLORS='1234'
+export NNN_FCOLORS='a6d66d8e00f66cf4a7d0afa7'
+# export NNN_COLORS='#6d8eafd0;1234'
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_TRASH=1
 export NNN_ARCHIVE="\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)"

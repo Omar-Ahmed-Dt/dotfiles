@@ -81,6 +81,7 @@ downgrade
 dracula-cursors-git
 dracula-gtk-theme
 dracula-icons-git
+dragon
 dropbox
 duf
 dunst
@@ -205,6 +206,7 @@ man-pages
 materia-gtk-theme
 materia-kde
 mdadm
+mediainfo
 mesa
 messenger-nativefier
 messenger-nativefier-debug
@@ -284,6 +286,7 @@ paru-git
 pavucontrol
 pcmanfm
 pcsclite
+perl-image-exiftool
 phinger-cursors
 picom-git
 pipewire
