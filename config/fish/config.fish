@@ -113,22 +113,22 @@ alias ft='xdg-mime query filetype'
 alias fd='xdg-mime query default'
 alias rip='~/scripts/rip.sh' #to get public ip 
 # alias ip='ip --color' #to get private ip 
-# alias ll='lsd -lh --icon-theme unicode'
-# alias la="lsd -lah --icon-theme unicode"
-# alias l="lsd --icon-theme unicode"
-# alias ls="lsd --icon-theme unicode"
-# alias llp="lsd -lh --permission octal --icon-theme unicode"
-# alias lls="lsd -lhS --icon-theme unicode"
-# alias llt="lsd -lht --icon-theme unicode"
-# alias llS="lsd -l --total-size 2> /dev/null --icon-theme unicode"
-alias ll='lsd -lh'
-alias la="lsd -lah"
-alias l="lsd"
-alias ls="lsd"
-alias llp="lsd -lh --permission octal"
-alias lls="lsd -lhS"
-alias llt="lsd -lht"
-alias llS="lsd -l --total-size 2> /dev/null"
+alias ll='lsd -lh --icon-theme unicode'
+alias la="lsd -lah --icon-theme unicode"
+alias l="lsd --icon-theme unicode"
+alias ls="lsd --icon-theme unicode"
+alias llp="lsd -lh --permission octal --icon-theme unicode"
+alias lls="lsd -lhS --icon-theme unicode"
+alias llt="lsd -lht --icon-theme unicode"
+alias llS="lsd -l --total-size 2> /dev/null --icon-theme unicode"
+# alias ll='lsd -lh'
+# alias la="lsd -lah"
+# alias l="lsd"
+# alias ls="lsd"
+# alias llp="lsd -lh --permission octal"
+# alias lls="lsd -lhS"
+# alias llt="lsd -lht"
+# alias llS="lsd -l --total-size 2> /dev/null"
 alias gcalc='gnome-calculator'
 alias calc='kalker'
 alias gm='cd /mnt'
@@ -270,6 +270,22 @@ function f
     doas find / -iname $argv 2> /dev/null | grep $argv
 end
 
+function pk
+    # show PID + COMMAND, without the header
+    set choice (ps -eo pid,comm --sort=-pid --no-headers | fzf --multi)
+
+    if test -z "$choice"
+        return
+    end
+
+    # extract PIDs (first column)
+    set pids (for line in $choice; echo $line | awk '{print $1}'; end)
+
+    for pid in $pids
+        kill $pid
+    end
+end
+
 ####################################
 ####################################
 #cd any directory by alias sd 
@@ -326,9 +342,13 @@ end
 # nnn configs
 alias nn='nnn -Rrxl 5' 
 alias n='nnn -rRxl 5'
+
+# export NNN_PLUG='C:!magick "$nnn" png:- | xclip -sel clipboard -t image/png*;u:upload;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!fish -i*;p:rsynccp;n:nmount;z:autojump;d:~/scripts/nnn_ripdrag.sh;c:~/scripts/nnn_tomp4.sh;o:~/scripts/nnn_thunar.sh'
+
 export NNN_PLUG='C:!magick "$nnn" png:- | xclip -sel clipboard -t
-image/png*;u:upload;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!fish
--i*;p:rsynccp;n:nmount;z:autojump;d:~/scripts/dr.sh;c:~/scripts/tomp4.sh;o:~/scripts/nnn_thunar.sh'
+image/png*;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!fish
+-i*;p:rsynccp;n:nmount;z:autojump;d:~/scripts/nnn_ripdrag.sh;c:~/scripts/nnn_tomp4.sh;o:~/scripts/nnn_thunar.sh;V:preview-tabbed'
+
 export NNN_BMS="r:$HOME/rnote;m:/mnt/;g:$HOME/Documents/GitHub;D:$HOME/Documents/;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
