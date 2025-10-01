@@ -380,6 +380,7 @@ sxiv
 syslinux
 system-config-printer
 systemd-resolvconf
+tabbed
 tcpdump
 tela-circle-icon-theme-git
 terminus-font
