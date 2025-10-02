@@ -8,6 +8,8 @@ SETUVAR FZF_LEGACY_KEYBINDINGS:0
 SETUVAR FZF_PREVIEW_DIR_CMD:ls
 SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
 SETUVAR FZF_TMUX_HEIGHT:40\x25
+SETUVAR --export NNN_PLUG:\x0aC\x3a\x21magick\x20\x22\x24nnn\x22\x20png\x3a\x2d\x20\x7c\x20xclip\x20\x2dsel\x20clipboard\x20\x2dt\x20image/png\x0af\x3afixname\x0ai\x3aimgview\x0at\x3amp3conv\x0av\x3apreview\x2dtui\x0as\x3a\x21fish\x20\x2di\x0ap\x3arsynccp\x0an\x3anmount\x0az\x3aautojump\x0ad\x3a\x24NNN_SCRIPTS/nnn_ripdrag\x2esh\x0ac\x3a\x24NNN_SCRIPTS/nnn_tomp4\x2esh\x0ao\x3a\x24NNN_SCRIPTS/nnn_thunar\x2esh\x0aV\x3apreview\x2dtabbed\x0aS\x3a\x24NNN_SCRIPTS/nnn_terminal\x2esh\x0a
+SETUVAR --export NNN_SCRIPTS:/home/omar/scripts
 SETUVAR --export --path PATH:/home/omar/\x2elocal/bin\x1e/home/omar/Applications\x1e/home/omar/\x2eyarn/bin\x1e/home/omar/\x2econfig/yarn/global/node_modules/\x2ebin\x1e/home/omar/\x2ebin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/opt/android\x2dsdk/platform\x2dtools\x1e/usr/lib/jvm/default/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/omar/go/bin
 SETUVAR THEME_EDEN_PROMPT_CHAR:\u00bb
 SETUVAR ZO_CMD:zo

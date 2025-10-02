@@ -57,6 +57,8 @@ chromium
 claude-code
 claude-code-debug
 claude-desktop
+cli-visualizer
+cli-visualizer-debug
 clipmenu-rofi
 clonezilla
 cozette-ttf
@@ -286,6 +288,8 @@ paru-git
 pavucontrol
 pcmanfm
 pcsclite
+peaclock
+peaclock-debug
 perl-image-exiftool
 phinger-cursors
 picom-git
