@@ -343,7 +343,8 @@ end
 alias nn='nnn -Rrxl 5' 
 alias n='nnn -rRxl 5'
 
-export NNN_PLUG='C:!magick "$nnn" png:- | xclip -sel clipboard -t image/png*;f:fixname;i:imgview;t:mp3conv;v:preview-tui;s:!fish -i*;p:rsynccp;z:autojump;d:~/scripts/nnn_ripdrag.sh;c:~/scripts/nnn_tomp4.sh;o:~/scripts/nnn_thunar.sh;V:preview-tabbed;S:~/scripts/nnn_terminal.sh'
+export NNN_PLUG='C:!magick "$nnn" png:- | xclip -sel clipboard -t
+image/png*;f:fixname;i:~/scripts/nnn_open_selected_img.sh;t:mp3conv;v:preview-tui;s:!fish -i*;p:rsynccp;z:autojump;d:~/scripts/nnn_ripdrag.sh;c:~/scripts/nnn_tomp4.sh;o:~/scripts/nnn_thunar.sh;V:preview-tabbed;S:~/scripts/nnn_terminal.sh'
 
 export NNN_BMS="r:$HOME/rnote;m:/mnt/;g:$HOME/Documents/GitHub;D:$HOME/Documents/;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
 
@@ -360,3 +361,4 @@ export NNN_ARCHIVE="\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|l
 export NNN_RCLONE='rclone mount --read-only --no-checksum'
 export NNN_LOCKER='unimatrix -l=aAcCegGkmnopPrRsS -s 95'
 export NNN_HELP='fortune'
+export NNN_SEL='/tmp/.sel'
