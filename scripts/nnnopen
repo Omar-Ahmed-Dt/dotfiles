@@ -6,80 +6,32 @@ fi
 
 mime=$(file -b --mime-type "$1")
 echo $mime
-# m3u files report as text/plain for some reason
-if [[ "${1#*.}" = "m3u" ]];then
-	mpv "$1"
-	# swallow mpv "$1"
-
-# text/*
-#elif [[ "${mime%/*}" = "text" ]];then
-#	nnnedit "$1"
 
 # image/*
-elif [[ "${mime%/*}" = "image" ]];then
+if [[ "${mime%/*}" = "image" ]];then
 	sxiv -ab "$1"
 # video/*
 elif [[ "${mime%/*}" = "video" || "${mime%/*}" = "audio" ]];then
     mpv --player-operation-mode=pseudo-gui -- "$@"
 	# mpv "$1"
 	# swallow mpv "$1"
+
+# vim
+elif [[ "${mime%/*}" = "text" || "$mime" = "application/json" || "$mime" = "application/x-setupscript" ]]; then
+    kitty -e nvim "$1"
+
 # ebooks 
-elif [[ "$mime" = "application/epub+zip" ]];then
+elif [[ "$mime" = "application/epub+zip" || "$mime" = "application/pdf" ]];then
 	zathura "$1"
-# pdfs 
-elif [[ "$mime" = "application/pdf" ]];then
-	zathura "$1"
-# exe 
-elif [[ "$mime" = "application/x-dosexec" ]];then
-	wine "$1"
-elif [[ "$mime" = "application/vnd.oasis.opendocument.text" ]];then
-	libreoffice "$1"
-elif [[ "$mime" = "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ]];then
-	libreoffice "$1"
-elif [[ "$mime" = "application/vnd.openxmlformats-officedocument.presentationml.presentation" ]];then
-	libreoffice "$1"
+
 # rnote
 elif [[ "$mime" = "application/gzip" ]];then
 	rnote "$1"
-# html 
-elif [[ "$mime" = "text/html" ]];then
-	firefox "$1"
-# plain txt
-elif [[ "$mime" = "text/plain" ]];then
-	kitty -e nvim "$1"
-# shellscript 
-elif [[ "$mime" = "text/x-shellscript" ]];then
-	kitty -e nvim "$1"
-elif [[ "$mime" = "text/x-perl" ]];then
-	kitty -e nvim "$1"
-elif [[ "$mime" = "application/json" ]];then
-	kitty -e nvim "$1"
-elif [[ "$mime" = "text/troff" ]];then
-	kitty -e nvim "$1"
-elif [[ "$mime" = "application/x-setupscript" ]];then
-	kitty -e nvim "$1"
-elif [[ "$mime" = "text/x-c++" ]];then
-	kitty -e nvim "$1"
-elif [[ "$mime" = "text/x-script.python" ]];then
-	kitty -e nvim "$1"
-elif [[ "$mime" = "text/csv" ]];then
-	kitty -e nvim "$1"
-elif [[ "$mime" = "text/x-java" ]];then
-	kitty -e nvim "$1"
-elif [[ "$mime" = "text/xml" ]];then
-	kitty -e nvim "$1"
-elif [[ "$mime" = "text/x-ruby" ]];then
-	kitty -e nvim "$1"
-elif [[ "$mime" = "text/x-file" ]];then
-	kitty -e nvim "$1"
-elif [[ "$mime" = "text/x-c" ]];then
-	kitty -e nvim "$1"
-elif [[ "$mime" = "text/x-makefile" ]];then
-	kitty -e nvim "$1"
-# word docs 
-elif [[ "$mime" = "application/vnd.oasis.opendocument.text" ]];then
-	libreoffice "$1"
-elif [[ "$mime" = "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ]];then
-	libreoffice "$1"
+
+# libreoffice files
+elif [[ "$mime" = "application/vnd.oasis.opendocument.text" || \
+        "$mime" = "application/vnd.openxmlformats-officedocument.wordprocessingml.document" || \
+        "$mime" = "application/vnd.openxmlformats-officedocument.presentationml.presentation" ]]; then
+    libreoffice "$1"
 
 fi
