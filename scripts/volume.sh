@@ -1,30 +1,29 @@
-#!/bin/sh
-# TERMINAL=kitty
+#!/bin/bash
 
-# case $BLOCK_BUTTON in
-# 		1) setsid -f "$TERMINAL" -e pulsemixer ;;
-# 		2) pamixer -t ;;
-# 		4) pamixer --allow-boost -i 5 ;;
-# 		5) pamixer --allow-boost -d 5 ;;
-# 		3) notify-send "📢 Volume module" "\- Shows volume 🔊, 🔇 if muted.
-# 		- Middle click to mute.
-# 		- Scroll to change." ;;
-# 		6) "$TERMINAL" -e "$EDITOR" "$0" ;;
-# 	esac
+# You can call this script like this:
+# $./volume.sh up
+# $./volume.sh down
+# $./volume.sh mute
 
-vol="$(pamixer --get-volume)"
-[ $(pamixer --get-mute) = true ] && echo 🔇 "$vol%" && exit
+case $1 in
+    up)
+        pamixer -i 5
+        ;;
+    down)
+        pamixer -d 5
+        ;;
+    mute)
+        pamixer -t
+        ;;
+esac
 
-# vol="$(pamixer --get-volume)"
+# Get updated status after change
+MUTED=$(pamixer --get-mute)
+VOL=$(pamixer --get-volume)
 
-if [ "$vol" -gt "70" ]; then
-		icon="🔊"
-	elif [ "$vol" -gt "30" ]; then
-			icon="🔉"
-		elif [ "$vol" -gt "0" ]; then
-				icon="🔈"
-			else
-				        echo 🔇 "$vol" [unknown] && exit
+if [ "$MUTED" = "true" ]; then
+    notify-send -u low -t 1000 -r 999 "🔇 Muted"
+else
+    notify-send -u low -t 1000 -r 999 "🔊 Volume: ${VOL}%"
 fi
 
-echo "$icon$vol%"
