@@ -5,8 +5,8 @@
 # the current promp theme: omf theme >> clearance
 
 function fish_greeting
-     # $HOME/github/shell-color-scripts/colorscript.sh -r 
-     pokemon-colorscripts --no-title -r -b
+     $HOME/github/shell-color-scripts/colorscript.sh -r 
+     # pokemon-colorscripts --no-title -r -b
 end
 
 # :)
@@ -138,8 +138,8 @@ alias gsh="~/scripts/gsh.sh"
 # alias gpu="doas nvim /etc/optimus-manager/optimus-manager.conf"
 alias ns="nvidia-smi"
 alias nr="prime-run"
-alias theme="kitty +kitten themes"
-alias note="io.github.lainsce.Notejot"
+alias ktheme="kitty +kitten themes"
+# alias note="io.github.lainsce.Notejot"
 # alias rm="rm -i"
 # alias V="doasedit"
 alias rf='source ~/.config/fish/config.fish'
@@ -351,11 +351,9 @@ export NNN_BMS="r:$HOME/rnote;m:/mnt/;g:$HOME/Documents/GitHub;D:$HOME/Documents
 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
-# export NNN_FCOLORS='c1e2904d976033f7c6d6ab84'
 export NNN_FCOLORS='a6d6908e00f66cf4a7d0afa7'
-# export NNN_FCOLORS='a6d66d8e00f66cf4a7d0afa7'
-export NNN_COLORS='1234'
-# export NNN_COLORS='#6d8eafd0;1234'
+# export NNN_COLORS='1234'
+export NNN_COLORS='#6d8eafd0;1234'
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_TRASH=1
 export NNN_ARCHIVE="\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)"
