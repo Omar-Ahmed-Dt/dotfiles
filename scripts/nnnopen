@@ -1,37 +1,51 @@
-#!/usr/bin/env sh 
-#path to this file : /usr/bin/nnnopen
-if [[ ! -f "$1" ]];then
-	exit
-fi
+#!/usr/bin/env sh
+# Path: /usr/bin/nnnopen
+#
+# Exit if file doesn't exist
+[ -f "$1" ] || exit 0
 
-mime=$(file -b --mime-type "$1")
-echo $mime
+file="$1"
+mime=$(file -b --mime-type "$file")
+echo "$mime"
 
-# image/*
-if [[ "${mime%/*}" = "image" ]];then
-	sxiv -ab "$1"
-# video/*
-elif [[ "${mime%/*}" = "video" || "${mime%/*}" = "audio" ]];then
-    mpv --player-operation-mode=pseudo-gui -- "$@"
-	# mpv "$1"
-	# swallow mpv "$1"
+case "$mime" in
+    # ── Images ────────────────────────────────────────────────
+    image/*)
+        sxiv -ab "$file" &
+        ;;
 
-# vim
-elif [[ "${mime%/*}" = "text" || "$mime" = "application/json" || "$mime" = "application/x-setupscript" ]]; then
-    kitty -e nvim "$1"
+    # ── Video or Audio ────────────────────────────────────────
+    video/*|audio/*)
+        mpv --player-operation-mode=pseudo-gui -- "$file" &
+        ;;
 
-# ebooks 
-elif [[ "$mime" = "application/epub+zip" || "$mime" = "application/pdf" ]];then
-	zathura "$1"
+    # ── Text, JSON, and setup scripts ─────────────────────────
+    text/*|application/json|application/x-setupscript)
+        kitty -e nvim "$file"
+        ;;
 
-# rnote
-elif [[ "$mime" = "application/gzip" ]];then
-	rnote "$1"
+    # ── eBooks (PDF, EPUB) ───────────────────────────────────
+    application/pdf|application/epub+zip)
+        zathura "$file" &
+        ;;
 
-# libreoffice files
-elif [[ "$mime" = "application/vnd.oasis.opendocument.text" || \
-        "$mime" = "application/vnd.openxmlformats-officedocument.wordprocessingml.document" || \
-        "$mime" = "application/vnd.openxmlformats-officedocument.presentationml.presentation" ]]; then
-    libreoffice "$1"
+    # ── Gzip archives (rnote) ────────────────────────────────
+    application/gzip)
+        rnote "$file" &
+        ;;
 
-fi
+    # ── LibreOffice documents ────────────────────────────────
+    application/vnd.oasis.opendocument.text|\
+    application/vnd.openxmlformats-officedocument.wordprocessingml.document|\
+    application/vnd.openxmlformats-officedocument.presentationml.presentation)
+        libreoffice "$file" &
+        ;;
+
+    # ── Default fallback ─────────────────────────────────────
+    *)
+        kitty -e nvim "$file"
+        ;;
+esac
+
+exit 0
+
