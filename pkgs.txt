@@ -123,6 +123,7 @@ git-delta
 git-graph
 github-cli
 glow
+gnome-calculator
 go
 go-blueprint-bin
 go-blueprint-bin-debug
@@ -154,6 +155,7 @@ i3-swallow-git
 i3-wm
 i3blocks
 i3status
+icons-in-terminal-git
 infracost
 intel-ucode
 inxi
@@ -243,6 +245,8 @@ nfs-utils
 nilfs-utils
 nitrogen
 nmap
+nnn-emoji-debug
+nnn-icons-debug
 nnn-nerd
 nnn-nerd-debug
 nordzy-icon-theme-git
