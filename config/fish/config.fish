@@ -5,8 +5,8 @@
 # the current promp theme: omf theme >> clearance
 
 function fish_greeting
-     $HOME/github/shell-color-scripts/colorscript.sh -r 
-     # pokemon-colorscripts --no-title -r -b
+     # $HOME/github/shell-color-scripts/colorscript.sh -r 
+     pokemon-colorscripts --no-title -r -b
 end
 
 # :)
@@ -165,7 +165,8 @@ alias clock="tty-clock -xscbt"
 alias ping="ping -c 20"
 alias dr='~/scripts/dr.sh'
 alias mm='~/scripts/mount_manager.sh'
-alias chmm='~/scripts/kill_mnt_processes.sh'
+alias rr='~/scripts/rsync.sh'
+# alias chmm='~/scripts/kill_mnt_processes.sh'
 alias topdf='~/scripts/extract_pages.sh'
 alias gif='~/scripts/gif.sh'
 alias bat='bat --theme gruvbox-dark'
@@ -358,7 +359,7 @@ export NNN_COLORS='1234'
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_TRASH=1
 export NNN_ARCHIVE="\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)"
-export NNN_RCLONE='rclone mount --read-only --no-checksum'
+# export NNN_RCLONE='rclone mount --read-only --no-checksum'
 export NNN_LOCKER='unimatrix -l=aAcCegGkmnopPrRsS -s 95'
 export NNN_HELP='fortune'
 export NNN_SEL='/tmp/.sel'
