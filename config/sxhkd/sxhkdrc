@@ -24,19 +24,19 @@ super + shift + x
 	xkill
 #Vol up 
 XF86AudioRaiseVolume
-   ~/scripts/volume_notification.sh up && pkill -RTMIN+10 i3blocks
+   ~/scripts/volume.sh up && pkill -RTMIN+10 i3blocks
 #Vol down 
 XF86AudioLowerVolume
-   ~/scripts/volume_notification.sh down && pkill -RTMIN+10 i3blocks
+   ~/scripts/volume.sh down && pkill -RTMIN+10 i3blocks
 #vol toggle 
 XF86AudioMute
-   ~/scripts/volume_notification.sh mute && pkill -RTMIN+10 i3blocks
+   ~/scripts/volume.sh mute && pkill -RTMIN+10 i3blocks
 # vol up
 super + Right
-   ~/scripts/volume_notification.sh up && pkill -RTMIN+10 i3blocks
+   ~/scripts/volume.sh up && pkill -RTMIN+10 i3blocks
 # vol down
 super + Left
-   ~/scripts/volume_notification.sh down && pkill -RTMIN+10 i3blocks
+   ~/scripts/volume.sh down && pkill -RTMIN+10 i3blocks
 #mic toggle 
 XF86AudioMicMute
    pactl set-source-mute @DEFAULT_SOURCE@ toggle && pkill -RTMIN+17 i3blocks

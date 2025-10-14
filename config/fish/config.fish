@@ -30,7 +30,7 @@ set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 set TERMINAL "kitty"                         # Sets the terminal type
 set EDITOR   "nvim"
 set VISUAL   "nvim"
-set -x BROWSER waterfox
+set -x BROWSER "waterfox"
 
 ### "bat" as manpager
 # set -x MANPAGER "sh -c 'bat --theme gruvbox-dark -l man'"
@@ -255,12 +255,12 @@ function v
     nvim $argv
 end
 
-function V
-    sudo -E nvim $argv
-end
+# function V
+#     sudo -E nvim $argv
+# end
 
 function vi 
-    vim $argv 
+    nvim $argv 
 end 
 
 # function lk
@@ -269,22 +269,6 @@ end
 
 function f 
     doas find / -iname $argv 2> /dev/null | grep $argv
-end
-
-function pk
-    # show PID + COMMAND, without the header
-    set choice (ps -eo pid,comm --sort=-pid --no-headers | fzf --multi)
-
-    if test -z "$choice"
-        return
-    end
-
-    # extract PIDs (first column)
-    set pids (for line in $choice; echo $line | awk '{print $1}'; end)
-
-    for pid in $pids
-        kill $pid
-    end
 end
 
 ####################################
@@ -344,15 +328,14 @@ end
 alias nn='nnn -Rrxl 5' 
 alias n='nnn -rRxl 5'
 
-export NNN_PLUG='C:!magick "$nnn" png:- | xclip -sel clipboard -t
-image/png*;f:fixname;i:~/scripts/nnn_imgs.sh;t:mp3conv;v:preview-tui;s:!fish -i*;p:rsynccp;z:autojump;d:~/scripts/nnn_ripdrag.sh;c:~/scripts/nnn_tomp4.sh;o:~/scripts/nnn_thunar.sh;V:preview-tabbed;S:~/scripts/nnn_terminal.sh'
+set NNN_PLUG_DIR ~/scripts/nnn_plugins
+set -x NNN_PLUG "C:!magick \"\$nnn\" png:- | xclip -sel clipboard -t image/png*;f:$NNN_PLUG_DIR/fixname;i:$NNN_PLUG_DIR/nnn_imgs.sh;t:$NNN_PLUG_DIR/mp3conv;v:$NNN_PLUG_DIR/preview-tui;s:!fish -i*;p:$NNN_PLUG_DIR/rsynccp;z:$NNN_PLUG_DIR/autojump;d:$NNN_PLUG_DIR/nnn_ripdrag.sh;c:$NNN_PLUG_DIR/nnn_tomp4.sh;o:$NNN_PLUG_DIR/nnn_thunar.sh;S:$NNN_PLUG_DIR/nnn_terminal.sh"
 
 export NNN_BMS="r:$HOME/rnote;m:/mnt/;g:$HOME/Documents/GitHub;D:$HOME/Documents/;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
 
 export NNN_OPENER=nnnopen #nnnopen path : /usr/bin/nnnopen
 export NNN_TMPFILE='/tmp/.lastd'
 export NNN_FCOLORS='a6d6908e00f66cf4a7d0afa7'
-# export NNN_COLORS='1234'
 export NNN_COLORS='#6d8eafd0;1234'
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_TRASH=1

@@ -8,6 +8,11 @@ separator=true
 markup=pango
 
 # :)
+# [i3-focusedwindow.sh]
+# interval=persist
+# color=#83a598
+
+# :)
 [currently_playing.sh]
 interval=1
 align=center
@@ -132,7 +137,7 @@ border_bottom=0
 
 
 # :)
-[volume-pipewire]
+[volume_i3blocks.sh]
 #border=#b8bb26
 color=#b8bb26
 interval=once
