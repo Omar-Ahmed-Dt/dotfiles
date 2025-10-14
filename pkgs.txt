@@ -88,6 +88,7 @@ dropbox
 duf
 dunst
 dust
+dxvk-bin
 dysk
 e2fsprogs
 edk2-shell
@@ -116,6 +117,7 @@ foomatic-db-nonfree
 foomatic-db-nonfree-ppds
 foomatic-db-ppds
 fsarchiver
+gamemode
 gemini-cli-debug
 gimp
 git
@@ -155,10 +157,12 @@ i3-swallow-git
 i3-wm
 i3blocks
 i3status
+icdiff
 icons-in-terminal-git
 infracost
 intel-ucode
 inxi
+iotop
 iw
 iwd
 jfsutils
@@ -180,8 +184,10 @@ laptop-detect
 layan-cursor-theme-git
 layan-gtk-theme-git
 layan-kde-git
+lazygit
 ldns
 less
+lib32-vkd3d
 libadwaita
 libfido2
 libreoffice-still
@@ -202,6 +208,7 @@ lshw
 lsscsi
 luarocks
 luna-icon-theme-git
+lutris
 lvm2
 lxappearance-gtk3
 maim
@@ -338,6 +345,7 @@ rofi-emoji-git-debug
 rofi-lbonn-wayland
 rp-pppoe
 rsync
+rtkit
 rtl8821cu-morrownr-dkms-git
 sardi-colora-variations-icons-git
 sardi-flat-colora-variations-icons-git
@@ -425,6 +433,8 @@ ttf-fantasque-sans-mono
 ttf-fira-code
 ttf-fira-mono
 ttf-fira-sans
+ttf-font-awesome-4
+ttf-font-awesome-5
 ttf-hack
 ttf-hactor
 ttf-hellvetica
@@ -465,10 +475,11 @@ vim
 vimix-cursors
 vimix-icon-theme-git
 virtualbox
-vlc
+vkd3d
 volumeicon
 vpnc
 vscodium
+vulkan-tools
 wacomtablet
 waterfox-bin
 wd719x-firmware
@@ -476,6 +487,7 @@ we10x-icon-theme-git
 weather
 wget
 whitesur-icon-theme-git
+winetricks
 wireless-regdb
 wireless_tools
 wmctrl

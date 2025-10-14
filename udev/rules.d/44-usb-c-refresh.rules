@@ -1,1 +1,0 @@
-ACTION=="add|remove", SUBSYSTEM=="usb", ATTRS{idVendor}=="001f", ATTRS{idProduct}=="0b21", RUN+="/usr/local/bin/keys-usb-handler.sh"
