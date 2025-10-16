@@ -186,6 +186,7 @@ alias gv='cd .config/nvim'
 alias gg='git-graph' # and install git-delta
 # alias tgl='~/scripts/toggle.sh'
 alias sx="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
+alias sxiv="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
 alias yx="yt-x"
 alias tf="terraform"
 alias glow='glow -l'
@@ -329,7 +330,9 @@ alias nn='nnn -Rrxl 5'
 alias n='nnn -rRxl 5'
 
 set NNN_PLUG_DIR ~/scripts/nnn_plugins
-set -x NNN_PLUG "C:!magick \"\$nnn\" png:- | xclip -sel clipboard -t image/png*;f:$NNN_PLUG_DIR/fixname;i:$NNN_PLUG_DIR/nnn_imgs.sh;t:$NNN_PLUG_DIR/mp3conv;v:$NNN_PLUG_DIR/preview-tui;s:!fish -i*;p:$NNN_PLUG_DIR/rsynccp;z:$NNN_PLUG_DIR/autojump;d:$NNN_PLUG_DIR/nnn_ripdrag.sh;c:$NNN_PLUG_DIR/nnn_tomp4.sh;o:$NNN_PLUG_DIR/nnn_thunar.sh;S:$NNN_PLUG_DIR/nnn_terminal.sh"
+set -x NNN_PLUG "C:!magick \"\$nnn\" png:- | xclip -sel clipboard -t
+image/png*;f:$NNN_PLUG_DIR/fixname;i:$NNN_PLUG_DIR/nnn_imgs.sh;t:$NNN_PLUG_DIR/mp3conv;v:$NNN_PLUG_DIR/preview-tui;s:!fish
+-i*;p:$NNN_PLUG_DIR/rsynccp;z:$NNN_PLUG_DIR/autojump;d:$NNN_PLUG_DIR/nnn_drag.sh;c:$NNN_PLUG_DIR/nnn_tomp4.sh;o:$NNN_PLUG_DIR/nnn_thunar.sh;S:$NNN_PLUG_DIR/nnn_terminal.sh"
 
 export NNN_BMS="r:$HOME/rnote;m:/mnt/;g:$HOME/Documents/GitHub;D:$HOME/Documents/;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;" 
 
