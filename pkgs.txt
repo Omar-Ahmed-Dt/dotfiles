@@ -84,6 +84,7 @@ dracula-cursors-git
 dracula-gtk-theme
 dracula-icons-git
 dragon
+dragon-drop
 dropbox
 duf
 dunst
@@ -318,6 +319,7 @@ polkit
 polkit-gnome
 polybar
 postman-bin
+powertop
 ppp
 pptpclient
 pv
