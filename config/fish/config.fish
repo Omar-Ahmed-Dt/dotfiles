@@ -1,8 +1,8 @@
 ## Gruvbox Theme:
 # options: dark {soft , medium , hard} | light {soft, medium, hard}
-# theme_gruvbox dark soft
+# theme_gruvbox dark hard
 
-# the current promp theme: omf theme >> clearance
+# the current promp theme: omf theme >> clearance | chain | gnuykeaj | harleen
 
 function fish_greeting
      $HOME/github/shell-color-scripts/colorscript.sh -r 
@@ -193,8 +193,8 @@ alias glow='glow -l'
 alias vu='vagrant up'
 alias vh='vagrant halt'
 alias vs='vagrant ssh'
-alias y='yazi'
 
+# functions
 function se
     cd ~/scripts
     fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r sh 
@@ -208,7 +208,6 @@ end
 function nto 
   nnn -p - | xargs $argv 2> /dev/null
 end
-  
 
 function keys
   xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
@@ -226,47 +225,38 @@ function hub
     cd /home/omar/github/dmscripts/scripts/
     ./dm-hub
 end
-#search pkg with packman and install it 
+
 function pmsi
     pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro doas pacman -S
 end
-#search pkg with yay and install it 
+
 function pmsii 
     paru -Slq | fzf -m --preview 'paru -Si {1}' | xargs -ro paru -S
 end 
-#search pkg and remove it 
+
 function pmsr
     pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro doas pacman -Rns
 end
-#search in scripts and open it 
+
 function sc
     cd ~/scripts/
     fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r -I % $EDITOR %
     cd - 
 end 
-# excution selected script 
+
 function se
     cd ~/scripts/
     fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' | xargs -r /bin/bash
     cd - 
 end 
 
-# alias to nvim 
 function v
     nvim $argv
 end
 
-# function V
-#     sudo -E nvim $argv
-# end
-
 function vi 
     nvim $argv 
 end 
-
-# function lk
-#   set loc (walk --icons $argv); and cd $loc;
-# end
 
 function f 
     doas find / -iname $argv 2> /dev/null | grep $argv
