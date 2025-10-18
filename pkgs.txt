@@ -561,8 +561,6 @@ xterm
 xwallpaper
 yad
 yay-git
-yazi-nightly-bin
-yazi-nightly-bin-debug
 yt-dlp
 yt-x
 zafiro-icon-theme
