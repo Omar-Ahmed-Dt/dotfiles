@@ -15,7 +15,6 @@ AUDIO_MUTED_SYMBOL=${AUDIO_MUTED_SYMBOL:-'  '}
 
 AUDIO_DELTA=${AUDIO_DELTA:-5}
 
-# DEFAULT_COLOR=${DEFAULT_COLOR:-"#ffffff"}
 DEFAULT_COLOR=${DEFAULT_COLOR:-"#b8bb26"}
 MUTED_COLOR=${MUTED_COLOR:-"#a0a0a0"}
 
@@ -157,7 +156,7 @@ sed 's/.*= "\(.*\)".*/\1/')
 
     if [[ $ACTIVE = "" ]] ; then
         echo "Sound inactive"
-        COLOR='#222225'
+        # COLOR='#222225'
     fi
 
     if [[ $SUBSCRIBE == 1 ]] ; then

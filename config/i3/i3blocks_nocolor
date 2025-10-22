@@ -3,7 +3,7 @@ command=/home/omar/scripts/$BLOCK_NAME
 
 # :)
 align=center
-separator=false
+separator=true
 color=#ebdbb2
 markup=pango
 
@@ -110,7 +110,7 @@ border_bottom=0
 
 
 # :)
-[volume-pipewire]
+[volume_i3blocks.sh]
 interval=once
 signal=10
 border_top=1
