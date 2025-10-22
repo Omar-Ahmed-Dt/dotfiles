@@ -37,6 +37,8 @@ do
   "w") 
       xwallpaper --stretch "$file" &&
       cp "$file" ~/.cache/wall/wallpaper.jpg 
+      rm -rf ~/.cache/wal/*
+      wal -i ~/.cache/wall/wallpaper.jpg 
       notify-send -t 1500 -i ~/logo/wall.jpg "$file has been set as your wallpaper." && exit 0
     ;;
 

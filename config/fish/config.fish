@@ -316,7 +316,7 @@ function sd -d "Change directory"
 end
 
 # nnn configs
-alias nn='nnn -Rrxl 5' 
+alias nn='nnn -rRxl 5' 
 alias n='nnn -rRxl 5'
 
 set NNN_PLUG_DIR ~/scripts/nnn_plugins
