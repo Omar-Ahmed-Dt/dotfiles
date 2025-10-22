@@ -137,8 +137,8 @@ border_bottom=0
 
 
 # :)
-[volume_i3blocks.sh]
-# [vol.sh]
+# [volume_i3blocks.sh]
+[vol.sh]
 # border=#b8bb26
 color=#b8bb26
 interval=once

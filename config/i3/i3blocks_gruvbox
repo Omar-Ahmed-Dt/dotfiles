@@ -132,14 +132,16 @@ border_bottom=0
 # label=<span foreground="#d3869b"> </span>
 
 #  Volume
-[volume_i3blocks.sh]
+# [volume_i3blocks.sh]
+[vol.sh]
 interval=once
 signal=10
 border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-label=<span foreground="#8ec07c"> </span>
+label=<span foreground="#b8bb26"> </span>
+# label=<span foreground="#8ec07c"> </span>
 
 #  Clock
 [clock.sh]

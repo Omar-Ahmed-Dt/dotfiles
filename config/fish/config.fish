@@ -5,8 +5,8 @@
 # the current promp theme: omf theme >> clearance | chain | gnuykeaj | harleen
 
 function fish_greeting
-     $HOME/github/shell-color-scripts/colorscript.sh -r 
-     # pokemon-colorscripts --no-title -r -b
+     # $HOME/github/shell-color-scripts/colorscript.sh -r 
+     pokemon-colorscripts --no-title -r --no-title
 end
 
 # :)
