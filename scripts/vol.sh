@@ -7,18 +7,18 @@ USE_PERCENT=1
 USE_ALSA_NAME=0
 USE_DESCRIPTION=1
 
-while getopts F:f:pdT:t:i:h opt; do
-  case "$opt" in
-    F) LONG_FORMAT="$OPTARG" ;;
-    f) SHORT_FORMAT="$OPTARG" ;;
-    p) USE_PERCENT=0 ;;
-    d) USE_DESCRIPTION=1 ;;
-    T) AUDIO_MED_THRESH="$OPTARG" ;;
-    t) AUDIO_LOW_THRESH="$OPTARG" ;;
-    i) AUDIO_INTERVAL="$OPTARG" ;;
-    h) printf "help" ;;
-  esac
-done
+# while getopts F:f:pdT:t:i:h opt; do
+#   case "$opt" in
+#     F) LONG_FORMAT="$OPTARG" ;;
+#     f) SHORT_FORMAT="$OPTARG" ;;
+#     p) USE_PERCENT=0 ;;
+#     d) USE_DESCRIPTION=1 ;;
+#     T) AUDIO_MED_THRESH="$OPTARG" ;;
+#     t) AUDIO_LOW_THRESH="$OPTARG" ;;
+#     i) AUDIO_INTERVAL="$OPTARG" ;;
+#     h) printf "help" ;;
+#   esac
+# done
 
 toggle_mute() { pamixer --toggle-mute; }
 

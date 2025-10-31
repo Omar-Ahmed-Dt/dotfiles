@@ -24,50 +24,60 @@ super + shift + x
 	xkill
 #Vol up 
 XF86AudioRaiseVolume
-   ~/scripts/volume.sh up && pkill -RTMIN+10 i3blocks
+   ~/scripts/volume.sh up 
+   # ~/scripts/volume.sh up && pkill -RTMIN+10 i3blocks
 #Vol down 
 XF86AudioLowerVolume
-   ~/scripts/volume.sh down && pkill -RTMIN+10 i3blocks
+   ~/scripts/volume.sh down 
+   # ~/scripts/volume.sh down && pkill -RTMIN+10 i3blocks
 #vol toggle 
 XF86AudioMute
-   ~/scripts/volume.sh mute && pkill -RTMIN+10 i3blocks
+   ~/scripts/volume.sh mute 
 # vol up
 super + Right
-   ~/scripts/volume.sh up && pkill -RTMIN+10 i3blocks
+   ~/scripts/volume.sh up
 # vol down
 super + Left
-   ~/scripts/volume.sh down && pkill -RTMIN+10 i3blocks
-#mic toggle 
+   ~/scripts/volume.sh down 
+# mic toggle (mute/unmute)
 XF86AudioMicMute
-   pactl set-source-mute @DEFAULT_SOURCE@ toggle && pkill -RTMIN+17 i3blocks
-#mic up 
-# super + equal
+    ~/scripts/mic.sh toggle
+
+# mic up
 super + Up
-   amixer set Capture 5%+ && pkill -RTMIN+17 i3blocks
-#mic down 
+    ~/scripts/mic.sh up
+
+# mic down
 super + Down
-   amixer set Capture 5%- && pkill -RTMIN+17 i3blocks
-# mic mute
-super + BackSpace 
-      amixer -q sset Capture toggle && pkill -RTMIN+17 i3blocks
+    ~/scripts/mic.sh down
+
+# mic toggle (alt key)
+super + BackSpace
+    ~/scripts/mic.sh toggle
+
 #light up 
 XF86MonBrightnessUp
-		light -A 5 && pkill -RTMIN+20 i3blocks
+	light -A 5 && pkill -RTMIN+20 i3blocks
+
 #LIGHT DOWN 
 XF86MonBrightnessDown
-		light -U 5 && pkill -RTMIN+20 i3blocks
+	light -U 5 && pkill -RTMIN+20 i3blocks
+
 #light up 
-F12
-		light -A 5 && pkill -RTMIN+20 i3blocks
+# F12
+# 		light -A 5 && pkill -RTMIN+20 i3blocks
+
 #light down 
-F11
-		light -U 5 && pkill -RTMIN+20 i3blocks
+# F11
+# 		light -U 5 && pkill -RTMIN+20 i3blocks
+
 #dmenu toggle program 
 # super + backslash
     # ~/scripts/lan_dmenu.sh && ~/scripts/toggle.sh
+
 # run a program
 super + shift + d 
-    ~/scripts/lan_dmenu.sh && dmenu_run -c -l 20
+    ~/scripts/lan_dmenu.sh && dmenu_run -c -l 20 -i
 #lang 
 super + space
     setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ara || setxkbmap us && pkill -RTMIN+15 i3blocks
@@ -148,8 +158,8 @@ super + period
 F10
     $HOME/scripts/keys.sh
 # messenger
-super + m
-    messenger-nativefier
+# super + m
+#     messenger-nativefier
 # switch
 super + shift + w 
     ~/scripts/switch.sh

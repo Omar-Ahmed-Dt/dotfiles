@@ -35,7 +35,8 @@ border_right=0
 border_left=0
 border_bottom=0
 # subtle blue label
-label=<span foreground="#83a598"> </span>
+label=<span foreground="#b8bb26"> </span>
+color=#b8bb26
 
 #  Lang
 [lang.sh]
@@ -45,7 +46,8 @@ border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-label=<span foreground="#d3869b">  </span>
+label=<span foreground="#fe8019">  </span>
+color=#fe8019
 
 #  Weather
 [weather.sh]
@@ -54,7 +56,7 @@ border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-# label=<span foreground="#8ec07c"> </span>
+color=#8ec07c
 
 #  Pacman
 [pacman.sh]
@@ -63,7 +65,8 @@ border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-label=<span foreground="#fb4934"> </span>
+label=<span foreground="#d3869b"> </span>
+color=#d3869b
 
 #  Uptime
 [uptime.sh]
@@ -72,7 +75,8 @@ border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-label=<span foreground="#fe8019"><b>  </b></span>
+label=<span foreground="#83a598"><b>  </b></span>
+color=#83a598
 
 #   Net traffic
 [nettraf.sh]
@@ -83,6 +87,7 @@ border_left=0
 border_bottom=0
 # down red / up green vibe
 label=<span> <span foreground="#fb4934"></span> <span foreground="#b8bb26"></span> </span>
+color=#fabd2f
 
 #  Battery
 [battery.sh]
@@ -91,7 +96,7 @@ border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-# label=<span foreground="#b8bb26"> </span>
+color=#b8bb26
 
 #  CPU avg
 [cpu_average.sh]
@@ -101,6 +106,7 @@ border_right=0
 border_left=0
 border_bottom=0
 label=<span foreground="#fe8019">  </span>
+color=#fe8019
 
 #  RAM
 [ram.sh]
@@ -109,7 +115,8 @@ border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-label=<span foreground="#83a598">  </span>
+label=<span foreground="#8ec07c">  </span>
+color=#8ec07c
 
 #  Backlight
 [backlight.sh]
@@ -119,7 +126,8 @@ border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-label=<span foreground="#fabd2f"> </span>
+label=<span foreground="#d3869b"> </span>
+color=#d3869b
 
 # 🎙 Microphone
 [micro.sh]
@@ -129,10 +137,9 @@ border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-# label=<span foreground="#d3869b"> </span>
+color=#83a598
 
 #  Volume
-# [volume_i3blocks.sh]
 [vol.sh]
 interval=once
 signal=10
@@ -140,8 +147,8 @@ border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-label=<span foreground="#b8bb26"> </span>
-# label=<span foreground="#8ec07c"> </span>
+color=#fabd2f
+label=<span foreground="#fabd2f"> </span>
 
 #  Clock
 [clock.sh]
@@ -150,4 +157,5 @@ border_top=1
 border_right=0
 border_left=0
 border_bottom=0
-label=<span foreground="#83a598"> </span>
+color=#b8bb26
+label=<span foreground="#b8bb26"> </span>

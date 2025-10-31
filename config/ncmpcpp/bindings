@@ -126,8 +126,8 @@ def_key "space"
 #def_key "3"
 #  show_search_engine
 #
-#def_key "3"
-#  reset_search_engine
+def_key "3"
+ reset_search_engine
 #
 #def_key "1"
 #  show_media_library
@@ -300,7 +300,7 @@ def_key "space"
 #def_key "a"
 #  add_selected_items
 #
-#def_key "c"
+# def_key "c"
 #  clear_playlist
 #
 #def_key "c"
@@ -393,16 +393,15 @@ def_key "space"
 #def_key "f"
 #	find_item_forward
 
-def_key "+"
-    show_clock
 def_key "="
-    volume_up
+    show_clock
+# def_key "="
+#     volume_up
 
 def_key "j"
     scroll_down
 def_key "k"
     scroll_up
-
 def_key "ctrl-u"
     page_up
 #push_characters "kkkkkkkkkkkkkkk"
@@ -419,10 +418,8 @@ def_key "h"
     previous_column
 def_key "l"
     next_column
-
 def_key "."
     show_lyrics
-
 def_key "n"
     next_found_item
 def_key "N"
@@ -456,8 +453,8 @@ def_key "g"
 #jump_to_position_in_song
 def_key "U"
   update_database
-def_key "s"
-  reset_search_engine
+# def_key "S"
+#   reset_search_engine
 def_key "s"
   show_browser
 def_key "x"
