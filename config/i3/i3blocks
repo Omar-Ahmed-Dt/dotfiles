@@ -17,7 +17,8 @@ markup=pango
 interval=1
 align=center
 border_top=0
-#border=#ebdbb2
+# label=<span foreground="#ebdbb2"> </span>
+label=<span foreground="#fabd2f"> </span>
 color=#ebdbb2
 border_right=0
 border_left=0
@@ -70,7 +71,8 @@ border_bottom=0
 # :)
 [nettraf.sh]
 interval=2
-label=<span color="#8ec97c">  </span>
+# label=<span color="#8ec97c">  </span>
+label=<span> <span foreground="#fb4934"></span> <span foreground="#b8bb26"></span> </span>
 #border=#8ec97c
 color=#8ec97c
 border_top=0

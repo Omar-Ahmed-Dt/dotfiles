@@ -231,8 +231,8 @@ bar {
     workspace_buttons yes
     font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont Bold 7.5
     position top
-    # status_command i3blocks -c ~/.config/i3/i3blocks
-    status_command i3blocks -c ~/.config/i3/i3blocks_gruvbox
+    status_command i3blocks -c ~/.config/i3/i3blocks
+    # status_command i3blocks -c ~/.config/i3/i3blocks_gruvbox
     colors {
         background           $bg 
         separator            $yellow
