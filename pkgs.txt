@@ -12,6 +12,7 @@ advcpmv
 advcpmv-debug
 aic94xx-firmware
 alacritty
+alacritty-themes
 alsa-firmware
 alsa-plugins
 alsa-tools
@@ -89,6 +90,7 @@ dracula-icons-git
 dragon
 dragon-drop
 dropbox
+dropbox-cli
 duf
 dunst
 dust
@@ -107,6 +109,7 @@ faba-mono-icons-git
 fagram-bin
 fatresize
 feh
+firefox
 fish
 fisher
 flameshot
@@ -131,6 +134,8 @@ git-graph
 github-cli
 glow
 gnome-calculator
+gns3-gui
+gns3-server
 go
 go-blueprint-bin
 go-blueprint-bin-debug
@@ -143,6 +148,7 @@ gptfdisk
 graphite-gtk-theme-git
 grub
 gsfonts
+gst-libav
 gst-plugins-bad
 gst-plugins-base
 gst-plugins-good
@@ -186,6 +192,7 @@ kvantum-theme-materia
 kvantum-theme-qogir-git
 la-capitaine-icon-theme-git
 laptop-detect
+latex-mk
 layan-cursor-theme-git
 layan-gtk-theme-git
 layan-kde-git
@@ -207,9 +214,11 @@ linux-headers
 linux-lts
 linux-lts-headers
 logrotate
+lolcat
 lsb-release
 lsd
 lshw
+lsof
 lsscsi
 luarocks
 luna-icon-theme-git
@@ -221,7 +230,9 @@ man-db
 man-pages
 materia-gtk-theme
 materia-kde
+mcat-bin
 mdadm
+mdcat
 mediainfo
 mesa
 messenger-nativefier
@@ -237,7 +248,6 @@ moka-icon-theme-git
 most
 mpc
 mpd
-mtools
 nano
 nbd
 ncmpcpp
@@ -332,8 +342,10 @@ pyinstaller
 pyinstaller-debug
 pyinstaller-hooks-contrib
 python-altgraph
+python-flask
 python-pip
 python-pipx
+python-pywal
 qogir-gtk-theme-git
 qogir-icon-theme
 qt5ct
@@ -350,6 +362,7 @@ rnote-git
 rnote-git-debug
 rofi
 rofi-emoji-git-debug
+rofimoji
 rp-pppoe
 rsync
 rtkit
@@ -388,6 +401,7 @@ smartmontools
 sof-firmware
 speedtest-cli
 splix
+sqlitebrowser
 squashfs-tools
 starship
 sudo
@@ -413,6 +427,11 @@ tesseract
 tesseract-data-ara
 tesseract-data-eng
 testdisk
+texlive-basic
+texlive-fontsextra
+texlive-latexextra
+texlive-meta
+texlive-publishers
 tgpt
 the_silver_searcher
 thorium-browser-bin
@@ -421,6 +440,7 @@ thunar-archive-plugin
 thunar-shares-plugin
 thunar-volman
 thunderbird
+tldr
 tlp
 tlp-rdw
 tmux
@@ -490,9 +510,8 @@ vpnc
 vscodium
 vulkan-tools
 wacomtablet
+warp-terminal-bin
 waterfox-bin
-waydroid
-waydroid-image
 wd719x-firmware
 we10x-icon-theme-git
 weather
@@ -507,6 +526,7 @@ wlrctl
 wmctrl
 woff2-font-awesome
 wpa_supplicant
+wttrbar
 wvdial
 xclip
 xcolor
@@ -575,6 +595,7 @@ xterm
 xwallpaper
 yad
 yay-git
+yazi
 yt-dlp
 yt-x
 zafiro-icon-theme

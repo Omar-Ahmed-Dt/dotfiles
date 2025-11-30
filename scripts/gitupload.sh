@@ -26,3 +26,4 @@ cp -r ~/.config/nvim/lua/  ~/Documents/GitHub/dotfiles/config/nvim/
 cp -r ~/.config/flameshot/ ~/Documents/GitHub/dotfiles/config/ 
 cp ~/github/bslock/config.def.h ~/Documents/GitHub/dotfiles/config/bslock/
 # cp -r /home/omar/.config/nnn/plugins/* ~/Documents/GitHub/dotfiles/config/nnn/plugins/
+cp -r /home/omar/.config/yazi/*.toml ~/Documents/GitHub/dotfiles/config/yazi/

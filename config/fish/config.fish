@@ -73,8 +73,6 @@ alias tofish="doas chsh $USER -s /bin/fish && echo 'Now log out.'"
 alias X='doas chmod 777'
 alias x='doas chmod 744'
 alias do='doas'
-
-
 alias pmi='doas pacman -S'
 alias pmu='doas pacman -Syyu'
 alias pmuu='paru -Syu'
@@ -87,15 +85,12 @@ alias pmqf="expac --timefmt='%Y-%m-%d %H:%M:%S' '%l %n %v' | sort -r | fzf"
 alias pmqt="expac --timefmt='%Y-%m-%d %H:%M:%S' '%l %n %v' | sort -r"
 alias pmn='pacman -Q | wc -l'
 alias pmc='doas pacman -Sc' #clean the cache after upgrade my system 
-# alias pmg='pamac-manager'
-# alias pmf="pacman -Qqo"
 alias md='mkdir'
 alias config='/home/omar/scripts/configs.sh'
 alias gc='cd ~/.config'
 alias ram='ps axh -o cmd:15,%mem --sort=-%mem | head | string trim'
 alias cpu='ps axh -o cmd:15,%cpu --sort=-%cpu | head'
 alias bup='sh /home/omar/scripts/gitupload.sh'
-# alias df='duf -hide special -style ascii'
 alias df='dysk -c fs+type+size+used+free+use+mp'
 alias dfdr='dust'
 alias dfd='dust -r'
@@ -104,15 +99,11 @@ alias printerinstall='hp-setup -u'
 alias epdf='okular'
 alias gt='cd ~/.local/share/Trash/files'
 alias gs='cd ~/scripts'
-# alias pr='proxychains'
-# alias pf='proxychains firefox'
-# alias toand='sh ~/scripts/android.sh'
 alias m='~/scripts/matrix.sh'
 alias gx='cd /usr/share/xsessions'
 alias ft='xdg-mime query filetype'
 alias fd='xdg-mime query default'
 alias rip='~/scripts/rip.sh' #to get public ip 
-# alias ip='ip --color' #to get private ip 
 alias ll='lsd -lh --icon-theme unicode'
 alias la="lsd -lah --icon-theme unicode"
 alias l="lsd --icon-theme unicode"
@@ -134,14 +125,9 @@ alias calc='kalker'
 alias gm='cd /mnt'
 alias code='vscodium'
 alias gsh="~/scripts/gsh.sh"
-# alias uprsc="xrdb -load ~/.Xresources"
-# alias gpu="doas nvim /etc/optimus-manager/optimus-manager.conf"
 alias ns="nvidia-smi"
 alias nr="prime-run"
 alias ktheme="kitty +kitten themes"
-# alias note="io.github.lainsce.Notejot"
-# alias rm="rm -i"
-# alias V="doasedit"
 alias rf='source ~/.config/fish/config.fish'
 alias rkeys="~/scripts/keys.sh"
 alias rmpm="doas rm /var/lib/pacman/db.lck"
@@ -151,11 +137,9 @@ alias prop="xprop | grep WM_CLASS"
 alias dl="~/scripts/dlfile.sh"
 alias dlmv="~/scripts/mvdragon.sh"
 alias dlcp="~/scripts/cpdrag.sh"
-alias ytm="ytfzf --pages=2 -m -t -l -s"
-alias ytv="ytfzf --pages=2 -t -l -s"
 alias phn="~/scripts/scrcpy.sh"
 alias pipes="pipes.sh"
-# alias ssh="kitty +kitten ssh"
+alias ssh="kitty +kitten ssh"
 alias st="speedtest-cli --simple --secure"
 alias stm="nload -u m -m wlp3s0"
 alias win="~/scripts/windows.sh"
@@ -166,8 +150,7 @@ alias ping="ping -c 20"
 alias dr='~/scripts/dr.sh'
 alias mm='~/scripts/mount_manager.sh'
 alias rr='~/scripts/rsync.sh'
-# alias chmm='~/scripts/kill_mnt_processes.sh'
-alias topdf='~/scripts/extract_pages.sh'
+alias topdf='~/scripts/build-latex.sh'
 alias gif='~/scripts/gif.sh'
 alias bat='bat --theme gruvbox-dark'
 alias rm='trash-put -ir'
@@ -180,19 +163,17 @@ alias k='kubectl'
 alias h='helm'
 alias tg='tgpt'
 alias dp='dropbox start -i'
-# alias mpv='prime-run mpv'
 alias mx='ncpamixer -t i'
 alias gv='cd .config/nvim'
 alias gg='git-graph' # and install git-delta
-# alias tgl='~/scripts/toggle.sh'
 alias sx="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
 alias sxiv="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
-alias yx="yt-x"
 alias tf="terraform"
 alias glow='glow -l'
 alias vu='vagrant up'
 alias vh='vagrant halt'
 alias vs='vagrant ssh'
+alias yz='yazi'
 
 # functions
 function se
@@ -254,9 +235,9 @@ function v
     nvim $argv
 end
 
-function vi 
-    nvim $argv 
-end 
+# function vi 
+#     nvim $argv 
+# end 
 
 function f 
     doas find / -iname $argv 2> /dev/null | grep $argv

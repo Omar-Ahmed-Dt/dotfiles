@@ -4,7 +4,7 @@ case "$BLOCK_BUTTON" in
     1) kitty $HOME ;;
 esac
 
-clock=$(date '+%I')
+# clock=$(date '+%I')
 
 # case "$clock" in
 #     "00") icon="N" ;;  # N for zero (nulla in Latin)
@@ -22,6 +22,6 @@ clock=$(date '+%I')
 #     "12") icon="XII" ;;# Twelve
 # esac
 
-# echo "$(date '+%a.%d.%b') $icon $(date '+%I:%M %p')"
 # echo "$(date '+%a.%d.%b') $(date '+%I:%M %p')"
-echo "$(date '+%a.%d.%b') $(date '+%I:%M %p')"
+# echo "$(date '+%d-%-m-%Y') $(date '+%I:%M %p')"
+echo "$(date '+%d-%-m %a %-I:%M %p')"

@@ -1,0 +1,102 @@
+[colors]
+[[colors.indexed_colors]]
+index = 16
+color = "#a7c080"
+
+[[colors.indexed_colors]]
+index = 17
+color = "#d3c6aa"
+
+[colors.primary]
+background = "#2d353b"
+foreground = "#d3c6aa"
+dim_foreground = "#d3c6aa"
+bright_foreground = "#d3c6aa"
+
+[colors.cursor]
+text = "#d3c6aa"
+cursor = "#d3c6aa"
+
+[colors.vi_mode_cursor]
+text = "#2d353b"
+cursor = "#7fbbb3"
+
+[colors.footer_bar]
+foreground = "#2d353b"
+background = "#83c092"
+
+[colors.selection]
+text = "#2d353b"
+background = "#a7c080"
+
+[colors.normal]
+black = "#475258"
+red = "#e67e80"
+green = "#a7c080"
+yellow = "#dbbc7f"
+blue = "#7fbbb3"
+magenta = "#d699b6"
+cyan = "#83c092"
+white = "#d3c6aa"
+
+[colors.bright]
+black = "#475258"
+red = "#e67e80"
+green = "#a7c080"
+yellow = "#dbbc7f"
+blue = "#7fbbb3"
+magenta = "#d699b6"
+cyan = "#83c092"
+white = "#d3c6aa"
+
+[colors.dim]
+black = "#475258"
+red = "#e67e80"
+green = "#a7c080"
+yellow = "#dbbc7f"
+blue = "#7fbbb3"
+magenta = "#d699b6"
+cyan = "#83c092"
+white = "#d3c6aa"
+
+[colors.search.matches]
+foreground = "#2d353b"
+background = "#83c092"
+
+[colors.search.focused_match]
+foreground = "#2d353b"
+background = "#a7c080"
+
+[colors.hints.start]
+foreground = "#2d353b"
+background = "#dbbc7f"
+
+[colors.hints.end]
+foreground = "#2d353b"
+background = "#83c092"
+
+[window]
+dynamic_padding = true
+dynamic_title = true
+
+[selection]
+save_to_clipboard = true
+
+[font]
+size = 11.0
+
+[font.normal]
+family = "Ubuntu Mono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "Ubuntu Mono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "Ubuntu Mono Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "Ubuntu Mono Nerd Font"
+style = "Bold Italic"
