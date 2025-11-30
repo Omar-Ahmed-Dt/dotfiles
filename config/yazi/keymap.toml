@@ -1,0 +1,116 @@
+# ~/.config/yazi/keymap.toml
+[mgr]
+
+# ── Bookmarks: b + <key> ─────────────────────────────────────────────
+prepend_keymap = [
+  # cd ~/.config/yazi/ && ya pkg add hankertrix/augment-command && ya pkg install
+  { on = ["'"], run = "plugin augment-command -- first_file", desc = "Jump to first file"}, 
+  { on = ["b", "r"], run = "cd ~/rnote", desc = "Go to rnote" },
+  { on = ["b", "m"], run = "cd /mnt/", desc = "Go to /mnt/" },
+  { on = ["b", "g"], run = "cd ~/Documents/GitHub", desc = "Go to GitHub" },
+  { on = ["b", "D"], run = "cd ~/Documents/", desc = "Go to Documents" },
+  { on = ["b", "d"], run = "cd ~/Downloads", desc = "Go to Downloads" },
+  { on = ["b", "h"], run = "cd ~", desc = "Go to Home" },
+  { on = ["b", "s"], run = "cd ~/scripts", desc = "Go to Scripts" },
+  { on = ["b", "f"], run = "cd ~/ffmpeg", desc = "Go to FFmpeg" },
+  { on = ["b", "w"], run = "cd ~/wallpapers", desc = "Go to Wallpapers" },
+  { on = ["b", "y"], run = "cd ~/youtube-dl", desc = "Go to YouTube DL" },
+  { on = ["b", "t"], run = "cd ~/.local/share/Trash/files", desc = "Go to Trash" },
+  { on = ["b", "S"], run = "cd ~/screenshots", desc = "Go to Screenshots" },
+  { on = ["b", "c"], run = "cd ~/.config", desc = "Go to Config" },
+  { on = ["b", "p"], run = "cd ~/pins", desc = "Go to Pins" },
+  { on = ["b", "P"], run = "cd ~/Pictures", desc = "Go to Pictures" },
+  { on = ["b", "M"], run = "cd ~/Music", desc = "Go to Music" },
+  { on = ["b", "v"], run = "cd ~/Videos", desc = "Go to Videos" },
+
+  # Open shell in current dir (your screenshot)
+  { on =["S"], run = 'shell "$SHELL" --block --confirm', desc = "Open shell in the current directory" }
+]
+
+# ── Keymaps (navigation, selection, ops, tabs, misc) ─────────────────
+keymap = [
+  # Core
+  { on = ["<Esc>"], run = "escape", desc = "Exit visual mode / clear / cancel search" },
+  { on = ["Q"], run = "quit", desc = "Exit the process" },
+  { on = ["q>"], run = "close", desc = "Close current tab, or quit if last" },
+
+  # Navigation
+  { on = ["k"], run = "arrow -1", desc = "Move cursor up" },
+  { on = ["j"], run = "arrow 1", desc = "Move cursor down" },
+  { on = ["h"], run = "leave", desc = "Go to parent" },
+  { on = ["l"], run = "plugin --sync smart-enter", desc = "Enter dir / open file" },
+  { on = ["<Enter>"], run = "plugin --sync smart-enter", desc = "Enter dir / open file" },
+  { on = ["g","g"], run = "arrow -99999999", desc = "Top" },
+  { on = ["G"], run = "arrow 99999999", desc = "Bottom" },
+
+  # Page navigation
+  { on = [ "<C-u>" ], run = "arrow -50%", desc = "Move up half page" },
+  { on = [ "<C-d>" ], run = "arrow 50%", desc = "Move down half page" },
+  { on = [ "<C-b>" ], run = "arrow -100%", desc = "Move up one page" },
+  { on = [ "<C-f>" ], run = "arrow 100%", desc = "Move down one page" },
+
+  # Selection
+  { on = [ "<Space>" ], run = [ "select --state=none", "arrow 1" ], desc = "Toggle selection" },
+  { on = [ "v" ], run = "visual_mode", desc = "Enter visual mode" },
+  { on = [ "V" ], run = "visual_mode --unset", desc = "Exit visual mode" },
+  { on = [ "<C-a>" ], run = "select_all --state=true", desc = "Select all" },
+  { on = [ "<C-r>" ], run = "select_all --state=none", desc = "Inverse selection" },
+
+  # File operations
+  { on = ["o"], run = "open --interactive", desc = "Open interactively" },
+  { on = ["y"], run = "yank", desc = "Yank (copy)" },
+  { on = ["x"], run = "yank --cut", desc = "Yank (cut)" },
+  { on = ["p"], run = "paste", desc = "Paste" },
+  { on = ["P"], run = "paste --force", desc = "Paste (overwrite)" },
+  { on = ["d"], run = "remove", desc = "Trash selected files" },
+  { on = ["D"], run = "remove --permanently", desc = "Delete permanently" },
+  { on = ["r"], run = "rename", desc = "Rename" },
+  { on = ["a", "f"], run = "create", desc = "Create file" },
+  { on = ["a", "d"], run = "create --dir", desc = "Create directory" },
+
+  # Search & filter
+  { on = ["/"], run = "find --smart", desc = "Find next" },
+  # { on = ["?"], run = "find --previous --smart", desc = "Find previous" },
+  { on = ["n"], run = "find_arrow", desc = "Next match" },
+  { on = ["N"], run = "find_arrow --previous", desc = "Prev match" },
+  { on = ["f"], run = "filter --smart", desc = "Filter" },
+
+  # Tabs
+  { on = ["t"], run = "tab_create --current", desc = "New tab with CWD" },
+  { on = ["H"], run = "tab_switch -1 --relative", desc = "Prev tab" },
+  { on = ["L"], run = "tab_switch 1 --relative", desc = "Next tab" },
+
+  # Misc
+  { on = ["."], run = "hidden toggle", desc = "Toggle hidden files" },
+  { on = ["~"], run = "help", desc = "Open help" },
+
+  # Sorting
+  { on = ["s", "a"], run = "sort alphabetical --reverse=no", desc = "Sort A → Z" },
+  { on = ["s", "A"], run = "sort alphabetical --reverse=yes", desc = "Sort Z → A" },
+  
+  # Sort by modification time
+  { on = ["s", "t"], run = "sort mtime --reverse", desc = "sort by time" },
+  { on = ["s", "T"], run = "sort mtime --reverse=no", desc = "sort by time" },
+  
+  # Sort by size
+  { on = ["s", "s"], run = "sort size --reverse=no", desc = "Sort by size ascending" },
+  { on = ["s", "S"], run = "sort size --reverse=yes", desc = "Sort by size descending" },
+
+]
+
+[help]
+
+keymap = [
+  { on = [ "<Esc>" ], run = "escape", desc = "Close help" },
+  { on = [ "q" ], run = "close", desc = "Close help" },
+  
+  # Navigation
+  { on = [ "k" ], run = "arrow -1", desc = "Move up" },
+  { on = [ "j" ], run = "arrow 1", desc = "Move down" },
+  
+  { on = [ "<C-u>" ], run = "arrow -50%", desc = "Move up half page" },
+  { on = [ "<C-d>" ], run = "arrow 50%", desc = "Move down half page" },
+  
+  { on = [ "g", "g" ], run = "arrow -99999999", desc = "Go to top" },
+  { on = [ "G" ], run = "arrow 99999999", desc = "Go to bottom" },
+]

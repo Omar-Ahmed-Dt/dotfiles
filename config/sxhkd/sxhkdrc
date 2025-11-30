@@ -123,9 +123,9 @@ super + shift + s
 #hub 
 super + o 
 	~/scripts/hub.sh
-#nnn file manger 
+#file manger 
 shift + Return
-    ~/scripts/nnn.sh
+    ~/scripts/filemanager.sh
 #open vim
 super + shift + v 
     kitty -e nvim
@@ -153,7 +153,8 @@ Insert
     ~/scripts/multi_ocr.sh
 # emoji
 super + period
-    ~/scripts/lan_dmenu.sh && bemoji -n
+    ~/scripts/lan_dmenu.sh && rofimoji --action copy --files ~/scripts/emoji -s neutral
+    # ~/scripts/lan_dmenu.sh && bemoji -n
 # rkeys
 F10
     $HOME/scripts/keys.sh

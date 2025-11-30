@@ -47,8 +47,8 @@ bindsym $mod+Shift+8 move container to workspace $WS8
 bindsym $mod+Shift+9 move container to workspace $WS9
 
 # Keybinding 
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
+# bindsym $mod+Shift+minus move scratchpad
+# bindsym $mod+minus scratchpad show
 bindsym $mod+Shift+c kill
 bindsym $mod+a focus parent
 bindsym $mod+z focus child
@@ -94,16 +94,8 @@ bindsym $mod+shift+o nop n1
 for_window [instance="mus"] floating enable 
 for_window [instance="mus"] resize set 1000 900
 for_window [instance="mus"] move scratchpad
-# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name mus -e ncmpcpp
 exec --no-startup-id $term --name mus -e ncmpcpp
-bindsym $mod+Shift+n [instance="mus"] scratchpad show; [instance="mus"] move position center
-# htop
-# for_window [instance="monitor"] floating enable 
-# for_window [instance="monitor"] resize set 1500 1000
-# for_window [instance="monitor"] move scratchpad
-# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name monitor -e htop 
-# exec --no-startup-id $term --name monitor -e htop 
-# bindsym $mod+shift+h [instance="monitor"] scratchpad show; [instance="monitor"] move position center
+bindsym $mod++minus [instance="mus"] scratchpad show; [instance="mus"] move position center
 
 # ncpamixer
 for_window [instance="maxir"] floating enable 
@@ -111,13 +103,6 @@ for_window [instance="maxir"] resize set 900 900
 for_window [instance="maxir"] move scratchpad
 exec --no-startup-id $term --name maxir -e ncpamixer -t i
 bindsym $mod+backslash [instance="maxir"] scratchpad show; [instance="maxir"] move position center
-
-# # keepassxc
-# for_window [instance="pass"] floating enable 
-# for_window [instance="pass"] resize set 1500 1000
-# for_window [instance="pass"] move scratchpad
-# exec --no-startup-id $term -c ~/.config/kitty/kitty2.conf --name pass -e ~/Documents/pass.sh
-# bindsym $mod+q [instance="pass"] scratchpad show; [instance="pass"] move position center
 
 #############################
 
@@ -157,7 +142,8 @@ exec_always --no-startup-id xhost +local:root
 exec_always --no-startup-id flameshot
 exec_always --no-startup-id xfce4-clipman
 exec_always --no-startup-id caffeine  #Install it using pmii caffeine-ng
-exec_always --no-startup-id dropbox start -i 
+# exec_always --no-startup-id dropbox start -i 
+exec_always --no-startup-id dropbox-cli start -i
 
 # Floating 
 # for_window [class="Joplin"] floating enable

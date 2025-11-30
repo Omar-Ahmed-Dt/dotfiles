@@ -29,16 +29,16 @@ case "$1" in
 esac
 
 # Read back current mic state
-info=$(wpctl get-volume "$SRC" 2>/dev/null)
-if [ $? -eq 0 ]; then
-    vol=$(awk '{print $2}' <<< "$info")
-    pct=$(printf "%.0f" "$(echo "$vol * 100" | bc -l)")
-    if grep -q '\[MUTED\]' <<< "$info"; then
-        notify-send -u low -t 1000 -r 997 "🎙️ Mic: muted"
-    else
-        notify-send -u low -t 1000 -r 997 "🎙️ Mic: ${pct}%"
-    fi
-fi
+# info=$(wpctl get-volume "$SRC" 2>/dev/null)
+# if [ $? -eq 0 ]; then
+#     vol=$(awk '{print $2}' <<< "$info")
+#     pct=$(printf "%.0f" "$(echo "$vol * 100" | bc -l)")
+#     if grep -q '\[MUTED\]' <<< "$info"; then
+#         notify-send -u low -t 1000 -r 997 "🎙️ Mic: muted"
+#     else
+#         notify-send -u low -t 1000 -r 997 "🎙️ Mic: ${pct}%"
+#     fi
+# fi
 
 # refresh i3blocks mic block (signal 17 as you used)
 pkill -RTMIN+17 i3blocks
