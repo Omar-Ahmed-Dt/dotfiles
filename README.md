@@ -33,7 +33,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
  - dmenu
 
 **File Manager**
- - nnn | thunar
+ - yazi | thunar
 
 **Music Player**
  - mpd & ncmpcpp
@@ -91,7 +91,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 | Editor and IDE | [nvchad](https://nvchad.com/) vscodium |
 | Scripts | [dm-scripts](https://gitlab.com/dwt1/dmscripts)|
 | Multimedia | pipewire [install pipewire](https://github.com/Omar-Ahmed-Dt/dotfiles/blob/main/scripts/pipewire_install.sh) pulseaudio pulsemixer mpv mpv-mpris mpd mpDris2 mpc moc ncmpcpp youtube-dl yt-dlp ffmpeg ncpamixer simplescreenrecorder obs | 
-| File Manager | nnn nemo | 
+| File Manager | nnn thunar yazi | 
 | Terminal and some tools | alacritty fish zsh kitty exa fzf cmatrix xdotool xclip maim flameshot |
 | Diagnostic | htop gotop bashtop bpytop nvtop | 
 | Nvidia | nvidia nvidia-lts optimus-manager | 
@@ -128,7 +128,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 | ncmpcpp | super + shift + n | 
 | mpc pause | ctrl + space  |
 | mpc stop | ctrl + Backspace |
-| nnn | shift + Return | 
+| yazi | shift + Return | 
 | thunderbird | super + shift + m | 
 | kitti3 | super + shift + o | 
 | record screen | super + print | 
