@@ -13,7 +13,5 @@ use = "hankertrix/augment-command"
 rev = "f0e6f44"
 hash = "9bcfdacce6b89dfd039a895c8403e5de"
 
-[[flavor.deps]]
-use = "bennyyip/gruvbox-dark"
-rev = "e5e1aef"
-hash = "eb88137cf13a796225254344bf6def2c"
+[flavor]
+deps = []
