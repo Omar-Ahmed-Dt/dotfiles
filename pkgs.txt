@@ -109,6 +109,7 @@ faba-mono-icons-git
 fagram-bin
 fatresize
 feh
+ffmpegthumbnailer
 firefox
 fish
 fisher
@@ -489,6 +490,7 @@ ttf-roboto-mono
 ttf-sourcecodepro-nerd
 ttf-ubuntu-font-family
 udftools
+ueberzug
 ufw
 upd72020x-fw
 upower

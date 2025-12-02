@@ -2,10 +2,11 @@
 
 # Menu options
 # OPTIONS="lock\nexit\nreboot\nhibernate\nzzz\nshutdown"
-OPTIONS="lock\nhibernate\nreboot\nexit\nzzz\nshutdown"
+# OPTIONS="lock\nhibernate\nreboot\nexit\nzzz\nshutdown"
+OPTIONS="lock\nreboot\nexit\nzzz\nshutdown"
 
 # Prompt user (centered and vertical)
-OPT=$(echo -e "$OPTIONS" | dmenu -i -c -l 6 -p "Choose action:")
+OPT=$(echo -e "$OPTIONS" | dmenu -i -c -l 5 -p "Choose action:")
 
 # Confirmation function
 confirm() {
@@ -23,11 +24,11 @@ case "$OPT" in
     reboot)
         [ "$(confirm reboot)" = "Yes" ] && reboot -i
         ;;
-    hibernate)
-        if [ "$(confirm hibernate)" = "Yes" ]; then
-            setxkbmap us && pkill -RTMIN+15 i3blocks && bslock systemctl hibernate
-        fi
-        ;;
+    # hibernate)
+    #     if [ "$(confirm hibernate)" = "Yes" ]; then
+    #         setxkbmap us && pkill -RTMIN+15 i3blocks && bslock systemctl hibernate
+    #     fi
+    #     ;;
     zzz)
         if [ "$(confirm suspend)" = "Yes" ]; then
             setxkbmap us && pkill -RTMIN+15 i3blocks && bslock systemctl suspend -i 
