@@ -33,7 +33,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
  - dmenu
 
 **File Manager**
- - yazi | thunar
+ - nnn | yazi | thunar
 
 **Music Player**
  - mpd & ncmpcpp
@@ -128,7 +128,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
 | ncmpcpp | super + shift + n | 
 | mpc pause | ctrl + space  |
 | mpc stop | ctrl + Backspace |
-| yazi | shift + Return | 
+| nnn | shift + Return | 
 | thunderbird | super + shift + m | 
 | kitti3 | super + shift + o | 
 | record screen | super + print | 
