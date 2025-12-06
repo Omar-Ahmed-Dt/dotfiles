@@ -12,7 +12,6 @@ advcpmv
 advcpmv-debug
 aic94xx-firmware
 alacritty
-alacritty-themes
 alsa-firmware
 alsa-plugins
 alsa-tools
@@ -49,6 +48,7 @@ bluez-utils
 brave-bin
 breeze
 breeze-gtk
+bridge-utils
 brightnessctl
 broadcom-wl-dkms
 btop
@@ -101,6 +101,7 @@ edk2-shell
 efibootmgr
 electron25-bin
 ethtool
+eve-ng-integration
 exfatprogs
 expac
 f2fs-tools
@@ -118,6 +119,7 @@ flat-remix-git
 fluent-gtk-theme
 fluent-icon-theme-git
 fluent-kde-theme-git
+fnott
 foomatic-db
 foomatic-db-engine
 foomatic-db-gutenprint-ppds
@@ -175,6 +177,7 @@ infracost
 intel-ucode
 inxi
 iotop
+iptables-nft
 iw
 iwd
 jfsutils
@@ -311,7 +314,8 @@ papirus-nord
 partclone
 parted
 partimage
-paru-git
+paru
+paru-debug
 pavucontrol
 pcmanfm
 pcsclite
@@ -347,11 +351,13 @@ python-flask
 python-pip
 python-pipx
 python-pywal
+qemu-full
 qogir-gtk-theme-git
 qogir-icon-theme
 qt5ct
 qterminal
 rate-mirrors-bin
+realtime-privileges
 redshift
 refind
 reflector
@@ -504,6 +510,8 @@ variety
 vim
 vimix-cursors
 vimix-icon-theme-git
+virt-manager
+virt-viewer
 virtualbox
 vkd3d
 vlc
@@ -596,7 +604,8 @@ xournalpp
 xterm
 xwallpaper
 yad
-yay-git
+yay
+yay-debug
 yazi
 yt-dlp
 yt-x

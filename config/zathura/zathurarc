@@ -10,7 +10,9 @@ map ^d scroll half-down
 map d toggle_page_mode
 map r reload
 map R rotate
-# map K zoom in
+map <C-j> scroll full-down
+map <C-k> scroll full-up
+# map K zoom in 
 map _ zoom out
 map i recolor
 map p print
