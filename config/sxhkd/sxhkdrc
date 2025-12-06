@@ -9,7 +9,7 @@ super + shift + r
     # i3-msg reload  && i3-msg restart
 #Terminal 
 super + Return
-    kitty 
+    alacritty 
 # browser
 super +  b
     ~/scripts/browser.sh
@@ -128,8 +128,8 @@ shift + Return
     ~/scripts/filemanager.sh
 #open vim
 super + shift + v 
-    kitty -e nvim
-    # kitty -e lvim
+    alacritty -e nvim
+    # alacritty -e lvim
 # mail  
 super + shift + m
     thunderbird

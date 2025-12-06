@@ -1,15 +1,5 @@
 #!/bin/bash
 
-# Gruvbox colors
-FG="#ebdbb2"
-RED="#fb4934"
-ORANGE="#fe8019"
-YELLOW="#fabd2f"
-GREEN="#b8bb26"
-AQUA="#8ec07c"
-BLUE="#83a598"
-PURPLE="#d3869b"
-
 # Icons
 CHARGING_ICON=''
 WARNING_ICON='⚠️'
@@ -32,24 +22,24 @@ get_battery() {
 
         # choose icon
         if [[ "$charging" == "Charging" ]]; then
-            ICON="<span foreground=\"$YELLOW\">$CHARGING_ICON</span>"
+            ICON="$CHARGING_ICON"
         elif [[ $capacity -le 18 ]]; then
-            ICON="<span foreground=\"$RED\">$WARNING_ICON</span>"
+            ICON="$WARNING_ICON"
         fi
 
         # choose battery icon by capacity
         if [[ $capacity -ge $FULL_AT ]]; then
-            BAT_ICON="<span foreground=\"$GREEN\">$BATTERY_FULL_ICON</span>"
+            BAT_ICON="$BATTERY_FULL_ICON"
         elif [[ $capacity -le 25 ]]; then
-            BAT_ICON="<span foreground=\"$RED\">$BATTERY_4_ICON</span>"
+            BAT_ICON="$BATTERY_4_ICON"
         elif [[ $capacity -le 60 ]]; then
-            BAT_ICON="<span foreground=\"$ORANGE\">$BATTERY_3_ICON</span>"
+            BAT_ICON="$BATTERY_3_ICON"
         else
-            BAT_ICON="<span foreground=\"$YELLOW\">$BATTERY_2_ICON</span>"
+            BAT_ICON="$BATTERY_2_ICON"
         fi
     fi
 
-    echo "$ICON $BAT_ICON <span foreground=\"$FG\">${capacity}% $remain</span>"
+    echo "$ICON $BAT_ICON ${capacity}% $remain"
 }
 
 get_battery

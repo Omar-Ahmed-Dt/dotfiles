@@ -1,0 +1,33 @@
+[keyboard]
+bindings = [
+  { key = "V",        mods = "Control|Shift",                                   action = "Paste" },
+  { key = "C",        mods = "Control|Shift",                                   action = "Copy" },
+  # { key = "S",        mods = "Control|Shift",                                   action = "PasteSelection" },
+
+  # Search
+  { key = "I",        mods = "Control|Shift",                                   action = "SearchForward" },
+  { key = "N",        mods = "Control|Shift",         mode = "Search",          action = "SearchFocusNext" },
+  { key = "P",        mods = "Control|Shift",         mode = "Search",          action = "SearchFocusPrevious" },
+
+  # Font size
+  { key = "Key0",     mods = "Control",                                         action = "ResetFontSize" },
+  { key = "Equals",   mods = "Control",                                         action = "IncreaseFontSize" },
+  { key = "Minus",    mods = "Control",                                         action = "DecreaseFontSize" },
+
+  # "\u000c": clear screen
+  { key = "L",        mods = "Control|Shift",         mode = "~Vi|~Search",     chars = "\u000c" },
+
+  # Vi Mode toggle
+  { key = "H",        mods = "Control|Shift",                                   action = "ToggleViMode" },
+  { key = "G",                                        mode = "Vi|~Search",      action = "ScrollToBottom" },
+  { key = "g",                                        mode = "Vi|~Search",      action = "ScrollToTop" },
+
+  { key = "K",        mods = "Control|Shift",                                   action = "ScrollPageUp" },
+  { key = "J",        mods = "Control|Shift",                                   action = "ScrollPageDown" },
+  { key = "A",        mods = "Control|Shift",                                   action = "ScrollToTop" },
+  { key = "E",        mods = "Control|Shift",                                   action = "ScrollToBottom" },
+  { key = "U",        mods = "Control|Shift" ,                                  action = "ScrollHalfPageUp" },
+  { key = "D",        mods = "Control|Shift" ,                                  action = "ScrollHalfPageDown" },
+
+
+]

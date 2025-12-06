@@ -18,7 +18,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
  - ![bslock](https://github.com/phenax/bslock)
 
 **Terminal**
- - kitty
+ - alacritty
 
 **Editor**
  -  nvim | vscodium

@@ -3,7 +3,7 @@
 
 pacman -Qeq > ~/Documents/GitHub/dotfiles/pkgs.txt
 cd ~/.config/
-cp -r alacritty fish neofetch sxhkd zathura htop paru dmscripts i3 pcmanfm yay sxiv mimeapps.list dunst /home/omar/Documents/GitHub/dotfiles/config
+cp -r fish neofetch sxhkd zathura htop paru dmscripts i3 pcmanfm yay sxiv mimeapps.list dunst /home/omar/Documents/GitHub/dotfiles/config
 cd /home/omar/Documents/GitHub/dotfiles/config/dmscripts
 rm dmnote
 cp -r /home/omar/scripts/ /home/omar/Documents/GitHub/dotfiles/
@@ -27,3 +27,4 @@ cp -r ~/.config/flameshot/ ~/Documents/GitHub/dotfiles/config/
 cp ~/github/bslock/config.def.h ~/Documents/GitHub/dotfiles/config/bslock/
 # cp -r /home/omar/.config/nnn/plugins/* ~/Documents/GitHub/dotfiles/config/nnn/plugins/
 cp -r /home/omar/.config/yazi/*.toml ~/Documents/GitHub/dotfiles/config/yazi/
+cp -r /home/omar/.config/alacritty/*.toml ~/Documents/GitHub/dotfiles/config/alacritty/

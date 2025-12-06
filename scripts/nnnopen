@@ -21,7 +21,7 @@ case "$mime" in
 
     # ── Text, JSON, and setup scripts ─────────────────────────
     text/*|application/json|application/x-setupscript)
-        kitty -e nvim "$file"
+        alacritty -e nvim "$file"
         ;;
 
     # ── eBooks (PDF, EPUB) ───────────────────────────────────
@@ -43,7 +43,7 @@ case "$mime" in
 
     # ── Default fallback ─────────────────────────────────────
     *)
-        kitty -e nvim "$file"
+        alacritty -e nvim "$file"
         ;;
 esac
 
