@@ -2,7 +2,6 @@
 bindings = [
   { key = "V",        mods = "Control|Shift",                                   action = "Paste" },
   { key = "C",        mods = "Control|Shift",                                   action = "Copy" },
-  # { key = "S",        mods = "Control|Shift",                                   action = "PasteSelection" },
 
   # Search
   { key = "I",        mods = "Control|Shift",                                   action = "SearchForward" },

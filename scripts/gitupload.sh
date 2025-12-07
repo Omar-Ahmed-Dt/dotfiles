@@ -28,3 +28,4 @@ cp ~/github/bslock/config.def.h ~/Documents/GitHub/dotfiles/config/bslock/
 # cp -r /home/omar/.config/nnn/plugins/* ~/Documents/GitHub/dotfiles/config/nnn/plugins/
 cp -r /home/omar/.config/yazi/*.toml ~/Documents/GitHub/dotfiles/config/yazi/
 cp -r /home/omar/.config/alacritty/*.toml ~/Documents/GitHub/dotfiles/config/alacritty/
+cp -r /home/omar/.config/alacritty/custom_themes/ ~/Documents/GitHub/dotfiles/config/alacritty/
