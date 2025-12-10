@@ -13,6 +13,7 @@ cp ~/.config/mpd/mpd.conf ~/Documents/GitHub/dotfiles/config/mpd
 cp -r ~/.config/kitty/kitty.conf ~/Documents/GitHub/dotfiles/config/kitty
 cp -r ~/.zshrc ~/Documents/GitHub/dotfiles/zsh/zshrc
 cp -r ~/.oh-my-zsh/custom/themes/zeta.zsh-theme ~/Documents/GitHub/dotfiles/zsh/
+cp -r ~/.oh-my-zsh/themes/fishy.zsh-theme ~/Documents/GitHub/dotfiles/zsh/
 cp -r ~/.Xresources ~/Documents/GitHub/dotfiles/Xresources
 cp ~/.cache/wall/wallpaper.jpg ~/Documents/GitHub/dotfiles/workflow/
 cp ~/.config/khal/config ~/Documents/GitHub/dotfiles/config/khal/

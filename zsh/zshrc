@@ -17,7 +17,9 @@ fi
 # -------------------------------------------------------
 
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="zeta"
+# ZSH_THEME="zeta"
+ZSH_THEME="fishy"
+# ZSH_THEME="refined"
 
 plugins=(
   git

@@ -16,7 +16,7 @@ case "$selected" in
 	mpv_config)        $DMEDITOR $HOME/.config/mpv/mpv.conf ;;
 	kitty)             $DMEDITOR $HOME/.config/kitty/kitty.conf ;;
 	alacritty)         $DMEDITOR $HOME/.config/alacritty/alacritty.toml ;;
-	alacritty_keys)         $DMEDITOR $HOME/.config/alacritty/keybindings.toml ;;
+	alacritty_keys)    $DMEDITOR $HOME/.config/alacritty/keybindings.toml ;;
     sxhkd)             $DMEDITOR $HOME/.config/sxhkd/sxhkdrc ;;
     sxiv)              $DMEDITOR $HOME/.config/sxiv/exec/key-handler ;;
     zathura)           $DMEDITOR $HOME/.config/zathura/zathurarc ;;
