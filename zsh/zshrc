@@ -1,0 +1,326 @@
+# -------------------------------------------------------
+# OPTIONAL: powerlevel10k instant prompt (commented out)
+# -------------------------------------------------------
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
+
+# -------------------------------------------------------
+# Colorscript (safe wrapper)
+# -------------------------------------------------------
+if [[ -x "$HOME/github/shell-color-scripts/colorscript.sh" ]]; then
+  "$HOME/github/shell-color-scripts/colorscript.sh" -r
+fi
+
+# -------------------------------------------------------
+# OH-MY-ZSH
+# -------------------------------------------------------
+
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="zeta"
+
+plugins=(
+  git
+  vi-mode
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# -------------------------------------------------------
+# VI MODE — CURSOR SHAPE + COLOR
+# -------------------------------------------------------
+
+bindkey -v
+export KEYTIMEOUT=1
+
+# Cursor shape helper
+set_cursor_shape() {
+  printf '\e[%d q' "$1"
+}
+
+# Cursor color helper
+set_cursor_color() {
+  printf '\e]12;%s\a' "$1"
+}
+
+# Mode switch
+zle-keymap-select() {
+  case $KEYMAP in
+    vicmd)
+      MODE="NORMAL"
+      set_cursor_shape 1
+      set_cursor_color "#ebdbb1"
+      ;;
+    visual|vivis|viopp)
+      MODE="VISUAL"
+      set_cursor_shape 1
+      set_cursor_color "#ebdbb1"
+      ;;
+    viins|main)
+      MODE="INSERT"
+      set_cursor_shape 5
+      set_cursor_color "#ebdbb1"
+      ;;
+  esac
+  zle reset-prompt
+}
+zle -N zle-keymap-select
+
+# Insert mode on new prompt
+zle-line-init() {
+  MODE="INSERT"
+  set_cursor_shape 5
+  set_cursor_color "#ebdbb1"
+  zle reset-prompt
+}
+zle -N zle-line-init
+
+# Ctrl-C resets cursor
+TRAPINT() {
+  MODE="INSERT"
+  set_cursor_shape 5
+  set_cursor_color "#a6e3a1"
+  return 128
+}
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#aaa28f'
+
+# -------------------------------------------------------
+# ENVIRONMENT
+# -------------------------------------------------------
+
+export TERM="alacritty"
+export EDITOR="nvim"
+export VISUAL="nvim"
+export BROWSER="waterfox"
+
+# -------------------------------------------------------
+# FZF HISTORY (Ctrl+R)
+# -------------------------------------------------------
+
+fzf-history-widget() {
+  local selected
+  selected=$(fc -l 1 | tac | fzf --height=70% --reverse --border \
+      | sed 's/ *[0-9]* *//') || return
+
+  LBUFFER=$selected
+  CURSOR=${#LBUFFER}
+  zle reset-prompt
+}
+zle -N fzf-history-widget
+bindkey '^R' fzf-history-widget
+
+# -------------------------------------------------------
+# ALIASES
+# -------------------------------------------------------
+
+alias .1='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+alias jctl="journalctl -e"
+
+# shell switching
+alias tobash="doas chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="doas chsh $USER -s /bin/zsh && echo 'Now log out.'"
+alias tofish="doas chsh $USER -s /bin/fish && echo 'Now log out.'"
+
+alias X='doas chmod 777'
+alias x='doas chmod 744'
+alias ds='doas'
+
+# Pacman / Paru
+alias pmi='doas pacman -S'
+alias pmu='doas pacman -Syyu'
+alias pmuu='paru -Syu'
+alias pmo='doas pacman -Sy'
+alias pmr='doas pacman -Rs'
+alias pmR='doas pacman -Rd --nodeps'
+alias pmii='paru -S'
+alias pmq='pacman -Q'
+alias pmqf="expac --timefmt='%Y-%m-%d %H:%M:%S' '%l %n %v' | sort -r | fzf"
+alias pmqt="expac --timefmt='%Y-%m-%d %H:%M:%S' '%l %n %v' | sort -r"
+alias pmn='pacman -Q | wc -l'
+alias pmc='doas pacman -Sc'
+
+alias md='mkdir'
+alias gc='cd ~/.config'
+alias gm='cd /mnt'
+alias gt='cd ~/.local/share/Trash/files'
+alias gs='cd ~/scripts'
+alias config='/home/omar/scripts/configs.sh'
+
+# System helpers
+alias ram='ps axh -o cmd:15,%mem --sort=-%mem | head'
+alias cpu='ps axh -o cmd:15,%cpu --sort=-%cpu | head'
+alias bup='sh /home/omar/scripts/gitupload.sh'
+alias df='dysk -c fs+type+size+used+free+use+mp'
+alias dfdr='dust'
+alias dfd='dust -r'
+
+alias printer='system-config-printer'
+alias printerinstall='hp-setup -u'
+
+alias epdf='okular'
+alias m='~/scripts/matrix.sh'
+alias gx='cd /usr/share/xsessions'
+alias rip='~/scripts/rip.sh'
+
+alias ll='lsd -lh'
+alias la='lsd -lah'
+alias l='lsd'
+alias ls='lsd'
+alias llp="lsd -lh --permission octal"
+alias lls="lsd -lhS"
+alias llt="lsd -lht"
+alias llS="lsd -l --total-size 2> /dev/null"
+
+alias gcalc='gnome-calculator'
+alias calc='kalker'
+
+alias code='vscodium'
+alias gsh="~/scripts/gsh.sh"
+alias ns="nvidia-smi"
+alias nr="prime-run"
+
+alias rf='source ~/.config/fish/config.fish'
+alias rkeys="~/scripts/keys.sh"
+alias rmpm="doas rm /var/lib/pacman/db.lck"
+
+alias cat='lolcat'      # OPTIONAL — can remove if needed
+alias prop="xprop | grep WM_CLASS"
+
+alias dl="~/scripts/dlfile.sh"
+alias dlmv="~/scripts/mvdragon.sh"
+alias dlcp="~/scripts/cpdrag.sh"
+
+alias phn="~/scripts/scrcpy.sh"
+alias pipes="pipes.sh"
+alias st="speedtest-cli --simple --secure"
+alias stm="nload -u m -m wlp3s0"
+
+alias win="~/scripts/windows.sh"
+alias swm="~/scripts/switch.sh"
+
+alias mega="megabasterd"
+alias dr='~/scripts/dr.sh'
+alias mm='~/scripts/mount_manager.sh'
+alias rr='~/scripts/rsync.sh'
+
+alias topdf='~/scripts/build-latex.sh'
+alias gif='~/scripts/gif.sh'
+alias bat='bat --theme gruvbox-dark'
+
+alias rm='trash-put -ir'
+alias rmPrm='trash-empty -vi'
+
+alias dbls='~/scripts/dbdb.sh'
+alias db='~/scripts/dbrowse.sh'
+
+alias khal='khal calendar'
+alias k='kubectl'
+alias h='helm'
+alias tg='tgpt'
+
+alias dp='dropbox start -i'
+alias mx='ncpamixer -t i'
+
+alias gv='cd ~/.config/nvim'
+alias gg='git-graph'
+
+alias sx="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
+alias sxiv="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
+
+alias tf="terraform"
+alias glow='glow -l'
+
+alias vu='vagrant up'
+alias vh='vagrant halt'
+alias vs='vagrant ssh'
+
+alias yz='yazi'
+alias v='nvim'
+alias gd='cd ~/Documents/GitHub/'
+
+# -------------------------------------------------------
+# ZOXIDE
+# -------------------------------------------------------
+eval "$(zoxide init zsh)"
+alias cd='z'      # smart cd
+
+# -------------------------------------------------------
+# FUNCTIONS
+# -------------------------------------------------------
+
+se() {
+    cd ~/scripts || return
+    fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' \
+        | xargs -r /bin/bash
+    cd - >/dev/null || return
+}
+
+keys() {
+    xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+}
+
+sv() {
+    ~/scripts/dmenu_service.sh
+}
+
+pmsi() {
+    pacman -Slq \
+        | fzf --multi --preview 'pacman -Si {1}' \
+        | xargs -ro doas pacman -S
+}
+
+pmsii() {
+    paru -Slq \
+        | fzf -m --preview 'paru -Si {1}' \
+        | xargs -ro paru -S
+}
+
+pmsr() {
+    pacman -Qq \
+        | fzf --multi --preview 'pacman -Qi {1}' \
+        | xargs -ro doas pacman -Rns
+}
+
+sc() {
+    cd ~/scripts/ || return
+    fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' \
+        | xargs -r -I % "$EDITOR" %
+    cd - >/dev/null || return
+}
+
+f() {
+    local term="$1"
+    [ -z "$term" ] && echo "Usage: f <pattern>" && return 1
+    doas find / -iname "*$term*" 2>/dev/null
+}
+
+# -------------------------------------------------------
+# NNN CONFIGURATION
+# -------------------------------------------------------
+
+alias nn='nnn -rRxl 5'
+alias n='nnn -rRxl 5'
+
+export NNN_PLUG_DIR="$HOME/scripts/nnn_plugins"
+export NNN_PLUG="C:!magick \"\$nnn\" png:- | xclip -sel clipboard -t image/png*;f:$NNN_PLUG_DIR/fixname;i:$NNN_PLUG_DIR/nnn_imgs.sh;t:$NNN_PLUG_DIR/mp3conv;v:$NNN_PLUG_DIR/preview-tui;s:!zsh -i*;p:$NNN_PLUG_DIR/rsynccp;z:$NNN_PLUG_DIR/autojump;d:$NNN_PLUG_DIR/nnn_drag.sh;c:$NNN_PLUG_DIR/nnn_tomp4.sh;o:$NNN_PLUG_DIR/nnn_thunar.sh;S:$NNN_PLUG_DIR/nnn_terminal.sh"
+
+export NNN_BMS="r:$HOME/rnote;m:/mnt/;g:$HOME/Documents/GitHub;D:$HOME/Documents/;d:$HOME/Downloads/;h:~;s:~/scripts;f:~/ffmpeg;C:~/cell;w:~/wallpapers;y:~/youtube-dl;t:~/.local/share/Trash/files;S:~/screenshots;c:~/.config;p:~/pins;P:~/Pictures;M:~/Music;v:~/Videos;"
+
+export NNN_OPENER=nnnopen
+export NNN_TMPFILE='/tmp/.lastd'
+export NNN_FCOLORS='a6d6908e00f66cf4a7d0afa7'
+export NNN_FIFO=/tmp/nnn.fifo
+export NNN_TRASH=1
+export NNN_ARCHIVE="\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)"
+export NNN_LOCKER='unimatrix -l=aAcCegGkmnopPrRsS -s 95'
+export NNN_HELP='fortune'
+export NNN_SEL='/tmp/.sel'
+

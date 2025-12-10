@@ -125,7 +125,8 @@ super + o
 	~/scripts/hub.sh
 #file manger 
 shift + Return
-    ~/scripts/filemanager.sh
+    alacritty -e zsh -ic 'nnn -Rrxl 5'
+    # ~/scripts/filemanager.sh
 #open vim
 super + shift + v 
     alacritty -e nvim

@@ -2,7 +2,7 @@
 # options: dark {soft , medium , hard} | light {soft, medium, hard}
 # theme_gruvbox dark hard
 
-# the current promp theme: omf theme >> clearance | chain | gnuykeaj | harleen
+# the current promp theme: omf theme >> clearance | * chain | gnuykeaj | harleen
 
 function fish_greeting
      $HOME/github/shell-color-scripts/colorscript.sh -r 
@@ -27,7 +27,7 @@ set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 
 
 ### EXPORT ###
-set TERMINAL "kitty"                         # Sets the terminal type
+set TERMINAL "alacritty"                         # Sets the terminal type
 set EDITOR   "nvim"
 set VISUAL   "nvim"
 set -x BROWSER "waterfox"
@@ -72,7 +72,7 @@ alias tofish="doas chsh $USER -s /bin/fish && echo 'Now log out.'"
 # alias p='cd ..'
 alias X='doas chmod 777'
 alias x='doas chmod 744'
-alias do='doas'
+alias ds='doas'
 alias pmi='doas pacman -S'
 alias pmu='doas pacman -Syyu'
 alias pmuu='paru -Syu'
@@ -127,7 +127,7 @@ alias code='vscodium'
 alias gsh="~/scripts/gsh.sh"
 alias ns="nvidia-smi"
 alias nr="prime-run"
-alias ktheme="kitty +kitten themes"
+# alias ktheme="kitty +kitten themes"
 alias rf='source ~/.config/fish/config.fish'
 alias rkeys="~/scripts/keys.sh"
 alias rmpm="doas rm /var/lib/pacman/db.lck"
@@ -139,7 +139,7 @@ alias dlmv="~/scripts/mvdragon.sh"
 alias dlcp="~/scripts/cpdrag.sh"
 alias phn="~/scripts/scrcpy.sh"
 alias pipes="pipes.sh"
-alias ssh="kitty +kitten ssh"
+# alias ssh="kitty +kitten ssh"
 alias st="speedtest-cli --simple --secure"
 alias stm="nload -u m -m wlp3s0"
 alias win="~/scripts/windows.sh"
@@ -158,7 +158,7 @@ alias rmPrm='trash-empty -vi'
 alias dbls='~/scripts/dbdb.sh'
 alias db='~/scripts/dbrowse.sh'
 alias khal='khal calendar'
-alias chft='kitty +list-fonts | grep "Source Code Pro"'
+# alias chft='kitty +list-fonts | grep "Source Code Pro"'
 alias k='kubectl'
 alias h='helm'
 alias tg='tgpt'
@@ -182,13 +182,13 @@ function se
     cd -
 end 
 
-function nls
-  ls -l $(nnn -p -)
-end 
-
-function nto 
-  nnn -p - | xargs $argv 2> /dev/null
-end
+# function nls
+#   ls -l $(nnn -p -)
+# end 
+#
+# function nto 
+#   nnn -p - | xargs $argv 2> /dev/null
+# end
 
 function keys
   xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
@@ -202,10 +202,10 @@ function gd
   cd ~/Documents/GitHub/
 end 
 
-function hub 
-    cd /home/omar/github/dmscripts/scripts/
-    ./dm-hub
-end
+# function hub 
+#     cd /home/omar/github/dmscripts/scripts/
+#     ./dm-hub
+# end
 
 function pmsi
     pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro doas pacman -S

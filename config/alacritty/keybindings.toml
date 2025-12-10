@@ -1,12 +1,12 @@
 [keyboard]
 bindings = [
-  { key = "V",        mods = "Control|Shift",                                   action = "Paste" },
   { key = "C",        mods = "Control|Shift",                                   action = "Copy" },
+  { key = "V",        mods = "Control|Shift",                                   action = "Paste" },
 
   # Search
   { key = "I",        mods = "Control|Shift",                                   action = "SearchForward" },
-  { key = "N",        mods = "Control|Shift",         mode = "Search",          action = "SearchFocusNext" },
-  { key = "P",        mods = "Control|Shift",         mode = "Search",          action = "SearchFocusPrevious" },
+  { key = "n",                                        mode = "Search",          action = "SearchFocusNext" },
+  { key = "N",        mods = "Control|Shift",         mode = "Search",          action = "SearchFocusPrevious" },
 
   # Font size
   { key = "Key0",     mods = "Control",                                         action = "ResetFontSize" },

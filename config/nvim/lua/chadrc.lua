@@ -6,15 +6,16 @@
 local M = {}
 
 M.base46 = {
-	-- theme = "gruvbox",
     theme = "seoul256_dark",
+    -- theme = "everforest",
+    -- theme = "onenord",
     transparency = true,
 
 	hl_override = {
 		Comment = { italic = true },
 		["@comment"] = { italic = true },
         -- CursorLine={
-        --     bg = "white",
+        --     bg = "gray",
         -- },
 	},
 }
@@ -54,6 +55,24 @@ M.nvdash = {
   },
 
 }
+
+-- M.nvdash = {
+--     load_on_startup = true,
+--     header = {
+--       "                      ",
+--       "  ▄▄         ▄ ▄▄▄▄▄▄▄",
+--       "▄▀███▄     ▄██ █████▀ ",
+--       "██▄▀███▄   ███        ",
+--       "███  ▀███▄ ███        ",
+--       "███    ▀██ ███        ",
+--       "███      ▀ ███        ",
+--       "▀██ █████▄▀█▀▄██████▄ ",
+--       "  ▀ ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀",
+--       "                      ",
+--       "  Powered By  eovim ",
+--       "                      ",
+--     },
+-- }
 
 -- Terminal
 -- M.term = {

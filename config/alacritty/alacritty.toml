@@ -1,12 +1,12 @@
 general.import = [
   "~/.config/alacritty/keybindings.toml",
-  "~/.config/alacritty/custom_themes/everforest",
+  "~/.config/alacritty/themes/themes/everforest_dark.toml"
 ]
 
 [window]
 dynamic_padding = true
-# opacity = 0.85
-opacity = 1.0
+opacity = 0.95
+# opacity = 1.0
 
 [cursor]
 style = { shape = "Beam", blinking = "On" }
@@ -46,5 +46,5 @@ background = "#44475a"
 
 [scrolling]
 history = 10000
-multiplier = 3
+multiplier = 5 # Number of lines scrolled for each input scroll increment
 
