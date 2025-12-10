@@ -27,7 +27,7 @@ These are my dotfiles. I'm trying to do better. Also, my window manager dots cha
  - Obsidian | joplin-desktop 
 
 **Shell** 
- - fish 
+ - zsh 
 
 **Launcher**
  - dmenu
