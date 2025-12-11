@@ -560,6 +560,7 @@ ttf-zed-mono-nerd
 udftools
 ueberzug
 ufw
+unimatrix-git
 upd72020x-fw
 upower
 usb_modeswitch

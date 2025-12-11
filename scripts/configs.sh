@@ -2,14 +2,15 @@
 #
 DMEDITOR="nvim"
 
-actions=(configs fish zsh i3 i3blocks mpv_input mpv_config kitty alacritty alacritty_keys sxhkd sxiv zathura mimeapps tmux)
+actions=(configs fish zsh nnn i3 i3blocks mpv_input mpv_config kitty alacritty alacritty_keys sxhkd sxiv zathura mimeapps tmux)
 
-selected=$(printf '%s\n' "${actions[@]}" | dmenu -c -i -l 23 -p "Edit Configs: ")
+selected=$(printf '%s\n' "${actions[@]}" | dmenu -c -i -l 24 -p "Edit Configs: ")
 
 case "$selected" in
 	configs)           $DMEDITOR $HOME/scripts/configs.sh ;;
 	fish)              $DMEDITOR $HOME/.config/fish/config.fish ;;
 	zsh)               $DMEDITOR $HOME/.zshrc ;;
+	nnn)               $DMEDITOR $HOME/.nnn_env.zsh ;;
 	i3)                $DMEDITOR $HOME/.config/i3/config ;;
 	i3blocks)          $DMEDITOR $HOME/.config/i3/i3blocks ;;
 	mpv_input)         $DMEDITOR $HOME/.config/mpv/input.conf ;;
