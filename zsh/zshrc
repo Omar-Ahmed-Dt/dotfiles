@@ -4,7 +4,7 @@
 # fi
 
 # -------------------------------------------------------
-# Colorscript (safe wrapper)
+# Colorscript
 # -------------------------------------------------------
 if [[ -x "$HOME/github/shell-color-scripts/colorscript.sh" ]]; then
   "$HOME/github/shell-color-scripts/colorscript.sh" -r
@@ -13,9 +13,7 @@ fi
 # -------------------------------------------------------
 # OH-MY-ZSH
 # -------------------------------------------------------
-
 export ZSH="$HOME/.oh-my-zsh"
-# ZSH_THEME="zeta"
 ZSH_THEME="fishy"
 # ZSH_THEME="refined"
 
@@ -129,119 +127,97 @@ alias tobash="doas chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="doas chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="doas chsh $USER -s /bin/fish && echo 'Now log out.'"
 
+#my config 
 alias X='doas chmod 777'
 alias x='doas chmod 744'
 alias ds='doas'
-
-# Pacman / Paru
 alias pmi='doas pacman -S'
 alias pmu='doas pacman -Syyu'
 alias pmuu='paru -Syu'
 alias pmo='doas pacman -Sy'
 alias pmr='doas pacman -Rs'
-alias pmR='doas pacman -Rd --nodeps'
+alias pmR='doas pacman -Rd --nodeps' #remove pkg without dependencies
 alias pmii='paru -S'
 alias pmq='pacman -Q'
 alias pmqf="expac --timefmt='%Y-%m-%d %H:%M:%S' '%l %n %v' | sort -r | fzf"
 alias pmqt="expac --timefmt='%Y-%m-%d %H:%M:%S' '%l %n %v' | sort -r"
 alias pmn='pacman -Q | wc -l'
-alias pmc='doas pacman -Sc'
-
+alias pmc='doas pacman -Sc' #clean the cache after upgrade my system 
 alias md='mkdir'
-alias gc='cd ~/.config'
-alias gm='cd /mnt'
-alias gt='cd ~/.local/share/Trash/files'
-alias gs='cd ~/scripts'
 alias config='/home/omar/scripts/configs.sh'
-
-# System helpers
-alias ram='ps axh -o cmd:15,%mem --sort=-%mem | head'
+alias gc='cd ~/.config'
+alias ram='ps axh -o cmd:15,%mem --sort=-%mem | head | string trim'
 alias cpu='ps axh -o cmd:15,%cpu --sort=-%cpu | head'
 alias bup='sh /home/omar/scripts/gitupload.sh'
 alias df='dysk -c fs+type+size+used+free+use+mp'
 alias dfdr='dust'
 alias dfd='dust -r'
-
 alias printer='system-config-printer'
 alias printerinstall='hp-setup -u'
-
 alias epdf='okular'
+alias gt='cd ~/.local/share/Trash/files'
+alias gs='cd ~/scripts'
 alias m='~/scripts/matrix.sh'
 alias gx='cd /usr/share/xsessions'
-alias rip='~/scripts/rip.sh'
-
+alias ft='xdg-mime query filetype'
+alias fd='xdg-mime query default'
+alias rip='~/scripts/rip.sh' #to get public ip 
 alias ll='lsd -lh'
-alias la='lsd -lah'
-alias l='lsd'
-alias ls='lsd'
+alias la="lsd -lah"
+alias l="lsd"
+alias ls="lsd"
 alias llp="lsd -lh --permission octal"
 alias lls="lsd -lhS"
 alias llt="lsd -lht"
 alias llS="lsd -l --total-size 2> /dev/null"
-
 alias gcalc='gnome-calculator'
 alias calc='kalker'
-
+alias gm='cd /mnt'
 alias code='vscodium'
 alias gsh="~/scripts/gsh.sh"
 # alias ns="nvidia-smi"
 # alias nr="prime-run"
-
 alias rf='source ~/.config/fish/config.fish'
 alias rkeys="~/scripts/keys.sh"
 alias rmpm="doas rm /var/lib/pacman/db.lck"
-
-alias cat='lolcat'      # OPTIONAL — can remove if needed
+alias cat="lolcat"
 alias prop="xprop | grep WM_CLASS"
-
 alias dl="~/scripts/dlfile.sh"
 alias dlmv="~/scripts/mvdragon.sh"
 alias dlcp="~/scripts/cpdrag.sh"
-
 alias phn="~/scripts/scrcpy.sh"
 alias pipes="pipes.sh"
 alias st="speedtest-cli --simple --secure"
 alias stm="nload -u m -m wlp3s0"
-
 alias win="~/scripts/windows.sh"
 alias swm="~/scripts/switch.sh"
-
 alias mega="megabasterd"
+alias ping="ping -c 20"
 alias dr='~/scripts/dr.sh'
 alias mm='~/scripts/mount_manager.sh'
 alias rr='~/scripts/rsync.sh'
-
 alias topdf='~/scripts/build-latex.sh'
 alias gif='~/scripts/gif.sh'
 alias bat='bat --theme gruvbox-dark'
-
 alias rm='trash-put -ir'
 alias rmPrm='trash-empty -vi'
-
 alias dbls='~/scripts/dbdb.sh'
 alias db='~/scripts/dbrowse.sh'
-
 alias khal='khal calendar'
 alias k='kubectl'
 alias h='helm'
 alias tg='tgpt'
-
 alias dp='dropbox start -i'
 alias mx='ncpamixer -t i'
-
-alias gv='cd ~/.config/nvim'
-alias gg='git-graph'
-
+alias gv='cd .config/nvim'
+alias gg='git-graph' # and install git-delta
 alias sx="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
 alias sxiv="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
-
 alias tf="terraform"
 alias glow='glow -l'
-
 alias vu='vagrant up'
 alias vh='vagrant halt'
 alias vs='vagrant ssh'
-
 alias yz='yazi'
 alias v='nvim'
 alias gd='cd ~/Documents/GitHub/'
@@ -250,7 +226,7 @@ alias gd='cd ~/Documents/GitHub/'
 # ZOXIDE
 # -------------------------------------------------------
 eval "$(zoxide init zsh)"
-alias cd='z'      # smart cd
+alias cd='z'      # zoxide pkg
 
 # -------------------------------------------------------
 # FUNCTIONS
@@ -307,4 +283,4 @@ f() {
 # -------------------------------------------------------
 [ -f ~/.nnn_env.zsh ] && source ~/.nnn_env.zsh
 alias n='nnn -rRxl 5'
-alias ncp="tr '\0' '\n' < \"${NNN_SEL:-/tmp/.sel}\""
+alias ns="tr '\0' '\n' < \"${NNN_SEL:-/tmp/.sel}\""
