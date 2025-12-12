@@ -94,7 +94,7 @@ bindsym $mod+shift+o nop n1
 for_window [instance="mus"] floating enable 
 for_window [instance="mus"] resize set 1000 900
 for_window [instance="mus"] move scratchpad
-exec --no-startup-id $term --name mus -e ncmpcpp
+exec --no-startup-id $term --name mus -e ncmpcpp 
 bindsym $mod++minus [instance="mus"] scratchpad show; [instance="mus"] move position center
 
 # ncpamixer

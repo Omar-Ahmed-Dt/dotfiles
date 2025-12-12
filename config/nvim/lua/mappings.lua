@@ -95,10 +95,22 @@ map({ "n", "t" }, "<A-v>", function()
   require("nvchad.term").toggle { pos = "vsp", id = "vtoggleTerm" }
 end, { desc = "terminal toggleable vertical term" })
 
-map({ "n", "t" }, "<A-h>", function()
+-- map({ "n", "t" }, "<A-h>", function()
+--   require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm" }
+-- end, { desc = "terminal toggleable horizontal term" })
+--
+-- from a file: change dir to file's dir, then toggle term
+map("n", "<A-h>", function()
+  vim.cmd("lcd %:p:h")
   require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm" }
 end, { desc = "terminal toggleable horizontal term" })
 
+-- from the terminal: just toggle, no lcd (avoids the error)
+map("t", "<A-h>", function()
+  require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm" }
+end, { desc = "terminal toggleable horizontal term" })
+
+--  
 map({ "n", "t" }, "<A-f>", function()
   require("nvchad.term").toggle { pos = "float", id = "floatTerm" }
 end, { desc = "terminal toggle floating term" })
