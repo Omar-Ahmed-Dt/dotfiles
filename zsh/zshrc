@@ -370,8 +370,7 @@ bindkey '^R' fzf-history-widget
 # Alt+p - Show detailed current directory info
 pwd-widget() {
   echo ""
-  echo -e "\033[1;36m📁 Current Directory:\033[0m"
-  pwd
+  echo -e "\033[1;36m📁 Current Directory:\033[0m" "$(pwd)"
   
   # Show number of files
   local file_count=$(ls -1 | wc -l)

@@ -144,6 +144,7 @@ exec_always --no-startup-id xfce4-clipman
 exec_always --no-startup-id caffeine  #Install it using pmii caffeine-ng
 # exec_always --no-startup-id dropbox start -i 
 exec_always --no-startup-id dropbox-cli start -i
+# exec --no-startup-id setxkbmap -option caps:escape
 
 # Floating 
 # for_window [class="Joplin"] floating enable
