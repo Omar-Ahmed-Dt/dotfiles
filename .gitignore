@@ -1,3 +1,6 @@
 lazy-lock.json
 homeDocker/syncDockerDire.sh
 config/fish/fish_variables
+
+# don't track workflow
+workflow/
