@@ -18,7 +18,7 @@ cp -r ~/.oh-my-zsh/custom/themes/*.zsh-theme ~/Documents/GitHub/dotfiles/zsh/
 cp ~/.nnn_env.zsh ~/Documents/GitHub/dotfiles/zsh/nnn_env.zsh
 
 cp -r ~/.Xresources ~/Documents/GitHub/dotfiles/Xresources
-cp ~/.cache/wall/wallpaper.jpg ~/Documents/GitHub/dotfiles/workflow/
+## cp ~/.cache/wall/wallpaper.jpg ~/Documents/GitHub/dotfiles/workflow/
 cp ~/.config/khal/config ~/Documents/GitHub/dotfiles/config/khal/
 cp -r ~/.config/ytfzf/* ~/Documents/GitHub/dotfiles/config/ytfzf/
 cp -r ~/.config/vis/* ~/Documents/GitHub/dotfiles/config/vis/

@@ -23,7 +23,7 @@ arc-gtk-theme
 arc-x-icons-theme
 arch-install-scripts
 archlinux-login-backgrounds-git
-aur-check-updates
+aur-check-updates-debug
 auto-cpufreq
 autotiling
 awesome-terminal-fonts
@@ -133,6 +133,7 @@ gemini-cli-debug
 gimp
 git
 git-delta
+git-filter-repo
 git-graph
 github-cli
 glow
@@ -141,7 +142,6 @@ gns3-gui
 gns3-server
 go
 go-blueprint-bin
-go-blueprint-bin-debug
 google-chrome
 google-cloud-cli
 gpart
@@ -256,7 +256,6 @@ nano
 nbd
 ncmpcpp
 ncpamixer
-ncpamixer-debug
 ndisc6
 neovim
 net-tools
@@ -326,8 +325,7 @@ papirus-nord
 partclone
 parted
 partimage
-paru
-paru-debug
+paru-bin
 pavucontrol
 pcmanfm
 pcsclite
@@ -356,7 +354,6 @@ pptpclient
 pv
 pwgen
 pyinstaller
-pyinstaller-debug
 pyinstaller-hooks-contrib
 python-altgraph
 python-flask
