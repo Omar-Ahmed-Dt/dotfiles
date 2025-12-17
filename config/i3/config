@@ -2,7 +2,8 @@
 # exec --no-startup-id xrandr --output eDP-1 --auto
 
 # :) 
-set $term kitty
+# set $term kitty
+set $term alacritty
 set $EDITOR nvim
 set $mod Mod4
 set $mod1 Mod1
@@ -85,24 +86,29 @@ mode "resize" {
 # focus_follows_mouse no
 
 # kitti3 
-exec_always --no-startup-id kitti3 -p CC -s 0.8 0.7 -n n1
-bindsym $mod+shift+o nop n1
+# exec_always --no-startup-id kitti3 -p CC -s 0.8 0.7 -n n1
+# bindsym $mod+shift+o nop n1
+
+# i3-quickterm
+bindsym $mod+Shift+o exec --no-startup-id i3-quickterm shell
 #
 #############################
 #scratchpad
 #ncmpcpp
-for_window [instance="mus"] floating enable 
-for_window [instance="mus"] resize set 1000 900
-for_window [instance="mus"] move scratchpad
-exec --no-startup-id $term --name mus -e ncmpcpp 
-bindsym $mod++minus [instance="mus"] scratchpad show; [instance="mus"] move position center
+# for_window [instance="mus"] floating enable 
+# for_window [instance="mus"] resize set 1000 900
+# for_window [instance="mus"] move scratchpad
+# # exec --no-startup-id $term --name mus -e ncmpcpp  # kitty term
+# exec --no-startup-id $term --class mus -e ncmpcpp
+# bindsym $mod++minus [instance="mus"] scratchpad show; [instance="mus"] move position center
 
 # ncpamixer
-for_window [instance="maxir"] floating enable 
-for_window [instance="maxir"] resize set 900 900
-for_window [instance="maxir"] move scratchpad
-exec --no-startup-id $term --name maxir -e ncpamixer -t i
-bindsym $mod+backslash [instance="maxir"] scratchpad show; [instance="maxir"] move position center
+# for_window [instance="maxir"] floating enable 
+# for_window [instance="maxir"] resize set 900 900
+# for_window [instance="maxir"] move scratchpad
+# # exec --no-startup-id $term --name maxir -e ncpamixer -t i   # kitty term
+# exec --no-startup-id $term --class maxir -e ncpamixer -t i
+# bindsym $mod+backslash [instance="maxir"] scratchpad show; [instance="maxir"] move position center
 
 #############################
 

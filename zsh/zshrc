@@ -6,9 +6,9 @@
 # -------------------------------------------------------
 # Colorscript
 # -------------------------------------------------------
-# if [[ -x "$HOME/github/shell-color-scripts/colorscript.sh" ]]; then
-#   "$HOME/github/shell-color-scripts/colorscript.sh" -r
-# fi
+if [[ -x "$HOME/github/shell-color-scripts/colorscript.sh" ]]; then
+  "$HOME/github/shell-color-scripts/colorscript.sh" -r
+fi
 
 # -------------------------------------------------------
 # OH-MY-ZSH
@@ -480,7 +480,7 @@ fzf_arch_packages() {
     --prompt="📦 Package > " \
     --height=60% \
     # --preview 'paru -Si {1} 2>/dev/null | sed -n "1,15p" || paru -Ai {1} 2>/dev/null | sed -n "1,15p"'
-    --preview 'yay -Si {1} 2>/dev/null | sed -n "1,15p" || yay -Ai {1} 2>/dev/null | sed -n "1,15p"'
+    # --preview 'yay -Si {1} 2>/dev/null | sed -n "1,15p" || yay -i {1} 2>/dev/null | sed -n "1,15p"'
 }
 fzf-insert-arch-pkg() {
   local pkgs

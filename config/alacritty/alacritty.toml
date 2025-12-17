@@ -5,8 +5,8 @@ general.import = [
 
 [window]
 dynamic_padding = true
-# opacity = 0.95
-opacity = 1.0
+opacity = 0.95
+# opacity = 1.0
 
 [cursor]
 style = { shape = "Beam", blinking = "On" }
