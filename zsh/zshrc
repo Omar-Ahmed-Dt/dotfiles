@@ -1,14 +1,11 @@
 # -------------------------------------------------------
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-
-# -------------------------------------------------------
 # Colorscript
 # -------------------------------------------------------
 if [[ -x "$HOME/github/shell-color-scripts/colorscript.sh" ]]; then
   "$HOME/github/shell-color-scripts/colorscript.sh" -r
 fi
+
+# pokemon-colorscripts --no-title -r --no-title
 
 # -------------------------------------------------------
 # OH-MY-ZSH
@@ -36,57 +33,62 @@ setopt HIST_IGNORE_SPACE        # ignore commands starting with space
 setopt HIST_IGNORE_ALL_DUPS     # remove older duplicate commands
 setopt HIST_SAVE_NO_DUPS        # don't write duplicates to file
 setopt SHARE_HISTORY            # share between sessions
-# setopt INC_APPEND_HISTORY       # write to history immediately
-# setopt EXTENDED_HISTORY         # timestamps in history
 
 # -------------------------------------------------------
 # VI MODE — CURSOR SHAPE + COLOR
 # -------------------------------------------------------
-
 bindkey -v
 export KEYTIMEOUT=1
-
-# Cursor shape helper
-set_cursor_shape() {
-  printf '\e[%d q' "$1"
-}
-
-# Cursor color helper
-set_cursor_color() {
-  printf '\e]12;%s\a' "$1"
-}
-
-# Mode switch
-zle-keymap-select() {
-  case $KEYMAP in
-    vicmd)
-      MODE="NORMAL"
-      set_cursor_shape 1
-      set_cursor_color "#ebdbb1"
-      ;;
-    visual|vivis|viopp)
-      MODE="VISUAL"
-      set_cursor_shape 1
-      set_cursor_color "#ebdbb1"
-      ;;
-    viins|main)
-      MODE="INSERT"
-      set_cursor_shape 5
-      set_cursor_color "#ebdbb1"
-      ;;
-  esac
-  zle reset-prompt
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
 }
 zle -N zle-keymap-select
-
-# Insert mode on new prompt
 zle-line-init() {
-  MODE="INSERT"
-  set_cursor_shape 5
-  set_cursor_color "#ebdbb1"
-  zle reset-prompt
+    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+    echo -ne "\e[5 q"
 }
 zle -N zle-line-init
+echo -ne '\e[5 q' # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+
+# zle-keymap-select() {
+#   case $KEYMAP in
+#     vicmd)
+#       MODE="NORMAL"
+#       set_cursor_shape 1
+#       set_cursor_color "#ebdbb1"
+#       ;;
+#     visual|vivis|viopp)
+#       MODE="VISUAL"
+#       set_cursor_shape 1
+#       set_cursor_color "#ebdbb1"
+#       ;;
+#     viins|main)
+#       MODE="INSERT"
+#       set_cursor_shape 5
+#       set_cursor_color "#ebdbb1"
+#       ;;
+#   esac
+#   zle reset-prompt
+# }
+# zle -N zle-keymap-select
+#
+# # Insert mode on new prompt
+# zle-line-init() {
+#   MODE="INSERT"
+#   set_cursor_shape 5
+#   set_cursor_color "#ebdbb1"
+#   zle reset-prompt
+# }
+# zle -N zle-line-init
 
 # TRAPINT() {
 #   MODE="INSERT"
@@ -181,8 +183,6 @@ alias calc='kalker'
 alias gm='cd /mnt'
 alias code='vscodium'
 alias gsh="~/scripts/gsh.sh"
-# alias ns="nvidia-smi"
-# alias nr="prime-run"
 alias rf='source ~/.config/fish/config.fish'
 alias rkeys="~/scripts/keys.sh"
 alias rmpm="doas rm /var/lib/pacman/db.lck"
@@ -221,12 +221,10 @@ alias sx="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
 alias sxiv="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
 alias tf="terraform"
 alias glow='glow -l'
-# alias vu='vagrant up'
-# alias vh='vagrant halt'
-# alias vs='vagrant ssh'
 alias yz='yazi'
 alias v='nvim'
 alias gd='cd ~/Documents/GitHub/'
+alias np='ncmpcpp'
 
 # -------------------------------------------------------
 # ZOXIDE
@@ -300,7 +298,7 @@ alias ns="tr '\0' '\n' < \"${NNN_SEL:-/tmp/.sel}\""
 # ╔════════════════════════════════════════╗
 # ║      ZSH Keyboard Shortcuts            ║
 # ╠════════════════════════════════════════╣
-# ║ Ctrl+s    │ Fuzzy find & open file     ║
+# ║ Alt+s     │ Fuzzy find & open file     ║
 # ║ Alt+d     │ Fuzzy find & cd directory  ║
 # ║ Alt+p     │ Show current directory     ║
 # ║ Alt+r     │ Reload zsh config          ║
@@ -370,25 +368,13 @@ zle -N fzf-kill-widget
 bindkey '^[k' fzf-kill-widget
 
 # Ctrl+r FZF HISTORY
-# fzf-history-widget() {
-#   local selected
-#   selected=$(fc -l 1 | tac | fzf --height=70% --reverse --border \
-#       | sed 's/ *[0-9]* *//') || return
-#
-#   LBUFFER=$selected
-#   CURSOR=${#LBUFFER}
-#   zle reset-prompt
-# }
-# zle -N fzf-history-widget
-# bindkey '^R' fzf-history-widget
-#
 fzf-history() {
   local selected
   selected=$(
     sed 's/^: [0-9]\+:[0-9]\+;//' "$HISTFILE" \
     | awk '!seen[$0]++' \
     | tac \
-    | fzf --height 50% --reverse --prompt='History> '
+    | fzf --height 70% --reverse --prompt='History> '
   )
 
   # If fzf was cancelled or nothing selected
@@ -438,19 +424,6 @@ pwd-widget() {
 zle -N pwd-widget
 bindkey '^[p' pwd-widget
 
-# Alt+e - Extract archive using FZF
-# fzf-extract-widget() {
-#   local file
-#   file=$(find . -maxdepth 3 -type f \( -name "*.zip" -o -name "*.tar.gz" -o -name "*.rar" -o -name "*.7z" -o -name "*.tar.bz2" -o -name "*.tgz" \) 2>/dev/null | fzf --preview 'ls -lh {}')
-#   if [[ -n $file ]]; then
-#     echo "Extracting: $file"
-#     extract "$file"
-#   fi
-#   zle reset-prompt
-# }
-# zle -N fzf-extract-widget
-# bindkey '^[e' fzf-extract-widget
-
 # Alt+r - Reload zsh configuration
 reload-zsh-widget() {
     echo ""
@@ -463,24 +436,15 @@ zle -N reload-zsh-widget
 bindkey '^[r' reload-zsh-widget
 
 # Alt+v - Quick execute temp script
-exec-temp() {
-    local tmpfile=$(mktemp /tmp/zsh-exec-XXXXXX.sh)
-    ${EDITOR:-nvim} "$tmpfile"
-    [[ -s "$tmpfile" ]] && source "$tmpfile"
-    rm -f "$tmpfile"
-    zle reset-prompt
-}
-zle -N exec-temp
-bindkey '^[v' exec-temp
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^[v' edit-command-line
 
 # Alt+i - FZF PACKAGE PICKER
 fzf_arch_packages() {
   yay -Slq | fzf \
     --multi \
     --prompt="📦 Package > " \
-    --height=60% \
-    # --preview 'paru -Si {1} 2>/dev/null | sed -n "1,15p" || paru -Ai {1} 2>/dev/null | sed -n "1,15p"'
-    # --preview 'yay -Si {1} 2>/dev/null | sed -n "1,15p" || yay -i {1} 2>/dev/null | sed -n "1,15p"'
+    --height=70% \
 }
 fzf-insert-arch-pkg() {
   local pkgs

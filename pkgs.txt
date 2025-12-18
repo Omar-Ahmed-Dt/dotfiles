@@ -326,6 +326,7 @@ picom-git
 pipewire
 pipewire-alsa
 pipewire-jack
+pipewire-media-session
 pipewire-pulse
 pipewire-zeroconf
 pkgfile
