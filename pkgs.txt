@@ -52,6 +52,7 @@ brightnessctl
 broadcom-wl-dkms
 btop
 btrfs-progs
+cabal-install
 caffeine-ng
 capitaine-cursors
 chromium
@@ -63,6 +64,7 @@ cli-visualizer-debug
 cliphist
 clipmenu-rofi
 clonezilla
+conky
 cozette-ttf
 cpupower
 cronie
@@ -127,6 +129,7 @@ foot
 fsarchiver
 gamemode
 gemini-cli-debug
+ghc
 gimp
 git
 git-delta
@@ -326,7 +329,6 @@ picom-git
 pipewire
 pipewire-alsa
 pipewire-jack
-pipewire-media-session
 pipewire-pulse
 pipewire-zeroconf
 pkgfile
@@ -555,6 +557,7 @@ whitesur-icon-theme-git
 winetricks
 wireless-regdb
 wireless_tools
+wireplumber
 wl-clipboard
 wlrctl
 wmctrl

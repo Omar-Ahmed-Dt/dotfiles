@@ -11,10 +11,10 @@
 
 DMENU="dmenu -i -c -l 30 -p"
 # DMENU="rofi -dmenu"
-DMBROWSER="waterfox"
+DMBROWSER="firefox"
 #DMBROWSER="qutebrowser"
 
-DMTERM="kitty -e"
+DMTERM="alacritty -e"
 
 #DMEDITOR="nvim"
 DMEDITOR="nvim"

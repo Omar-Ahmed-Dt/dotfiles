@@ -15,7 +15,8 @@ super +  b
     ~/scripts/browser.sh
 # firefox
 super + shift + b
-    waterfox
+    firefox
+    # waterfox
 #file manger gui 
 super + shift + Return
     thunar 
@@ -171,3 +172,6 @@ super + shift + p
 # kill program
 super + shift + k
     cd ~/scripts/dmenu_scripts/ && ./dm-kill
+# web search
+super + w
+    ~/scripts/dm-websearch.sh

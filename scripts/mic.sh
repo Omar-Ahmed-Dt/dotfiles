@@ -1,17 +1,26 @@
 #!/bin/bash
-# PipeWire mic control via pactl (works with pipewire-media-session + pipewire-pulse)
+# Usage:
+#   mic.sh toggle
+#   mic.sh up
+#   mic.sh down
+#
+# Bind in sxhkd and send signal 17 to i3blocks.
 
+SRC="@DEFAULT_AUDIO_SOURCE@"
 STEP="5%"
 
 case "$1" in
   toggle|mute)
-    pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    # toggle mute on default source
+    wpctl set-mute "$SRC" toggle > /dev/null
     ;;
   up)
-    pactl set-source-volume @DEFAULT_SOURCE@ +$STEP
+    # increase mic gain
+    wpctl set-volume "$SRC" "$STEP"+ > /dev/null
     ;;
   down)
-    pactl set-source-volume @DEFAULT_SOURCE@ -$STEP
+    # decrease mic gain
+    wpctl set-volume "$SRC" "$STEP"- > /dev/null
     ;;
   *)
     echo "Usage: $0 {toggle|up|down}"
@@ -20,16 +29,17 @@ case "$1" in
 esac
 
 # Read back current mic state
-VOL_LINE=$(pactl get-source-volume @DEFAULT_SOURCE@ | head -n1)
-MUTE_LINE=$(pactl get-source-mute @DEFAULT_SOURCE@)
-
-PCT=$(echo "$VOL_LINE" | grep -oE '[0-9]+%' | head -n1)
-
-if echo "$MUTE_LINE" | grep -q "yes"; then
-  notify-send -u low -t 1000 -r 997 "🎙️ Mic: muted"
-else
-  notify-send -u low -t 1000 -r 997 "🎙️ Mic: ${PCT}"
+info=$(wpctl get-volume "$SRC" 2>/dev/null)
+if [ $? -eq 0 ]; then
+    vol=$(awk '{print $2}' <<< "$info")
+    pct=$(printf "%.0f" "$(echo "$vol * 100" | bc -l)")
+    if grep -q '\[MUTED\]' <<< "$info"; then
+        notify-send -u low -t 1000 -r 997 "🎙️ Mic: muted"
+    else
+        notify-send -u low -t 1000 -r 997 "🎙️ Mic: ${pct}%"
+    fi
 fi
 
-pkill -RTMIN+17 -x i3blocks
+# refresh i3blocks mic block (signal 17 as you used)
+pkill -RTMIN+17 i3blocks
 

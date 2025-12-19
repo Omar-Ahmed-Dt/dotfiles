@@ -106,7 +106,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#aaa28f'
 export TERM="alacritty"
 export EDITOR="nvim"
 export VISUAL="nvim"
-export BROWSER="waterfox"
+export BROWSER="firefox"
 
 # -------------------------------------------------------
 # FZF-TAB

@@ -1,35 +1,43 @@
 #!/bin/bash
-# PipeWire volume control via pactl (works with pipewire-media-session + pipewire-pulse)
+# PipeWire-native volume control using wpctl
+# Usage:
+#   ./volume.sh up
+#   ./volume.sh down
+#   ./volume.sh mute
 
-STEP="5%"
+SINK="@DEFAULT_AUDIO_SINK@"   # Automatically follows current default sink
+STEP="5%"                     # Volume step
 
 case "$1" in
-  up)
-    pactl set-sink-volume @DEFAULT_SINK@ +$STEP
-    ;;
-  down)
-    pactl set-sink-volume @DEFAULT_SINK@ -$STEP
-    ;;
-  mute|toggle)
-    pactl set-sink-mute @DEFAULT_SINK@ toggle
-    ;;
-  *)
-    echo "Usage: $0 {up|down|mute}"
-    exit 1
-    ;;
+    up)
+        wpctl set-volume "$SINK" "$STEP"+ > /dev/null
+        ;;
+    down)
+        wpctl set-volume "$SINK" "$STEP"- > /dev/null
+        ;;
+    mute|toggle)
+        wpctl set-mute "$SINK" toggle > /dev/null
+        ;;
+    *)
+        echo "Usage: $0 {up|down|mute}"
+        exit 1
+        ;;
 esac
 
-# Read volume + mute state
-VOL_LINE=$(pactl get-sink-volume @DEFAULT_SINK@ | head -n1)
-MUTE_LINE=$(pactl get-sink-mute @DEFAULT_SINK@)
+# --- Get current state -------------------------------------------------------
+# Example wpctl output:
+#   Volume: 0.34 [MUTED]
+#   Volume: 0.45
+VOL_INFO=$(wpctl get-volume "$SINK")
+VOL=$(awk '{print $2}' <<< "$VOL_INFO")
+VOL_PCT=$(printf "%.0f" "$(echo "$VOL * 100" | bc -l)")
 
-VOL_PCT=$(echo "$VOL_LINE" | grep -oE '[0-9]+%' | head -n1)
-
-if echo "$MUTE_LINE" | grep -q "yes"; then
-  notify-send -u low -t 1000 -r 999 "🔇 Muted"
+# Check mute state
+if grep -q '\[MUTED\]' <<< "$VOL_INFO"; then
+    notify-send -u low -t 1000 -r 999 "🔇 Muted"
 else
-  notify-send -u low -t 1000 -r 999 "🔊 Volume: ${VOL_PCT}"
+    notify-send -u low -t 1000 -r 999 "🔊 Volume: ${VOL_PCT}%"
 fi
 
-pkill -RTMIN+10 -x i3blocks
-
+# --- Trigger i3blocks refresh ------------------------------------------------
+pkill -RTMIN+10 i3blocks

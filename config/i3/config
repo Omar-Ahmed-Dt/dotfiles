@@ -114,11 +114,9 @@ bindsym $mod+Shift+o exec --no-startup-id i3-quickterm shell
 
 # Jump to urgent window 
 # for_window [urgent=latest] focus
-# don't care about urgent windows 
 focus_on_window_activation focus
 default_orientation horizontal
 exec_always --no-startup-id autotiling
-
 # i3-back
 # Start the daemon which listens to focus changes and sets _back mark
 exec --no-startup-id /usr/bin/i3-back
@@ -130,75 +128,31 @@ bindsym mod1+Tab workspace back_and_forth
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # exec --no-startup-id blueberry-tray
 exec_always --no-startup-id nm-applet
-exec_always --no-startup-id numlockx on
+exec --no-startup-id numlockx on
 exec --no-startup-id feh --bg-fill /home/omar/.cache/wall/wallpaper.jpg & 
-exec_always --no-startup-id sxhkd 
-exec_always --no-startup-id mpd
-exec --no-startup-id clipmenud
-exec_always --no-startup-id redshift -P -O 3250 &
+exec --no-startup-id sxhkd 
+exec --no-startup-id mpd
+exec_always --no-startup-id clipmenud
+exec --no-startup-id redshift -P -O 3250 &
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
-exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
-# exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+exec --no-startup-id picom --config ~/.config/i3/picom.conf
 # exec --no-startup-id conky 
 exec --no-startup-id dunst
-
-# lvim and acpi
-exec_always --no-startup-id xhost +local:root 
-
-exec_always --no-startup-id flameshot
+exec --no-startup-id flameshot
 exec_always --no-startup-id xfce4-clipman
 exec_always --no-startup-id caffeine  #Install it using pmii caffeine-ng
-# exec_always --no-startup-id dropbox start -i 
-exec_always --no-startup-id dropbox-cli start -i
+exec --no-startup-id dropbox-cli start -i
+
 # exec --no-startup-id setxkbmap -option caps:escape
+# lvim and acpi
+# exec_always --no-startup-id xhost +local:root 
 
 # Floating 
-# for_window [class="Joplin"] floating enable
 for_window [class="SimpleScreenRecorder"] floating enable
-for_window [class="Arcolinux-welcome-app.py"] floating enable
-for_window [class="yad"] floating enable
-for_window [class="Arcolinux-calamares-tool.py"] floating enable
-for_window [class="Bleachbit"] floating disable
-for_window [class="Blueberry.py"] floating enable
-for_window [class="Brasero"] floating disable
-for_window [class="Galculator"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="Pavucontrol"] floating enable
-for_window [class="Gnome-disks"] floating disable
-for_window [class="^Gnome-font-viewer$"] floating enable
-for_window [class="^Gpick$"] floating enable
-for_window [class="Hexchat"] floating disable
-for_window [class="Imagewriter"] floating enable
-for_window [class="Font-manager"] floating enable
-for_window [class="Nitrogen"] floating disable
-for_window [class="Peek"] floating enable
-for_window [class="^Skype$"] floating enable
-for_window [class="^Spotify$"] floating disable
-for_window [class="System-config-printer.py"] floating enable
-for_window [class="Unetbootin.elf"] floating enable
-for_window [class="Usb-creator-gtk"] floating enable
-for_window [class="^Vlc$"] floating disable
-for_window [class="Wine"] floating disable
-for_window [class="Xfburn"] floating disable
-for_window [class="Xfce4-appfinder"] floating enable
-for_window [class="Xfce4-settings-manager"] floating disable
-for_window [class="Xfce4-taskmanager"] floating enable
-for_window [instance="script-fu"] border normal
-for_window [instance="variety"] floating disable
-for_window [title="Copying"] floating enable
-for_window [title="Deleting"] floating enable
-for_window [title="Moving"] floating enable
-for_window [title="^Terminator Preferences$"] floating enable
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="^Preferences$"] floating enable
-for_window [window_role="setup"] floating enable
-for_window [class="Gnome-terminal"] focus
-for_window [class="Termite"] focus
-for_window [class="Terminator"] focus
-for_window [class="Urxvt"] focus
-for_window [class="io.github.lainsce.Notejot"] floating enable
-new_window normal
-new_float normal
+# new_window normal
+# new_float normal
 popup_during_fullscreen smart
 for_window [class="^.*"] border pixel 2
 gaps inner 3
@@ -224,7 +178,6 @@ bar {
     workspace_buttons yes
     font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont Bold 7.5
     position top
-    # status_command i3blocks -c ~/.config/i3/i3blocks
     status_command i3blocks -c ~/.config/i3/i3blocks_custom_color
     colors {
         background           $bg 

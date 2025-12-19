@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+#
+# Script name: dm-websearch
+# Description: Search various search engines (inspired by surfraw).
+# Dependencies: dmenu, fzf, rofi, brave (change DMMBROWSER in dmscripts config if using another browser)
+# GitLab: https://www.gitlab.com/dwt1/dmscripts
+# License: https://www.gitlab.com/dwt1/dmscripts/LICENSE
+# Contributors: Derek Taylor
+#               Ali Furkan Yıldız
+#               HostGrady
+#               Simon Ingelsson
+
+# Set with the flags "-e", "-u","-o pipefail" cause the script to fail
+# if certain things happen, which is a good thing.  Otherwise, we can
+# get hidden bugs that are hard to discover.
+set -euo pipefail
+
+# shellcheck disable=SC1091
+source ./_dm-helper.sh 2>/dev/null || source _dm-helper.sh 2>/dev/null
+
+source_dmscripts_configs
+
+if configs_are_different; then
+    echo "$(date): configs are different" >>"$DM_CONFIG_DIFF_LOGFILE"
+    sleep 1
+fi
+
+main() {
+    if [ -z "${!websearch[*]}" ]; then
+        notify-send "dm-websearch: BREAKING CHANGES" "Due to breaking changes you must edit all declare statements in your config to include the g option. declare -A -> declare -Ag, declare -a -> declare -ag"
+        echo "$(date): dm-websearch: BREAKING CHANGES: Due to breaking changes you must edit all declare statements in your config to include the g option.
+are -A -> declare -Ag
+are -a -> declare -ag" >>"$DM_CONFIG_DIFF_LOGFILE"
+        sleep 2
+        exit 1
+    fi
+    # As this is loaded from other file it is technically not defined
+    # shellcheck disable=SC2154 # Choosing  a search engine by name from array above.
+    engine=$(printf '%s\n' "${!websearch[@]}" | sort | ${MENU} 'Choose search engine:') || exit 1
+
+    # Getting the URL of the search engine we chose.
+    url="${websearch["${engine}"]}"
+
+    # Searching the chosen engine.
+    query=$(printf '%s' "$engine" | ${MENU} 'Enter search query:')
+
+    query="$(echo -n "${query}" | jq -s -R -r @uri)"
+    # Display search results in web browser
+    # shellcheck disable=SC2154
+    ${DMBROWSER} "${url}${query}"
+}
+
+MENU="$(get_menu_program "$@")"
+[[ "${BASH_SOURCE[0]}" == "${0}" ]] && main
