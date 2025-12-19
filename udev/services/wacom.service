@@ -1,6 +1,9 @@
 [Unit]
-Description=wacom configurations
+Description=Wacom configurations
+After=graphical.target
 
 [Service]
 Type=oneshot
+User=omar
 ExecStart=/home/omar/scripts/wacom.sh
+

@@ -1,19 +1,19 @@
 #!/bin/bash
-set -e
 
-# DMENU="dmenu -i -l 5 -p"
-DMENU="dmenu -i -c -l 3 -p" 
+Menu="dmenu -i -c -l 5 -p" 
+# Menu="rofi -dmenu -i -p"
+
 BROWSER="firefox"
 
 # Choose search engine
-ENGINE=$(printf "Google\nDuckDuckGo\nStartpage" | $DMENU "Search engine:")
+ENGINE=$(printf "Google\nDuckDuckGo\nStartpage\nYouTube" | $Menu "Search engine")
 [ -z "$ENGINE" ] && exit 0
 
 # Enter search query
-QUERY=$(printf "" | $DMENU "Search query:")
+QUERY=$(printf "" | $Menu "Search query")
 [ -z "$QUERY" ] && exit 0
 
-# URL encode (basic)
+# Basic URL encoding (spaces only)
 ENCODED_QUERY=$(printf '%s' "$QUERY" | sed 's/ /+/g')
 
 case "$ENGINE" in
@@ -26,7 +26,9 @@ case "$ENGINE" in
   Startpage)
     URL="https://www.startpage.com/do/search?q=$ENCODED_QUERY"
     ;;
+  YouTube)
+    URL="https://www.youtube.com/results?search_query=$ENCODED_QUERY"
+    ;;
 esac
 
 exec "$BROWSER" "$URL" >/dev/null 2>&1 &
-

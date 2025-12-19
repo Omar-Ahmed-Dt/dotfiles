@@ -185,7 +185,6 @@ alias code='vscodium'
 alias gsh="~/scripts/gsh.sh"
 alias rf='source ~/.config/fish/config.fish'
 alias rkeys="~/scripts/keys.sh"
-alias rmpm="doas rm /var/lib/pacman/db.lck"
 alias cat="lolcat"
 alias prop="xprop | grep WM_CLASS"
 alias dl="~/scripts/dlfile.sh"
@@ -197,7 +196,7 @@ alias st="speedtest-cli --simple --secure"
 alias stm="nload -u m -m wlp3s0"
 alias win="~/scripts/windows.sh"
 alias swm="~/scripts/switch.sh"
-alias mega="megabasterd"
+# alias mega="megabasterd"
 alias ping="ping -c 20"
 alias dr='~/scripts/dr.sh'
 alias mm='~/scripts/mount_manager.sh'
@@ -205,15 +204,15 @@ alias rr='~/scripts/rsync.sh'
 alias topdf='~/scripts/build-latex.sh'
 alias gif='~/scripts/gif.sh'
 alias bat='bat --theme gruvbox-dark'
-alias rm='trash-put -ir'
-alias rmPrm='trash-empty -vi'
-alias dbls='~/scripts/dbdb.sh'
-alias db='~/scripts/dbrowse.sh'
+# alias rm='trash-put -ir'
+alias te='trash-empty -vi'
+# alias dbls='~/scripts/dbdb.sh'
+# alias db='~/scripts/dbrowse.sh'
 alias khal='khal calendar'
 alias k='kubectl'
 alias h='helm'
 alias tg='tgpt'
-alias dp='dropbox start -i'
+# alias dp='dropbox start -i'
 alias mx='ncpamixer -t i'
 alias gv='cd .config/nvim'
 alias gg='git-graph' # and install git-delta
@@ -235,6 +234,10 @@ alias cd='z'      # zoxide pkg
 # -------------------------------------------------------
 # FUNCTIONS
 # -------------------------------------------------------
+
+rm() {
+  trash-put -ir "$@"
+}
 
 se() {
     cd ~/scripts || return

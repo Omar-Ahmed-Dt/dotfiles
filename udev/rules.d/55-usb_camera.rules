@@ -1,1 +1,1 @@
-ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0c45", TAG+="systemd", ENV{SYSTEMD_WANTS}+="keys.service"
+# ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0c45", TAG+="systemd", ENV{SYSTEMD_WANTS}+="keys.service"

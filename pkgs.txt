@@ -249,6 +249,7 @@ moka-icon-theme-git
 most
 mpc
 mpd
+mtpfs
 nano
 nbd
 ncmpcpp
