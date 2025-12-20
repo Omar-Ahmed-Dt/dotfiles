@@ -1,0 +1,85 @@
+command=/home/omar/scripts/$BLOCK_NAME
+
+align=center
+separator=true
+markup=pango
+
+[currently_playing.sh]
+interval=1
+align=center
+label=<span> </span>
+color=#000000
+background=#ebdbb2
+
+[lang.sh]
+interval=once
+signal=15
+label=<span>  </span>
+color=#000000
+background=#b8bb26
+
+[weather.sh]
+interval=3600
+color=#000000
+background=#fabd2f
+
+[pacman.sh]
+interval=3600
+label=<span> </span>
+color=#000000
+background=#83a598
+
+[uptime.sh]
+interval=60
+label=<span><b>  </b></span>
+color=#000000
+background=#d3879b
+
+[nettraf.sh]
+interval=2
+label=<span>   </span>
+color=#000000
+background=#8ec97c
+
+[battery.sh]
+interval=10
+label=<span> </span>
+color=#000000
+background=#ebdbb2
+
+[cpu_average.sh]
+interval=5
+label=<span>  </span> 
+color=#000000
+background=#b8bb26
+
+[ram.sh]
+interval=5 
+label=<span>  </span>
+color=#000000
+background=#fabd2f
+
+[backlight.sh]
+interval=once
+signal=20
+label=<span> </span>
+color=#000000
+background=#83a598
+
+[micro.sh]
+interval=once
+signal=17
+color=#000000
+background=#d3879b
+
+[vol.sh]
+interval=once
+signal=10
+color=#000000
+background=#b8bb26
+
+[clock.sh]
+interval=30
+color=#000000
+background=#ebdbb2
+

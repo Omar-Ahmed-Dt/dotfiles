@@ -4,16 +4,22 @@ command=/home/omar/scripts/$BLOCK_NAME
 # :)
 align=center
 separator=true
+# color=#ebdbb2
 markup=pango
+
+# :)
+# [i3-focusedwindow.sh]
+# interval=persist
+# color=#83a598
 
 # :)
 [currently_playing.sh]
 interval=1
 align=center
+border_top=0
+# label=<span foreground="#ebdbb2"> </span>
 label=<span foreground="#fabd2f"> </span>
 color=#ebdbb2
-border=#ebdbb2
-border_top=1
 border_right=0
 border_left=0
 border_bottom=0
@@ -22,10 +28,10 @@ border_bottom=0
 [lang.sh]
 interval=once
 signal=15
+border_top=0
 label=<span color="#b8bb26">  </span>
+#border=#b8bb26
 color=#b8bb26
-border=#b8bb26
-border_top=1
 border_right=0
 border_left=0
 border_bottom=0
@@ -33,9 +39,9 @@ border_bottom=0
 # :)
 [weather.sh]
 interval=3600
+#border=#fabd2f
 color=#fabd2f
-border=#fabd2f
-border_top=1
+border_top=0
 border_right=0
 border_left=0
 border_bottom=0
@@ -44,9 +50,9 @@ border_bottom=0
 [pacman.sh]
 interval=3600
 label=<span color="#83a598"> </span>
+#border=#83a598
 color=#83a598
-border=#83a598
-border_top=1
+border_top=0
 border_right=0
 border_left=0
 border_bottom=0
@@ -55,9 +61,9 @@ border_bottom=0
 [uptime.sh]
 interval=60
 label=<span color="#d3879b"><b>  </b></span>
+#border=#d3879b
 color=#d3879b
-border=#d3879b
-border_top=1
+border_top=0
 border_right=0
 border_left=0
 border_bottom=0
@@ -65,10 +71,11 @@ border_bottom=0
 # :)
 [nettraf.sh]
 interval=2
+# label=<span color="#8ec97c">  </span>
 label=<span> <span foreground="#fb4934"></span> <span foreground="#b8bb26"></span> </span>
+#border=#8ec97c
 color=#8ec97c
-border=#8ec97c
-border_top=1
+border_top=0
 border_right=0
 border_left=0
 border_bottom=0
@@ -77,20 +84,20 @@ border_bottom=0
 [battery.sh]
 interval=10
 label=<span color="#ebdbb2"> </span>
+#border=#ebdbb2
 color=#ebdbb2
-border=#ebdbb2
-border_top=1
+border_top=0
 border_right=0
 border_left=0
 border_bottom=0
 
 # :)
 [cpu_average.sh]
-interval=5
 label=<span color="#b8bb26">  </span> 
+interval=5
+#border=#b8bb26
 color=#b8bb26
-border=#b8bb26
-border_top=1
+border_top=0
 border_right=0
 border_left=0
 border_bottom=0
@@ -99,9 +106,9 @@ border_bottom=0
 [ram.sh]
 interval=5 
 label=<span color="#fabd2f">  </span>
+#border=#fabd2f
 color=#fabd2f
-border=#fabd2f
-border_top=1
+border_top=0
 border_right=0
 border_left=0
 border_bottom=0
@@ -111,41 +118,43 @@ border_bottom=0
 interval=once
 signal=20
 label=<span color="#83a598"> </span>
+#border=#83a598
 color=#83a598
-border=#83a598
-border_top=1
+border_top=0
 border_right=0
 border_left=0
 border_bottom=0
+#
 
 # :)
 [micro.sh]
+#border=#d3879b
+color=#d3879b
 interval=once
 signal=17
-color=#d3879b
-border=#d3879b
-border_top=1
+border_top=0
 border_right=0
 border_left=0
 border_bottom=0
 
+
 # :)
 [vol.sh]
+color=#b8bb26
 interval=once
 signal=10
-color=#b8bb26
-border=#b8bb26
-border_top=1
+border_top=0
 border_right=0
 border_left=0
 border_bottom=0
+
 
 # :)
 [clock.sh]
 interval=30
-color=#ebdbb2
 border=#ebdbb2
-border_top=1
+color=#ebdbb2
 border_right=0
+border_top=0
 border_left=0
 border_bottom=0

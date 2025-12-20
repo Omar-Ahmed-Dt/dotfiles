@@ -23,7 +23,7 @@ cp ~/.config/khal/config ~/Documents/GitHub/dotfiles/config/khal/
 cp -r ~/.config/ytfzf/* ~/Documents/GitHub/dotfiles/config/ytfzf/
 cp -r ~/.config/vis/* ~/Documents/GitHub/dotfiles/config/vis/
 rm ~/Documents/GitHub/dotfiles/config/vis/vis.log
-cp -r /home/omar/.config/conky/ ~/Documents/GitHub/dotfiles/config/
+# cp -r /home/omar/.config/conky/ ~/Documents/GitHub/dotfiles/config/
 cp ~/.config/picom.conf ~/Documents/GitHub/dotfiles/config/
 cp ~/.config/mpv/mpv.conf   ~/Documents/GitHub/dotfiles/config/mpv/
 cp ~/.config/mpv/input.conf ~/Documents/GitHub/dotfiles/config/mpv/

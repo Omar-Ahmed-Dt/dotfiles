@@ -173,5 +173,5 @@ super + shift + p
 super + shift + k
     cd ~/scripts/dmenu_scripts/ && ./dm-kill
 # web search
-super + w
+super + w 
     ~/scripts/dm-websearch.sh

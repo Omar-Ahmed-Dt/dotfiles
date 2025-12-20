@@ -384,6 +384,7 @@ sddm
 sdparm
 sg3_utils
 simplescreenrecorder
+slock
 smartmontools
 sof-firmware
 speedtest-cli
@@ -552,7 +553,6 @@ waterfox-bin
 wd719x-firmware
 we10x-icon-theme-git
 weather
-weston
 wget
 whitesur-icon-theme-git
 winetricks

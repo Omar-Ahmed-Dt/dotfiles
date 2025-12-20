@@ -8,6 +8,11 @@ fi
 # pokemon-colorscripts --no-title -r --no-title
 
 # -------------------------------------------------------
+# PATH
+# -------------------------------------------------------
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# -------------------------------------------------------
 # OH-MY-ZSH
 # -------------------------------------------------------
 export ZSH="$HOME/.oh-my-zsh"
@@ -154,7 +159,7 @@ alias pmc='doas pacman -Sc' #clean the cache after upgrade my system
 alias md='mkdir'
 alias config='/home/omar/scripts/configs.sh'
 alias gc='cd ~/.config'
-alias ram='ps axh -o cmd:15,%mem --sort=-%mem | head | string trim'
+alias ram='ps axh -o cmd:15,%mem --sort=-%mem | head'
 alias cpu='ps axh -o cmd:15,%cpu --sort=-%cpu | head'
 alias bup='sh /home/omar/scripts/gitupload.sh'
 alias df='dysk -c fs+type+size+used+free+use+mp'
@@ -215,7 +220,7 @@ alias tg='tgpt'
 # alias dp='dropbox start -i'
 alias mx='ncpamixer -t i'
 alias gv='cd .config/nvim'
-alias gg='git-graph' # and install git-delta
+# alias gg='git-graph' # and install git-delta
 alias sx="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
 alias sxiv="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
 alias tf="terraform"

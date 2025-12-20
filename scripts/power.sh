@@ -3,7 +3,7 @@
 # Menu options
 # OPTIONS="lock\nexit\nreboot\nhibernate\nzzz\nshutdown"
 # OPTIONS="lock\nhibernate\nreboot\nexit\nzzz\nshutdown"
-OPTIONS="lock\nreboot\nexit\nzzz\nshutdown"
+OPTIONS="lock\nzzz\nexit\nreboot\nshutdown"
 
 # Prompt user (centered and vertical)
 OPT=$(echo -e "$OPTIONS" | dmenu -i -c -l 5 -p "Choose action:")
@@ -21,6 +21,11 @@ case "$OPT" in
     exit)
         [ "$(confirm exit)" = "Yes" ] && pkill i3
         ;;
+    zzz)
+        if [ "$(confirm suspend)" = "Yes" ]; then
+            setxkbmap us && pkill -RTMIN+15 i3blocks && bslock systemctl suspend -i 
+        fi
+        ;;
     reboot)
         [ "$(confirm reboot)" = "Yes" ] && reboot -i
         ;;
@@ -29,11 +34,6 @@ case "$OPT" in
     #         setxkbmap us && pkill -RTMIN+15 i3blocks && bslock systemctl hibernate
     #     fi
     #     ;;
-    zzz)
-        if [ "$(confirm suspend)" = "Yes" ]; then
-            setxkbmap us && pkill -RTMIN+15 i3blocks && bslock systemctl suspend -i 
-        fi
-        ;;
     shutdown)
         [ "$(confirm shutdown)" = "Yes" ] && shutdown now
         ;;
