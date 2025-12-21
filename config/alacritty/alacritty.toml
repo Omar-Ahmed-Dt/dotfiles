@@ -5,7 +5,7 @@ general.import = [
 
 [window]
 dynamic_padding = true
-# opacity = 0.9
+# opacity = 0.97
 opacity = 1.0
 
 [cursor]

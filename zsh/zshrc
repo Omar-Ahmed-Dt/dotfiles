@@ -8,9 +8,10 @@ fi
 # pokemon-colorscripts --no-title -r --no-title
 
 # -------------------------------------------------------
-# PATH
+# PATH and VAR
 # -------------------------------------------------------
 export PATH="$HOME/.cargo/bin:$PATH"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # -------------------------------------------------------
 # OH-MY-ZSH

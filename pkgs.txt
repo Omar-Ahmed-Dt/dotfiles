@@ -327,6 +327,8 @@ peaclock-debug
 perl-image-exiftool
 phinger-cursors
 picom-git
+pipemixer
+pipemixer-debug
 pipewire
 pipewire-alsa
 pipewire-jack
