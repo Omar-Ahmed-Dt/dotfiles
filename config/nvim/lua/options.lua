@@ -8,6 +8,8 @@ opt.cursorlineopt = 'number,line'
 vim.cmd [[
   highlight CursorLine guibg=#2c2c2c
   highlight CursorColumn guibg=#2c2c2c
+  "highlight CursorLine guibg=#5f5f5f
+  "highlight CursorColumn guibg=#5f5f5f
 ]]
 
 -- Optional: extra guide line for max width (like column 120)
@@ -24,3 +26,4 @@ opt.shiftwidth = 4
 opt.expandtab = true
 -- show the filename
 opt.winbar = "%f" 
+opt.clipboard = ""

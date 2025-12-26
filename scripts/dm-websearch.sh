@@ -1,12 +1,12 @@
 #!/bin/bash
 
-Menu="dmenu -i -c -l 5 -p" 
+Menu="dmenu -i -c -l 5 -p"
 # Menu="rofi -dmenu -i -p"
 
-BROWSER="firefox"
+BROWSER="waterfox"
 
-# Choose search engine
-ENGINE=$(printf "Google\nDuckDuckGo\nStartpage\nYouTube" | $Menu "Search engine")
+# Choose search engine (added AUR)
+ENGINE=$(printf "Google\nDuckDuckGo\nStartpage\nYouTube\nAUR" | $Menu "Search engine")
 [ -z "$ENGINE" ] && exit 0
 
 # Enter search query
@@ -29,6 +29,10 @@ case "$ENGINE" in
   YouTube)
     URL="https://www.youtube.com/results?search_query=$ENCODED_QUERY"
     ;;
+  AUR)
+    URL="https://aur.archlinux.org/packages?O=0&K=$ENCODED_QUERY"
+    ;;
 esac
 
+# Launch browser (fixed your trailing &,,)
 exec "$BROWSER" "$URL" >/dev/null 2>&1 &

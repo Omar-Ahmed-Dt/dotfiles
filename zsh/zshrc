@@ -12,6 +12,7 @@ fi
 # -------------------------------------------------------
 export PATH="$HOME/.cargo/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
+export MANPAGER="nvim +Man!"
 
 # -------------------------------------------------------
 # OH-MY-ZSH
@@ -45,6 +46,7 @@ setopt SHARE_HISTORY            # share between sessions
 # -------------------------------------------------------
 bindkey -v
 export KEYTIMEOUT=1
+
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||
      [[ $1 = 'block' ]]; then
@@ -65,45 +67,7 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-# zle-keymap-select() {
-#   case $KEYMAP in
-#     vicmd)
-#       MODE="NORMAL"
-#       set_cursor_shape 1
-#       set_cursor_color "#ebdbb1"
-#       ;;
-#     visual|vivis|viopp)
-#       MODE="VISUAL"
-#       set_cursor_shape 1
-#       set_cursor_color "#ebdbb1"
-#       ;;
-#     viins|main)
-#       MODE="INSERT"
-#       set_cursor_shape 5
-#       set_cursor_color "#ebdbb1"
-#       ;;
-#   esac
-#   zle reset-prompt
-# }
-# zle -N zle-keymap-select
-#
-# # Insert mode on new prompt
-# zle-line-init() {
-#   MODE="INSERT"
-#   set_cursor_shape 5
-#   set_cursor_color "#ebdbb1"
-#   zle reset-prompt
-# }
-# zle -N zle-line-init
-
-# TRAPINT() {
-#   MODE="INSERT"
-#   set_cursor_shape 5
-#   set_cursor_color "#a6e3a1"
-#   return 128
-# }
-
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#aaa28f'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#777777'
 
 # -------------------------------------------------------
 # ENVIRONMENT
@@ -112,7 +76,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#aaa28f'
 export TERM="alacritty"
 export EDITOR="nvim"
 export VISUAL="nvim"
-export BROWSER="firefox"
+export BROWSER="waterfox"
 
 # -------------------------------------------------------
 # FZF-TAB
@@ -121,6 +85,7 @@ autoload -Uz compinit
 compinit
 source ~/.oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
 zstyle ':completion:*' menu no
+
 
 # -------------------------------------------------------
 # ALIASES
@@ -197,18 +162,18 @@ alias dl="~/scripts/dlfile.sh"
 alias dlmv="~/scripts/mvdragon.sh"
 alias dlcp="~/scripts/cpdrag.sh"
 alias phn="~/scripts/scrcpy.sh"
-alias pipes="pipes.sh"
+# alias pipes="pipes.sh"
 alias st="speedtest-cli --simple --secure"
-alias stm="nload -u m -m wlp3s0"
-alias win="~/scripts/windows.sh"
-alias swm="~/scripts/switch.sh"
+# alias stm="nload -u m -m wlp3s0"
+# alias win="~/scripts/windows.sh"
+# alias swm="~/scripts/switch.sh"
 # alias mega="megabasterd"
 alias ping="ping -c 20"
 alias dr='~/scripts/dr.sh'
 alias mm='~/scripts/mount_manager.sh'
 alias rr='~/scripts/rsync.sh'
-alias topdf='~/scripts/build-latex.sh'
-alias gif='~/scripts/gif.sh'
+# alias topdf='~/scripts/build-latex.sh'
+# alias gif='~/scripts/gif.sh'
 alias bat='bat --theme gruvbox-dark'
 # alias rm='trash-put -ir'
 alias te='trash-empty -vi'
@@ -319,7 +284,7 @@ alias ns="tr '\0' '\n' < \"${NNN_SEL:-/tmp/.sel}\""
 # Alt+s Fuzzy find and open file in nvim
 fzf-file-widget() {
   local file
-  file=$(find . -type f | fzf --preview 'bat --style=numbers --color=always {} 2>/dev/null || cat {}' --preview-window=right:60%)
+  file=$(find . -type f | fzf --preview 'bat --style=numbers --color=always {} 2>/dev/null || cat {}' --preview-window=right:70%)
   if [[ -n $file ]]; then
     nvim "$file"
   fi

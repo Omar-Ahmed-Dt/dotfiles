@@ -63,17 +63,17 @@ return {
         end,
     },
 
-    -- markdown preview live
+    -- markdown preview in a file
     {
         "MeanderingProgrammer/render-markdown.nvim",
         ft = "markdown", -- Load only for Markdown files
         dependencies = { "nvim-treesitter/nvim-treesitter" }, -- Requires Tree-sitter
-        config = function()
-            require("render-markdown").setup({
-                enabled = true,
-                render_modes = { "n", "v" },
-            })
-        end,
+
+        -- for enable the configs: ~/.config/nvim/lua/configs/render_markdown.lua 
+        -- config = function()
+        --     require("configs.render_markdown").setup()
+        -- end,
+
     },
 
     {

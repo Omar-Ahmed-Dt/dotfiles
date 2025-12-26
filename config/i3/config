@@ -13,17 +13,26 @@ set $left h
 set $right l
 
 
-# workspaces names
-set $WS1  1:Browser
-set $WS2  2:Notes
-set $WS3  3:Files
-set $WS4  4:Chat
-set $WS5  5:Media
-set $WS6  6:Dev
-set $WS7  7:Term
-set $WS8  8:Downloads
-set $WS9  9:Server
+#===workspace control===
+# set $WS1  1:Browser
+# set $WS2  2:Notes
+# set $WS3  3:Files
+# set $WS4  4:Chat
+# set $WS5  5:Media
+# set $WS6  6:Dev
+# set $WS7  7:Term
+# set $WS8  8:Downloads
+# set $WS9  9:Server
 
+set $WS1 "1:  "
+set $WS2 "2:  "
+set $WS3 "3:  "
+set $WS6 "4:  "
+set $WS4 "5:  "
+set $WS5 "6:  "
+set $WS7 "7:  "
+set $WS8 "8:  "
+set $WS9 "9:  "
 
 # Switch to workspace
 bindsym $mod+1 workspace $WS1
@@ -173,8 +182,9 @@ set $darkgray  #1d2021
 set $lightgray #bdae93
 set $white     #EEEEEE
 
+
 bar {
-    height 17
+    height 16
     workspace_buttons yes
     font pango:Exo2, FontAwesome5Free, FontAwesome5Brands, SymbolsNerdFont Bold 7.5
     position top

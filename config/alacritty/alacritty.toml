@@ -1,11 +1,12 @@
 general.import = [
   "~/.config/alacritty/keybindings.toml",
+  # "~/.cache/wal/colors.toml"
   "~/.config/alacritty/themes/themes/everforest_dark.toml"
 ]
 
 [window]
 dynamic_padding = true
-# opacity = 0.97
+# opacity = 0.9
 opacity = 1.0
 
 [cursor]

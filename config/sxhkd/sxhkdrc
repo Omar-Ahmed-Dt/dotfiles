@@ -15,7 +15,8 @@ super +  b
     ~/scripts/browser.sh
 # firefox
 super + shift + b
-    firefox
+    waterfox # flatpak pkg
+    # flatpak run net.waterfox.waterfox
     # waterfox
 #file manger gui 
 super + shift + Return
@@ -78,7 +79,8 @@ XF86MonBrightnessDown
 
 # run a program
 super + shift + d 
-    ~/scripts/lan_dmenu.sh && dmenu_run -c -l 20 -i
+    ~/scripts/lan_dmenu.sh && rofi -show run
+    # ~/scripts/lan_dmenu.sh && dmenu_run -c -l 20 -i -p "dmenu: "
 #lang 
 super + space
     setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ara || setxkbmap us && pkill -RTMIN+15 i3blocks
@@ -164,8 +166,8 @@ F10
 # super + m
 #     messenger-nativefier
 # switch
-super + shift + w 
-    ~/scripts/switch.sh
+# super + shift + w 
+#     ~/scripts/switch.sh
 # obsidian
 super + shift + p
     obsidian 
@@ -173,5 +175,8 @@ super + shift + p
 super + shift + k
     cd ~/scripts/dmenu_scripts/ && ./dm-kill
 # web search
-super + w 
+super + shift + w
     ~/scripts/dm-websearch.sh
+# yt with mpv
+super + p 
+    mpv $(xclip -o)

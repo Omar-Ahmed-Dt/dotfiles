@@ -6,18 +6,24 @@
 local M = {}
 
 M.base46 = {
-    theme = "seoul256_dark",
-    -- theme = "everforest",
-    -- theme = "onenord",
-    transparency = true,
+  theme = "seoul256_dark",
+  transparency = true,
 
-	hl_override = {
-		Comment = { italic = true },
-		["@comment"] = { italic = true },
-        -- CursorLine={
-        --     bg = "gray",
-        -- },
-	},
+  hl_override = {
+    Comment = { italic = true },
+    ["@comment"] = { italic = true },
+
+    -- 🔍 Search highlight fixes
+    IncSearch = {
+      bg = "#FFD75F", -- current match background
+      fg = "#ffffff",
+    },
+
+    Search = {
+      bg = "#5f5f5f", -- other matches
+      fg = "#ffffff",
+    },
+  },
 }
 
 -- statusline
