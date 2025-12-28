@@ -163,14 +163,15 @@ for_window [class="Pavucontrol"] floating enable
 # new_window normal
 # new_float normal
 popup_during_fullscreen smart
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 gaps inner 3
 gaps outer 0
 # smart_gaps on
 smart_borders on
 
 # theme: 
-set $bg        #282828
+# set $bg        #282828
+set $bg        #2f2f2f
 set $red       #cc241d
 set $green     #98971a
 set $yellow    #d79921

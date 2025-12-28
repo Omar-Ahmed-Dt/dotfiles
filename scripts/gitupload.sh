@@ -35,3 +35,4 @@ cp -r /home/omar/.config/yazi/*.toml ~/Documents/GitHub/dotfiles/config/yazi/
 cp -r /home/omar/.config/alacritty/*.toml ~/Documents/GitHub/dotfiles/config/alacritty/
 cp -r /home/omar/.config/alacritty/custom_themes/ ~/Documents/GitHub/dotfiles/config/alacritty/
 cp -r /home/omar/.config/ncpamixer.conf ~/Documents/GitHub/dotfiles/config/
+cp -r /home/omar/.config/rofi/ ~/Documents/GitHub/dotfiles/config/

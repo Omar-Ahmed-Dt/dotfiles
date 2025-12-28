@@ -1,0 +1,6 @@
+configuration {
+    modi: "drun,run,combi";
+    combi-modi: "drun,run";
+    font: "hack 10";
+}
+@theme "~/.config/rofi/themes/dtos-center.rasi"
