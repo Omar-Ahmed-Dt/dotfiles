@@ -1,28 +1,25 @@
-####
-# input from keyboard 
 #Reload sxhkd 
 shift + Escape
 	pkill -USR1 -x sxhkd
 # Reload i3
-super + shift + r 
+super + r 
     i3-msg reload
     # i3-msg reload  && i3-msg restart
 #Terminal 
 super + Return
     alacritty 
 # browser
-super +  b
-    ~/scripts/browser.sh
+super + b
+    waterfox
 # firefox
 super + shift + b
-    waterfox # flatpak pkg
+    ~/scripts/browser.sh
     # flatpak run net.waterfox.waterfox
-    # waterfox
 #file manger gui 
 super + shift + Return
     thunar 
 #xkill 
-super + shift + x 
+super + x 
 	xkill
 #Vol up 
 XF86AudioRaiseVolume
@@ -78,9 +75,9 @@ XF86MonBrightnessDown
     # ~/scripts/lan_dmenu.sh && ~/scripts/toggle.sh
 
 # run a program
-super + shift + d 
-    ~/scripts/lan_dmenu.sh && rofi -show run
-    # ~/scripts/lan_dmenu.sh && dmenu_run -c -l 20 -i -p "dmenu: "
+super + d
+    ~/scripts/lan_dmenu.sh && dmenu_run -c -l 20 -i -p "dmenu: "
+    # ~/scripts/lan_dmenu.sh && rofi -show run
 #lang 
 super + space
     setxkbmap -query | grep -q "layout:\s\+us" && setxkbmap ara || setxkbmap us && pkill -RTMIN+15 i3blocks
@@ -109,13 +106,13 @@ ctrl + XF86AudioNext
 ctrl + XF86AudioPlay
     mpc toggle 
 #clipboard 
-super + v 
+super + bracketleft
     ~/scripts/lan_dmenu.sh && clipmenu
 #screeen record 
 super + Print
 	simplescreenrecorder
 #mp3-youtube-dl 
-super + shift + y
+super + y
     /home/omar/scripts/ytdmenu.sh
 #screenshot 
 Print
@@ -131,11 +128,11 @@ shift + Return
     ~/scripts/filemanager.sh
     # alacritty -e zsh -ic 'nnn -Rrxl 5'
 #open vim
-super + shift + v 
+super + v 
     alacritty -e nvim
     # alacritty -e lvim
 # mail  
-super + shift + m
+super + m
     thunderbird
 # Pause button 
 ctrl + Pause
@@ -169,14 +166,17 @@ F10
 # super + shift + w 
 #     ~/scripts/switch.sh
 # obsidian
-super + shift + p
+super + p
     obsidian 
 # kill program
 super + shift + k
     cd ~/scripts/dmenu_scripts/ && ./dm-kill
 # web search
-super + shift + w
+super + w
     ~/scripts/dm-websearch.sh
 # yt with mpv
-super + p 
+super + shift + p 
     mpv $(xclip -o)
+# open dire
+super + shift + o 
+    ~/scripts/dmenu-places-menu.sh

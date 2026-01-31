@@ -55,6 +55,9 @@ map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
 map("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" })
 map("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "nvimtree focus window" })
 
+-- dash
+map("n", "<leader>d", "<cmd>Nvdash<CR>", { desc = "open dash" })
+
 -- telescope
 map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "telescope live grep" })
 map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "telescope find buffers" })

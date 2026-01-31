@@ -1,27 +1,14 @@
 #!/bin/sh
+
 case "$BLOCK_BUTTON" in
-    # 3) kitty -e khal --color interactive ;;
-    1) kitty $HOME ;;
+    3)
+        ~/scripts/power.sh
+        # pkill i3 
+        ;;
+    1)
+        alacritty --working-directory "$HOME" &
+        ;;
 esac
 
-# clock=$(date '+%I')
-
-# case "$clock" in
-#     "00") icon="N" ;;  # N for zero (nulla in Latin)
-#     "01") icon="I" ;;  # One
-#     "02") icon="II" ;; # Two
-#     "03") icon="III" ;;# Three
-#     "04") icon="IV" ;; # Four
-#     "05") icon="V" ;;  # Five
-#     "06") icon="VI" ;; # Six
-#     "07") icon="VII" ;;# Seven
-#     "08") icon="VIII";;# Eight
-#     "09") icon="IX" ;; # Nine
-#     "10") icon="X" ;;  # Ten
-#     "11") icon="XI" ;; # Eleven
-#     "12") icon="XII" ;;# Twelve
-# esac
-
-# echo "$(date '+%a.%d.%b') $(date '+%I:%M %p')"
-# echo "$(date '+%d-%-m-%Y') $(date '+%I:%M %p')"
 echo "$(date '+%d-%-m %a %-I:%M %p')"
+

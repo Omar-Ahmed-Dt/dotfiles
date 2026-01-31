@@ -3,7 +3,6 @@ declare options=("Google-chrome-stable
 Brave
 Waterfox
 Chromium
-Thorium
 Firefox"
 )
 
@@ -23,9 +22,6 @@ case "$choice" in
    ;;
     Brave) 
         exec brave --password-store=basic
-    ;;
-    Thorium) 
-        choice="thorium-browser"
     ;;
     Firefox) 
         choice="firefox"

@@ -1,23 +1,30 @@
 general.import = [
   "~/.config/alacritty/keybindings.toml",
+  # THEMES 
   "~/.config/alacritty/themes/themes/everforest_dark.toml"
   # "~/.config/alacritty/themes/themes/afterglow.toml"
+  # catppuccin theme
+  # "~/.config/alacritty/themes/themes/catppuccin.toml"
+  # "~/.config/alacritty/themes/themes/catppuccin_frappe.toml"
+  # "~/.config/alacritty/themes/themes/catppuccin_macchiato.toml"
+  # "~/.config/alacritty/themes/themes/catppuccin_mocha.toml"
 ]
 
 [window]
 dynamic_padding = true
-opacity = 0.8
-# opacity = 1.0
+opacity = 0.5
+# opacity = 1.0 
 
 [cursor]
 style = { shape = "Beam", blinking = "On" }
 vi_mode_style = { shape = "Block", blinking = "On" }
 
-[colors.cursor]
-text = "#4d4d4c"
+# [colors.cursor]
+# text = "#4d4d4c"
+# text = "#d3c6aa"
 
-[colors.vi_mode_cursor]
-text = "#4d4d4c"
+# [colors.vi_mode_cursor]
+# text = "#4d4d4c"
 
 [selection]
 save_to_clipboard = true
@@ -41,9 +48,9 @@ style = "MediumItalic"
 family = "JetBrainsMono Nerd Font"
 style = "BoldItalic"
 
-[colors.selection]
-text = "CellForeground"
-background = "#44475a"
+# [colors.selection]
+# text = "CellForeground"
+# background = "#44475a"
 
 [scrolling]
 history = 10000

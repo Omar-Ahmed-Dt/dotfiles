@@ -5,7 +5,7 @@ bindings = [
 
   # Search
   { key = "I",        mods = "Control|Shift",                                   action = "SearchForward" },
-  { key = "n",                                        mode = "Search",          action = "SearchFocusNext" },
+  { key = "n",        mods = "Control",               mode = "Search",          action = "SearchFocusNext" },
   { key = "N",        mods = "Control|Shift",         mode = "Search",          action = "SearchFocusPrevious" },
 
   # Font size

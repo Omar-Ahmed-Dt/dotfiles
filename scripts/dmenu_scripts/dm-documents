@@ -26,7 +26,12 @@ fi
 
 main() {
     PDF_VIEWER=zathura
-    files="$(find "$HOME" -maxdepth 4 -iname "*.pdf")"
+    # files="$(find "$HOME" -maxdepth 4 -iname "*.pdf")"
+    # Ignore /home/omar/home_docker
+    files="$(find "$HOME" -maxdepth 4 \
+      -path "$HOME/home_docker" -prune -o \
+      -iname "*.pdf" -print)"
+
     choice=$(printf '%s\n' "${files[@]}" \
         | cut -d '/' -f4- \
         | sed -e 's/Documents/Dcs/g' \

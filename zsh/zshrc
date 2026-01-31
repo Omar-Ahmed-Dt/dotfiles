@@ -4,7 +4,7 @@
 if [[ -x "$HOME/github/shell-color-scripts/colorscript.sh" ]]; then
   "$HOME/github/shell-color-scripts/colorscript.sh" -r
 fi
-
+#
 # pokemon-colorscripts --no-title -r --no-title
 
 # -------------------------------------------------------
@@ -182,7 +182,7 @@ alias te='trash-empty -vi'
 alias khal='khal calendar'
 alias k='kubectl'
 alias h='helm'
-alias tg='tgpt'
+# alias tg='tgpt'
 # alias dp='dropbox start -i'
 alias mx='ncpamixer -t i'
 alias gv='cd .config/nvim'
@@ -205,6 +205,10 @@ alias cd='z'      # zoxide pkg
 # -------------------------------------------------------
 # FUNCTIONS
 # -------------------------------------------------------
+
+# ??() {
+#   tgpt "$*"
+# }
 
 rm() {
   trash-put -ir "$@"
@@ -413,19 +417,13 @@ bindkey '^[r' reload-zsh-widget
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^[v' edit-command-line
 
-# Alt+i - FZF PACKAGE PICKER
-fzf_arch_packages() {
-  yay -Slq | fzf \
-    --multi \
-    --prompt="📦 Package > " \
-    --height=70% \
+# Alt+i - List PKGs
+list_bins() {
+  local cmd
+  cmd=$(whence -pm '*' | sed 's:.*/::' | sort -u | fzf) || return
+  LBUFFER+="$cmd"
 }
-fzf-insert-arch-pkg() {
-  local pkgs
-  pkgs="$(fzf_arch_packages)"
-  [[ -n "$pkgs" ]] && LBUFFER+="${pkgs//$'\n'/ } "
-  zle redisplay
-}
-zle -N fzf-insert-arch-pkg
-bindkey '^[i' fzf-insert-arch-pkg
+
+zle -N list_bins
+bindkey '^[i' list_bins
 

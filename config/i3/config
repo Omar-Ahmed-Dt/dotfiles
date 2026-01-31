@@ -59,7 +59,7 @@ bindsym $mod+Shift+9 move container to workspace $WS9
 # Keybinding 
 # bindsym $mod+Shift+minus move scratchpad
 # bindsym $mod+minus scratchpad show
-bindsym $mod+Shift+c kill
+bindsym $mod+c kill
 bindsym $mod+a focus parent
 bindsym $mod+z focus child
 # bindsym $mod+b bar mode toggle
@@ -91,15 +91,16 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-# Disable automatic window focus
-# focus_follows_mouse no
+# window focus
+focus_follows_mouse yes
 
 # kitti3 
 # exec_always --no-startup-id kitti3 -p CC -s 0.8 0.7 -n n1
 # bindsym $mod+shift+o nop n1
 
 # i3-quickterm
-bindsym $mod+Shift+o exec --no-startup-id i3-quickterm shell
+bindsym $mod+backslash exec --no-startup-id i3-quickterm shell
+# bindsym $mod+Shift+o exec --no-startup-id i3-quickterm shell
 #
 #############################
 #scratchpad
@@ -123,7 +124,8 @@ bindsym $mod+Shift+o exec --no-startup-id i3-quickterm shell
 
 # Jump to urgent window 
 # for_window [urgent=latest] focus
-focus_on_window_activation focus
+# focus_on_window_activation focus
+focus_on_window_activation smart
 default_orientation horizontal
 exec_always --no-startup-id autotiling
 # i3-back
@@ -135,16 +137,17 @@ bindsym mod1+Tab workspace back_and_forth
 
 # auto start
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-# exec --no-startup-id blueberry-tray
+exec --no-startup-id blueberry-tray
 exec_always --no-startup-id nm-applet
 exec --no-startup-id numlockx on
 exec --no-startup-id feh --bg-fill /home/omar/.cache/wall/wallpaper.jpg & 
 exec --no-startup-id sxhkd 
 exec --no-startup-id mpd
-exec_always --no-startup-id clipmenud
+exec_always --no-startup-id clipmenud & 
 exec --no-startup-id redshift -P -O 3250 &
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
-exec --no-startup-id picom --config ~/.config/i3/picom.conf
+# exec --no-startup-id picom --config ~/.config/i3/picom.conf
+exec --no-startup-id picom
 # exec --no-startup-id conky 
 exec --no-startup-id dunst
 exec --no-startup-id flameshot
@@ -167,7 +170,7 @@ for_window [class="^.*"] border pixel 1
 gaps inner 3
 gaps outer 0
 # smart_gaps on
-smart_borders on
+# smart_borders on
 
 # theme: 
 # set $bg        #282828

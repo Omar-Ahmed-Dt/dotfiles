@@ -22,6 +22,7 @@ arc-darkest-theme-git
 arc-gtk-theme
 arc-x-icons-theme
 arch-install-scripts
+archclean
 aur-check-updates
 aur-check-updates-debug
 auto-cpufreq
@@ -54,8 +55,9 @@ broadcom-wl-dkms
 btop
 btrfs-progs
 cabal-install
-caffeine-ng
+caffeine-ng-git
 capitaine-cursors
+chatgpt-cli
 chromium
 claude-code
 claude-code-debug
@@ -74,6 +76,7 @@ cups
 cups-pdf
 cups-pk-helper
 ddrescue
+deepfilternet-demos-git
 dex
 dialog
 diffutils
@@ -98,6 +101,7 @@ dust
 dxvk-bin
 dysk
 e2fsprogs
+easyeffects
 edk2-shell
 efibootmgr
 electron25-bin
@@ -169,6 +173,7 @@ hwinfo
 hyperv
 i3-back-bin
 i3-back-bin-debug
+i3-resurrect
 i3-swallow-git
 i3-wm
 i3blocks
@@ -255,6 +260,7 @@ mpd
 mtpfs
 nano
 nbd
+ncdu
 ncmpcpp
 ncpamixer
 ndisc6
@@ -284,7 +290,7 @@ ntfs-3g
 ntp
 numix-gtk-theme-git
 numlockx
-nvidia-dkms
+nvidia-open-dkms
 nvidia-settings
 nvidia-utils
 nvme-cli
@@ -376,6 +382,7 @@ rnote-git
 rnote-git-debug
 rofi
 rofi-emoji-git-debug
+rofi-rbw
 rofimoji
 rp-pppoe
 rsync
@@ -423,7 +430,6 @@ texlive-meta
 texlive-publishers
 tgpt
 the_silver_searcher
-thorium-browser-bin
 thunar
 thunar-archive-plugin
 thunar-shares-plugin
@@ -528,7 +534,7 @@ ttf-ubuntu-nerd
 ttf-victor-mono-nerd
 ttf-zed-mono-nerd
 udftools
-ueberzug
+ueberzugpp
 ufw
 unimatrix-git
 upd72020x-fw

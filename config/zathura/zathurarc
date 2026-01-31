@@ -1,9 +1,9 @@
 #my config
 
-set sandbox none
+# set sandbox none
 set statusbar-h-padding 0
 set statusbar-v-padding 0
-set page-padding 1
+# set page-padding 1
 # set selection-clipboard clipboard
 map ^u scroll half-up
 map ^d scroll half-down
@@ -27,10 +27,10 @@ set statusbar-fg                "#D8DEE9"
 set statusbar-bg                "#434C5E"
 # set statusbar-bg                "#000000"
 
-set index-bg                   "#2E3440" 
-set index-fg                   "#ECEFF4" 
-set index-active-bg             "#5e81ac" 
-set index-active-fg             "#ECEFF4" 
+# set index-bg                   "#2E3440" 
+# set index-fg                   "#ECEFF4" 
+# set index-active-bg             "#5e81ac" 
+# set index-active-fg             "#ECEFF4" 
 
 set inputbar-bg                 "#2E3440"
 set inputbar-fg                 "#8FBCBB"

@@ -6,23 +6,20 @@
 local M = {}
 
 M.base46 = {
-  theme = "seoul256_dark",
+  -- THEMES
+  -- theme = "seoul256_dark",
+  -- theme = "gruvbox",
+  -- theme = "gruvchad",
+  -- theme = "catppuccin",
+  theme = "everforest",
+  -- theme = "tomorrow_night",
+    --
   transparency = true,
 
   hl_override = {
     Comment = { italic = true },
     ["@comment"] = { italic = true },
 
-    -- 🔍 Search highlight fixes
-    IncSearch = {
-      bg = "#FFD75F", -- current match background
-      fg = "#ffffff",
-    },
-
-    Search = {
-      bg = "#5f5f5f", -- other matches
-      fg = "#ffffff",
-    },
   },
 }
 
@@ -62,38 +59,6 @@ M.nvdash = {
 
 }
 
--- M.nvdash = {
---     load_on_startup = true,
---     header = {
---       "                      ",
---       "  ▄▄         ▄ ▄▄▄▄▄▄▄",
---       "▄▀███▄     ▄██ █████▀ ",
---       "██▄▀███▄   ███        ",
---       "███  ▀███▄ ███        ",
---       "███    ▀██ ███        ",
---       "███      ▀ ███        ",
---       "▀██ █████▄▀█▀▄██████▄ ",
---       "  ▀ ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀",
---       "                      ",
---       "  Powered By  eovim ",
---       "                      ",
---     },
--- }
-
--- Terminal
--- M.term = {
---     winopts = { number = false, relativenumber = false },
---     sizes = { sp = 0.3, vsp = 0.2, ["bo sp"] = 0.3, ["bo vsp"] = 0.2 },
---     float = {
---       relative = "editor",
---       row = 0.3,
---       col = 0.25,
---       width = 0.5,
---       height = 0.4,
---       border = "single",
---     },
--- }
-
 -- the command :W that writes the current buffer using sudo.-
 vim.api.nvim_create_user_command("W", function()
   vim.cmd('silent! write !sudo tee % > /dev/null')
@@ -108,5 +73,5 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
-
 return M
+
