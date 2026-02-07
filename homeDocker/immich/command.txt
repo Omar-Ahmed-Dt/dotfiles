@@ -1,0 +1,11 @@
+immich login http://127.0.0.1:2283/api <api>
+
+immich upload --album-name "Pictures" --recursive Pictures/
+
+## after backup:
+borg list /mnt/myssd/immich/immich-borg
+borg list /mnt/myssd/immich/immich-borg::2025-12-25T21:30:09
+borg list /mnt/myssd/immich/immich-borg::2025-12-25T21:30:09 | grep -i immich-database
+borg info /mnt/myssd/immich/immich-borg::2025-12-25T21:30:09
+
+
