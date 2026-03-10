@@ -154,6 +154,7 @@ exec --no-startup-id flameshot
 exec_always --no-startup-id xfce4-clipman
 exec_always --no-startup-id caffeine  #Install it using pmii caffeine-ng
 exec --no-startup-id dropbox-cli start -i
+exec_always --no-startup-id blueberry-tray  
 
 # exec --no-startup-id setxkbmap -option caps:escape
 # lvim and acpi

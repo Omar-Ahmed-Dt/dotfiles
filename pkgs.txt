@@ -105,6 +105,7 @@ easyeffects
 edk2-shell
 efibootmgr
 electron25-bin
+electron40-bin
 ethtool
 eve-ng-integration
 exfatprogs
@@ -117,7 +118,6 @@ fastfetch
 fatresize
 feh
 ffmpegthumbnailer
-firefox
 fish
 fisher
 flameshot
@@ -151,11 +151,14 @@ go
 go-blueprint-bin
 google-chrome
 google-cloud-cli
+google-cloud-cli-gke-gcloud-auth-plugin
+gotop
 gpart
 gparted
 gpm
 gptfdisk
 graphite-gtk-theme-git
+gromit-mpx
 grub
 gsfonts
 gst-libav
@@ -240,6 +243,7 @@ man-db
 man-pages
 materia-gtk-theme
 materia-kde
+materialious
 mcat-bin
 mdadm
 mdcat
@@ -321,6 +325,7 @@ otf-monaspace-nerd
 otf-opendyslexic-nerd
 otf-overpass-nerd
 pamixer
+pandoc-cli
 papirus-folders-nordic
 papirus-linux-universe
 papirus-nord
@@ -364,7 +369,6 @@ python-i3-quickterm
 python-pip
 python-pipx
 python-pywal
-qemu-full
 qogir-gtk-theme-git
 qogir-icon-theme
 qt5ct
@@ -570,6 +574,7 @@ wireless-regdb
 wireless_tools
 wireplumber
 wl-clipboard
+wl-screenrec-debug
 wlrctl
 wmctrl
 woff2-font-awesome

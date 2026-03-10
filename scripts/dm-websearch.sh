@@ -1,7 +1,7 @@
 #!/bin/bash
 
-Menu="dmenu -i -c -l 5 -p"
-# Menu="rofi -dmenu -i -p"
+# Menu="dmenu -i -c -l 5 -p"
+Menu="rofi -dmenu -i -l 5 -p"
 
 BROWSER="waterfox"
 

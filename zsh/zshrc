@@ -29,6 +29,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Google Cloud CLI
+source /opt/google-cloud-cli/path.zsh.inc
+source /opt/google-cloud-cli/completion.zsh.inc
+
 # -------------------------------------------------------
 # History
 # -------------------------------------------------------
@@ -81,8 +85,8 @@ export BROWSER="waterfox"
 # -------------------------------------------------------
 # FZF-TAB
 # -------------------------------------------------------
-autoload -Uz compinit
-compinit
+# autoload -Uz compinit
+# compinit
 source ~/.oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
 zstyle ':completion:*' menu no
 
@@ -190,7 +194,7 @@ alias gv='cd .config/nvim'
 alias sx="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
 alias sxiv="ls -1t --classic | xargs swallow sxiv 2> /dev/null"
 alias tf="terraform"
-alias glow='glow -l'
+# alias glow='glow -l'
 alias yz='yazi'
 alias v='nvim'
 alias gd='cd ~/Documents/GitHub/'

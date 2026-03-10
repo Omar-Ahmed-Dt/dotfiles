@@ -1,20 +1,18 @@
 #!/bin/bash
-declare options=("Google-chrome-stable
+declare options=("Google
 Brave
 Waterfox
-Chromium
-Firefox"
+Chromium"
 )
 
-# choice=$(echo -e "${options[@]}" | dmenu -i -l 20 -g 2 -X 0 -Y 0 -W 680 -p 'launch browser: ' )
-choice=$(echo -e "${options[@]}" | dmenu -i -l 20 -c -p 'launch browser: ' )
+choice=$(echo -e "${options[@]}" | dmenu -i -l 10 -c -p 'launch browser: ' )
 
 case "$choice" in 
    Waterfox)
        choice="waterfox"
        # exec flatpak run net.waterfox.waterfox
    ;;
-   Google-chrome-stable)
+   Google)
        choice="google-chrome-stable"
    ;;
    Chromium)
@@ -23,8 +21,8 @@ case "$choice" in
     Brave) 
         exec brave --password-store=basic
     ;;
-    Firefox) 
-        choice="firefox"
-    ;;
+    # Firefox) 
+    #     choice="firefox"
+    # ;;
 esac
 "$choice"
